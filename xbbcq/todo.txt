@@ -1,7 +1,7 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
 狼人		1		1		1		1		1		1		1
 电魂		1		1		1		1		1		1		1
-女王		1		1		1		1			
+女王		1		1		1		1		1			
 
 
 女王 白
