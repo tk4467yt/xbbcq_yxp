@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-尸王
+尸王		1		1
 船长		1		1		1		1		1		1		1
 酒仙		1		1		1		1		1		1		1
 海民		1		1		1		1		1		1		1
