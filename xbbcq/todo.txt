@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-海民
+酒仙
+海民		1		1		1		1		1		1		1
 刚背猪		1		1		1		1		1		1		1
 狼人		1		1		1		1		1		1		1
 电魂		1		1		1		1		1		1		1
