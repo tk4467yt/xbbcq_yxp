@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-龙女
+龙女		1		1		1		1		1		1		1
 大鱼人		1		1		1		1		1		1		1
 伐木机		1		1		1		1		1		1		1
 尸王		1		1		1		1		1		1		1
