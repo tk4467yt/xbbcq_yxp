@@ -1,4 +1,7 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
+狂猎
+牛头酋长		1		1		1		1		1		1		1
+潮汐		1		1		1		1		1		1		1
 龙女		1		1		1		1		1		1		1
 大鱼人		1		1		1		1		1		1		1
 伐木机		1		1		1		1		1		1		1
