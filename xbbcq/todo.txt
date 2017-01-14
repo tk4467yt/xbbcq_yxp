@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-斧王		1		1		1		1		1
+斧王		1		1		1		1		1		1		1
 狂猎		1		1		1		1		1		1		1
 牛头酋长		1		1		1		1		1		1		1
 潮汐		1		1		1		1		1		1		1
