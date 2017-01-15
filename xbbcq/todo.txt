@@ -1,4 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
+神牛		1		1		1		1		1		1		1
 发条		1		1		1		1		1		1		1
 炼金术士		1		1		1		1		1		1		1
 混沌骑士		1		1		1		1		1		1		1
