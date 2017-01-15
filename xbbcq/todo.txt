@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-炼金术士
+炼金术士		1		1		1		1		1		1		1
 混沌骑士		1		1		1		1		1		1		1
 斧王		1		1		1		1		1		1		1
 狂猎		1		1		1		1		1		1		1
