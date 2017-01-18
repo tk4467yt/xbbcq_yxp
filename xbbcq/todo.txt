@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-猎魔人
+猎魔人		1		1		1		1		1
 幽鬼		1		1		1		1		1		1		1
 全能骑士		1		1		1		1		1		1		1
 骨王		1		1		1		1		1		1		1
