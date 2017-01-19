@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-美杜莎		1		1		1		1		1
+编织者
+美杜莎		1		1		1		1		1		1		1
 猎魔人		1		1		1		1		1		1		1
 幽鬼		1		1		1		1		1		1		1
 全能骑士		1		1		1		1		1		1		1
