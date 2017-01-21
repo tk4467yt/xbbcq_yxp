@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-火枪
+火枪		1		1		1		1
 血魔		1		1		1		1		1		1		1
 云游武僧		1		1		1		1		1		1		1
 影魔		1		1		1		1		1		1		1
