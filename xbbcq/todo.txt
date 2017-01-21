@@ -1,6 +1,7 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
+武器大师
 赏金猎人		1		1		1		1		1		1		1
-虚空		1		1		1		1
+虚空		1		1		1		1		1		1		1
 编织者		1		1		1		1		1		1		1
 美杜莎		1		1		1		1		1		1		1
 猎魔人		1		1		1		1		1		1		1
