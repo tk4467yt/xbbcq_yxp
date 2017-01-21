@@ -1,5 +1,7 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-影魔		1		1		1		1		1
+血魔
+云游武僧		1		1		1		1		1		1		1
+影魔		1		1		1		1		1		1		1
 幻影刺客		1		1		1		1		1		1		1
 武器大师		1		1		1		1		1		1		1
 赏金猎人		1		1		1		1		1		1		1
