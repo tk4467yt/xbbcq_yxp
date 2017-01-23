@@ -1,5 +1,7 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-小鱼人		1		1		1		1		1
+白银刺客
+水人		1		1		1		1		1		1		1
+小鱼人		1		1		1		1		1		1		1
 艾吉奥		1		1		1		1		1		1		1
 小娜迦		1		1		1		1		1		1		1
 火枪		1		1		1		1		1		1		1
