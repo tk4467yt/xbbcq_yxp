@@ -1,4 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
+隐刺
+铁面狂人		1		1		1		1		1		1		1
 剧毒		1		1		1		1		1		1		1
 白银刺客		1		1		1		1		1		1		1
 水人		1		1		1		1		1		1		1
