@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-小强
+灰烬之灵
+小强		1		1		1		1		1		1		1
 隐刺		1		1		1		1		1		1		1
 铁面狂人		1		1		1		1		1		1		1
 剧毒		1		1		1		1		1		1		1
