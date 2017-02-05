@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-圣堂刺客
+机枪兵
+圣堂刺客		1		1		1		1		1		1		1
 直升机		1		1		1		1		1		1		1
 拍拍熊		1		1		1		1		1		1		1
 亚龙		1		1		1		1		1		1		1
