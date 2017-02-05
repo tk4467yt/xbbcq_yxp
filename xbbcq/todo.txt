@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-复仇
+敌法
+复仇		1		1		1		1		1		1		1
 机枪兵		1		1		1		1		1		1		1
 圣堂刺客		1		1		1		1		1		1		1
 直升机		1		1		1		1		1		1		1
