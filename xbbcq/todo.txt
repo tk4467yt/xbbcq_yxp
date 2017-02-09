@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-小黑
+月骑
+小黑		1		1		1		1		1		1		1
 灵魂守卫		1		1		1		1		1		1		1
 白虎		1		1		1		1		1		1		1
 猴子		1		1		1		1		1		1		1
