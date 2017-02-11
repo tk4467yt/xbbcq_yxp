@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-猫馆长
+恶魔巫师
+猫馆长		1		1		1		1		1		1		1
 天师道人		1		1		1		1		1		1		1
 骨弓		1		1		1		1		1		1		1
 剑圣		1		1		1		1		1		1		1
