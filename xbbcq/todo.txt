@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-骨弓
+赌徒
+骨弓		1		1		1		1		1		1		1
 剑圣		1		1		1		1		1		1		1
 月骑		1		1		1		1		1		1		1
 小黑		1		1		1		1		1		1		1
