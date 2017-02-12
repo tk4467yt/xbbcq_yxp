@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-迪迦
+火女
+迪迦		1		1		1		1		1		1		1
 恶魔巫师		1		1		1		1		1		1		1
 猫馆长		1		1		1		1		1		1		1
 天师道人		1		1		1		1		1		1		1
