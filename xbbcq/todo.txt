@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-厨娘
+死灵龙
+厨娘		1		1		1		1		1		1		1
 宙斯		1		1		1		1		1		1		1
 蝙蝠骑士		1		1		1		1		1		1		1
 火女		1		1		1		1		1		1		1
