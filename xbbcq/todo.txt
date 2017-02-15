@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-月亮女神
+双子
+月亮女神		1		1		1		1		1		1		1
 魔蛇之女		1		1		1		1		1		1		1
 死灵龙		1		1		1		1		1		1		1
 厨娘		1		1		1		1		1		1		1
