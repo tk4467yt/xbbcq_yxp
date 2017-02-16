@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-天照
+圣灵骑士
+天照		1		1		1		1		1		1		1
 魔术师		1		1		1		1		1		1		1
 双子		1		1		1		1		1		1		1
 月亮女神		1		1		1		1		1		1		1
