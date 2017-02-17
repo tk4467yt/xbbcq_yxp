@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-干扰者
+爱丽丝
+干扰者		1		1		1		1		1		1		1
 圣灵骑士		1		1		1		1		1		1		1
 天照		1		1		1		1		1		1		1
 魔术师		1		1		1		1		1		1		1
