@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-圣灵骑士
+干扰者
+圣灵骑士		1		1		1		1		1		1		1
 天照		1		1		1		1		1		1		1
 魔术师		1		1		1		1		1		1		1
 双子		1		1		1		1		1		1		1
@@ -95,4 +96,4 @@
 
 
 missing:
-赌徒,谜团，月读
+赌徒,谜团，月读,食魂鬼
