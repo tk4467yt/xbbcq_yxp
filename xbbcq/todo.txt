@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-吟游诗人
+深渊恶魔
+吟游诗人		1		1		1		1		1		1		1
 爱丽丝		1		1		1		1		1		1		1
 干扰者		1		1		1		1		1		1		1
 圣灵骑士		1		1		1		1		1		1		1
