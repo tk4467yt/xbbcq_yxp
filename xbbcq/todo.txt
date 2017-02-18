@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-死灵法师
+黑鸟
+死灵法师		1		1		1		1		1		1		1
 修补匠		1		1		1		1		1		1		1
 深渊恶魔		1		1		1		1		1		1		1
 吟游诗人		1		1		1		1		1		1		1
