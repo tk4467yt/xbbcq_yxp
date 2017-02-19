@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-光法
+双头龙
+光法		1		1		1		1		1		1		1
 术士		1		1		1		1		1		1		1
 蓝胖		1		1		1		1		1		1		1
 召唤师		1		1		1		1		1		1		1
