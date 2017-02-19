@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-蓝胖
+术士
+蓝胖		1		1		1		1		1		1		1
 召唤师		1		1		1		1		1		1		1
 巫医		1		1		1		1		1		1		1
 小鹿		1		1		1		1		1		1		1
