@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-炸弹人
+冰魂
+炸弹人		1		1		1		1		1		1		1
 暗牧		1		1		1		1		1		1		1
 黑鸟		1		1		1		1		1		1		1
 死灵法师		1		1		1		1		1		1		1
