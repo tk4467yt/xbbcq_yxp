@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-风暴之灵
+老鹿
+风暴之灵		1		1		1		1		1		1		1
 冰魂		1		1		1		1		1		1		1
 炸弹人		1		1		1		1		1		1		1
 暗牧		1		1		1		1		1		1		1
