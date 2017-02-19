@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-小鹿
+巫医
+小鹿		1		1		1		1		1		1		1
 老鹿		1		1		1		1		1		1		1
 风暴之灵		1		1		1		1		1		1		1
 冰魂		1		1		1		1		1		1		1
