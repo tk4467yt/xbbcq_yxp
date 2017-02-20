@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-巫妖
+仙女龙
+巫妖		1		1		1		1		1		1		1
 双头龙		1		1		1		1		1		1		1
 光法		1		1		1		1		1		1		1
 术士		1		1		1		1		1		1		1
