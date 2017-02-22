@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-猩红伯爵
+风行
+猩红伯爵		1		1		1		1		1		1		1
 仙女龙		1		1		1		1		1		1		1
 巫妖		1		1		1		1		1		1		1
 双头龙		1		1		1		1		1		1		1
