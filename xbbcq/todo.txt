@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-冰女
+机甲浣熊
+冰女		1		1		1		1		1		1		1
 风行		1		1		1		1		1		1		1
 猩红伯爵		1		1		1		1		1		1		1
 仙女龙		1		1		1		1		1		1		1
