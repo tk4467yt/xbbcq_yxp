@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-冰龙
+炼狱行者
+冰龙		1		1		1		1		1		1		1
 机甲浣熊		1		1		1		1		1		1		1
 冰女		1		1		1		1		1		1		1
 风行		1		1		1		1		1		1		1
