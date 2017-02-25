@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-黑暗小丑
+大魔导师
+黑暗小丑		1		1		1		1		1		1		1
 科学怪人		1		1		1		1		1		1		1
 厄运之源		1		1		1		1		1		1		1
 炼狱行者		1		1		1		1		1		1		1
