@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-沉默
+沉默		1		1		1		1		1		1		1
 天怒法师		1		1		1		1		1		1		1
 暗影萨满		1		1		1		1		1		1		1
 先知		1		1		1		1		1		1		1
