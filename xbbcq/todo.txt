@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-黑暗先知
+蜘蛛女郎
+黑暗先知		1		1		1		1		1		1		1
 大魔导师		1		1		1		1		1		1		1
 黑暗小丑		1		1		1		1		1		1		1
 科学怪人		1		1		1		1		1		1		1
