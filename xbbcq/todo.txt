@@ -1,5 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-先知
+暗影萨满
+先知		1		1		1		1		1		1		1
 骨法		1		1		1		1		1		1		1
 蜘蛛女郎		1		1		1		1		1		1		1
 黑暗先知		1		1		1		1		1		1		1
