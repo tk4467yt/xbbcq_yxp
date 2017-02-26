@@ -16,6 +16,8 @@
 		257024481E630D2D001CB5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257024461E630D2D001CB5F3 /* LaunchScreen.storyboard */; };
 		257024531E630D2D001CB5F3 /* xbbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024521E630D2D001CB5F3 /* xbbTests.m */; };
 		2570245E1E630D2D001CB5F3 /* xbbUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570245D1E630D2D001CB5F3 /* xbbUITests.m */; };
+		2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246B1E630EE1001CB5F3 /* Localizable.strings */; };
+		2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246D1E630F32001CB5F3 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		257024591E630D2D001CB5F3 /* xbbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xbbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2570245D1E630D2D001CB5F3 /* xbbUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xbbUITests.m; sourceTree = "<group>"; };
 		2570245F1E630D2D001CB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2570246B1E630EE1001CB5F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2570246D1E630F32001CB5F3 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				257024461E630D2D001CB5F3 /* LaunchScreen.storyboard */,
 				257024491E630D2D001CB5F3 /* Info.plist */,
 				257024351E630D2D001CB5F3 /* Supporting Files */,
+				2570246B1E630EE1001CB5F3 /* Localizable.strings */,
+				2570246D1E630F32001CB5F3 /* InfoPlist.strings */,
 			);
 			path = xbb;
 			sourceTree = "<group>";
@@ -255,8 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				257024481E630D2D001CB5F3 /* LaunchScreen.storyboard in Resources */,
+				2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */,
 				257024451E630D2D001CB5F3 /* Assets.xcassets in Resources */,
 				257024431E630D2D001CB5F3 /* Main.storyboard in Resources */,
+				2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K977ADZFXX;
 				INFOPLIST_FILE = xbb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazilybird.app.xbb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K977ADZFXX;
 				INFOPLIST_FILE = xbb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazilybird.app.xbb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
