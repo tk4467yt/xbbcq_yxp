@@ -1,5 +1,5 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
-食魂鬼
+食魂鬼		1		1		1		1		1		1		1
 月读		1		1		1		1		1		1		1
 谜团		1		1		1		1		1		1		1
 赌徒		1		1		1		1		1		1		1
