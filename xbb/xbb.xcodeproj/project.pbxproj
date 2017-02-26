@@ -18,6 +18,7 @@
 		2570245E1E630D2D001CB5F3 /* xbbUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570245D1E630D2D001CB5F3 /* xbbUITests.m */; };
 		2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246B1E630EE1001CB5F3 /* Localizable.strings */; };
 		2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246D1E630F32001CB5F3 /* InfoPlist.strings */; };
+		257024711E6320DA001CB5F3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024701E6320DA001CB5F3 /* MineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		2570245F1E630D2D001CB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2570246B1E630EE1001CB5F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2570246D1E630F32001CB5F3 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2570246F1E6320DA001CB5F3 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		257024701E6320DA001CB5F3 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				257024351E630D2D001CB5F3 /* Supporting Files */,
 				2570246B1E630EE1001CB5F3 /* Localizable.strings */,
 				2570246D1E630F32001CB5F3 /* InfoPlist.strings */,
+				2570246F1E6320DA001CB5F3 /* MineViewController.h */,
+				257024701E6320DA001CB5F3 /* MineViewController.m */,
 			);
 			path = xbb;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			files = (
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
 				2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */,
+				257024711E6320DA001CB5F3 /* MineViewController.m in Sources */,
 				2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */,
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
 			);
@@ -532,6 +538,7 @@
 				257024641E630D2D001CB5F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257024651E630D2D001CB5F3 /* Build configuration list for PBXNativeTarget "xbbTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +547,7 @@
 				257024671E630D2D001CB5F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257024681E630D2D001CB5F3 /* Build configuration list for PBXNativeTarget "xbbUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +556,7 @@
 				2570246A1E630D2D001CB5F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
