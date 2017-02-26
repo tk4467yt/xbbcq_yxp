@@ -1,4 +1,6 @@
 		hero_info	hero_grow	hero_species	species_desc	hero_skill	hero_equips	equip_info
+月读
+谜团		1		1		1		1		1		1		1
 赌徒		1		1		1		1		1		1		1
 沉默		1		1		1		1		1		1		1
 天怒法师		1		1		1		1		1		1		1
@@ -134,4 +136,4 @@
 
 
 missing:
-谜团，月读,食魂鬼
+食魂鬼
