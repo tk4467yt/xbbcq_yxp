@@ -18,16 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UITabBarController *rootTabbarVC=(UITabBarController *)self.window.rootViewController;
-    for (UITabBarItem *aItem in rootTabbarVC.tabBar.items) {
-        if (1 == aItem.tag) {
-             aItem.title=NSLocalizedString(@"title_hero", @"");
-        } else if (2 == aItem.tag) {
-            aItem.title=NSLocalizedString(@"title_equip", @"");
-        } else if (3 == aItem.tag) {
-            aItem.title=NSLocalizedString(@"title_mine", @"");
-        }
-    }
     return YES;
 }
 

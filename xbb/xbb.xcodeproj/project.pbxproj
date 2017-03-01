@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB1C1E67108300524553 /* MyTabbarViewController.m */; };
 		257024371E630D2D001CB5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024361E630D2D001CB5F3 /* main.m */; };
 		2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024391E630D2D001CB5F3 /* AppDelegate.m */; };
 		2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570243C1E630D2D001CB5F3 /* FirstViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253EBB1B1E67108300524553 /* MyTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabbarViewController.h; sourceTree = "<group>"; };
+		253EBB1C1E67108300524553 /* MyTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabbarViewController.m; sourceTree = "<group>"; };
 		257024321E630D2D001CB5F3 /* xbb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xbb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257024361E630D2D001CB5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		257024381E630D2D001CB5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				2570246D1E630F32001CB5F3 /* InfoPlist.strings */,
 				2570246F1E6320DA001CB5F3 /* MineViewController.h */,
 				257024701E6320DA001CB5F3 /* MineViewController.m */,
+				253EBB1B1E67108300524553 /* MyTabbarViewController.h */,
+				253EBB1C1E67108300524553 /* MyTabbarViewController.m */,
 			);
 			path = xbb;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */,
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
 				2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */,
 				257024711E6320DA001CB5F3 /* MineViewController.m in Sources */,
