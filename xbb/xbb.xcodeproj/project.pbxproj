@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB1C1E67108300524553 /* MyTabbarViewController.m */; };
+		253EBB211E6859D400524553 /* xbb.db in Resources */ = {isa = PBXBuildFile; fileRef = 253EBB201E6859D400524553 /* xbb.db */; };
 		257024371E630D2D001CB5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024361E630D2D001CB5F3 /* main.m */; };
 		2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024391E630D2D001CB5F3 /* AppDelegate.m */; };
 		2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570243C1E630D2D001CB5F3 /* FirstViewController.m */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		253EBB1B1E67108300524553 /* MyTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabbarViewController.h; sourceTree = "<group>"; };
 		253EBB1C1E67108300524553 /* MyTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabbarViewController.m; sourceTree = "<group>"; };
+		253EBB201E6859D400524553 /* xbb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbb.db; sourceTree = "<group>"; };
 		257024321E630D2D001CB5F3 /* xbb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xbb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257024361E630D2D001CB5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		257024381E630D2D001CB5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,17 +53,17 @@
 		2570243E1E630D2D001CB5F3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		2570243F1E630D2D001CB5F3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		257024421E630D2D001CB5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		257024441E630D2D001CB5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		257024441E630D2D001CB5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = xbb/Assets.xcassets; sourceTree = "<group>"; };
 		257024471E630D2D001CB5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		257024491E630D2D001CB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257024491E630D2D001CB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = xbb/Info.plist; sourceTree = "<group>"; };
 		2570244E1E630D2D001CB5F3 /* xbbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xbbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		257024521E630D2D001CB5F3 /* xbbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xbbTests.m; sourceTree = "<group>"; };
 		257024541E630D2D001CB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257024591E630D2D001CB5F3 /* xbbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xbbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2570245D1E630D2D001CB5F3 /* xbbUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xbbUITests.m; sourceTree = "<group>"; };
 		2570245F1E630D2D001CB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2570246B1E630EE1001CB5F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		2570246D1E630F32001CB5F3 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2570246B1E630EE1001CB5F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = xbb/Localizable.strings; sourceTree = "<group>"; };
+		2570246D1E630F32001CB5F3 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = xbb/InfoPlist.strings; sourceTree = "<group>"; };
 		2570246F1E6320DA001CB5F3 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		257024701E6320DA001CB5F3 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		253EBB1E1E68595900524553 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				257024441E630D2D001CB5F3 /* Assets.xcassets */,
+				257024491E630D2D001CB5F3 /* Info.plist */,
+				2570246D1E630F32001CB5F3 /* InfoPlist.strings */,
+				2570246B1E630EE1001CB5F3 /* Localizable.strings */,
+				253EBB201E6859D400524553 /* xbb.db */,
+			);
+			name = res;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		253EBB1F1E68598D00524553 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				2570243B1E630D2D001CB5F3 /* FirstViewController.h */,
+				2570243C1E630D2D001CB5F3 /* FirstViewController.m */,
+				2570246F1E6320DA001CB5F3 /* MineViewController.h */,
+				257024701E6320DA001CB5F3 /* MineViewController.m */,
+				253EBB1B1E67108300524553 /* MyTabbarViewController.h */,
+				253EBB1C1E67108300524553 /* MyTabbarViewController.m */,
+				2570243E1E630D2D001CB5F3 /* SecondViewController.h */,
+				2570243F1E630D2D001CB5F3 /* SecondViewController.m */,
+			);
+			name = vc;
+			sourceTree = "<group>";
+		};
 		257024291E630D2D001CB5F3 = {
 			isa = PBXGroup;
 			children = (
@@ -116,21 +146,11 @@
 			children = (
 				257024381E630D2D001CB5F3 /* AppDelegate.h */,
 				257024391E630D2D001CB5F3 /* AppDelegate.m */,
-				2570243B1E630D2D001CB5F3 /* FirstViewController.h */,
-				2570243C1E630D2D001CB5F3 /* FirstViewController.m */,
-				2570243E1E630D2D001CB5F3 /* SecondViewController.h */,
-				2570243F1E630D2D001CB5F3 /* SecondViewController.m */,
-				257024411E630D2D001CB5F3 /* Main.storyboard */,
-				257024441E630D2D001CB5F3 /* Assets.xcassets */,
 				257024461E630D2D001CB5F3 /* LaunchScreen.storyboard */,
-				257024491E630D2D001CB5F3 /* Info.plist */,
+				257024411E630D2D001CB5F3 /* Main.storyboard */,
+				253EBB1E1E68595900524553 /* res */,
 				257024351E630D2D001CB5F3 /* Supporting Files */,
-				2570246B1E630EE1001CB5F3 /* Localizable.strings */,
-				2570246D1E630F32001CB5F3 /* InfoPlist.strings */,
-				2570246F1E6320DA001CB5F3 /* MineViewController.h */,
-				257024701E6320DA001CB5F3 /* MineViewController.m */,
-				253EBB1B1E67108300524553 /* MyTabbarViewController.h */,
-				253EBB1C1E67108300524553 /* MyTabbarViewController.m */,
+				253EBB1F1E68598D00524553 /* vc */,
 			);
 			path = xbb;
 			sourceTree = "<group>";
@@ -274,6 +294,7 @@
 				2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */,
 				257024451E630D2D001CB5F3 /* Assets.xcassets in Resources */,
 				257024431E630D2D001CB5F3 /* Main.storyboard in Resources */,
+				253EBB211E6859D400524553 /* xbb.db in Resources */,
 				2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
