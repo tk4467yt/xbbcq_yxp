@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "DbHandler.h"
 
 @interface FirstViewController ()
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [DbHandler getAllHeros];
 }
 
 
