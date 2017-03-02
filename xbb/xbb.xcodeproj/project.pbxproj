@@ -18,6 +18,7 @@
 		253EBB391E685B6200524553 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB341E685B6200524553 /* FMResultSet.m */; };
 		253EBB3D1E685C0500524553 /* DbHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB3C1E685C0500524553 /* DbHandler.m */; };
 		253EBB401E685F6D00524553 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 253EBB3F1E685F6D00524553 /* libsqlite3.tbd */; };
+		253EBB441E685FE400524553 /* HeroInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB431E685FE400524553 /* HeroInfo.m */; };
 		257024371E630D2D001CB5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024361E630D2D001CB5F3 /* main.m */; };
 		2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024391E630D2D001CB5F3 /* AppDelegate.m */; };
 		2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570243C1E630D2D001CB5F3 /* FirstViewController.m */; };
@@ -70,6 +71,8 @@
 		253EBB3B1E685C0500524553 /* DbHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbHandler.h; sourceTree = "<group>"; };
 		253EBB3C1E685C0500524553 /* DbHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbHandler.m; sourceTree = "<group>"; };
 		253EBB3F1E685F6D00524553 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		253EBB421E685FE400524553 /* HeroInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroInfo.h; sourceTree = "<group>"; };
+		253EBB431E685FE400524553 /* HeroInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroInfo.m; sourceTree = "<group>"; };
 		257024321E630D2D001CB5F3 /* xbb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xbb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257024361E630D2D001CB5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		257024381E630D2D001CB5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -201,6 +204,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		253EBB411E685FCD00524553 /* data_structure */ = {
+			isa = PBXGroup;
+			children = (
+				253EBB421E685FE400524553 /* HeroInfo.h */,
+				253EBB431E685FE400524553 /* HeroInfo.m */,
+			);
+			name = data_structure;
+			sourceTree = "<group>";
+		};
 		257024291E630D2D001CB5F3 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		257024341E630D2D001CB5F3 /* xbb */ = {
 			isa = PBXGroup;
 			children = (
+				253EBB411E685FCD00524553 /* data_structure */,
 				253EBB3A1E685BCA00524553 /* utility */,
 				253EBB281E685B3300524553 /* 3rd_tools */,
 				253EBB221E685AE600524553 /* cell */,
@@ -416,6 +429,7 @@
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
 				253EBB381E685B6200524553 /* FMDatabaseQueue.m in Sources */,
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
+				253EBB441E685FE400524553 /* HeroInfo.m in Sources */,
 				253EBB3D1E685C0500524553 /* DbHandler.m in Sources */,
 				253EBB351E685B6200524553 /* FMDatabase.m in Sources */,
 			);
