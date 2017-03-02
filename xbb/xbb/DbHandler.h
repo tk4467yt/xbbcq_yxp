@@ -11,6 +11,7 @@
 @interface DbHandler : NSObject
 
 +(void)initLocalDatabase;
++(void)closeLocalDatabase;
 
 +(NSArray *)getAllHeros;
 

@@ -10,7 +10,7 @@
 #import "DbHandler.h"
 
 @interface FirstViewController ()
-
+@property (nonatomic,strong) NSArray *allHerosArr;
 @end
 
 @implementation FirstViewController
@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [DbHandler getAllHeros];
+    self.allHerosArr=[DbHandler getAllHeros];
 }
 
 
