@@ -7,8 +7,9 @@
 //
 
 #import "DbHandler.h"
-#import "FMDatabase.h"
+#import "FMDB.h"
 #import "HeroInfo.h"
+#import "HeroTypeDesc.h"
 
 static __strong FMDatabase *dbConfig;
 
@@ -50,7 +51,7 @@ static __strong FMDatabase *dbConfig;
 {
     NSMutableArray *arr2ret=[NSMutableArray new];
     
-    FMResultSet *s = [[DbHandler configDb] executeQuery:@"SELECT * FROM `hero_info`"];
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_info`"];
     while ([s next]) {
         HeroInfo *aHero=[HeroInfo new];
         
@@ -86,6 +87,23 @@ static __strong FMDatabase *dbConfig;
         aHero.initPhysicaBaoji=[s intForColumn:@"init_physics_baoji"];
         
         [arr2ret addObject:aHero];
+    }
+    
+    return arr2ret;
+}
+
++(NSArray *)getAllHeroTypeDesc
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `type_desc`"];
+    while ([s next]) {
+        HeroTypeDesc *aHeroTypeDesc=[HeroTypeDesc new];
+        
+        aHeroTypeDesc.typeId=[s stringForColumn:@"type_id"];
+        aHeroTypeDesc.typeDesc=[s stringForColumn:@"type_name"];
+        
+        [arr2ret addObject:aHeroTypeDesc];
     }
     
     return arr2ret;

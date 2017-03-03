@@ -31,6 +31,8 @@
 		2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246B1E630EE1001CB5F3 /* Localizable.strings */; };
 		2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246D1E630F32001CB5F3 /* InfoPlist.strings */; };
 		257024711E6320DA001CB5F3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024701E6320DA001CB5F3 /* MineViewController.m */; };
+		25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C9791E69A9670083C581 /* HeroTypeDesc.m */; };
+		25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C97C1E69ACE30083C581 /* MyUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		2570246D1E630F32001CB5F3 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = xbb/InfoPlist.strings; sourceTree = "<group>"; };
 		2570246F1E6320DA001CB5F3 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		257024701E6320DA001CB5F3 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		25C8C9781E69A9670083C581 /* HeroTypeDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroTypeDesc.h; sourceTree = "<group>"; };
+		25C8C9791E69A9670083C581 /* HeroTypeDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroTypeDesc.m; sourceTree = "<group>"; };
+		25C8C97B1E69ACE30083C581 /* MyUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtility.h; sourceTree = "<group>"; };
+		25C8C97C1E69ACE30083C581 /* MyUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,8 @@
 			children = (
 				253EBB3B1E685C0500524553 /* DbHandler.h */,
 				253EBB3C1E685C0500524553 /* DbHandler.m */,
+				25C8C97B1E69ACE30083C581 /* MyUtility.h */,
+				25C8C97C1E69ACE30083C581 /* MyUtility.m */,
 			);
 			name = utility;
 			sourceTree = "<group>";
@@ -209,6 +217,8 @@
 			children = (
 				253EBB421E685FE400524553 /* HeroInfo.h */,
 				253EBB431E685FE400524553 /* HeroInfo.m */,
+				25C8C9781E69A9670083C581 /* HeroTypeDesc.h */,
+				25C8C9791E69A9670083C581 /* HeroTypeDesc.m */,
 			);
 			name = data_structure;
 			sourceTree = "<group>";
@@ -418,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */,
 				253EBB261E685B0A00524553 /* HeroCollectionViewCell.m in Sources */,
 				253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */,
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
@@ -432,6 +443,7 @@
 				253EBB441E685FE400524553 /* HeroInfo.m in Sources */,
 				253EBB3D1E685C0500524553 /* DbHandler.m in Sources */,
 				253EBB351E685B6200524553 /* FMDatabase.m in Sources */,
+				25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

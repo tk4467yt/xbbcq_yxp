@@ -14,5 +14,6 @@
 +(void)closeLocalDatabase;
 
 +(NSArray *)getAllHeros;
++(NSArray *)getAllHeroTypeDesc;
 
 @end

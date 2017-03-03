@@ -55,6 +55,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="hero" image="tab_hero" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="cvHeros" destination="re0-DM-f3H" id="nmv-Kc-LIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

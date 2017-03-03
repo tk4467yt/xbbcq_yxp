@@ -10,6 +10,7 @@
 
 @interface FirstViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *cvHeros;
 
 @end
 
