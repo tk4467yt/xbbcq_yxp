@@ -10,6 +10,7 @@
 #import "DbHandler.h"
 #import "HeroCollectionViewCell.h"
 #import "HeroInfo.h"
+#import "HeroTypeDesc.h"
 #import "MyUtility.h"
 
 #define heroBriefReusableCellId @"hero_cv_cell_id"
@@ -19,6 +20,8 @@
 @property (nonatomic,strong) NSMutableArray *liLiangHerosArr;
 @property (nonatomic,strong) NSMutableArray *zhiLiHerosArr;
 @property (nonatomic,strong) NSMutableArray *minJieHerosArr;
+
+@property (nonatomic,strong) NSDictionary *heroTypeDescDict;
 
 @property (nonatomic,strong) NSMutableArray *heroType2showArr;
 @end
@@ -38,6 +41,7 @@
 -(void)initHerosInfo
 {
     self.allHerosArr=[DbHandler getAllHeros];
+    self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
     
     self.liLiangHerosArr=[NSMutableArray new];
     self.zhiLiHerosArr=[NSMutableArray new];
@@ -94,6 +98,10 @@
     
     heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
     heroCell.lblName.text=heroInfo2use.heroName;
+    
+    HeroTypeDesc *typeDesc=self.self.heroTypeDescDict[heroInfo2use.heroType];
+    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
+    
     return heroCell;
 }
 

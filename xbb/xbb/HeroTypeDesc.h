@@ -11,4 +11,6 @@
 @interface HeroTypeDesc : NSObject
 @property (nonatomic,copy) NSString *typeId;
 @property (nonatomic,copy) NSString *typeDesc;
+@property (nonatomic,copy) NSString *typeThumb;
+@property (nonatomic,copy) NSString *typeThumbS;
 @end

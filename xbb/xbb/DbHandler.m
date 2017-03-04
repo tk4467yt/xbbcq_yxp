@@ -92,9 +92,9 @@ static __strong FMDatabase *dbConfig;
     return arr2ret;
 }
 
-+(NSArray *)getAllHeroTypeDesc
++(NSDictionary *)getAllHeroTypeDescDict
 {
-    NSMutableArray *arr2ret=[NSMutableArray new];
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
     
     FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `type_desc`"];
     while ([s next]) {
@@ -102,10 +102,12 @@ static __strong FMDatabase *dbConfig;
         
         aHeroTypeDesc.typeId=[s stringForColumn:@"type_id"];
         aHeroTypeDesc.typeDesc=[s stringForColumn:@"type_name"];
+        aHeroTypeDesc.typeThumb=[s stringForColumn:@"thumb"];
+        aHeroTypeDesc.typeThumbS=[s stringForColumn:@"thumb_s"];
         
-        [arr2ret addObject:aHeroTypeDesc];
+        [dict2ret setObject:aHeroTypeDesc forKey:aHeroTypeDesc.typeId];
     }
     
-    return arr2ret;
+    return dict2ret;
 }
 @end
