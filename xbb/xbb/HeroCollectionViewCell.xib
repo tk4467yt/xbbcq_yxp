@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,14 +20,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-ft-487" userLabel="ivThumb">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="108"/>
+                        <rect key="frame" x="26" y="0.0" width="108" height="108"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="height" multiplier="1:1" id="kxJ-P3-Mzr"/>
+                        </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-bZ-p9X" userLabel="ivMask">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="108"/>
+                        <rect key="frame" x="26" y="0.0" width="108" height="108"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-YA-lHQ" userLabel="ivType">
-                        <rect key="frame" x="112" y="75.5" width="48" height="32.5"/>
+                        <rect key="frame" x="101.5" y="75.5" width="32.5" height="32.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l69-cV-gOH" userLabel="lblName">
                         <rect key="frame" x="0.0" y="108" width="160" height="20"/>
@@ -47,12 +51,11 @@
                 <constraint firstItem="OdP-ft-487" firstAttribute="bottom" secondItem="cDX-YA-lHQ" secondAttribute="bottom" id="986-v2-1pv"/>
                 <constraint firstItem="cDX-YA-lHQ" firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="width" multiplier="0.3" id="Aaw-0v-Nwe"/>
                 <constraint firstAttribute="trailing" secondItem="l69-cV-gOH" secondAttribute="trailing" id="DyS-q3-kcZ"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="P1y-kK-Sfx"/>
                 <constraint firstItem="OdP-ft-487" firstAttribute="trailing" secondItem="cDX-YA-lHQ" secondAttribute="trailing" id="UcZ-gy-ZBf"/>
                 <constraint firstItem="7hm-bZ-p9X" firstAttribute="top" secondItem="OdP-ft-487" secondAttribute="top" id="aU9-Up-bbf"/>
                 <constraint firstItem="7hm-bZ-p9X" firstAttribute="bottom" secondItem="OdP-ft-487" secondAttribute="bottom" id="bbX-O8-bcG"/>
-                <constraint firstAttribute="trailing" secondItem="OdP-ft-487" secondAttribute="trailing" id="cbl-e5-ErO"/>
                 <constraint firstAttribute="bottom" secondItem="l69-cV-gOH" secondAttribute="bottom" id="jcu-sP-hxf"/>
+                <constraint firstItem="OdP-ft-487" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lgk-JP-0K5"/>
                 <constraint firstItem="cDX-YA-lHQ" firstAttribute="height" secondItem="OdP-ft-487" secondAttribute="height" multiplier="0.3" id="sLx-b8-Fgk"/>
                 <constraint firstItem="l69-cV-gOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yLS-9z-SYY"/>
             </constraints>

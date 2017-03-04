@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *cvEquips;
 
 @end
 
