@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "DbHandler.h"
 #import "HeroCollectionViewCell.h"
+#import "HeroHeaderReusableView.h"
 #import "HeroInfo.h"
 #import "HeroTypeDesc.h"
 #import "MyUtility.h"
@@ -110,6 +111,36 @@
     return self.heroType2showArr.count;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableView2ret=nil;
+    
+    if ([UICollectionElementKindSectionHeader isEqualToString:kind]) {
+        HeroHeaderReusableView *headerView=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                              withReuseIdentifier:@"hero_reusable_header_cell"
+                                                                                     forIndexPath:indexPath];
+        
+        NSString *typeId=self.heroType2showArr[indexPath.section];
+        NSString *title2set=@"";
+        UIColor *color2set=[UIColor clearColor];
+        if ([typeId isEqualToString:[MyUtility heroTypeLiliangId]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_liliang_hero", @""),(int)self.liLiangHerosArr.count];
+            color2set=[UIColor redColor];
+        } else if ([typeId isEqualToString:[MyUtility heroTypeZhiliId]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_zhili_hero", @""),(int)self.zhiLiHerosArr.count];
+            color2set=[UIColor blueColor];
+        } else if ([typeId isEqualToString:[MyUtility heroTypeMinjieId]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_minjie_hero", @""),(int)self.minJieHerosArr.count];
+            color2set=[UIColor greenColor];
+        }
+        headerView.lblTitle.text=title2set;
+        headerView.lblTitle.textColor=color2set;
+        
+        reusableView2ret=headerView;
+    }
+    
+    return reusableView2ret;
+}
 
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

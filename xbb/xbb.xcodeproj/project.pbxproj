@@ -33,6 +33,7 @@
 		257024711E6320DA001CB5F3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024701E6320DA001CB5F3 /* MineViewController.m */; };
 		25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C9791E69A9670083C581 /* HeroTypeDesc.m */; };
 		25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C97C1E69ACE30083C581 /* MyUtility.m */; };
+		25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		25C8C9791E69A9670083C581 /* HeroTypeDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroTypeDesc.m; sourceTree = "<group>"; };
 		25C8C97B1E69ACE30083C581 /* MyUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtility.h; sourceTree = "<group>"; };
 		25C8C97C1E69ACE30083C581 /* MyUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtility.m; sourceTree = "<group>"; };
+		25DD749E1E6A637C0000EB46 /* HeroHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroHeaderReusableView.h; sourceTree = "<group>"; };
+		25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroHeaderReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				253EBB231E685B0A00524553 /* HeroCollectionViewCell.h */,
 				253EBB241E685B0A00524553 /* HeroCollectionViewCell.m */,
 				253EBB251E685B0A00524553 /* HeroCollectionViewCell.xib */,
+				25DD749E1E6A637C0000EB46 /* HeroHeaderReusableView.h */,
+				25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				253EBB361E685B6200524553 /* FMDatabaseAdditions.m in Sources */,
 				253EBB391E685B6200524553 /* FMResultSet.m in Sources */,
 				2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */,
+				25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */,
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
 				253EBB381E685B6200524553 /* FMDatabaseQueue.m in Sources */,
 				257024371E630D2D001CB5F3 /* main.m in Sources */,

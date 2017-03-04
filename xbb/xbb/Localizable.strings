@@ -8,3 +8,7 @@
 "title_hero"="英雄";
 "title_equip"="装备";
 "title_mine"="我的";
+
+"title_liliang_hero"="力量型英雄";
+"title_minjie_hero"="敏捷型英雄";
+"title_zhili_hero"="智力型英雄";

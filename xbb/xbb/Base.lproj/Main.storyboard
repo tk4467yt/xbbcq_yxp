@@ -26,13 +26,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Thq-IG-6ld">
                                     <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AiR-Lf-hYR">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -40,6 +40,27 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="hero_reusable_header_cell" id="0NV-s2-TOX" customClass="HeroHeaderReusableView">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBy-EK-2er" userLabel="lblTitle">
+                                            <rect key="frame" x="8" y="8" width="327" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XBy-EK-2er" secondAttribute="bottom" id="4x8-zs-Hr9"/>
+                                        <constraint firstItem="XBy-EK-2er" firstAttribute="top" secondItem="0NV-s2-TOX" secondAttribute="topMargin" id="MT7-gs-xfb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XBy-EK-2er" secondAttribute="trailing" id="T5A-LN-m7W"/>
+                                        <constraint firstItem="XBy-EK-2er" firstAttribute="leading" secondItem="0NV-s2-TOX" secondAttribute="leadingMargin" id="yoG-Ko-9v3"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="lblTitle" destination="XBy-EK-2er" id="aKP-be-dd1"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="2BG-YW-1e4"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="9Oy-Ec-2yL"/>
