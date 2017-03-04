@@ -51,7 +51,7 @@ static __strong FMDatabase *dbConfig;
 {
     NSMutableArray *arr2ret=[NSMutableArray new];
     
-    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_info`"];
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_info` ORDER BY `rowid`"];
     while ([s next]) {
         HeroInfo *aHero=[HeroInfo new];
         
