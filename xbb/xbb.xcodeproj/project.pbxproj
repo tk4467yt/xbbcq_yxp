@@ -34,6 +34,16 @@
 		25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C9791E69A9670083C581 /* HeroTypeDesc.m */; };
 		25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C97C1E69ACE30083C581 /* MyUtility.m */; };
 		25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */; };
+		25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A21E6ABF7A0000EB46 /* StarDesc.m */; };
+		25DD74A61E6AC0410000EB46 /* SpeciesDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A51E6AC0410000EB46 /* SpeciesDesc.m */; };
+		25DD74A91E6AC1070000EB46 /* RankDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A81E6AC1070000EB46 /* RankDesc.m */; };
+		25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74AB1E6AC1960000EB46 /* PosDesc.m */; };
+		25DD74AF1E6AC2510000EB46 /* HeroSpecies.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74AE1E6AC2510000EB46 /* HeroSpecies.m */; };
+		25DD74B21E6AC3840000EB46 /* HeroSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74B11E6AC3840000EB46 /* HeroSkill.m */; };
+		25DD74B51E6AC4CB0000EB46 /* HeroGrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74B41E6AC4CB0000EB46 /* HeroGrow.m */; };
+		25DD74B81E6AC5F40000EB46 /* HeroEquips.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74B71E6AC5F40000EB46 /* HeroEquips.m */; };
+		25DD74BB1E6AC6FB0000EB46 /* FragmentFromDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74BA1E6AC6FB0000EB46 /* FragmentFromDesc.m */; };
+		25DD74BE1E6AC7B20000EB46 /* EquipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +114,26 @@
 		25C8C97C1E69ACE30083C581 /* MyUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtility.m; sourceTree = "<group>"; };
 		25DD749E1E6A637C0000EB46 /* HeroHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroHeaderReusableView.h; sourceTree = "<group>"; };
 		25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroHeaderReusableView.m; sourceTree = "<group>"; };
+		25DD74A11E6ABF7A0000EB46 /* StarDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDesc.h; sourceTree = "<group>"; };
+		25DD74A21E6ABF7A0000EB46 /* StarDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarDesc.m; sourceTree = "<group>"; };
+		25DD74A41E6AC0410000EB46 /* SpeciesDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeciesDesc.h; sourceTree = "<group>"; };
+		25DD74A51E6AC0410000EB46 /* SpeciesDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeciesDesc.m; sourceTree = "<group>"; };
+		25DD74A71E6AC1070000EB46 /* RankDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankDesc.h; sourceTree = "<group>"; };
+		25DD74A81E6AC1070000EB46 /* RankDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankDesc.m; sourceTree = "<group>"; };
+		25DD74AA1E6AC1960000EB46 /* PosDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosDesc.h; sourceTree = "<group>"; };
+		25DD74AB1E6AC1960000EB46 /* PosDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosDesc.m; sourceTree = "<group>"; };
+		25DD74AD1E6AC2510000EB46 /* HeroSpecies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSpecies.h; sourceTree = "<group>"; };
+		25DD74AE1E6AC2510000EB46 /* HeroSpecies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSpecies.m; sourceTree = "<group>"; };
+		25DD74B01E6AC3840000EB46 /* HeroSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSkill.h; sourceTree = "<group>"; };
+		25DD74B11E6AC3840000EB46 /* HeroSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSkill.m; sourceTree = "<group>"; };
+		25DD74B31E6AC4CB0000EB46 /* HeroGrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroGrow.h; sourceTree = "<group>"; };
+		25DD74B41E6AC4CB0000EB46 /* HeroGrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroGrow.m; sourceTree = "<group>"; };
+		25DD74B61E6AC5F40000EB46 /* HeroEquips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroEquips.h; sourceTree = "<group>"; };
+		25DD74B71E6AC5F40000EB46 /* HeroEquips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroEquips.m; sourceTree = "<group>"; };
+		25DD74B91E6AC6FB0000EB46 /* FragmentFromDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FragmentFromDesc.h; sourceTree = "<group>"; };
+		25DD74BA1E6AC6FB0000EB46 /* FragmentFromDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FragmentFromDesc.m; sourceTree = "<group>"; };
+		25DD74BC1E6AC7B20000EB46 /* EquipInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipInfo.h; sourceTree = "<group>"; };
+		25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +254,26 @@
 				253EBB431E685FE400524553 /* HeroInfo.m */,
 				25C8C9781E69A9670083C581 /* HeroTypeDesc.h */,
 				25C8C9791E69A9670083C581 /* HeroTypeDesc.m */,
+				25DD74A11E6ABF7A0000EB46 /* StarDesc.h */,
+				25DD74A21E6ABF7A0000EB46 /* StarDesc.m */,
+				25DD74A41E6AC0410000EB46 /* SpeciesDesc.h */,
+				25DD74A51E6AC0410000EB46 /* SpeciesDesc.m */,
+				25DD74A71E6AC1070000EB46 /* RankDesc.h */,
+				25DD74A81E6AC1070000EB46 /* RankDesc.m */,
+				25DD74AA1E6AC1960000EB46 /* PosDesc.h */,
+				25DD74AB1E6AC1960000EB46 /* PosDesc.m */,
+				25DD74AD1E6AC2510000EB46 /* HeroSpecies.h */,
+				25DD74AE1E6AC2510000EB46 /* HeroSpecies.m */,
+				25DD74B01E6AC3840000EB46 /* HeroSkill.h */,
+				25DD74B11E6AC3840000EB46 /* HeroSkill.m */,
+				25DD74B31E6AC4CB0000EB46 /* HeroGrow.h */,
+				25DD74B41E6AC4CB0000EB46 /* HeroGrow.m */,
+				25DD74B61E6AC5F40000EB46 /* HeroEquips.h */,
+				25DD74B71E6AC5F40000EB46 /* HeroEquips.m */,
+				25DD74B91E6AC6FB0000EB46 /* FragmentFromDesc.h */,
+				25DD74BA1E6AC6FB0000EB46 /* FragmentFromDesc.m */,
+				25DD74BC1E6AC7B20000EB46 /* EquipInfo.h */,
+				25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */,
 			);
 			name = data_structure;
 			sourceTree = "<group>";
@@ -435,12 +485,22 @@
 			files = (
 				25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */,
 				253EBB261E685B0A00524553 /* HeroCollectionViewCell.m in Sources */,
+				25DD74B51E6AC4CB0000EB46 /* HeroGrow.m in Sources */,
+				25DD74B21E6AC3840000EB46 /* HeroSkill.m in Sources */,
+				25DD74AF1E6AC2510000EB46 /* HeroSpecies.m in Sources */,
 				253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */,
+				25DD74B81E6AC5F40000EB46 /* HeroEquips.m in Sources */,
+				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
+				25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */,
 				2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */,
+				25DD74A61E6AC0410000EB46 /* SpeciesDesc.m in Sources */,
 				257024711E6320DA001CB5F3 /* MineViewController.m in Sources */,
+				25DD74A91E6AC1070000EB46 /* RankDesc.m in Sources */,
 				253EBB361E685B6200524553 /* FMDatabaseAdditions.m in Sources */,
+				25DD74BE1E6AC7B20000EB46 /* EquipInfo.m in Sources */,
 				253EBB391E685B6200524553 /* FMResultSet.m in Sources */,
+				25DD74BB1E6AC6FB0000EB46 /* FragmentFromDesc.m in Sources */,
 				2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */,
 				25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */,
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,

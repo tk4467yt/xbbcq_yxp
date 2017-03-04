@@ -10,6 +10,15 @@
 #import "FMDB.h"
 #import "HeroInfo.h"
 #import "HeroTypeDesc.h"
+#import "StarDesc.h"
+#import "SpeciesDesc.h"
+#import "RankDesc.h"
+#import "PosDesc.h"
+#import "HeroSpecies.h"
+#import "HeroSkill.h"
+#import "HeroGrow.h"
+#import "HeroEquips.h"
+#import "FragmentFromDesc.h"
 
 static __strong FMDatabase *dbConfig;
 
@@ -106,6 +115,171 @@ static __strong FMDatabase *dbConfig;
         aHeroTypeDesc.typeThumbS=[s stringForColumn:@"thumb_s"];
         
         [dict2ret setObject:aHeroTypeDesc forKey:aHeroTypeDesc.typeId];
+    }
+    
+    return dict2ret;
+}
+
++(NSArray *)getAllStarDesc
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `star_desc` ORDER BY `star_count`"];
+    while ([s next]) {
+        StarDesc *aStarDesc=[StarDesc new];
+        
+        aStarDesc.starCount=[s intForColumn:@"star_count"];
+        aStarDesc.starDesc=[s stringForColumn:@"star_desc"];
+        
+        [arr2ret addObject:aStarDesc];
+    }
+    
+    return arr2ret;
+}
+
++(NSDictionary *)getAllSpeciesDescDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `species_desc`"];
+    while ([s next]) {
+        SpeciesDesc *aSpeciesDesc=[SpeciesDesc new];
+        
+        aSpeciesDesc.speciesId=[s stringForColumn:@"species_id"];
+        aSpeciesDesc.speciesDesc=[s stringForColumn:@"species_desc"];
+        
+        [dict2ret setObject:aSpeciesDesc forKey:aSpeciesDesc.speciesId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllRankDescDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `rank_desc`"];
+    while ([s next]) {
+        RankDesc *aRankDesc=[RankDesc new];
+        
+        aRankDesc.rankId=[s stringForColumn:@"rank_id"];
+        aRankDesc.rankDesc=[s stringForColumn:@"rank_name"];
+        
+        [dict2ret setObject:aRankDesc forKey:aRankDesc.rankId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllPosDescDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `pos_desc`"];
+    while ([s next]) {
+        PosDesc *aPosDesc=[PosDesc new];
+        
+        aPosDesc.posId=[s stringForColumn:@"pos_id"];
+        aPosDesc.posDesc=[s stringForColumn:@"pos_desc"];
+        
+        [dict2ret setObject:aPosDesc forKey:aPosDesc.posId];
+    }
+    
+    return dict2ret;
+}
+
++(NSArray *)getAllHeroSpecies
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_species`"];
+    while ([s next]) {
+        HeroSpecies *aHeroSpecies=[HeroSpecies new];
+        
+        aHeroSpecies.heroId=[s stringForColumn:@"hero_id"];
+        aHeroSpecies.speciesId=[s stringForColumn:@"species_id"];
+        
+        [arr2ret addObject:aHeroSpecies];
+    }
+    
+    return arr2ret;
+}
+
++(NSArray *)getAllHeroSkills
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_skill`"];
+    while ([s next]) {
+        HeroSkill *aHeroSkill=[HeroSkill new];
+        
+        aHeroSkill.heroId=[s stringForColumn:@"hero_id"];
+        aHeroSkill.skillId=[s stringForColumn:@"skill_id"];
+        aHeroSkill.skillName=[s stringForColumn:@"skill_name"];
+        aHeroSkill.skillDesc=[s stringForColumn:@"skill_desc"];
+        aHeroSkill.skillThumb=[s stringForColumn:@"skill_thumb"];
+        
+        [arr2ret addObject:aHeroSkill];
+    }
+    
+    return arr2ret;
+}
+
++(NSArray *)getAllHeroGrow
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_grow`"];
+    while ([s next]) {
+        HeroGrow *aHeroGrow=[HeroGrow new];
+        
+        aHeroGrow.heroId=[s stringForColumn:@"hero_id"];
+        aHeroGrow.starCount=[s intForColumn:@"star_count"];
+        aHeroGrow.liliang=[s doubleForColumn:@"li_liang"];
+        aHeroGrow.zhili=[s doubleForColumn:@"zhi_li"];
+        aHeroGrow.minjie=[s doubleForColumn:@"min_jie"];
+        
+        [arr2ret addObject:aHeroGrow];
+    }
+    
+    return arr2ret;
+}
+
++(NSArray *)getAllHeroEquips
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_equips`"];
+    while ([s next]) {
+        HeroEquips *aHeroEquip=[HeroEquips new];
+        
+        aHeroEquip.heroId=[s stringForColumn:@"hero_id"];
+        aHeroEquip.heroRank=[s stringForColumn:@"hero_rank"];
+        aHeroEquip.equip1=[s stringForColumn:@"equip_1"];
+        aHeroEquip.equip2=[s stringForColumn:@"equip_2"];
+        aHeroEquip.equip3=[s stringForColumn:@"equip_3"];
+        aHeroEquip.equip4=[s stringForColumn:@"equip_4"];
+        aHeroEquip.equip5=[s stringForColumn:@"equip_5"];
+        aHeroEquip.equip6=[s stringForColumn:@"equip_6"];
+        
+        [arr2ret addObject:aHeroEquip];
+    }
+    
+    return arr2ret;
+}
+
++(NSDictionary *)getAllFragmentFromDescDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `fragment_from_desc`"];
+    while ([s next]) {
+        FragmentFromDesc *aFragmentFromDesc=[FragmentFromDesc new];
+        
+        aFragmentFromDesc.fromId=[s stringForColumn:@"from_id"];
+        aFragmentFromDesc.fromDesc=[s stringForColumn:@"from_desc"];
+        
+        [dict2ret setObject:aFragmentFromDesc forKey:aFragmentFromDesc.fromId];
     }
     
     return dict2ret;

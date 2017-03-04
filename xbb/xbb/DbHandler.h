@@ -15,5 +15,13 @@
 
 +(NSArray *)getAllHeros;
 +(NSDictionary *)getAllHeroTypeDescDict;
-
++(NSArray *)getAllStarDesc;
++(NSDictionary *)getAllSpeciesDescDict;
++(NSDictionary *)getAllRankDescDict;
++(NSDictionary *)getAllPosDescDict;
++(NSArray *)getAllHeroSpecies;
++(NSArray *)getAllHeroSkills;
++(NSArray *)getAllHeroGrow;
++(NSArray *)getAllHeroEquips;
++(NSDictionary *)getAllFragmentFromDescDict;
 @end
