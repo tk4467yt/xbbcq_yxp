@@ -21,4 +21,9 @@
 {
     return @"min_jie";
 }
+
++(NSString *)rankIdForWhite
+{
+    return @"rank_bai";
+}
 @end

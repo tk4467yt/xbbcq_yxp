@@ -21,6 +21,10 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-ft-487" userLabel="ivThumb">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="108"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-bZ-p9X" userLabel="ivMask">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="108"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-YA-lHQ" userLabel="ivType">
                         <rect key="frame" x="112" y="75.5" width="48" height="32.5"/>
                     </imageView>
@@ -38,11 +42,15 @@
             <constraints>
                 <constraint firstItem="l69-cV-gOH" firstAttribute="top" secondItem="OdP-ft-487" secondAttribute="bottom" id="0Mg-xt-hlq"/>
                 <constraint firstItem="OdP-ft-487" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Fq-Pg-HGe"/>
+                <constraint firstItem="7hm-bZ-p9X" firstAttribute="leading" secondItem="OdP-ft-487" secondAttribute="leading" id="7Sp-ZR-KEB"/>
+                <constraint firstItem="7hm-bZ-p9X" firstAttribute="trailing" secondItem="OdP-ft-487" secondAttribute="trailing" id="8fb-Ua-9ed"/>
                 <constraint firstItem="OdP-ft-487" firstAttribute="bottom" secondItem="cDX-YA-lHQ" secondAttribute="bottom" id="986-v2-1pv"/>
                 <constraint firstItem="cDX-YA-lHQ" firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="width" multiplier="0.3" id="Aaw-0v-Nwe"/>
                 <constraint firstAttribute="trailing" secondItem="l69-cV-gOH" secondAttribute="trailing" id="DyS-q3-kcZ"/>
                 <constraint firstItem="OdP-ft-487" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="P1y-kK-Sfx"/>
                 <constraint firstItem="OdP-ft-487" firstAttribute="trailing" secondItem="cDX-YA-lHQ" secondAttribute="trailing" id="UcZ-gy-ZBf"/>
+                <constraint firstItem="7hm-bZ-p9X" firstAttribute="top" secondItem="OdP-ft-487" secondAttribute="top" id="aU9-Up-bbf"/>
+                <constraint firstItem="7hm-bZ-p9X" firstAttribute="bottom" secondItem="OdP-ft-487" secondAttribute="bottom" id="bbX-O8-bcG"/>
                 <constraint firstAttribute="trailing" secondItem="OdP-ft-487" secondAttribute="trailing" id="cbl-e5-ErO"/>
                 <constraint firstAttribute="bottom" secondItem="l69-cV-gOH" secondAttribute="bottom" id="jcu-sP-hxf"/>
                 <constraint firstItem="cDX-YA-lHQ" firstAttribute="height" secondItem="OdP-ft-487" secondAttribute="height" multiplier="0.3" id="sLx-b8-Fgk"/>
@@ -50,6 +58,7 @@
             </constraints>
             <size key="customSize" width="160" height="128"/>
             <connections>
+                <outlet property="ivMask" destination="7hm-bZ-p9X" id="tSD-cZ-j9p"/>
                 <outlet property="ivThumb" destination="OdP-ft-487" id="4FJ-yd-8qx"/>
                 <outlet property="ivType" destination="cDX-YA-lHQ" id="2oK-hw-xqi"/>
                 <outlet property="lblName" destination="l69-cV-gOH" id="U5B-s3-B5J"/>

@@ -13,6 +13,7 @@
 #import "HeroInfo.h"
 #import "HeroTypeDesc.h"
 #import "MyUtility.h"
+#import "RankDesc.h"
 
 #define heroBriefReusableCellId @"hero_cv_cell_id"
 
@@ -23,6 +24,7 @@
 @property (nonatomic,strong) NSMutableArray *minJieHerosArr;
 
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
+@property (nonatomic,strong) NSDictionary *rankDescDict;
 
 @property (nonatomic,strong) NSMutableArray *heroType2showArr;
 @end
@@ -43,6 +45,7 @@
 {
     self.allHerosArr=[DbHandler getAllHeros];
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
+    self.rankDescDict=[DbHandler getAllRankDescDict];
     
     self.liLiangHerosArr=[NSMutableArray new];
     self.zhiLiHerosArr=[NSMutableArray new];
@@ -98,6 +101,11 @@
     }
     
     heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+    
+    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForWhite]];
+    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
+    heroCell.ivMask.image=[maskImg resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) resizingMode:UIImageResizingModeStretch];
+    
     heroCell.lblName.text=heroInfo2use.heroName;
     
     HeroTypeDesc *typeDesc=self.self.heroTypeDescDict[heroInfo2use.heroType];

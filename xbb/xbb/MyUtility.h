@@ -12,4 +12,6 @@
 +(NSString *)heroTypeLiliangId;
 +(NSString *)heroTypeZhiliId;
 +(NSString *)heroTypeMinjieId;
+
++(NSString *)rankIdForWhite;
 @end
