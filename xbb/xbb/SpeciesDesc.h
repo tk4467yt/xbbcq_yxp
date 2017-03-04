@@ -11,4 +11,5 @@
 @interface SpeciesDesc : NSObject
 @property (nonatomic,copy) NSString *speciesId;
 @property (nonatomic,copy) NSString *speciesDesc;
+@property (nonatomic,copy) NSString *speciesThumb;
 @end

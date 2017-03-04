@@ -150,6 +150,7 @@ static __strong FMDatabase *dbConfig;
         
         aSpeciesDesc.speciesId=[s stringForColumn:@"species_id"];
         aSpeciesDesc.speciesDesc=[s stringForColumn:@"species_desc"];
+        aSpeciesDesc.speciesThumb=[s stringForColumn:@"species_thumb"];
         
         [dict2ret setObject:aSpeciesDesc forKey:aSpeciesDesc.speciesId];
     }
@@ -166,7 +167,11 @@ static __strong FMDatabase *dbConfig;
         RankDesc *aRankDesc=[RankDesc new];
         
         aRankDesc.rankId=[s stringForColumn:@"rank_id"];
-        aRankDesc.rankDesc=[s stringForColumn:@"rank_name"];
+        aRankDesc.rankName=[s stringForColumn:@"rank_name"];
+        aRankDesc.artBgThumb=[s stringForColumn:@"art_bg_thumb"];
+        aRankDesc.equipFrameThumb=[s stringForColumn:@"equip_frame_thumb"];
+        aRankDesc.fragmentFrameThumb=[s stringForColumn:@"fragment_frame_thumb"];
+        aRankDesc.heroIconFrameThumb=[s stringForColumn:@"hero_icon_frame_thumb"];
         
         [dict2ret setObject:aRankDesc forKey:aRankDesc.rankId];
     }
