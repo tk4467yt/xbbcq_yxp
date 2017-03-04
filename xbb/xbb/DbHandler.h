@@ -24,4 +24,7 @@
 +(NSArray *)getAllHeroGrow;
 +(NSArray *)getAllHeroEquips;
 +(NSDictionary *)getAllFragmentFromDescDict;
++(NSArray *)getAllEquipInfo;
++(NSDictionary *)getAllEquipComposeInfo;
++(NSDictionary *)getAllEquipAttrDesc;
 @end

@@ -19,6 +19,9 @@
 #import "HeroGrow.h"
 #import "HeroEquips.h"
 #import "FragmentFromDesc.h"
+#import "EquipInfo.h"
+#import "EquipComposeInfo.h"
+#import "EquipAttrDesc.h"
 
 static __strong FMDatabase *dbConfig;
 
@@ -280,6 +283,91 @@ static __strong FMDatabase *dbConfig;
         aFragmentFromDesc.fromDesc=[s stringForColumn:@"from_desc"];
         
         [dict2ret setObject:aFragmentFromDesc forKey:aFragmentFromDesc.fromId];
+    }
+    
+    return dict2ret;
+}
+
++(NSArray *)getAllEquipInfo
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_info`"];
+    while ([s next]) {
+        EquipInfo *aEquipInfo=[EquipInfo new];
+        
+        aEquipInfo.equipId=[s stringForColumn:@"equip_id"];
+        aEquipInfo.equipName=[s stringForColumn:@"equip_name"];
+        
+        aEquipInfo.levelRequire=[s intForColumn:@"level_require"];
+        aEquipInfo.isCompose=[s boolForColumn:@"is_compose"];
+        
+        aEquipInfo.equipRank=[s stringForColumn:@"equip_rank"];
+        aEquipInfo.thumbFile=[s stringForColumn:@"thumb_file"];
+        
+        aEquipInfo.liliang=[s intForColumn:@"li_liang"];
+        aEquipInfo.minjie=[s intForColumn:@"min_jie"];
+        aEquipInfo.zhili=[s intForColumn:@"zhi_li"];
+        aEquipInfo.healthMax=[s intForColumn:@"health_max"];
+        aEquipInfo.healthRecover=[s intForColumn:@"health_recover"];
+        aEquipInfo.energyRecover=[s intForColumn:@"energy_recover"];
+        aEquipInfo.physicsGongji=[s intForColumn:@"physics_gongji"];
+        aEquipInfo.physicsHujia=[s intForColumn:@"physics_hujia"];
+        aEquipInfo.physicsBaoji=[s intForColumn:@"physics_baoji"];
+        aEquipInfo.chuantouPhysicsHujia=[s intForColumn:@"chuantou_physics_hujia"];
+        aEquipInfo.magicQiangdu=[s intForColumn:@"magic_qiangdu"];
+        aEquipInfo.magicBaoji=[s intForColumn:@"magic_baoji"];
+        aEquipInfo.magicKangxing=[s intForColumn:@"magic_kangxing"];
+        aEquipInfo.hulueMagicKangxing=[s intForColumn:@"hulue_magic_kangxing"];
+        aEquipInfo.xixue=[s intForColumn:@"xixue"];
+        aEquipInfo.zhiliaoXiaoguo=[s intForColumn:@"zhiliao_xiaoguo"];
+        aEquipInfo.shangbi=[s intForColumn:@"shangbi"];
+        aEquipInfo.mingzhong=[s intForColumn:@"mingzhong"];
+        aEquipInfo.minusControlTime=[s intForColumn:@"minus_control_time"];
+        aEquipInfo.yingzhiDikang=[s intForColumn:@"yingzhi_dikang"];
+        aEquipInfo.chengmoDikang=[s intForColumn:@"chengmo_dikang"];
+        aEquipInfo.minusNengliangXiaohao=[s intForColumn:@"minus_nengliang_xiaohao"];
+        aEquipInfo.skillLevelAddon=[s intForColumn:@"skill_level_addon"];
+        
+        [arr2ret addObject:aEquipInfo];
+    }
+    
+    return arr2ret;
+}
+
++(NSDictionary *)getAllEquipComposeInfo
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_compose_info`"];
+    while ([s next]) {
+        EquipComposeInfo *aEquipComposeInfo=[EquipComposeInfo new];
+        
+        aEquipComposeInfo.equipId=[s stringForColumn:@"equip_id"];
+        aEquipComposeInfo.fragmentCount=[s intForColumn:@"fragment_count"];
+        aEquipComposeInfo.composeFrom1=[s stringForColumn:@"compose_from_1"];
+        aEquipComposeInfo.composeFrom2=[s stringForColumn:@"compose_from_2"];
+        aEquipComposeInfo.composeFrom3=[s stringForColumn:@"compose_from_3"];
+        aEquipComposeInfo.composeFrom4=[s stringForColumn:@"compose_from_4"];
+        
+        [dict2ret setObject:aEquipComposeInfo forKey:aEquipComposeInfo.equipId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllEquipAttrDesc
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_attr_desc`"];
+    while ([s next]) {
+        EquipAttrDesc *aEquipAttrDesc=[EquipAttrDesc new];
+        
+        aEquipAttrDesc.attrId=[s stringForColumn:@"attr_id"];
+        aEquipAttrDesc.attrDesc=[s stringForColumn:@"attr_desc"];
+        
+        [dict2ret setObject:aEquipAttrDesc forKey:aEquipAttrDesc.attrId];
     }
     
     return dict2ret;

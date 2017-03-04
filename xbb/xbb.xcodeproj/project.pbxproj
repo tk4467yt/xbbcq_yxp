@@ -44,6 +44,8 @@
 		25DD74B81E6AC5F40000EB46 /* HeroEquips.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74B71E6AC5F40000EB46 /* HeroEquips.m */; };
 		25DD74BB1E6AC6FB0000EB46 /* FragmentFromDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74BA1E6AC6FB0000EB46 /* FragmentFromDesc.m */; };
 		25DD74BE1E6AC7B20000EB46 /* EquipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */; };
+		25DD74C11E6AD39D0000EB46 /* EquipComposeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74C01E6AD39D0000EB46 /* EquipComposeInfo.m */; };
+		25DD74C41E6AD4CD0000EB46 /* EquipAttrDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,10 @@
 		25DD74BA1E6AC6FB0000EB46 /* FragmentFromDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FragmentFromDesc.m; sourceTree = "<group>"; };
 		25DD74BC1E6AC7B20000EB46 /* EquipInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipInfo.h; sourceTree = "<group>"; };
 		25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipInfo.m; sourceTree = "<group>"; };
+		25DD74BF1E6AD39D0000EB46 /* EquipComposeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeInfo.h; sourceTree = "<group>"; };
+		25DD74C01E6AD39D0000EB46 /* EquipComposeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeInfo.m; sourceTree = "<group>"; };
+		25DD74C21E6AD4CD0000EB46 /* EquipAttrDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipAttrDesc.h; sourceTree = "<group>"; };
+		25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipAttrDesc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +280,10 @@
 				25DD74BA1E6AC6FB0000EB46 /* FragmentFromDesc.m */,
 				25DD74BC1E6AC7B20000EB46 /* EquipInfo.h */,
 				25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */,
+				25DD74BF1E6AD39D0000EB46 /* EquipComposeInfo.h */,
+				25DD74C01E6AD39D0000EB46 /* EquipComposeInfo.m */,
+				25DD74C21E6AD4CD0000EB46 /* EquipAttrDesc.h */,
+				25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */,
 			);
 			name = data_structure;
 			sourceTree = "<group>";
@@ -494,7 +504,9 @@
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
 				25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */,
 				2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */,
+				25DD74C11E6AD39D0000EB46 /* EquipComposeInfo.m in Sources */,
 				25DD74A61E6AC0410000EB46 /* SpeciesDesc.m in Sources */,
+				25DD74C41E6AD4CD0000EB46 /* EquipAttrDesc.m in Sources */,
 				257024711E6320DA001CB5F3 /* MineViewController.m in Sources */,
 				25DD74A91E6AC1070000EB46 /* RankDesc.m in Sources */,
 				253EBB361E685B6200524553 /* FMDatabaseAdditions.m in Sources */,
