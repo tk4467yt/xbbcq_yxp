@@ -102,9 +102,9 @@
     
     heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
     
-    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForWhite]];
+    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
     UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
-    heroCell.ivMask.image=[maskImg resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) resizingMode:UIImageResizingModeStretch];
+    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     heroCell.lblName.text=heroInfo2use.heroName;
     

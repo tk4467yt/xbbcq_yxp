@@ -127,7 +127,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OBf-Zi-Rez">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equip_brief_info_cell_id" id="OBf-Zi-Rez" customClass="EquipBriefInfoCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="158" height="108"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -144,12 +144,12 @@
                                                     <rect key="frame" x="43" y="8" width="72" height="72"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPZ-0z-XGF" userLabel="lblName">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UPZ-0z-XGF" userLabel="lblName">
                                                     <rect key="frame" x="8" y="80" width="142" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Db5-pr-li0"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -167,6 +167,11 @@
                                             <constraint firstItem="UPZ-0z-XGF" firstAttribute="top" secondItem="8Ez-pA-DII" secondAttribute="bottom" id="eqE-nd-Xyg"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="UPZ-0z-XGF" secondAttribute="trailing" id="u9j-MB-W05"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="ivMask" destination="i6O-GV-o07" id="dHM-wk-hCQ"/>
+                                            <outlet property="ivThumb" destination="8Ez-pA-DII" id="Jzl-xx-WZ7"/>
+                                            <outlet property="lblName" destination="UPZ-0z-XGF" id="Zbz-rf-Yba"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
