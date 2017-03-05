@@ -20,17 +20,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-ft-487" userLabel="ivThumb">
-                        <rect key="frame" x="26" y="0.0" width="108" height="108"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="height" multiplier="1:1" id="kxJ-P3-Mzr"/>
-                        </constraints>
+                        <rect key="frame" x="33" y="7" width="94" height="94"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-bZ-p9X" userLabel="ivMask">
                         <rect key="frame" x="26" y="0.0" width="108" height="108"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="7hm-bZ-p9X" secondAttribute="height" multiplier="1:1" id="I9r-xL-71H"/>
+                        </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-YA-lHQ" userLabel="ivType">
-                        <rect key="frame" x="101.5" y="75.5" width="32.5" height="32.5"/>
+                        <rect key="frame" x="98.5" y="72.5" width="28.5" height="28.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l69-cV-gOH" userLabel="lblName">
                         <rect key="frame" x="0.0" y="108" width="160" height="20"/>
@@ -44,20 +44,20 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="l69-cV-gOH" firstAttribute="top" secondItem="OdP-ft-487" secondAttribute="bottom" id="0Mg-xt-hlq"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Fq-Pg-HGe"/>
-                <constraint firstItem="7hm-bZ-p9X" firstAttribute="leading" secondItem="OdP-ft-487" secondAttribute="leading" id="7Sp-ZR-KEB"/>
-                <constraint firstItem="7hm-bZ-p9X" firstAttribute="trailing" secondItem="OdP-ft-487" secondAttribute="trailing" id="8fb-Ua-9ed"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="bottom" secondItem="cDX-YA-lHQ" secondAttribute="bottom" id="986-v2-1pv"/>
-                <constraint firstItem="cDX-YA-lHQ" firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="width" multiplier="0.3" id="Aaw-0v-Nwe"/>
-                <constraint firstAttribute="trailing" secondItem="l69-cV-gOH" secondAttribute="trailing" id="DyS-q3-kcZ"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="trailing" secondItem="cDX-YA-lHQ" secondAttribute="trailing" id="UcZ-gy-ZBf"/>
-                <constraint firstItem="7hm-bZ-p9X" firstAttribute="top" secondItem="OdP-ft-487" secondAttribute="top" id="aU9-Up-bbf"/>
-                <constraint firstItem="7hm-bZ-p9X" firstAttribute="bottom" secondItem="OdP-ft-487" secondAttribute="bottom" id="bbX-O8-bcG"/>
-                <constraint firstAttribute="bottom" secondItem="l69-cV-gOH" secondAttribute="bottom" id="jcu-sP-hxf"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lgk-JP-0K5"/>
-                <constraint firstItem="cDX-YA-lHQ" firstAttribute="height" secondItem="OdP-ft-487" secondAttribute="height" multiplier="0.3" id="sLx-b8-Fgk"/>
-                <constraint firstItem="l69-cV-gOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yLS-9z-SYY"/>
+                <constraint firstItem="7hm-bZ-p9X" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="0WJ-ND-neU"/>
+                <constraint firstItem="OdP-ft-487" firstAttribute="leading" secondItem="7hm-bZ-p9X" secondAttribute="leading" constant="7" id="1m6-zF-9L4"/>
+                <constraint firstItem="l69-cV-gOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6la-EF-ztt"/>
+                <constraint firstItem="cDX-YA-lHQ" firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="width" multiplier="0.3" id="E8f-d6-D7l"/>
+                <constraint firstItem="l69-cV-gOH" firstAttribute="top" secondItem="7hm-bZ-p9X" secondAttribute="bottom" id="GjB-pe-4eC"/>
+                <constraint firstAttribute="trailing" secondItem="l69-cV-gOH" secondAttribute="trailing" id="L0d-BZ-9hR"/>
+                <constraint firstItem="OdP-ft-487" firstAttribute="top" secondItem="7hm-bZ-p9X" secondAttribute="top" constant="7" id="Uvw-TN-hTi"/>
+                <constraint firstItem="cDX-YA-lHQ" firstAttribute="height" secondItem="OdP-ft-487" secondAttribute="height" multiplier="0.3" id="Xf9-TT-8Os"/>
+                <constraint firstItem="OdP-ft-487" firstAttribute="bottom" secondItem="7hm-bZ-p9X" secondAttribute="bottom" constant="-7" id="bzY-8Q-CXc"/>
+                <constraint firstItem="cDX-YA-lHQ" firstAttribute="trailing" secondItem="OdP-ft-487" secondAttribute="trailing" id="iQi-KQ-V8M"/>
+                <constraint firstItem="OdP-ft-487" firstAttribute="trailing" secondItem="7hm-bZ-p9X" secondAttribute="trailing" constant="-7" id="lo2-mw-ryY"/>
+                <constraint firstItem="7hm-bZ-p9X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pC1-6s-ptk"/>
+                <constraint firstAttribute="bottom" secondItem="l69-cV-gOH" secondAttribute="bottom" id="rOB-G4-MqQ"/>
+                <constraint firstItem="cDX-YA-lHQ" firstAttribute="bottom" secondItem="OdP-ft-487" secondAttribute="bottom" id="wKJ-Fb-5jO"/>
             </constraints>
             <size key="customSize" width="160" height="128"/>
             <connections>
