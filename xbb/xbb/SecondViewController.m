@@ -13,6 +13,8 @@
 #import "RankDesc.h"
 #import "EquipBriefInfoCollectionViewCell.h"
 
+#define equipBriefReusableCellId @"equip_brief_info_cell_id"
+
 @interface SecondViewController ()
 @property (nonatomic,strong) NSArray *allEquipsArr;
 @property (nonatomic,strong) NSMutableDictionary *equipRankDict;
@@ -28,6 +30,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title=NSLocalizedString(@"title_equip", @"");
+    
+    [self.cvEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:equipBriefReusableCellId];
     
     [self initEquipInfo];
 }

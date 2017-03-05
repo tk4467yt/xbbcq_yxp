@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,54 +125,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equip_brief_info_cell_id" id="OBf-Zi-Rez" customClass="EquipBriefInfoCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="108"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="108"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ez-pA-DII" userLabel="ivThumb">
-                                                    <rect key="frame" x="43" y="8" width="72" height="72"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="8Ez-pA-DII" secondAttribute="height" multiplier="1:1" id="uqk-x5-HK6"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i6O-GV-o07" userLabel="ivMask">
-                                                    <rect key="frame" x="43" y="8" width="72" height="72"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UPZ-0z-XGF" userLabel="lblName">
-                                                    <rect key="frame" x="8" y="80" width="142" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="Db5-pr-li0"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="i6O-GV-o07" firstAttribute="top" secondItem="8Ez-pA-DII" secondAttribute="top" id="2xb-JU-B3r"/>
-                                            <constraint firstItem="i6O-GV-o07" firstAttribute="trailing" secondItem="8Ez-pA-DII" secondAttribute="trailing" id="8Sg-uW-RVU"/>
-                                            <constraint firstItem="8Ez-pA-DII" firstAttribute="centerX" secondItem="OBf-Zi-Rez" secondAttribute="centerX" id="HE6-5S-3gt"/>
-                                            <constraint firstItem="8Ez-pA-DII" firstAttribute="top" secondItem="OBf-Zi-Rez" secondAttribute="topMargin" id="KR2-Aw-NZO"/>
-                                            <constraint firstItem="i6O-GV-o07" firstAttribute="leading" secondItem="8Ez-pA-DII" secondAttribute="leading" id="PJP-qU-kZS"/>
-                                            <constraint firstItem="UPZ-0z-XGF" firstAttribute="leading" secondItem="OBf-Zi-Rez" secondAttribute="leadingMargin" id="QrI-fx-X9d"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="UPZ-0z-XGF" secondAttribute="bottom" id="UCd-dA-Dr8"/>
-                                            <constraint firstItem="i6O-GV-o07" firstAttribute="bottom" secondItem="8Ez-pA-DII" secondAttribute="bottom" id="ZOU-01-ncF"/>
-                                            <constraint firstItem="UPZ-0z-XGF" firstAttribute="top" secondItem="8Ez-pA-DII" secondAttribute="bottom" id="eqE-nd-Xyg"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="UPZ-0z-XGF" secondAttribute="trailing" id="u9j-MB-W05"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="ivMask" destination="i6O-GV-o07" id="dHM-wk-hCQ"/>
-                                            <outlet property="ivThumb" destination="8Ez-pA-DII" id="Jzl-xx-WZ7"/>
-                                            <outlet property="lblName" destination="UPZ-0z-XGF" id="Zbz-rf-Yba"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="mjq-03-ZFB"/>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="eHj-FB-8rv"/>

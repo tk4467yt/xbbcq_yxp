@@ -46,7 +46,8 @@
 		25DD74BE1E6AC7B20000EB46 /* EquipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74BD1E6AC7B20000EB46 /* EquipInfo.m */; };
 		25DD74C11E6AD39D0000EB46 /* EquipComposeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74C01E6AD39D0000EB46 /* EquipComposeInfo.m */; };
 		25DD74C41E6AD4CD0000EB46 /* EquipAttrDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */; };
-		25DD74C71E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74C61E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.m */; };
+		25EDF2CB1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */; };
+		25EDF2CC1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,8 +142,9 @@
 		25DD74C01E6AD39D0000EB46 /* EquipComposeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeInfo.m; sourceTree = "<group>"; };
 		25DD74C21E6AD4CD0000EB46 /* EquipAttrDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipAttrDesc.h; sourceTree = "<group>"; };
 		25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipAttrDesc.m; sourceTree = "<group>"; };
-		25DD74C51E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipBriefInfoCollectionViewCell.h; sourceTree = "<group>"; };
-		25DD74C61E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipBriefInfoCollectionViewCell.m; sourceTree = "<group>"; };
+		25EDF2C81E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipBriefInfoCollectionViewCell.h; sourceTree = "<group>"; };
+		25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipBriefInfoCollectionViewCell.m; sourceTree = "<group>"; };
+		25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipBriefInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,8 +209,9 @@
 				253EBB251E685B0A00524553 /* HeroCollectionViewCell.xib */,
 				25DD749E1E6A637C0000EB46 /* HeroHeaderReusableView.h */,
 				25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */,
-				25DD74C51E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.h */,
-				25DD74C61E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.m */,
+				25EDF2C81E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.h */,
+				25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */,
+				25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */,
 				257024451E630D2D001CB5F3 /* Assets.xcassets in Resources */,
 				253EBB271E685B0A00524553 /* HeroCollectionViewCell.xib in Resources */,
+				25EDF2CC1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib in Resources */,
 				257024431E630D2D001CB5F3 /* Main.storyboard in Resources */,
 				253EBB211E6859D400524553 /* xbb.db in Resources */,
 				2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */,
@@ -518,7 +522,7 @@
 				25DD74BE1E6AC7B20000EB46 /* EquipInfo.m in Sources */,
 				253EBB391E685B6200524553 /* FMResultSet.m in Sources */,
 				25DD74BB1E6AC6FB0000EB46 /* FragmentFromDesc.m in Sources */,
-				25DD74C71E6B0E060000EB46 /* EquipBriefInfoCollectionViewCell.m in Sources */,
+				25EDF2CB1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m in Sources */,
 				2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */,
 				25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */,
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
