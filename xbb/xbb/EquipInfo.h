@@ -18,6 +18,8 @@
 @property (nonatomic,copy) NSString *equipRank;
 @property (nonatomic,copy) NSString *thumbFile;
 
+@property (nonatomic,assign) BOOL showInBook;
+
 @property (nonatomic,assign) NSInteger liliang;
 @property (nonatomic,assign) NSInteger minjie;
 @property (nonatomic,assign) NSInteger zhili;

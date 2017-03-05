@@ -56,8 +56,10 @@
     }
     
     for (EquipInfo *aEquipInfo in self.allEquipsArr) {
-        NSMutableArray *equipArr=self.equipRankDict[aEquipInfo.equipRank];
-        [equipArr addObject:aEquipInfo];
+        if (aEquipInfo.showInBook) {
+            NSMutableArray *equipArr=self.equipRankDict[aEquipInfo.equipRank];
+            [equipArr addObject:aEquipInfo];
+        }
     }
 }
 

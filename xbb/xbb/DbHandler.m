@@ -297,7 +297,7 @@ static __strong FMDatabase *dbConfig;
 {
     NSMutableArray *arr2ret=[NSMutableArray new];
     
-    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_info`"];
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_info` ORDER BY `level_require`"];
     while ([s next]) {
         EquipInfo *aEquipInfo=[EquipInfo new];
         
@@ -309,6 +309,8 @@ static __strong FMDatabase *dbConfig;
         
         aEquipInfo.equipRank=[s stringForColumn:@"equip_rank"];
         aEquipInfo.thumbFile=[s stringForColumn:@"thumb_file"];
+        
+        aEquipInfo.showInBook=[s boolForColumn:@"show_in_book"];
         
         aEquipInfo.liliang=[s intForColumn:@"li_liang"];
         aEquipInfo.minjie=[s intForColumn:@"min_jie"];
