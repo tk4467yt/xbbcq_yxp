@@ -7,7 +7,8 @@
 //
 
 #import "MyRootViewController.h"
+#import "HeroInfo.h"
 
 @interface HeroDetailViewController : MyRootViewController
-
+@property (nonatomic,weak) HeroInfo *hero2show;
 @end

@@ -14,6 +14,7 @@
 #import "HeroTypeDesc.h"
 #import "MyUtility.h"
 #import "RankDesc.h"
+#import "HeroDetailViewController.h"
 
 #define heroBriefReusableCellId @"hero_cv_cell_id"
 
@@ -37,7 +38,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title=NSLocalizedString(@"nav_title_hero", @"");
-    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(switchThumbShown)];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(switchThumbShown)];
+    [self updateRightNavItem];
     
     [self initHerosInfo];
     
@@ -48,6 +50,17 @@
 {
     self.showThumbS= !self.showThumbS;
     [self.cvHeros reloadData];
+    
+    [self updateRightNavItem];
+}
+
+-(void)updateRightNavItem
+{
+    if (self.showThumbS) {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_normal", @"");
+    } else {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_juexing", @"");
+    }
 }
 
 -(void)initHerosInfo
@@ -140,14 +153,14 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    HeroDetailViewController *detailVC=[HeroDetailViewController new];
+    detailVC.hero2show=[self getHeroInfoWithIndexPath:indexPath];
     
+    [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+-(HeroInfo *)getHeroInfoWithIndexPath:(NSIndexPath *)indexPath
 {
-    HeroCollectionViewCell *heroCell=(HeroCollectionViewCell *)cell;
-    heroCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
-    
     NSString *typeId=self.heroType2showArr[indexPath.section];
     
     HeroInfo *heroInfo2use=nil;
@@ -158,6 +171,16 @@
     } else if ([typeId isEqualToString:[MyUtility heroTypeMinjieId]]) {
         heroInfo2use = self.minJieHerosArr[indexPath.row];
     }
+    
+    return heroInfo2use;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    HeroCollectionViewCell *heroCell=(HeroCollectionViewCell *)cell;
+    heroCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
+    
+    HeroInfo *heroInfo2use=[self getHeroInfoWithIndexPath:indexPath];
     
     if (self.showThumbS && ![MyUtility isStringNilOrZeroLength:heroInfo2use.thumbFileS]) {
         heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFileS];
