@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title=NSLocalizedString(@"title_mine", @"");
+    self.navigationItem.title=NSLocalizedString(@"nav_title_mine", @"");
 }
 
 - (void)didReceiveMemoryWarning {

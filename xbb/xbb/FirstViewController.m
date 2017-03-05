@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title=NSLocalizedString(@"title_hero", @"");
+    self.navigationItem.title=NSLocalizedString(@"nav_title_hero", @"");
     
     [self initHerosInfo];
     

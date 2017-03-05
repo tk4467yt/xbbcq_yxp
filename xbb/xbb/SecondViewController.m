@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title=NSLocalizedString(@"title_equip", @"");
+    self.navigationItem.title=NSLocalizedString(@"nav_title_equip", @"");
     
     [self.cvEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:equipBriefReusableCellId];
     
