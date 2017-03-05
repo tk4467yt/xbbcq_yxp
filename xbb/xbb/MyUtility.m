@@ -89,6 +89,6 @@
 
 +(UIImage *)makeMaskImageFroFrame:(UIImage *)img2use
 {
-    return [img2use resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15) resizingMode:UIImageResizingModeStretch];
+    return [img2use resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10) resizingMode:UIImageResizingModeStretch];
 }
 @end

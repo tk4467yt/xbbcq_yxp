@@ -137,6 +137,7 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HeroCollectionViewCell *heroCell=(HeroCollectionViewCell *)cell;
+    heroCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
     
     NSString *typeId=self.heroType2showArr[indexPath.section];
     
