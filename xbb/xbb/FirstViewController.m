@@ -89,28 +89,6 @@
 {
     HeroCollectionViewCell *heroCell=[collectionView dequeueReusableCellWithReuseIdentifier:heroBriefReusableCellId forIndexPath:indexPath];
     
-    NSString *typeId=self.heroType2showArr[indexPath.section];
-    
-    HeroInfo *heroInfo2use=nil;
-    if ([typeId isEqualToString:[MyUtility heroTypeLiliangId]]) {
-        heroInfo2use = self.liLiangHerosArr[indexPath.row];
-    } else if ([typeId isEqualToString:[MyUtility heroTypeZhiliId]]) {
-        heroInfo2use = self.zhiLiHerosArr[indexPath.row];
-    } else if ([typeId isEqualToString:[MyUtility heroTypeMinjieId]]) {
-        heroInfo2use = self.minJieHerosArr[indexPath.row];
-    }
-    
-    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
-    
-    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
-    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
-    
-    heroCell.lblName.text=heroInfo2use.heroName;
-    
-    HeroTypeDesc *typeDesc=self.self.heroTypeDescDict[heroInfo2use.heroType];
-    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
-    
     return heroCell;
 }
 
@@ -154,6 +132,33 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    HeroCollectionViewCell *heroCell=(HeroCollectionViewCell *)cell;
+    
+    NSString *typeId=self.heroType2showArr[indexPath.section];
+    
+    HeroInfo *heroInfo2use=nil;
+    if ([typeId isEqualToString:[MyUtility heroTypeLiliangId]]) {
+        heroInfo2use = self.liLiangHerosArr[indexPath.row];
+    } else if ([typeId isEqualToString:[MyUtility heroTypeZhiliId]]) {
+        heroInfo2use = self.zhiLiHerosArr[indexPath.row];
+    } else if ([typeId isEqualToString:[MyUtility heroTypeMinjieId]]) {
+        heroInfo2use = self.minJieHerosArr[indexPath.row];
+    }
+    
+    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+    
+    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
+    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
+    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+    
+    heroCell.lblName.text=heroInfo2use.heroName;
+    
+    HeroTypeDesc *typeDesc=self.self.heroTypeDescDict[heroInfo2use.heroType];
+    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout

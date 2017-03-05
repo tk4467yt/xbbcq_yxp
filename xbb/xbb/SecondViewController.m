@@ -71,18 +71,9 @@
     
 }
 
-#pragma mark UICollectionViewDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *rankId=self.equipRank2showArr[section];
-    NSArray *equipsArr=self.equipRankDict[rankId];
-    return equipsArr.count;
-}
-
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //equip_brief_info_cell_id
-    EquipBriefInfoCollectionViewCell *equipBriefCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"equip_brief_info_cell_id" forIndexPath:indexPath];
+    EquipBriefInfoCollectionViewCell *equipBriefCell=(EquipBriefInfoCollectionViewCell *)cell;
     
     NSString *rankId=self.equipRank2showArr[indexPath.section];
     NSArray *equipsArr=self.equipRankDict[rankId];
@@ -95,6 +86,19 @@
     equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     equipBriefCell.lblName.text=equipInfo2use.equipName;
+}
+
+#pragma mark UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    NSString *rankId=self.equipRank2showArr[section];
+    NSArray *equipsArr=self.equipRankDict[rankId];
+    return equipsArr.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    EquipBriefInfoCollectionViewCell *equipBriefCell=[collectionView dequeueReusableCellWithReuseIdentifier:equipBriefReusableCellId forIndexPath:indexPath];
     
     return equipBriefCell;
 }
