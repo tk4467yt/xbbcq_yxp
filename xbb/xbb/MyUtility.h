@@ -32,4 +32,6 @@
 +(NSString *)rankIdForHong1;
 
 +(UIImage *)makeMaskImageFroFrame:(UIImage *)img2use;
+
++(BOOL)isStringNilOrZeroLength:(NSString *)str2check;
 @end

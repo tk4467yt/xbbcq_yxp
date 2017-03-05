@@ -27,6 +27,8 @@
 @property (nonatomic,strong) NSDictionary *rankDescDict;
 
 @property (nonatomic,strong) NSMutableArray *heroType2showArr;
+
+@property (nonatomic,assign) BOOL showThumbS;
 @end
 
 @implementation FirstViewController
@@ -35,10 +37,17 @@
     [super viewDidLoad];
     
     self.navigationItem.title=NSLocalizedString(@"nav_title_hero", @"");
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(switchThumbShown)];
     
     [self initHerosInfo];
     
     [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:heroBriefReusableCellId];
+}
+
+-(void)switchThumbShown
+{
+    self.showThumbS= !self.showThumbS;
+    [self.cvHeros reloadData];
 }
 
 -(void)initHerosInfo
@@ -150,7 +159,11 @@
         heroInfo2use = self.minJieHerosArr[indexPath.row];
     }
     
-    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+    if (self.showThumbS && ![MyUtility isStringNilOrZeroLength:heroInfo2use.thumbFileS]) {
+        heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFileS];
+    } else {
+        heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+    }
     
     RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
     UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];

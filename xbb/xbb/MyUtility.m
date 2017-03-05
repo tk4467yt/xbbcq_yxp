@@ -91,4 +91,9 @@
 {
     return [img2use resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10) resizingMode:UIImageResizingModeStretch];
 }
+
++(BOOL)isStringNilOrZeroLength:(NSString *)str2check
+{
+    return nil == str2check || [str2check isKindOfClass:[NSNull class]] || str2check.length == 0;
+}
 @end
