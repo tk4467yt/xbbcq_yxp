@@ -12,7 +12,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    self.ivThumb.layer.masksToBounds=true;
+    self.ivThumb.layer.cornerRadius=10;
 }
 
 @end
