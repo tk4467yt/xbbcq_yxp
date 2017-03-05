@@ -12,6 +12,7 @@
 #import "EquipInfo.h"
 #import "RankDesc.h"
 #import "EquipBriefInfoCollectionViewCell.h"
+#import "EquipHeaderCollectionReusableView.h"
 
 #define equipBriefReusableCellId @"equip_brief_info_cell_id"
 
@@ -106,6 +107,47 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return self.equipRank2showArr.count;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableView2ret=nil;
+    
+    if ([UICollectionElementKindSectionHeader isEqualToString:kind]) {
+        EquipHeaderCollectionReusableView *equipView=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                              withReuseIdentifier:@"equip_reusable_header_cell_id"
+                                                                                     forIndexPath:indexPath];
+        
+        NSString *rankId=self.equipRank2showArr[indexPath.section];
+        NSArray *equipsArr=self.equipRankDict[rankId];
+        NSString *title2set=@"";
+        UIColor *color2set=[UIColor clearColor];
+        if ([rankId isEqualToString:[MyUtility rankIdForBai]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_bai", @""),(int)equipsArr.count];
+            color2set=[UIColor lightGrayColor];
+        } else if ([rankId isEqualToString:[MyUtility rankIdForLv]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_lv", @""),(int)equipsArr.count];
+            color2set=[UIColor greenColor];
+        } else if ([rankId isEqualToString:[MyUtility rankIdForLan]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_lan", @""),(int)equipsArr.count];
+            color2set=[UIColor blueColor];
+        } else if ([rankId isEqualToString:[MyUtility rankIdForZi]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_zi", @""),(int)equipsArr.count];
+            color2set=[UIColor purpleColor];
+        } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_cheng", @""),(int)equipsArr.count];
+            color2set=[UIColor orangeColor];
+        } else if ([rankId isEqualToString:[MyUtility rankIdForHong]]) {
+            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_hong", @""),(int)equipsArr.count];
+            color2set=[UIColor redColor];
+        }
+        equipView.lblTitle.text=title2set;
+        equipView.lblTitle.textColor=color2set;
+        
+        reusableView2ret=equipView;
+    }
+    
+    return reusableView2ret;
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout

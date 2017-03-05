@@ -48,6 +48,7 @@
 		25DD74C41E6AD4CD0000EB46 /* EquipAttrDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */; };
 		25EDF2CB1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */; };
 		25EDF2CC1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */; };
+		25EDF2CF1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EDF2CE1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,8 @@
 		25EDF2C81E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipBriefInfoCollectionViewCell.h; sourceTree = "<group>"; };
 		25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipBriefInfoCollectionViewCell.m; sourceTree = "<group>"; };
 		25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipBriefInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		25EDF2CD1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		25EDF2CE1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				25EDF2C81E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.h */,
 				25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */,
 				25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */,
+				25EDF2CD1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.h */,
+				25EDF2CE1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
 				253EBB381E685B6200524553 /* FMDatabaseQueue.m in Sources */,
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
+				25EDF2CF1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m in Sources */,
 				253EBB441E685FE400524553 /* HeroInfo.m in Sources */,
 				253EBB3D1E685C0500524553 /* DbHandler.m in Sources */,
 				253EBB351E685B6200524553 /* FMDatabase.m in Sources */,

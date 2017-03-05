@@ -30,16 +30,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AiR-Lf-hYR">
-                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="hero_reusable_header_cell" id="0NV-s2-TOX" customClass="HeroHeaderReusableView">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,11 +112,32 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yv5-HD-RIU">
                                     <size key="itemSize" width="158" height="108"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equip_reusable_header_cell_id" id="Ape-9Q-lVg" customClass="EquipHeaderCollectionReusableView">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAD-zz-2cr">
+                                            <rect key="frame" x="8" y="8" width="327" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MAD-zz-2cr" firstAttribute="leading" secondItem="Ape-9Q-lVg" secondAttribute="leadingMargin" id="GuZ-Yg-Lzg"/>
+                                        <constraint firstItem="MAD-zz-2cr" firstAttribute="top" secondItem="Ape-9Q-lVg" secondAttribute="topMargin" id="VRv-gN-5fa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="MAD-zz-2cr" secondAttribute="bottom" id="WCa-5o-gv6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MAD-zz-2cr" secondAttribute="trailing" id="bIp-ro-08T"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="lblTitle" destination="MAD-zz-2cr" id="IuF-fR-fEX"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="mjq-03-ZFB"/>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="eHj-FB-8rv"/>
