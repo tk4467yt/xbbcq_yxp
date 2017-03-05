@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyRootViewController.h"
 
-@interface MineViewController : UIViewController
+@interface MineViewController : MyRootViewController
 
 @end

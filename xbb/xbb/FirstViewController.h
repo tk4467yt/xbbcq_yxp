@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyRootViewController.h"
 
-@interface FirstViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface FirstViewController : MyRootViewController <UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *cvHeros;
 
