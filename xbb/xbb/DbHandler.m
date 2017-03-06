@@ -213,6 +213,23 @@ static __strong FMDatabase *dbConfig;
     return arr2ret;
 }
 
++(NSArray *)getHeroSpeciesForHero:(NSString *)heroId
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_species` WHERE `hero_id` = ?",heroId];
+    while ([s next]) {
+        HeroSpecies *aHeroSpecies=[HeroSpecies new];
+        
+        aHeroSpecies.heroId=[s stringForColumn:@"hero_id"];
+        aHeroSpecies.speciesId=[s stringForColumn:@"species_id"];
+        
+        [arr2ret addObject:aHeroSpecies];
+    }
+    
+    return arr2ret;
+}
+
 +(NSArray *)getAllHeroSkills
 {
     NSMutableArray *arr2ret=[NSMutableArray new];

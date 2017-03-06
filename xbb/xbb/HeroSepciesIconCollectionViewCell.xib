@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hero_species_icon_cv_cell_id" id="gTV-IL-0wX" customClass="HeroSepciesIconCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nMS-mv-BRp" userLabel="ivSpeciesThumb">
+                        <rect key="frame" x="-1" y="0.0" width="62" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nMS-mv-BRp" secondAttribute="height" multiplier="1:1" id="Nht-KU-Oe0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y9a-ff-42M" userLabel="lblSpeciesName">
+                        <rect key="frame" x="8" y="62" width="44" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Buj-9j-1K8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="Y9a-ff-42M" secondAttribute="trailing" id="35L-NI-f35"/>
+                <constraint firstItem="Y9a-ff-42M" firstAttribute="top" secondItem="nMS-mv-BRp" secondAttribute="bottom" id="3QZ-jF-phb"/>
+                <constraint firstItem="Y9a-ff-42M" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="9LX-JP-nSG"/>
+                <constraint firstItem="nMS-mv-BRp" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="U1n-fZ-Afa"/>
+                <constraint firstAttribute="bottom" secondItem="Y9a-ff-42M" secondAttribute="bottom" id="hUc-Vy-q2j"/>
+                <constraint firstItem="nMS-mv-BRp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ixs-qD-ktJ"/>
+            </constraints>
+            <size key="customSize" width="77" height="102"/>
+            <connections>
+                <outlet property="ivSpeciesThumb" destination="nMS-mv-BRp" id="135-9l-yze"/>
+                <outlet property="lblSpeciesName" destination="Y9a-ff-42M" id="LxB-NL-Zzq"/>
+            </connections>
+            <point key="canvasLocation" x="148.5" y="37"/>
+        </collectionViewCell>
+    </objects>
+</document>

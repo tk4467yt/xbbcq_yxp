@@ -19,7 +19,10 @@
 +(NSDictionary *)getAllSpeciesDescDict;
 +(NSDictionary *)getAllRankDescDict;
 +(NSDictionary *)getAllPosDescDict;
+
 +(NSArray *)getAllHeroSpecies;
++(NSArray *)getHeroSpeciesForHero:(NSString *)heroId;
+
 +(NSArray *)getAllHeroSkills;
 +(NSArray *)getAllHeroGrow;
 +(NSArray *)getAllHeroEquips;

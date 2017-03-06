@@ -8,11 +8,13 @@
 
 #import "HeroDetailViewController.h"
 #import "HeroDetailTopTableViewCell.h"
+#import "HeroDetailSpeciesTableViewCell.h"
 #import "DbHandler.h"
 #import "HeroTypeDesc.h"
 #import "PosDesc.h"
 
 #define kHeroDetailTopCellId @"hero_detail_top_table_view_cell"
+#define kHeroDetailSpeciesCellId @"hero_detail_species_cell_id"
 
 @interface HeroDetailViewController ()
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
@@ -30,6 +32,7 @@
     self.heroPosDescDict=[DbHandler getAllPosDescDict];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailTopCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSpeciesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSpeciesCellId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,14 +45,22 @@
 {
     if (0 == indexPath.section) {
         return 120;
+    } else if (1 == indexPath.section) {
+        return 60;
     }
     return 0;
 }
+
+//- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return NO;
+//}
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (0 == section) {
+        return 1;
+    } else if (1 == section) {
         return 1;
     }
     return 0;
@@ -75,6 +86,11 @@
         topCell.lblDesc.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_desc", @""),self.hero2show.heroDesc];
         
         cell2ret=topCell;
+    } else if (1 == indexPath.section) {
+        HeroDetailSpeciesTableViewCell *speciesCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailSpeciesCellId];
+        speciesCell.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
+        
+        cell2ret=speciesCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -83,6 +99,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 @end
