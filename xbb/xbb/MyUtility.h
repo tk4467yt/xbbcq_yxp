@@ -35,4 +35,6 @@
 
 +(BOOL)isStringNilOrZeroLength:(NSString *)str2check;
 +(void)pushViewControllerFromNav:(UINavigationController *)navVC withTargetVC:(UIViewController *)targetVC animated:(BOOL)anim;
+
++(UIView *)getTopViewForNib:(UINib *)nib2use;
 @end

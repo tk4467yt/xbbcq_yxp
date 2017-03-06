@@ -9,6 +9,8 @@
 #import "MyRootViewController.h"
 #import "HeroInfo.h"
 
-@interface HeroDetailViewController : MyRootViewController
+@interface HeroDetailViewController : MyRootViewController <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,weak) HeroInfo *hero2show;
+@property (weak, nonatomic) IBOutlet UITableView *tbContent;
+
 @end

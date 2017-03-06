@@ -102,4 +102,9 @@
     targetVC.hidesBottomBarWhenPushed=true;
     [navVC pushViewController:targetVC animated:anim];
 }
+
++(UIView *)getTopViewForNib:(UINib *)nib2use
+{
+    return nil;
+}
 @end
