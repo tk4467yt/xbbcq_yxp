@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,6 +25,9 @@
                             <constraint firstAttribute="width" constant="80" id="Pxe-h2-0b2"/>
                             <constraint firstAttribute="height" constant="80" id="Wcg-yK-9kH"/>
                         </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXd-av-Lge" userLabel="ivType">
+                        <rect key="frame" x="64" y="64" width="24" height="24"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FWG-J7-VvT" userLabel="lblName">
                         <rect key="frame" x="98" y="8" width="214" height="18"/>
@@ -51,17 +55,21 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hXd-av-Lge" firstAttribute="height" secondItem="lft-Wj-i1V" secondAttribute="height" multiplier="0.3" id="053-zg-yxX"/>
                     <constraint firstItem="19N-I7-c7W" firstAttribute="trailing" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="8QV-jf-yK4"/>
                     <constraint firstItem="Ol6-GQ-8N6" firstAttribute="leading" secondItem="FWG-J7-VvT" secondAttribute="leading" id="8pn-Wz-k3c"/>
                     <constraint firstItem="lft-Wj-i1V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Czk-fH-SfN"/>
                     <constraint firstItem="9VA-Bf-3Vc" firstAttribute="trailing" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="IUy-s9-FaI"/>
                     <constraint firstItem="9VA-Bf-3Vc" firstAttribute="leading" secondItem="FWG-J7-VvT" secondAttribute="leading" id="Pqb-el-aGy"/>
                     <constraint firstItem="FWG-J7-VvT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="S3t-Br-wfl"/>
+                    <constraint firstItem="hXd-av-Lge" firstAttribute="trailing" secondItem="lft-Wj-i1V" secondAttribute="trailing" id="TxX-3N-nZz"/>
                     <constraint firstItem="FWG-J7-VvT" firstAttribute="leading" secondItem="lft-Wj-i1V" secondAttribute="trailing" constant="10" id="X8j-9V-ZJf"/>
                     <constraint firstItem="19N-I7-c7W" firstAttribute="leading" secondItem="FWG-J7-VvT" secondAttribute="leading" id="ZeW-Qb-i6s"/>
                     <constraint firstAttribute="trailingMargin" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="hwr-uu-WXB"/>
+                    <constraint firstItem="hXd-av-Lge" firstAttribute="bottom" secondItem="lft-Wj-i1V" secondAttribute="bottom" id="kPe-JZ-A1z"/>
                     <constraint firstItem="9VA-Bf-3Vc" firstAttribute="top" secondItem="19N-I7-c7W" secondAttribute="bottom" id="kVO-5h-cap"/>
                     <constraint firstItem="Ol6-GQ-8N6" firstAttribute="trailing" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="mhY-W4-xzb"/>
+                    <constraint firstItem="hXd-av-Lge" firstAttribute="width" secondItem="lft-Wj-i1V" secondAttribute="width" multiplier="0.3" id="nGE-Gc-pPL"/>
                     <constraint firstItem="19N-I7-c7W" firstAttribute="top" secondItem="FWG-J7-VvT" secondAttribute="bottom" id="suc-z4-1B5"/>
                     <constraint firstItem="lft-Wj-i1V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="y5Q-IT-nvg"/>
                     <constraint firstItem="Ol6-GQ-8N6" firstAttribute="top" secondItem="9VA-Bf-3Vc" secondAttribute="bottom" id="yij-ro-ztM"/>
@@ -69,6 +77,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="ivThumb" destination="lft-Wj-i1V" id="Wha-IY-YVk"/>
+                <outlet property="ivType" destination="hXd-av-Lge" id="L7a-Xr-prI"/>
                 <outlet property="lblDesc" destination="Ol6-GQ-8N6" id="tLZ-AS-hZa"/>
                 <outlet property="lblName" destination="FWG-J7-VvT" id="fVq-4q-GkD"/>
                 <outlet property="lblPos" destination="9VA-Bf-3Vc" id="cOk-vT-J88"/>

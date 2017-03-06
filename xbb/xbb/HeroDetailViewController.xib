@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S7x-VG-yvo" userLabel="tbContent">
-                    <rect key="frame" x="8" y="8" width="359" height="651"/>
+                    <rect key="frame" x="0.0" y="8" width="375" height="651"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jJW-8j-EAo"/>
@@ -33,8 +33,8 @@
             <constraints>
                 <constraint firstAttribute="bottomMargin" secondItem="S7x-VG-yvo" secondAttribute="bottom" id="9rm-sk-1Qe"/>
                 <constraint firstItem="S7x-VG-yvo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="DAi-xz-sVF"/>
-                <constraint firstItem="S7x-VG-yvo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="HWd-OQ-azm"/>
-                <constraint firstAttribute="trailingMargin" secondItem="S7x-VG-yvo" secondAttribute="trailing" id="le2-4d-894"/>
+                <constraint firstItem="S7x-VG-yvo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HWd-OQ-azm"/>
+                <constraint firstAttribute="trailing" secondItem="S7x-VG-yvo" secondAttribute="trailing" id="le2-4d-894"/>
             </constraints>
         </view>
     </objects>

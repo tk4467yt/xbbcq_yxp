@@ -67,6 +67,7 @@
         
         HeroTypeDesc *typeDesc2use=self.heroTypeDescDict[self.hero2show.heroType];
         topCell.lblType.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_type", @""),typeDesc2use.typeDesc];
+        topCell.ivType.image=[UIImage imageNamed:typeDesc2use.typeThumb];
         
         PosDesc *posDesc2use=self.heroPosDescDict[self.hero2show.heroPos];
         topCell.lblPos.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_pos", @""),posDesc2use.posDesc];
