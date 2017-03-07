@@ -19,6 +19,7 @@
 @interface HeroDetailViewController ()
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
 @property (nonatomic,strong) NSDictionary *heroPosDescDict;
+@property (nonatomic,strong) NSArray *heroSpeciesArr;
 @end
 
 @implementation HeroDetailViewController
@@ -30,6 +31,7 @@
     
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
     self.heroPosDescDict=[DbHandler getAllPosDescDict];
+    self.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailTopCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSpeciesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSpeciesCellId];
@@ -46,6 +48,9 @@
     if (0 == indexPath.section) {
         return 120;
     } else if (1 == indexPath.section) {
+        if (self.heroSpeciesArr.count <= 0) {
+            return 0;
+        }
         return 60;
     }
     return 0;
@@ -88,7 +93,7 @@
         cell2ret=topCell;
     } else if (1 == indexPath.section) {
         HeroDetailSpeciesTableViewCell *speciesCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailSpeciesCellId];
-        speciesCell.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
+        speciesCell.heroSpeciesArr=self.heroSpeciesArr;
         
         cell2ret=speciesCell;
     } else {
