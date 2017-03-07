@@ -9,12 +9,14 @@
 #import "HeroDetailViewController.h"
 #import "HeroDetailTopTableViewCell.h"
 #import "HeroDetailSpeciesTableViewCell.h"
+#import "HeroDetailStarInfoTableViewCell.h"
 #import "DbHandler.h"
 #import "HeroTypeDesc.h"
 #import "PosDesc.h"
 
 #define kHeroDetailTopCellId @"hero_detail_top_table_view_cell"
 #define kHeroDetailSpeciesCellId @"hero_detail_species_cell_id"
+#define kHeroDetailStarInfoCellId @"hero_detail_star_info_cell_id"
 
 @interface HeroDetailViewController ()
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
@@ -35,6 +37,7 @@
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailTopCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSpeciesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSpeciesCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailStarInfoTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailStarInfoCellId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +55,8 @@
             return 0;
         }
         return 60;
+    } else if (2 == indexPath.section) {
+        return 106;
     }
     return 0;
 }
@@ -66,6 +71,8 @@
     if (0 == section) {
         return 1;
     } else if (1 == section) {
+        return 1;
+    } else if (2 == section) {
         return 1;
     }
     return 0;
@@ -96,6 +103,13 @@
         speciesCell.heroSpeciesArr=self.heroSpeciesArr;
         
         cell2ret=speciesCell;
+    } else if (2 == indexPath.section) {
+        HeroDetailStarInfoTableViewCell *starInfoCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailStarInfoCellId];
+        starInfoCell.initStar=self.hero2show.initStar;
+        starInfoCell.curShownStarCount=self.hero2show.initStar;
+        starInfoCell.heroGrowArr=[DbHandler getHeroGrowForHero:self.hero2show.heroId];
+        
+        cell2ret=starInfoCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -104,6 +118,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 @end

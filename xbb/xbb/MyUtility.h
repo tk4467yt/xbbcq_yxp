@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define kHeroStarImage @"detail_star"
+#define kHeroStarImageGrey @"detail_star_grey"
+
 @interface MyUtility : NSObject
 +(NSString *)heroTypeLiliangId;
 +(NSString *)heroTypeZhiliId;

@@ -270,6 +270,26 @@ static __strong FMDatabase *dbConfig;
     return arr2ret;
 }
 
++(NSArray *)getHeroGrowForHero:(NSString *)heroId
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_grow` WHERE `hero_id` = ?",heroId];
+    while ([s next]) {
+        HeroGrow *aHeroGrow=[HeroGrow new];
+        
+        aHeroGrow.heroId=[s stringForColumn:@"hero_id"];
+        aHeroGrow.starCount=[s intForColumn:@"star_count"];
+        aHeroGrow.liliang=[s doubleForColumn:@"li_liang"];
+        aHeroGrow.zhili=[s doubleForColumn:@"zhi_li"];
+        aHeroGrow.minjie=[s doubleForColumn:@"min_jie"];
+        
+        [arr2ret addObject:aHeroGrow];
+    }
+    
+    return arr2ret;
+}
+
 +(NSArray *)getAllHeroEquips
 {
     NSMutableArray *arr2ret=[NSMutableArray new];
