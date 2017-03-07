@@ -37,11 +37,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title=NSLocalizedString(@"nav_title_hero", @"");
+    [self initHerosInfo];
+    
+    self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(switchThumbShown)];
     [self updateRightNavItem];
-    
-    [self initHerosInfo];
     
     [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:heroBriefReusableCellId];
 }
