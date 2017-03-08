@@ -24,6 +24,7 @@
 +(NSArray *)getHeroSpeciesForHero:(NSString *)heroId;
 
 +(NSArray *)getAllHeroSkills;
++(NSArray *)getHeroSkillsForHero:(NSString *)heroId;
 
 +(NSArray *)getAllHeroGrow;
 +(NSArray *)getHeroGrowForHero:(NSString *)heroId;

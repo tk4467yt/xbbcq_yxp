@@ -250,6 +250,26 @@ static __strong FMDatabase *dbConfig;
     return arr2ret;
 }
 
++(NSArray *)getHeroSkillsForHero:(NSString *)heroId
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_skill` WHERE `hero_id` = ? ORDER BY `rowid`",heroId];
+    while ([s next]) {
+        HeroSkill *aHeroSkill=[HeroSkill new];
+        
+        aHeroSkill.heroId=[s stringForColumn:@"hero_id"];
+        aHeroSkill.skillId=[s stringForColumn:@"skill_id"];
+        aHeroSkill.skillName=[s stringForColumn:@"skill_name"];
+        aHeroSkill.skillDesc=[s stringForColumn:@"skill_desc"];
+        aHeroSkill.skillThumb=[s stringForColumn:@"skill_thumb"];
+        
+        [arr2ret addObject:aHeroSkill];
+    }
+    
+    return arr2ret;
+}
+
 +(NSArray *)getAllHeroGrow
 {
     NSMutableArray *arr2ret=[NSMutableArray new];

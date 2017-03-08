@@ -40,4 +40,6 @@
 +(void)pushViewControllerFromNav:(UINavigationController *)navVC withTargetVC:(UIViewController *)targetVC animated:(BOOL)anim;
 
 +(UIView *)getTopViewForNib:(UINib *)nib2use;
++(CGFloat)screenWidth;
++(CGFloat)screenHeight;
 @end

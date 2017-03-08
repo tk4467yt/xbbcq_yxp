@@ -10,6 +10,7 @@
 #import "HeroDetailTopTableViewCell.h"
 #import "HeroDetailSpeciesTableViewCell.h"
 #import "HeroDetailStarInfoTableViewCell.h"
+#import "HeroDetailSkillTableViewCell.h"
 #import "DbHandler.h"
 #import "HeroTypeDesc.h"
 #import "PosDesc.h"
@@ -17,11 +18,13 @@
 #define kHeroDetailTopCellId @"hero_detail_top_table_view_cell"
 #define kHeroDetailSpeciesCellId @"hero_detail_species_cell_id"
 #define kHeroDetailStarInfoCellId @"hero_detail_star_info_cell_id"
+#define kHeroDetailSkillCellId @"hero_detail_skill_tb_cell_id"
 
 @interface HeroDetailViewController ()
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
 @property (nonatomic,strong) NSDictionary *heroPosDescDict;
 @property (nonatomic,strong) NSArray *heroSpeciesArr;
+@property (nonatomic,strong) NSArray *heroSkillsArr;
 @end
 
 @implementation HeroDetailViewController
@@ -34,10 +37,12 @@
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
     self.heroPosDescDict=[DbHandler getAllPosDescDict];
     self.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
+    self.heroSkillsArr=[DbHandler getHeroSkillsForHero:self.hero2show.heroId];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailTopCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSpeciesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSpeciesCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailStarInfoTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailStarInfoCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSkillTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSkillCellId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +62,8 @@
         return 60;
     } else if (2 == indexPath.section) {
         return 106;
+    } else if (3 == indexPath.section) {
+        return self.heroSkillsArr.count*76;
     }
     return 0;
 }
@@ -73,6 +80,8 @@
     } else if (1 == section) {
         return 1;
     } else if (2 == section) {
+        return 1;
+    } else if (3 == section) {
         return 1;
     }
     return 0;
@@ -110,6 +119,11 @@
         starInfoCell.heroGrowArr=[DbHandler getHeroGrowForHero:self.hero2show.heroId];
         
         cell2ret=starInfoCell;
+    } else if (3 == indexPath.section) {
+        HeroDetailSkillTableViewCell *skillCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailSkillCellId];
+        skillCell.heroSkillsArr=self.heroSkillsArr;
+        
+        cell2ret=skillCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -118,6 +132,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 @end
