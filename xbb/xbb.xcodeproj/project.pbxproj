@@ -11,6 +11,8 @@
 		250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250B1B501E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib */; };
 		250B1B561E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B1B541E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m */; };
 		250B1B571E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250B1B551E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib */; };
+		250CB1F81E71A70200495F52 /* EquipComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CB1F61E71A70200495F52 /* EquipComposeViewController.m */; };
+		250CB1F91E71A70200495F52 /* EquipComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250CB1F71E71A70200495F52 /* EquipComposeViewController.xib */; };
 		253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB1C1E67108300524553 /* MyTabbarViewController.m */; };
 		253EBB211E6859D400524553 /* xbb.db in Resources */ = {isa = PBXBuildFile; fileRef = 253EBB201E6859D400524553 /* xbb.db */; };
 		253EBB261E685B0A00524553 /* HeroCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EBB241E685B0A00524553 /* HeroCollectionViewCell.m */; };
@@ -92,6 +94,9 @@
 		250B1B531E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailSkillTableViewCell.h; sourceTree = "<group>"; };
 		250B1B541E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailSkillTableViewCell.m; sourceTree = "<group>"; };
 		250B1B551E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailSkillTableViewCell.xib; sourceTree = "<group>"; };
+		250CB1F51E71A70200495F52 /* EquipComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeViewController.h; sourceTree = "<group>"; };
+		250CB1F61E71A70200495F52 /* EquipComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeViewController.m; sourceTree = "<group>"; };
+		250CB1F71E71A70200495F52 /* EquipComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeViewController.xib; sourceTree = "<group>"; };
 		253EBB1B1E67108300524553 /* MyTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabbarViewController.h; sourceTree = "<group>"; };
 		253EBB1C1E67108300524553 /* MyTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabbarViewController.m; sourceTree = "<group>"; };
 		253EBB201E6859D400524553 /* xbb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbb.db; sourceTree = "<group>"; };
@@ -235,19 +240,22 @@
 		253EBB1F1E68598D00524553 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				250CB1F51E71A70200495F52 /* EquipComposeViewController.h */,
+				250CB1F61E71A70200495F52 /* EquipComposeViewController.m */,
+				250CB1F71E71A70200495F52 /* EquipComposeViewController.xib */,
 				2570243B1E630D2D001CB5F3 /* FirstViewController.h */,
 				2570243C1E630D2D001CB5F3 /* FirstViewController.m */,
+				25989BEA1E6C24E600E8481C /* HeroDetailViewController.h */,
+				25989BEB1E6C24E600E8481C /* HeroDetailViewController.m */,
+				25989BEC1E6C24E600E8481C /* HeroDetailViewController.xib */,
 				2570246F1E6320DA001CB5F3 /* MineViewController.h */,
 				257024701E6320DA001CB5F3 /* MineViewController.m */,
+				25EDF2D01E6C0B130046AF1C /* MyRootViewController.h */,
+				25EDF2D11E6C0B130046AF1C /* MyRootViewController.m */,
 				253EBB1B1E67108300524553 /* MyTabbarViewController.h */,
 				253EBB1C1E67108300524553 /* MyTabbarViewController.m */,
 				2570243E1E630D2D001CB5F3 /* SecondViewController.h */,
 				2570243F1E630D2D001CB5F3 /* SecondViewController.m */,
-				25EDF2D01E6C0B130046AF1C /* MyRootViewController.h */,
-				25EDF2D11E6C0B130046AF1C /* MyRootViewController.m */,
-				25989BEA1E6C24E600E8481C /* HeroDetailViewController.h */,
-				25989BEB1E6C24E600E8481C /* HeroDetailViewController.m */,
-				25989BEC1E6C24E600E8481C /* HeroDetailViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -552,6 +560,7 @@
 				25EDF2CC1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib in Resources */,
 				257024431E630D2D001CB5F3 /* Main.storyboard in Resources */,
 				25834CF31E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib in Resources */,
+				250CB1F91E71A70200495F52 /* EquipComposeViewController.xib in Resources */,
 				25895E2C1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib in Resources */,
 				25895E361E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib in Resources */,
 				250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */,
@@ -621,6 +630,7 @@
 				253EBB441E685FE400524553 /* HeroInfo.m in Sources */,
 				253EBB3D1E685C0500524553 /* DbHandler.m in Sources */,
 				253EBB351E685B6200524553 /* FMDatabase.m in Sources */,
+				250CB1F81E71A70200495F52 /* EquipComposeViewController.m in Sources */,
 				25834CF21E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m in Sources */,
 				25834CED1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m in Sources */,
 				25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */,
