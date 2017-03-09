@@ -333,6 +333,29 @@ static __strong FMDatabase *dbConfig;
     return arr2ret;
 }
 
++(NSDictionary *)getHeroEquipsDictForHero:(NSString *)heroId
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `hero_equips` WHERE `hero_id` = ?",heroId];
+    while ([s next]) {
+        HeroEquips *aHeroEquip=[HeroEquips new];
+        
+        aHeroEquip.heroId=[s stringForColumn:@"hero_id"];
+        aHeroEquip.heroRank=[s stringForColumn:@"hero_rank"];
+        aHeroEquip.equip1=[s stringForColumn:@"equip_1"];
+        aHeroEquip.equip2=[s stringForColumn:@"equip_2"];
+        aHeroEquip.equip3=[s stringForColumn:@"equip_3"];
+        aHeroEquip.equip4=[s stringForColumn:@"equip_4"];
+        aHeroEquip.equip5=[s stringForColumn:@"equip_5"];
+        aHeroEquip.equip6=[s stringForColumn:@"equip_6"];
+        
+        [dict2ret setObject:aHeroEquip forKey:aHeroEquip.heroRank];
+    }
+    
+    return dict2ret;
+}
+
 +(NSDictionary *)getAllFragmentFromDescDict
 {
     NSMutableDictionary *dict2ret=[NSMutableDictionary new];
@@ -397,6 +420,51 @@ static __strong FMDatabase *dbConfig;
     }
     
     return arr2ret;
+}
+
++(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId
+{
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_info` WHERE `equip_id` = ?",equipId];
+    
+    EquipInfo *aEquipInfo=[EquipInfo new];
+    if ([s next]) {
+        aEquipInfo.equipId=[s stringForColumn:@"equip_id"];
+        aEquipInfo.equipName=[s stringForColumn:@"equip_name"];
+        
+        aEquipInfo.levelRequire=[s intForColumn:@"level_require"];
+        aEquipInfo.isCompose=[s boolForColumn:@"is_compose"];
+        
+        aEquipInfo.equipRank=[s stringForColumn:@"equip_rank"];
+        aEquipInfo.thumbFile=[s stringForColumn:@"thumb_file"];
+        
+        aEquipInfo.showInBook=[s boolForColumn:@"show_in_book"];
+        
+        aEquipInfo.liliang=[s intForColumn:@"li_liang"];
+        aEquipInfo.minjie=[s intForColumn:@"min_jie"];
+        aEquipInfo.zhili=[s intForColumn:@"zhi_li"];
+        aEquipInfo.healthMax=[s intForColumn:@"health_max"];
+        aEquipInfo.healthRecover=[s intForColumn:@"health_recover"];
+        aEquipInfo.energyRecover=[s intForColumn:@"energy_recover"];
+        aEquipInfo.physicsGongji=[s intForColumn:@"physics_gongji"];
+        aEquipInfo.physicsHujia=[s intForColumn:@"physics_hujia"];
+        aEquipInfo.physicsBaoji=[s intForColumn:@"physics_baoji"];
+        aEquipInfo.chuantouPhysicsHujia=[s intForColumn:@"chuantou_physics_hujia"];
+        aEquipInfo.magicQiangdu=[s intForColumn:@"magic_qiangdu"];
+        aEquipInfo.magicBaoji=[s intForColumn:@"magic_baoji"];
+        aEquipInfo.magicKangxing=[s intForColumn:@"magic_kangxing"];
+        aEquipInfo.hulueMagicKangxing=[s intForColumn:@"hulue_magic_kangxing"];
+        aEquipInfo.xixue=[s intForColumn:@"xixue"];
+        aEquipInfo.zhiliaoXiaoguo=[s intForColumn:@"zhiliao_xiaoguo"];
+        aEquipInfo.shangbi=[s intForColumn:@"shangbi"];
+        aEquipInfo.mingzhong=[s intForColumn:@"mingzhong"];
+        aEquipInfo.minusControlTime=[s intForColumn:@"minus_control_time"];
+        aEquipInfo.yingzhiDikang=[s intForColumn:@"yingzhi_dikang"];
+        aEquipInfo.chengmoDikang=[s intForColumn:@"chengmo_dikang"];
+        aEquipInfo.minusNengliangXiaohao=[s intForColumn:@"minus_nengliang_xiaohao"];
+        aEquipInfo.skillLevelAddon=[s intForColumn:@"skill_level_addon"];
+    }
+    
+    return aEquipInfo;
 }
 
 +(NSDictionary *)getAllEquipComposeInfo

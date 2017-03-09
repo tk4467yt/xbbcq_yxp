@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "EquipInfo.h"
 
 #define kHeroStarImage @"detail_star"
 #define kHeroStarImageGrey @"detail_star_grey"
@@ -42,4 +43,7 @@
 +(UIView *)getTopViewForNib:(UINib *)nib2use;
 +(CGFloat)screenWidth;
 +(CGFloat)screenHeight;
+
++(NSArray *)getAllEquipInfoFromDb;
++(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId;
 @end

@@ -37,6 +37,8 @@
 		257024711E6320DA001CB5F3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024701E6320DA001CB5F3 /* MineViewController.m */; };
 		25834CED1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25834CEB1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m */; };
 		25834CEE1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25834CEC1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib */; };
+		25834CF21E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25834CF01E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m */; };
+		25834CF31E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25834CF11E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib */; };
 		25895E2B1E6D9B900085B662 /* HeroDetailTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25895E291E6D9B900085B662 /* HeroDetailTopTableViewCell.m */; };
 		25895E2C1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25895E2A1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib */; };
 		25895E301E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25895E2E1E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.m */; };
@@ -137,6 +139,9 @@
 		25834CEA1E704AFA00B45F05 /* HeroSkillItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSkillItemTableViewCell.h; sourceTree = "<group>"; };
 		25834CEB1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSkillItemTableViewCell.m; sourceTree = "<group>"; };
 		25834CEC1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroSkillItemTableViewCell.xib; sourceTree = "<group>"; };
+		25834CEF1E704FE700B45F05 /* HeroDetailEquipsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailEquipsTableViewCell.h; sourceTree = "<group>"; };
+		25834CF01E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailEquipsTableViewCell.m; sourceTree = "<group>"; };
+		25834CF11E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailEquipsTableViewCell.xib; sourceTree = "<group>"; };
 		25895E281E6D9B900085B662 /* HeroDetailTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailTopTableViewCell.h; sourceTree = "<group>"; };
 		25895E291E6D9B900085B662 /* HeroDetailTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailTopTableViewCell.m; sourceTree = "<group>"; };
 		25895E2A1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailTopTableViewCell.xib; sourceTree = "<group>"; };
@@ -258,6 +263,9 @@
 				253EBB231E685B0A00524553 /* HeroCollectionViewCell.h */,
 				253EBB241E685B0A00524553 /* HeroCollectionViewCell.m */,
 				253EBB251E685B0A00524553 /* HeroCollectionViewCell.xib */,
+				25834CEF1E704FE700B45F05 /* HeroDetailEquipsTableViewCell.h */,
+				25834CF01E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m */,
+				25834CF11E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib */,
 				250B1B531E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.h */,
 				250B1B541E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m */,
 				250B1B551E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib */,
@@ -543,6 +551,7 @@
 				253EBB271E685B0A00524553 /* HeroCollectionViewCell.xib in Resources */,
 				25EDF2CC1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib in Resources */,
 				257024431E630D2D001CB5F3 /* Main.storyboard in Resources */,
+				25834CF31E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib in Resources */,
 				25895E2C1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib in Resources */,
 				25895E361E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib in Resources */,
 				250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */,
@@ -612,6 +621,7 @@
 				253EBB441E685FE400524553 /* HeroInfo.m in Sources */,
 				253EBB3D1E685C0500524553 /* DbHandler.m in Sources */,
 				253EBB351E685B6200524553 /* FMDatabase.m in Sources */,
+				25834CF21E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m in Sources */,
 				25834CED1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m in Sources */,
 				25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */,
 			);

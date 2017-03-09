@@ -19,10 +19,20 @@
 
 "title_equip_bai"="白色装备";
 "title_equip_lv"="绿色装备";
+"title_equip_lv1"="绿+1装备";
 "title_equip_lan"="蓝色装备";
+"title_equip_lan1"="蓝+1装备";
+"title_equip_lan2"="蓝+2装备";
 "title_equip_zi"="紫色装备";
+"title_equip_zi1"="紫+1装备";
+"title_equip_zi2"="紫+2装备";
+"title_equip_zi3"="紫+3装备";
+"title_equip_zi4"="紫+4装备";
 "title_equip_cheng"="橙色装备";
+"title_equip_cheng1"="橙+1装备";
+"title_equip_cheng2"="橙+2装备";
 "title_equip_hong"="红色装备";
+"title_equip_hong1"="红+1装备";
 
 "hero_title_thumb_normal"="普通头像";
 "hero_title_thumb_juexing"="觉醒头像";

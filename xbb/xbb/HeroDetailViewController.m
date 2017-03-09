@@ -11,20 +11,25 @@
 #import "HeroDetailSpeciesTableViewCell.h"
 #import "HeroDetailStarInfoTableViewCell.h"
 #import "HeroDetailSkillTableViewCell.h"
+#import "HeroDetailEquipsTableViewCell.h"
 #import "DbHandler.h"
 #import "HeroTypeDesc.h"
 #import "PosDesc.h"
+#import "MyUtility.h"
+#import "HeroEquips.h"
 
 #define kHeroDetailTopCellId @"hero_detail_top_table_view_cell"
 #define kHeroDetailSpeciesCellId @"hero_detail_species_cell_id"
 #define kHeroDetailStarInfoCellId @"hero_detail_star_info_cell_id"
 #define kHeroDetailSkillCellId @"hero_detail_skill_tb_cell_id"
+#define kHeroDetailEquipCellId @"hero_detail_equip_tb_cell_id"
 
 @interface HeroDetailViewController ()
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
 @property (nonatomic,strong) NSDictionary *heroPosDescDict;
 @property (nonatomic,strong) NSArray *heroSpeciesArr;
 @property (nonatomic,strong) NSArray *heroSkillsArr;
+@property (nonatomic,strong) NSDictionary *heroEquipsDict;
 @end
 
 @implementation HeroDetailViewController
@@ -38,11 +43,13 @@
     self.heroPosDescDict=[DbHandler getAllPosDescDict];
     self.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
     self.heroSkillsArr=[DbHandler getHeroSkillsForHero:self.hero2show.heroId];
+    self.heroEquipsDict=[DbHandler getHeroEquipsDictForHero:self.hero2show.heroId];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailTopCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSpeciesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSpeciesCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailStarInfoTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailStarInfoCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSkillTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSkillCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailEquipsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailEquipCellId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +71,8 @@
         return 106;
     } else if (3 == indexPath.section) {
         return self.heroSkillsArr.count*76;
+    } else if (4 == indexPath.section) {
+        return 80;
     }
     return 0;
 }
@@ -83,6 +92,8 @@
         return 1;
     } else if (3 == section) {
         return 1;
+    } else if (4 == section) {
+        return 16;
     }
     return 0;
 }
@@ -124,6 +135,84 @@
         skillCell.heroSkillsArr=self.heroSkillsArr;
         
         cell2ret=skillCell;
+    } else if (4 == indexPath.section) {
+        HeroDetailEquipsTableViewCell *equipCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailEquipCellId];
+        
+        NSString *rankId2use=@"";
+        NSString *title2set=@"";
+        if (0 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForBai];
+            title2set=NSLocalizedString(@"title_equip_bai", @"");
+        } else if (1 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForLv];
+            title2set=NSLocalizedString(@"title_equip_lv", @"");
+        } else if (2 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForLv1];
+            title2set=NSLocalizedString(@"title_equip_lv1", @"");
+        } else if (3 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForLan];
+            title2set=NSLocalizedString(@"title_equip_lan", @"");
+        } else if (4 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForLan1];
+            title2set=NSLocalizedString(@"title_equip_lan1", @"");
+        } else if (5 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForLan2];
+            title2set=NSLocalizedString(@"title_equip_lan2", @"");
+        } else if (6 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForZi];
+            title2set=NSLocalizedString(@"title_equip_zi", @"");
+        } else if (7 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForZi1];
+            title2set=NSLocalizedString(@"title_equip_zi1", @"");
+        } else if (8 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForZi2];
+            title2set=NSLocalizedString(@"title_equip_zi2", @"");
+        } else if (9 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForZi3];
+            title2set=NSLocalizedString(@"title_equip_zi3", @"");
+        } else if (10 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForZi4];
+            title2set=NSLocalizedString(@"title_equip_zi4", @"");
+        } else if (11 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForCheng];
+            title2set=NSLocalizedString(@"title_equip_cheng", @"");
+        } else if (12 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForCheng1];
+            title2set=NSLocalizedString(@"title_equip_cheng1", @"");
+        } else if (13 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForCheng2];
+            title2set=NSLocalizedString(@"title_equip_cheng2", @"");
+        } else if (14 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForHong];
+            title2set=NSLocalizedString(@"title_equip_hong", @"");
+        } else if (15 == indexPath.row) {
+            rankId2use=[MyUtility rankIdForHong1];
+            title2set=NSLocalizedString(@"title_equip_hong1", @"");
+        }
+        
+        HeroEquips *aHeroEquip=self.heroEquipsDict[rankId2use];
+        
+        equipCell.lblRankDesc.text=title2set;
+        
+        EquipInfo *equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip1];
+        equipCell.ivEquip0.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        
+        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip2];
+        equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        
+        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip3];
+        equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        
+        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip4];
+        equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        
+        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip5];
+        equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        
+        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip6];
+        equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        
+        cell2ret=equipCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -132,6 +221,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 @end

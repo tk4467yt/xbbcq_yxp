@@ -7,6 +7,9 @@
 //
 
 #import "MyUtility.h"
+#import "DbHandler.h"
+
+static __strong NSArray *allEquipsInfoArr;
 
 @implementation MyUtility
 +(NSString *)heroTypeLiliangId
@@ -115,5 +118,29 @@
 +(CGFloat)screenHeight
 {
     return [UIScreen mainScreen].bounds.size.height;
+}
+
++(NSArray *)getAllEquipInfoFromDb
+{
+    if (nil == allEquipsInfoArr) {
+        allEquipsInfoArr=[DbHandler getAllEquipInfo];
+    }
+    
+    return allEquipsInfoArr;
+}
+
++(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId
+{
+    if (nil == allEquipsInfoArr) {
+        allEquipsInfoArr=[DbHandler getAllEquipInfo];
+    }
+    
+    for (EquipInfo *aEquipInfo in allEquipsInfoArr) {
+        if ([aEquipInfo.equipId isEqualToString:equipId]) {
+            return aEquipInfo;
+        }
+    }
+    
+    return nil;
 }
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EquipInfo.h"
 
 @interface DbHandler : NSObject
 
@@ -30,8 +31,13 @@
 +(NSArray *)getHeroGrowForHero:(NSString *)heroId;
 
 +(NSArray *)getAllHeroEquips;
++(NSDictionary *)getHeroEquipsDictForHero:(NSString *)heroId;
+
 +(NSDictionary *)getAllFragmentFromDescDict;
+
 +(NSArray *)getAllEquipInfo;
++(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId;
+
 +(NSDictionary *)getAllEquipComposeInfo;
 +(NSDictionary *)getAllEquipAttrDesc;
 @end
