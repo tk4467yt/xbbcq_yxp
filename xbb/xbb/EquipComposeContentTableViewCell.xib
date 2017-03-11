@@ -16,11 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="301" height="369"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="301" height="368.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="301" height="369"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bu-vh-61H" userLabel="lblTitle">
+                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOh-bk-RSY" userLabel="composeFromEquipHolder">
-                        <rect key="frame" x="8" y="8" width="285" height="250"/>
+                        <rect key="frame" x="8" y="29" width="285" height="250"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRq-dN-wl7" userLabel="composeFrom2Holder">
                                 <rect key="frame" x="0.0" y="0.0" width="285" height="250"/>
@@ -284,27 +290,27 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-rm-JnH" userLabel="composeFromFragmentHolder">
-                        <rect key="frame" x="8" y="8" width="285" height="150"/>
+                        <rect key="frame" x="8" y="29" width="285" height="150"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-8X-bBt" userLabel="ivFragment">
-                                <rect key="frame" x="61" y="56.5" width="36" height="35"/>
+                                <rect key="frame" x="61" y="57" width="36" height="35"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujr-RQ-7aL" userLabel="ivFragmentMask">
-                                <rect key="frame" x="54" y="50.5" width="50" height="50"/>
+                                <rect key="frame" x="54" y="51" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0Y6-j2-AGa"/>
                                     <constraint firstAttribute="width" constant="50" id="qMk-3R-27b"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SvG-ib-z7W" userLabel="ivArrow">
-                                <rect key="frame" x="124" y="61.5" width="37" height="28"/>
+                                <rect key="frame" x="124" y="62" width="37" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="WiE-RQ-ahe"/>
                                     <constraint firstAttribute="height" constant="28" id="rEt-rw-nFU"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-lA-Uk3" userLabel="ivEquip">
-                                <rect key="frame" x="181" y="50.5" width="50" height="50"/>
+                                <rect key="frame" x="181" y="51" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2fe-fr-bxY"/>
                                     <constraint firstAttribute="width" constant="50" id="Qii-Y0-Evv"/>
@@ -326,17 +332,68 @@
                             <constraint firstItem="SvG-ib-z7W" firstAttribute="centerY" secondItem="SxV-rm-JnH" secondAttribute="centerY" id="zRa-d3-rcm"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hh-rj-lhn" userLabel="lblComposeNone">
+                        <rect key="frame" x="8" y="79" width="285" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="7bu-vh-61H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5xU-S5-Kel"/>
                     <constraint firstAttribute="trailingMargin" secondItem="SxV-rm-JnH" secondAttribute="trailing" id="8kD-7P-L18"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3Hh-rj-lhn" secondAttribute="trailing" id="Eop-6T-WZS"/>
                     <constraint firstItem="SxV-rm-JnH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="GBA-RS-o4j"/>
-                    <constraint firstItem="SxV-rm-JnH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="OWH-EF-46S"/>
-                    <constraint firstItem="VOh-bk-RSY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="SkP-iQ-Abi"/>
                     <constraint firstAttribute="trailingMargin" secondItem="VOh-bk-RSY" secondAttribute="trailing" id="Vdn-vF-VdH"/>
+                    <constraint firstItem="VOh-bk-RSY" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" id="Z8y-Yl-SW4"/>
+                    <constraint firstItem="SxV-rm-JnH" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" id="Zji-jt-gyf"/>
+                    <constraint firstItem="3Hh-rj-lhn" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" constant="50" id="qaY-BP-zxV"/>
+                    <constraint firstItem="3Hh-rj-lhn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="r1f-J9-y0g"/>
+                    <constraint firstItem="7bu-vh-61H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vMP-59-LKK"/>
                     <constraint firstItem="VOh-bk-RSY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="wpc-Wo-I0h"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="composeFrom2Holder" destination="oRq-dN-wl7" id="sJ2-HE-Y4o"/>
+                <outlet property="composeFrom3Holder" destination="e9c-DW-y2K" id="uOM-xf-Ydu"/>
+                <outlet property="composeFrom4Holder" destination="os3-de-OWf" id="Ifo-uW-qyX"/>
+                <outlet property="composeFromEquipHolder" destination="VOh-bk-RSY" id="jvT-Rc-K4W"/>
+                <outlet property="ivArrow" destination="SvG-ib-z7W" id="frS-Vb-Agd"/>
+                <outlet property="ivComposeIndFrom2" destination="CcL-1t-J6v" id="sBF-rA-o1Y"/>
+                <outlet property="ivComposeIndFrom3" destination="ehz-BL-tYJ" id="rod-aU-0o1"/>
+                <outlet property="ivComposeIndFrom4" destination="ebZ-Gw-WcN" id="axd-Tx-Kn0"/>
+                <outlet property="ivEquip" destination="Hxo-lA-Uk3" id="shn-wR-RNM"/>
+                <outlet property="ivEquipCompose0From2" destination="kUs-i6-PPc" id="tGa-A9-UV5"/>
+                <outlet property="ivEquipCompose0From3" destination="zm9-u5-di0" id="VRs-Kk-fGS"/>
+                <outlet property="ivEquipCompose0From4" destination="3uO-ZG-Qq0" id="oaB-Gz-4le"/>
+                <outlet property="ivEquipCompose0MaskFrom2" destination="RA3-ER-Dso" id="bLC-ne-teT"/>
+                <outlet property="ivEquipCompose0MaskFrom3" destination="IeW-rR-CBp" id="sLx-vF-M7C"/>
+                <outlet property="ivEquipCompose0MaskFrom4" destination="gxf-l9-dLD" id="kx0-nw-jgm"/>
+                <outlet property="ivEquipCompose1From2" destination="r1p-XI-yxG" id="7B7-7P-oSx"/>
+                <outlet property="ivEquipCompose1From3" destination="czG-92-17q" id="oeH-yg-3kJ"/>
+                <outlet property="ivEquipCompose1From4" destination="ooj-UL-zAb" id="BTd-yy-nyD"/>
+                <outlet property="ivEquipCompose1MaskFrom2" destination="mGC-Rm-WPb" id="cYN-yL-gIR"/>
+                <outlet property="ivEquipCompose1MaskFrom3" destination="cd3-JL-vEp" id="P6W-dQ-XMk"/>
+                <outlet property="ivEquipCompose1MaskFrom4" destination="KQN-kT-N4y" id="E9K-e0-B6U"/>
+                <outlet property="ivEquipCompose2From3" destination="oY5-29-n96" id="aaH-HG-Fuw"/>
+                <outlet property="ivEquipCompose2From4" destination="5P0-Kf-nTe" id="T1M-B8-KN8"/>
+                <outlet property="ivEquipCompose2MaskFrom3" destination="pQd-t4-iL9" id="Hhi-Wu-OZK"/>
+                <outlet property="ivEquipCompose2MaskFrom4" destination="tKy-Do-1tg" id="yxi-ZI-6rc"/>
+                <outlet property="ivEquipCompose3From4" destination="g8Y-na-U2Q" id="jkb-5V-MpM"/>
+                <outlet property="ivEquipCompose3Mask" destination="SxV-rm-JnH" id="ONK-jo-7LI"/>
+                <outlet property="ivEquipCompose3MaskFrom4" destination="soI-qV-cxe" id="Aa1-Pf-zW5"/>
+                <outlet property="ivEquipFrom2" destination="lBE-Z7-32E" id="9DY-Qv-8Lm"/>
+                <outlet property="ivEquipFrom3" destination="lWa-A3-uJ0" id="x6N-V4-wyI"/>
+                <outlet property="ivEquipFrom4" destination="hqC-U6-7uT" id="EZ9-38-f0G"/>
+                <outlet property="ivEquipMaskFrom2" destination="j3c-8a-9gp" id="Rm6-ma-aJj"/>
+                <outlet property="ivEquipMaskFrom3" destination="LXf-5c-ENZ" id="0Kg-bP-ZGt"/>
+                <outlet property="ivEquipMaskFrom4" destination="Mht-dd-sxQ" id="pdh-rv-uzl"/>
+                <outlet property="ivFragment" destination="q6T-8X-bBt" id="0Uc-kn-RxB"/>
+                <outlet property="ivFragmentMask" destination="Ujr-RQ-7aL" id="wq7-aB-Kme"/>
+                <outlet property="lblComposeNone" destination="3Hh-rj-lhn" id="24w-bh-qiL"/>
+                <outlet property="lblTitle" destination="7bu-vh-61H" id="Ik6-nN-qDA"/>
+            </connections>
             <point key="canvasLocation" x="-78.5" y="144.5"/>
         </tableViewCell>
     </objects>
