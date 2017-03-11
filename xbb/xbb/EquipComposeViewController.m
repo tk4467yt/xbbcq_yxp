@@ -44,9 +44,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (0 == indexPath.section) {
-        return 80;
+        return 84;
     } else if (1 == indexPath.section) {
-        return [MyUtility screenHeight]-80-60-20;
+        return [MyUtility screenHeight]-84-60-20;
     }
     return 0;
 }

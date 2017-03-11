@@ -11,8 +11,13 @@
 #import "MyUtility.h"
 #import "DbHandler.h"
 #import "EquipInfo.h"
+#import "RankDesc.h"
 
 #define kEquipComposeHeaderItemCVCellId @"equip_compose_header_item_cv_cell_id"
+
+@interface EquipComposeHeaderTableViewCell ()
+@property (nonatomic,strong) NSDictionary *rankDescDict;
+@end
 
 @implementation EquipComposeHeaderTableViewCell
 
@@ -21,6 +26,8 @@
     
     self.cvHeader.dataSource=self;
     self.cvHeader.delegate=self;
+    
+    self.rankDescDict=[DbHandler getAllRankDescDict];
     
     [self.cvHeader registerNib:[UINib nibWithNibName:@"EquipComposeHeaderItemCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kEquipComposeHeaderItemCVCellId];
 }
@@ -46,11 +53,19 @@
     
     headerComposeItemCell.ivEquip.image=[UIImage imageNamed:curEquip.thumbFile];
     if (indexPath.row == self.equipShowingArr.count-1) {
-        headerComposeItemCell.ivEquipMask.hidden=false;
+        headerComposeItemCell.ivEquipSelected.hidden=false;
         headerComposeItemCell.ivRightArrow.hidden=true;
     } else {
-        headerComposeItemCell.ivEquipMask.hidden=true;
+        headerComposeItemCell.ivEquipSelected.hidden=true;
         headerComposeItemCell.ivRightArrow.hidden=false;
+    }
+    
+    headerComposeItemCell.ivEquipMask.hidden=!headerComposeItemCell.ivEquipSelected.hidden;
+    
+    if (!headerComposeItemCell.ivEquipMask.hidden) {
+        RankDesc *rankDesc2use=self.rankDescDict[curEquip.equipRank];
+        UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
+        headerComposeItemCell.ivEquipMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     }
     
     return headerComposeItemCell;

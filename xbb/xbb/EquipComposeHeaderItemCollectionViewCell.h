@@ -11,6 +11,7 @@
 @interface EquipComposeHeaderItemCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquipMask;
+@property (weak, nonatomic) IBOutlet UIImageView *ivEquipSelected;
 @property (weak, nonatomic) IBOutlet UIImageView *ivRightArrow;
 
 @end

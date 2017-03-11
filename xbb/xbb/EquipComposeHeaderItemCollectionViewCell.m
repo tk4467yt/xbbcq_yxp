@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.ivEquip.layer.masksToBounds=true;
+    self.ivEquip.layer.cornerRadius=10;
 }
 
 @end

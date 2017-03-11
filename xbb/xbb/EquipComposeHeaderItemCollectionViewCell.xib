@@ -21,7 +21,10 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rA3-ag-uP5" userLabel="ivEquip">
                         <rect key="frame" x="12" y="12" width="49" height="47"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equip_craft_select" translatesAutoresizingMaskIntoConstraints="NO" id="fGy-oX-kfs" userLabel="ivEquipMask">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJd-Bo-R7U" userLabel="ivEquipMask">
+                        <rect key="frame" x="5" y="6" width="63" height="62"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equip_craft_select" translatesAutoresizingMaskIntoConstraints="NO" id="fGy-oX-kfs" userLabel="ivEquipSelected">
                         <rect key="frame" x="8" y="8" width="57" height="66"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="57" id="omP-hY-gIg"/>
@@ -44,13 +47,18 @@
                 <constraint firstItem="fGy-oX-kfs" firstAttribute="trailing" secondItem="rA3-ag-uP5" secondAttribute="trailing" constant="4" id="ZKq-1h-HL0"/>
                 <constraint firstItem="BSx-Eb-fP0" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="bFY-NR-ALP"/>
                 <constraint firstItem="fGy-oX-kfs" firstAttribute="bottom" secondItem="rA3-ag-uP5" secondAttribute="bottom" constant="15" id="bG2-n3-LLM"/>
+                <constraint firstItem="rA3-ag-uP5" firstAttribute="leading" secondItem="yJd-Bo-R7U" secondAttribute="leading" constant="7" id="dMu-yD-ctD"/>
+                <constraint firstItem="rA3-ag-uP5" firstAttribute="top" secondItem="yJd-Bo-R7U" secondAttribute="top" constant="6" id="gF4-eE-0yi"/>
+                <constraint firstItem="yJd-Bo-R7U" firstAttribute="bottom" secondItem="rA3-ag-uP5" secondAttribute="bottom" constant="9" id="hAq-Av-F1Q"/>
+                <constraint firstItem="yJd-Bo-R7U" firstAttribute="trailing" secondItem="rA3-ag-uP5" secondAttribute="trailing" constant="7" id="iNE-Eb-haU"/>
                 <constraint firstItem="fGy-oX-kfs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="n9Y-Ju-jbC"/>
                 <constraint firstItem="rA3-ag-uP5" firstAttribute="leading" secondItem="fGy-oX-kfs" secondAttribute="leading" constant="4" id="sTt-Vx-hBI"/>
             </constraints>
             <size key="customSize" width="437" height="82"/>
             <connections>
                 <outlet property="ivEquip" destination="rA3-ag-uP5" id="IB2-EY-eDa"/>
-                <outlet property="ivEquipMask" destination="fGy-oX-kfs" id="PkM-ba-LrS"/>
+                <outlet property="ivEquipMask" destination="yJd-Bo-R7U" id="Wfo-Ez-lOp"/>
+                <outlet property="ivEquipSelected" destination="fGy-oX-kfs" id="6Gn-fX-UgI"/>
                 <outlet property="ivRightArrow" destination="BSx-Eb-fP0" id="nsT-3j-xVT"/>
             </connections>
             <point key="canvasLocation" x="-52.5" y="68"/>
