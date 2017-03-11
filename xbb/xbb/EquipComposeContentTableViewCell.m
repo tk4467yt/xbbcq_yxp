@@ -9,20 +9,45 @@
 #import "EquipComposeContentTableViewCell.h"
 #import "EquipInfo.h"
 #import "EquipComposeInfo.h"
+#import "RankDesc.h"
 #import "DbHandler.h"
 #import "MyUtility.h"
+
+@interface EquipComposeContentTableViewCell ()
+@property (nonatomic,strong) NSDictionary *rankDescDict;
+@end
 
 @implementation EquipComposeContentTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.rankDescDict=[DbHandler getAllRankDescDict];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(UIImage *)getEquipMaskForRank:(NSString *)rankId
+{
+    RankDesc *rankDesc2use=self.rankDescDict[rankId];
+    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
+    maskImg=[MyUtility makeMaskImageFroFrame:maskImg];
+    
+    return maskImg;
+}
+
+-(UIImage *)getEquipFragmentMaskForRank:(NSString *)rankId
+{
+    RankDesc *rankDesc2use=self.rankDescDict[rankId];
+    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.fragmentFrameThumb];
+    maskImg=[MyUtility makeMaskImageFroFrame:maskImg];
+    
+    return maskImg;
 }
 
 - (void)layoutSubviews
@@ -40,6 +65,12 @@
         if (composeInfo.fragmentCount > 0) {
             self.composeFromEquipHolder.hidden=true;
             self.composeFromFragmentHolder.hidden=false;
+            
+            self.ivFragment.image=[UIImage imageNamed:equipInfo.thumbFile];
+            self.ivFragmentMask.image=[self getEquipFragmentMaskForRank:equipInfo.equipRank];
+            self.ivEquip.image=[UIImage imageNamed:equipInfo.thumbFile];
+            self.ivEquipMask.image=[self getEquipMaskForRank:equipInfo.equipRank];
+            self.lblCount.text=[NSString stringWithFormat:@"*%d",(int)composeInfo.fragmentCount];
         } else {
             self.composeFromEquipHolder.hidden=false;
             self.composeFromFragmentHolder.hidden=true;

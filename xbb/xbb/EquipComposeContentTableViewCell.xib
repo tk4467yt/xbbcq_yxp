@@ -302,6 +302,12 @@
                                     <constraint firstAttribute="width" constant="50" id="qMk-3R-27b"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-Ag-w8V" userLabel="lblCount">
+                                <rect key="frame" x="61.5" y="100" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fragment_compose_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="SvG-ib-z7W" userLabel="ivArrow">
                                 <rect key="frame" x="124" y="61" width="37" height="28"/>
                                 <constraints>
@@ -309,7 +315,10 @@
                                     <constraint firstAttribute="height" constant="28" id="rEt-rw-nFU"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-lA-Uk3" userLabel="ivEquip">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cw0-u5-tlw" userLabel="ivEquip">
+                                <rect key="frame" x="188" y="56" width="36" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-lA-Uk3" userLabel="ivEquipMask">
                                 <rect key="frame" x="181" y="50" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2fe-fr-bxY"/>
@@ -321,14 +330,20 @@
                         <constraints>
                             <constraint firstItem="Ujr-RQ-7aL" firstAttribute="bottom" secondItem="q6T-8X-bBt" secondAttribute="bottom" constant="9" id="2tb-hL-iB9"/>
                             <constraint firstItem="SvG-ib-z7W" firstAttribute="leading" secondItem="Ujr-RQ-7aL" secondAttribute="trailing" constant="20" id="8cI-Z8-Xl0"/>
+                            <constraint firstItem="Hxo-lA-Uk3" firstAttribute="bottom" secondItem="cw0-u5-tlw" secondAttribute="bottom" constant="9" id="9Wx-VB-iiy"/>
                             <constraint firstItem="Hxo-lA-Uk3" firstAttribute="centerY" secondItem="SxV-rm-JnH" secondAttribute="centerY" id="BmZ-3P-FEP"/>
+                            <constraint firstItem="0Xf-Ag-w8V" firstAttribute="centerX" secondItem="Ujr-RQ-7aL" secondAttribute="centerX" id="Ma8-ch-Asm"/>
                             <constraint firstAttribute="height" constant="150" id="OLW-LN-dNd"/>
                             <constraint firstItem="q6T-8X-bBt" firstAttribute="top" secondItem="Ujr-RQ-7aL" secondAttribute="top" constant="6" id="Trt-Ph-rf3"/>
+                            <constraint firstItem="cw0-u5-tlw" firstAttribute="leading" secondItem="Hxo-lA-Uk3" secondAttribute="leading" constant="7" id="UO6-jH-WD0"/>
+                            <constraint firstItem="cw0-u5-tlw" firstAttribute="top" secondItem="Hxo-lA-Uk3" secondAttribute="top" constant="6" id="Ukb-hO-6N2"/>
                             <constraint firstItem="Hxo-lA-Uk3" firstAttribute="leading" secondItem="SvG-ib-z7W" secondAttribute="trailing" constant="20" id="lK3-4X-Dve"/>
                             <constraint firstItem="SvG-ib-z7W" firstAttribute="centerX" secondItem="SxV-rm-JnH" secondAttribute="centerX" id="nT0-XX-Nfi"/>
                             <constraint firstItem="Ujr-RQ-7aL" firstAttribute="centerY" secondItem="SxV-rm-JnH" secondAttribute="centerY" id="orU-bW-uDC"/>
                             <constraint firstItem="q6T-8X-bBt" firstAttribute="leading" secondItem="Ujr-RQ-7aL" secondAttribute="leading" constant="7" id="pfG-vX-w54"/>
+                            <constraint firstItem="Hxo-lA-Uk3" firstAttribute="trailing" secondItem="cw0-u5-tlw" secondAttribute="trailing" constant="7" id="qRe-rJ-hWD"/>
                             <constraint firstItem="Ujr-RQ-7aL" firstAttribute="trailing" secondItem="q6T-8X-bBt" secondAttribute="trailing" constant="7" id="t0u-Wj-K0m"/>
+                            <constraint firstItem="0Xf-Ag-w8V" firstAttribute="top" secondItem="Ujr-RQ-7aL" secondAttribute="bottom" id="vyE-TD-Fsb"/>
                             <constraint firstItem="SvG-ib-z7W" firstAttribute="centerY" secondItem="SxV-rm-JnH" secondAttribute="centerY" id="zRa-d3-rcm"/>
                         </constraints>
                     </view>
@@ -364,7 +379,7 @@
                 <outlet property="ivComposeIndFrom2" destination="CcL-1t-J6v" id="sBF-rA-o1Y"/>
                 <outlet property="ivComposeIndFrom3" destination="ehz-BL-tYJ" id="rod-aU-0o1"/>
                 <outlet property="ivComposeIndFrom4" destination="ebZ-Gw-WcN" id="axd-Tx-Kn0"/>
-                <outlet property="ivEquip" destination="Hxo-lA-Uk3" id="shn-wR-RNM"/>
+                <outlet property="ivEquip" destination="cw0-u5-tlw" id="KsQ-fl-Hx7"/>
                 <outlet property="ivEquipCompose0From2" destination="kUs-i6-PPc" id="tGa-A9-UV5"/>
                 <outlet property="ivEquipCompose0From3" destination="zm9-u5-di0" id="VRs-Kk-fGS"/>
                 <outlet property="ivEquipCompose0From4" destination="3uO-ZG-Qq0" id="oaB-Gz-4le"/>
@@ -386,12 +401,14 @@
                 <outlet property="ivEquipFrom2" destination="lBE-Z7-32E" id="9DY-Qv-8Lm"/>
                 <outlet property="ivEquipFrom3" destination="lWa-A3-uJ0" id="x6N-V4-wyI"/>
                 <outlet property="ivEquipFrom4" destination="hqC-U6-7uT" id="EZ9-38-f0G"/>
+                <outlet property="ivEquipMask" destination="Hxo-lA-Uk3" id="5jV-De-b1z"/>
                 <outlet property="ivEquipMaskFrom2" destination="j3c-8a-9gp" id="Rm6-ma-aJj"/>
                 <outlet property="ivEquipMaskFrom3" destination="LXf-5c-ENZ" id="0Kg-bP-ZGt"/>
                 <outlet property="ivEquipMaskFrom4" destination="Mht-dd-sxQ" id="pdh-rv-uzl"/>
                 <outlet property="ivFragment" destination="q6T-8X-bBt" id="0Uc-kn-RxB"/>
                 <outlet property="ivFragmentMask" destination="Ujr-RQ-7aL" id="wq7-aB-Kme"/>
                 <outlet property="lblComposeNone" destination="3Hh-rj-lhn" id="24w-bh-qiL"/>
+                <outlet property="lblCount" destination="0Xf-Ag-w8V" id="YCd-SI-ZLf"/>
                 <outlet property="lblTitle" destination="7bu-vh-61H" id="Ik6-nN-qDA"/>
             </connections>
             <point key="canvasLocation" x="-78.5" y="144.5"/>

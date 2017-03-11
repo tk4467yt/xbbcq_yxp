@@ -52,6 +52,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivFragmentMask;
 @property (weak, nonatomic) IBOutlet UIImageView *ivArrow;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip;
+@property (weak, nonatomic) IBOutlet UIImageView *ivEquipMask;
+@property (weak, nonatomic) IBOutlet UILabel *lblCount;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *lblComposeNone;
 
