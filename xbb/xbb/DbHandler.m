@@ -488,6 +488,24 @@ static __strong FMDatabase *dbConfig;
     return dict2ret;
 }
 
++(EquipComposeInfo *)getEquipComposeInfoForEquipId:(NSString *)equipId
+{
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_compose_info` WHERE `equip_id` = ?",equipId];
+    EquipComposeInfo *aEquipComposeInfo;
+    if ([s next]) {
+        aEquipComposeInfo=[EquipComposeInfo new];
+        
+        aEquipComposeInfo.equipId=[s stringForColumn:@"equip_id"];
+        aEquipComposeInfo.fragmentCount=[s intForColumn:@"fragment_count"];
+        aEquipComposeInfo.composeFrom1=[s stringForColumn:@"compose_from_1"];
+        aEquipComposeInfo.composeFrom2=[s stringForColumn:@"compose_from_2"];
+        aEquipComposeInfo.composeFrom3=[s stringForColumn:@"compose_from_3"];
+        aEquipComposeInfo.composeFrom4=[s stringForColumn:@"compose_from_4"];
+    }
+    
+    return aEquipComposeInfo;
+}
+
 +(NSDictionary *)getAllEquipAttrDesc
 {
     NSMutableDictionary *dict2ret=[NSMutableDictionary new];

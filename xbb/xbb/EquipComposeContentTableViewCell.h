@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 
 @property (weak, nonatomic) IBOutlet UIView *composeFromEquipHolder;
+
 @property (weak, nonatomic) IBOutlet UIView *composeFrom2Holder;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquipFrom2;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquipMaskFrom2;
@@ -45,11 +46,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquipCompose3From4;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquipCompose3MaskFrom4;
 
-@property (weak, nonatomic) IBOutlet UIView *ivEquipCompose3Mask;
+
+@property (weak, nonatomic) IBOutlet UIView *composeFromFragmentHolder;
 @property (weak, nonatomic) IBOutlet UIImageView *ivFragment;
 @property (weak, nonatomic) IBOutlet UIImageView *ivFragmentMask;
 @property (weak, nonatomic) IBOutlet UIImageView *ivArrow;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblComposeNone;
+
+@property (strong,nonatomic) NSString *equipId2show;
 @end

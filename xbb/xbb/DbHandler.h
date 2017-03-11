@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EquipInfo.h"
+#import "EquipComposeInfo.h"
 
 @interface DbHandler : NSObject
 
@@ -39,5 +40,7 @@
 +(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId;
 
 +(NSDictionary *)getAllEquipComposeInfo;
++(EquipComposeInfo *)getEquipComposeInfoForEquipId:(NSString *)equipId;
+
 +(NSDictionary *)getAllEquipAttrDesc;
 @end

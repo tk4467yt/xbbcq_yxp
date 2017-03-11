@@ -45,3 +45,6 @@
 "liliang_grow_title"="力量成长：%@";
 "zhili_grow_title"="智力成长：%@";
 "minjie_grow_title"="敏捷成长：%@";
+
+"equip_compose_title"="合成信息";
+"desc_for_none"="无";

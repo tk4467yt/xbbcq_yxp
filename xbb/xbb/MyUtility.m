@@ -97,7 +97,7 @@ static __strong NSArray *allEquipsInfoArr;
 
 +(BOOL)isStringNilOrZeroLength:(NSString *)str2check
 {
-    return nil == str2check || [str2check isKindOfClass:[NSNull class]] || str2check.length == 0;
+    return nil == str2check || str2check == NULL || [str2check isKindOfClass:[NSNull class]] || str2check.length == 0;
 }
 
 +(void)pushViewControllerFromNav:(UINavigationController *)navVC withTargetVC:(UIViewController *)targetVC animated:(BOOL)anim

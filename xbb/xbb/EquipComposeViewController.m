@@ -73,11 +73,14 @@
         cell2ret=headerCell;
     } else if (1 == indexPath.section) {
         EquipComposeContentTableViewCell *contentCell=[tableView dequeueReusableCellWithIdentifier:equipComposeContentCellId];
+        contentCell.equipId2show=self.equip2showArr.lastObject;
         
         cell2ret=contentCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
+    
+    [cell2ret setNeedsLayout];
     return cell2ret;
 }
 
