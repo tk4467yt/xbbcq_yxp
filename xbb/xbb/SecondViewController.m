@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "EquipComposeViewController.h"
 #import "DbHandler.h"
 #import "MyUtility.h"
 #import "EquipInfo.h"
@@ -71,7 +72,15 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    EquipComposeViewController *composeVC=[EquipComposeViewController new];
     
+    NSString *rankId=self.equipRank2showArr[indexPath.section];
+    NSArray *equipsArr=self.equipRankDict[rankId];
+    EquipInfo *equipInfo2use=equipsArr[indexPath.row];
+    
+    composeVC.equipInfo=equipInfo2use;
+    
+    [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:composeVC animated:YES];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath

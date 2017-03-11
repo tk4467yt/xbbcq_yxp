@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EquipInfo.h"
 
 @interface EquipComposeViewController : UIViewController
+@property (nonatomic,strong) EquipInfo *equipInfo;
+
+@property (weak, nonatomic) IBOutlet UITableView *tbContent;
 
 @end
