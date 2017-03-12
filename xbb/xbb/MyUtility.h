@@ -46,4 +46,6 @@
 
 +(NSArray *)getAllEquipInfoFromDb;
 +(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId;
+
++(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask;
 @end

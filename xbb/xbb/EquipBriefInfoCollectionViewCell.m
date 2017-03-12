@@ -7,14 +7,19 @@
 //
 
 #import "EquipBriefInfoCollectionViewCell.h"
+#import "MyUtility.h"
 
 @implementation EquipBriefInfoCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
     
-    self.ivThumb.layer.masksToBounds=true;
-    self.ivThumb.layer.cornerRadius=10;
+    [MyUtility applyMaskImageToImageView:self.ivThumb withImage:[UIImage imageNamed:@"equip_stencil"]];
 }
 
 @end

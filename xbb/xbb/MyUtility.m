@@ -143,4 +143,13 @@ static __strong NSArray *allEquipsInfoArr;
     
     return nil;
 }
+
++(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask
+{
+    CALayer* maskLayer = [CALayer layer];
+    maskLayer.frame = CGRectMake(0, 0, iv2mask.frame.size.width, iv2mask.frame.size.height);
+    maskLayer.contents = (id)[img2mask CGImage];
+    [iv2mask.layer setMask:maskLayer];
+    iv2mask.layer.masksToBounds=true;
+}
 @end

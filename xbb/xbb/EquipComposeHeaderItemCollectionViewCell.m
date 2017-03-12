@@ -7,15 +7,20 @@
 //
 
 #import "EquipComposeHeaderItemCollectionViewCell.h"
+#import "MyUtility.h"
 
 @implementation EquipComposeHeaderItemCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
     
-    self.ivEquip.layer.masksToBounds=true;
-    self.ivEquip.layer.cornerRadius=10;
+    [MyUtility applyMaskImageToImageView:self.ivEquip withImage:[UIImage imageNamed:@"equip_stencil"]];
 }
 
 @end

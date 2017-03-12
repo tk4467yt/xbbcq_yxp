@@ -71,6 +71,9 @@
             self.ivEquip.image=[UIImage imageNamed:equipInfo.thumbFile];
             self.ivEquipMask.image=[self getEquipMaskForRank:equipInfo.equipRank];
             self.lblCount.text=[NSString stringWithFormat:@"*%d",(int)composeInfo.fragmentCount];
+            
+            [MyUtility applyMaskImageToImageView:self.ivFragment withImage:[UIImage imageNamed:@"fragment_stencil"]];
+            [MyUtility applyMaskImageToImageView:self.ivEquip withImage:[UIImage imageNamed:@"equip_stencil"]];
         } else {
             self.composeFromEquipHolder.hidden=false;
             self.composeFromFragmentHolder.hidden=true;
