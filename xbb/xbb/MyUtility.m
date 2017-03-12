@@ -10,6 +10,7 @@
 #import "DbHandler.h"
 
 static __strong NSArray *allEquipsInfoArr;
+static __strong NSDictionary *rankDescDict;
 
 @implementation MyUtility
 +(NSString *)heroTypeLiliangId
@@ -138,6 +139,30 @@ static __strong NSArray *allEquipsInfoArr;
     for (EquipInfo *aEquipInfo in allEquipsInfoArr) {
         if ([aEquipInfo.equipId isEqualToString:equipId]) {
             return aEquipInfo;
+        }
+    }
+    
+    return nil;
+}
+
++(NSDictionary *)getAllRankDescDict
+{
+    if (nil == rankDescDict) {
+        rankDescDict=[DbHandler getAllRankDescDict];
+    }
+    
+    return rankDescDict;
+}
+
++(RankDesc *)getRankDescForRankId:(NSString *)rankId
+{
+    if (nil == rankDescDict) {
+        rankDescDict=[DbHandler getAllRankDescDict];
+    }
+    
+    for (RankDesc *aRankDesc in rankDescDict.allValues) {
+        if ([aRankDesc.rankId isEqualToString:rankId]) {
+            return aRankDesc;
         }
     }
     

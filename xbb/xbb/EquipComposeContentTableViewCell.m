@@ -23,7 +23,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.rankDescDict=[DbHandler getAllRankDescDict];
+    self.rankDescDict=[MyUtility getAllRankDescDict];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

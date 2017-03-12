@@ -27,7 +27,7 @@
     self.cvHeader.dataSource=self;
     self.cvHeader.delegate=self;
     
-    self.rankDescDict=[DbHandler getAllRankDescDict];
+    self.rankDescDict=[MyUtility getAllRankDescDict];
     
     [self.cvHeader registerNib:[UINib nibWithNibName:@"EquipComposeHeaderItemCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kEquipComposeHeaderItemCVCellId];
 }

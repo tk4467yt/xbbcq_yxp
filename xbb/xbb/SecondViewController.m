@@ -41,7 +41,7 @@
 -(void)initEquipInfo
 {
     self.allEquipsArr=[MyUtility getAllEquipInfoFromDb];
-    self.rankDescDict=[DbHandler getAllRankDescDict];
+    self.rankDescDict=[MyUtility getAllRankDescDict];
     
     self.equipRank2showArr=[NSMutableArray arrayWithObjects:[MyUtility rankIdForBai],
                             [MyUtility rankIdForLv],

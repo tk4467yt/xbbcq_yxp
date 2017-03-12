@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "EquipInfo.h"
+#import "RankDesc.h"
 
 #define kHeroStarImage @"detail_star"
 #define kHeroStarImageGrey @"detail_star_grey"
@@ -46,6 +47,9 @@
 
 +(NSArray *)getAllEquipInfoFromDb;
 +(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId;
+
++(NSDictionary *)getAllRankDescDict;
++(RankDesc *)getRankDescForRankId:(NSString *)rankId;
 
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask;
 @end

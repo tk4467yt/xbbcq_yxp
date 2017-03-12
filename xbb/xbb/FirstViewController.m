@@ -67,7 +67,7 @@
 {
     self.allHerosArr=[DbHandler getAllHeros];
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
-    self.rankDescDict=[DbHandler getAllRankDescDict];
+    self.rankDescDict=[MyUtility getAllRankDescDict];
     
     self.liLiangHerosArr=[NSMutableArray new];
     self.zhiLiHerosArr=[NSMutableArray new];
