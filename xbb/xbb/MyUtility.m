@@ -93,7 +93,7 @@ static __strong NSDictionary *rankDescDict;
 
 +(UIImage *)makeMaskImageFroFrame:(UIImage *)img2use
 {
-    return [img2use resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10) resizingMode:UIImageResizingModeStretch];
+    return [img2use resizableImageWithCapInsets:UIEdgeInsetsMake(30, 30, 30, 30) resizingMode:UIImageResizingModeStretch];
 }
 
 +(BOOL)isStringNilOrZeroLength:(NSString *)str2check
