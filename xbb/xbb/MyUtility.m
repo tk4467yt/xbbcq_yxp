@@ -11,6 +11,7 @@
 
 static __strong NSArray *allEquipsInfoArr;
 static __strong NSDictionary *rankDescDict;
+static __strong NSArray *allEquipAttrDescArr;
 
 @implementation MyUtility
 +(NSString *)heroTypeLiliangId
@@ -91,6 +92,99 @@ static __strong NSDictionary *rankDescDict;
     return @"rank_hong_1";
 }
 
++(NSString *)attrIdForLiliang
+{
+    return @"li_liang";
+}
++(NSString *)attrIdForMinjie
+{
+    return @"min_jie";
+}
++(NSString *)attrIdForZhili
+{
+    return @"zhi_li";
+}
++(NSString *)attrIdForHealthMax
+{
+    return @"health_max";
+}
++(NSString *)attrIdForHealthRecover
+{
+    return @"health_recover";
+}
++(NSString *)attrIdForEnergyRecover
+{
+    return @"energy_recover";
+}
++(NSString *)attrIdForPhysicsGongji
+{
+    return @"physics_gongji";
+}
++(NSString *)attrIdForPhysicsHujia
+{
+    return @"physics_hujia";
+}
++(NSString *)attrIdForPhysicsBaoji
+{
+    return @"physics_baoji";
+}
++(NSString *)attrIdForChuantouPhysicsHujia
+{
+    return @"chuantou_physics_hujia";
+}
++(NSString *)attrIdForMagicQiangdu
+{
+    return @"magic_qiangdu";
+}
++(NSString *)attrIdForMagicBaoji
+{
+    return @"magic_baoji";
+}
++(NSString *)attrIdForMagicKangxing
+{
+    return @"magic_kangxing";
+}
++(NSString *)attrIdForHulueMagicKangxing
+{
+    return @"hulue_magic_kangxing";
+}
++(NSString *)attrIdForXixue
+{
+    return @"xixue";
+}
++(NSString *)attrIdForZhiliaoXiaoguo
+{
+    return @"zhiliao_xiaoguo";
+}
++(NSString *)attrIdForShangbi
+{
+    return @"shangbi";
+}
++(NSString *)attrIdForMingzhong
+{
+    return @"mingzhong";
+}
++(NSString *)attrIdForMinusControlTime
+{
+    return @"minus_control_time";
+}
++(NSString *)attrIdForYingzhiDikang
+{
+    return @"yingzhi_dikang";
+}
++(NSString *)attrIdForChengmoDikang
+{
+    return @"chengmo_dikang";
+}
++(NSString *)attrIdForMinusNengliangXiaohao
+{
+    return @"minus_nengliang_xiaohao";
+}
++(NSString *)attrIdForSkillLevelAddon
+{
+    return @"skill_level_addon";
+}
+
 +(UIImage *)makeMaskImageFroFrame:(UIImage *)img2use
 {
     return [img2use resizableImageWithCapInsets:UIEdgeInsetsMake(30, 30, 30, 30) resizingMode:UIImageResizingModeStretch];
@@ -163,6 +257,29 @@ static __strong NSDictionary *rankDescDict;
     for (RankDesc *aRankDesc in rankDescDict.allValues) {
         if ([aRankDesc.rankId isEqualToString:rankId]) {
             return aRankDesc;
+        }
+    }
+    
+    return nil;
+}
+
++(NSArray *)getAllEquipAttrDescArr
+{
+    if (nil == allEquipAttrDescArr) {
+        allEquipAttrDescArr=[DbHandler getAllEquipAttrDescArr];
+    }
+    
+    return allEquipAttrDescArr;
+}
++(EquipAttrDesc *)getEquipAttrDescForAttrId:(NSString *)attrId
+{
+    if (nil == allEquipAttrDescArr) {
+        allEquipAttrDescArr=[DbHandler getAllEquipAttrDescArr];
+    }
+    
+    for (EquipAttrDesc *aAttrDesc in allEquipAttrDescArr) {
+        if ([aAttrDesc.attrId isEqualToString:attrId]) {
+            return aAttrDesc;
         }
     }
     

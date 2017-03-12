@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250057021E7559E1006FB475 /* EquipComposeAttrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250057001E7559E1006FB475 /* EquipComposeAttrTableViewCell.m */; };
+		250057031E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250057011E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib */; };
+		250057071E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250057051E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m */; };
+		250057081E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250057061E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib */; };
 		250B1B511E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B1B4F1E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m */; };
 		250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250B1B501E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib */; };
 		250B1B561E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B1B541E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m */; };
@@ -94,6 +98,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250056FF1E7559E1006FB475 /* EquipComposeAttrTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeAttrTableViewCell.h; sourceTree = "<group>"; };
+		250057001E7559E1006FB475 /* EquipComposeAttrTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeAttrTableViewCell.m; sourceTree = "<group>"; };
+		250057011E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeAttrTableViewCell.xib; sourceTree = "<group>"; };
+		250057041E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeAttrItemCollectionViewCell.h; sourceTree = "<group>"; };
+		250057051E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeAttrItemCollectionViewCell.m; sourceTree = "<group>"; };
+		250057061E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeAttrItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		250B1B4E1E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailStarInfoTableViewCell.h; sourceTree = "<group>"; };
 		250B1B4F1E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailStarInfoTableViewCell.m; sourceTree = "<group>"; };
 		250B1B501E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailStarInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -281,6 +291,12 @@
 				25EDF2C81E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.h */,
 				25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */,
 				25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */,
+				250057041E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.h */,
+				250057051E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m */,
+				250057061E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib */,
+				250056FF1E7559E1006FB475 /* EquipComposeAttrTableViewCell.h */,
+				250057001E7559E1006FB475 /* EquipComposeAttrTableViewCell.m */,
+				250057011E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib */,
 				25AEB6BA1E72F46700AE73BB /* EquipComposeContentTableViewCell.h */,
 				25AEB6BB1E72F46700AE73BB /* EquipComposeContentTableViewCell.m */,
 				25AEB6BC1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib */,
@@ -587,8 +603,10 @@
 				25834CF31E704FE700B45F05 /* HeroDetailEquipsTableViewCell.xib in Resources */,
 				250CB1F91E71A70200495F52 /* EquipComposeViewController.xib in Resources */,
 				25895E2C1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib in Resources */,
+				250057031E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib in Resources */,
 				25895E361E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib in Resources */,
 				250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */,
+				250057081E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib in Resources */,
 				250B1B571E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib in Resources */,
 				25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */,
 				253EBB211E6859D400524553 /* xbb.db in Resources */,
@@ -635,6 +653,7 @@
 				25989BED1E6C24E600E8481C /* HeroDetailViewController.m in Sources */,
 				25AEB6B81E72F23800AE73BB /* EquipComposeHeaderTableViewCell.m in Sources */,
 				25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */,
+				250057021E7559E1006FB475 /* EquipComposeAttrTableViewCell.m in Sources */,
 				2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */,
 				25DD74C11E6AD39D0000EB46 /* EquipComposeInfo.m in Sources */,
 				25DD74A61E6AC0410000EB46 /* SpeciesDesc.m in Sources */,
@@ -653,6 +672,7 @@
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
 				253EBB381E685B6200524553 /* FMDatabaseQueue.m in Sources */,
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
+				250057071E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m in Sources */,
 				25EDF2D21E6C0B130046AF1C /* MyRootViewController.m in Sources */,
 				250B1B511E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m in Sources */,
 				25EDF2CF1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m in Sources */,

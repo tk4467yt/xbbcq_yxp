@@ -10,11 +10,13 @@
 #import "HeroCollectionViewCell.h"
 #import "EquipComposeHeaderTableViewCell.h"
 #import "EquipComposeContentTableViewCell.h"
+#import "EquipComposeAttrTableViewCell.h"
 #import "MyUtility.h"
 #import "DbHandler.h"
 
 #define equipComposeHeaderCellId @"equip_compose_header_tb_cell_id"
 #define equipComposeContentCellId @"equip_compose_content_tb_cell_id"
+#define equipComposeAttrCellId @"equip_compose_attr_tb_cell_id"
 
 @interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSMutableArray *equip2showArr;
@@ -33,6 +35,7 @@
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHeaderCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeAttrTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeAttrCellId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,6 +89,8 @@
         return 84;
     } else if (1 == indexPath.section) {
         return [self heightForEquipComposeCell];
+    } else if (2 == indexPath.section) {
+        return 150;
     }
     return 0;
 }
@@ -96,6 +101,8 @@
     if (0 == section) {
         return 1;
     } else if (1 == section) {
+        return 1;
+    } else if (2 == section) {
         return 1;
     }
     return 0;
@@ -115,6 +122,11 @@
         contentCell.equipId2show=self.equip2showArr.lastObject;
         
         cell2ret=contentCell;
+    } else if (2 == indexPath.section) {
+        EquipComposeAttrTableViewCell *attrCell=[tableView dequeueReusableCellWithIdentifier:equipComposeAttrCellId];
+        attrCell.equipInfo2show=self.equipInfo;
+        
+        cell2ret=attrCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -125,6 +137,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 @end

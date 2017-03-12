@@ -506,20 +506,20 @@ static __strong FMDatabase *dbConfig;
     return aEquipComposeInfo;
 }
 
-+(NSDictionary *)getAllEquipAttrDesc
++(NSArray *)getAllEquipAttrDescArr
 {
-    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    NSMutableArray *arr2ret=[NSMutableArray new];
     
-    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_attr_desc`"];
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `equip_attr_desc` ORDER BY `rowid`"];
     while ([s next]) {
         EquipAttrDesc *aEquipAttrDesc=[EquipAttrDesc new];
         
         aEquipAttrDesc.attrId=[s stringForColumn:@"attr_id"];
         aEquipAttrDesc.attrDesc=[s stringForColumn:@"attr_desc"];
         
-        [dict2ret setObject:aEquipAttrDesc forKey:aEquipAttrDesc.attrId];
+        [arr2ret addObject:aEquipAttrDesc];
     }
     
-    return dict2ret;
+    return arr2ret;
 }
 @end

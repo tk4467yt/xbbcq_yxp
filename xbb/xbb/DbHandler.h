@@ -42,5 +42,5 @@
 +(NSDictionary *)getAllEquipComposeInfo;
 +(EquipComposeInfo *)getEquipComposeInfoForEquipId:(NSString *)equipId;
 
-+(NSDictionary *)getAllEquipAttrDesc;
++(NSArray *)getAllEquipAttrDescArr;
 @end
