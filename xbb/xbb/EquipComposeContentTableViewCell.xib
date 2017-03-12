@@ -26,43 +26,43 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOh-bk-RSY" userLabel="composeFromEquipHolder">
-                        <rect key="frame" x="8" y="29" width="285" height="200"/>
+                        <rect key="frame" x="8" y="29" width="285" height="180"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRq-dN-wl7" userLabel="composeFrom2Holder">
-                                <rect key="frame" x="0.0" y="0.0" width="285" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="285" height="180"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBE-Z7-32E" userLabel="ivEquip">
-                                        <rect key="frame" x="124" y="31" width="36" height="35"/>
+                                        <rect key="frame" x="124" y="21" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j3c-8a-9gp" userLabel="ivEquipMask">
-                                        <rect key="frame" x="117" y="25" width="50" height="50"/>
+                                        <rect key="frame" x="117" y="15" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AB0-Ba-dwp"/>
                                             <constraint firstAttribute="width" constant="50" id="UlO-Sc-u2a"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equip_craft_2" translatesAutoresizingMaskIntoConstraints="NO" id="CcL-1t-J6v" userLabel="ivComposeInd">
-                                        <rect key="frame" x="92" y="75" width="100" height="50"/>
+                                        <rect key="frame" x="92" y="65" width="100" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CcL-1t-J6v" secondAttribute="height" multiplier="2:1" id="556-ih-PfP"/>
                                             <constraint firstAttribute="width" constant="100" id="VeC-Ub-VxF"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kUs-i6-PPc" userLabel="ivEquipCompose0">
-                                        <rect key="frame" x="74" y="131" width="36" height="35"/>
+                                        <rect key="frame" x="74" y="121" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-ER-Dso" userLabel="ivEquipCompose0Mask">
-                                        <rect key="frame" x="67" y="125" width="50" height="50"/>
+                                        <rect key="frame" x="67" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a3D-kn-Bl8"/>
                                             <constraint firstAttribute="width" constant="50" id="iPP-3a-SJY"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1p-XI-yxG" userLabel="ivEquipCompose1">
-                                        <rect key="frame" x="174" y="131" width="36" height="35"/>
+                                        <rect key="frame" x="174" y="121" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGC-Rm-WPb" userLabel="ivEquipCompose1Mask">
-                                        <rect key="frame" x="167" y="125" width="50" height="50"/>
+                                        <rect key="frame" x="167" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="FY5-GK-x5y"/>
                                             <constraint firstAttribute="height" constant="50" id="Iq0-m9-mvv"/>
@@ -94,50 +94,50 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-DW-y2K" userLabel="composeFrom3Holder">
-                                <rect key="frame" x="0.0" y="0.0" width="285" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="285" height="180"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWa-A3-uJ0" userLabel="ivEquip">
-                                        <rect key="frame" x="124" y="31" width="36" height="35"/>
+                                        <rect key="frame" x="124" y="21" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXf-5c-ENZ" userLabel="ivEquipMask">
-                                        <rect key="frame" x="117" y="25" width="50" height="50"/>
+                                        <rect key="frame" x="117" y="15" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7VP-wE-Wgs"/>
                                             <constraint firstAttribute="width" constant="50" id="hdI-7g-0VI"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equip_craft_3" translatesAutoresizingMaskIntoConstraints="NO" id="ehz-BL-tYJ" userLabel="ivComposeInd">
-                                        <rect key="frame" x="42" y="75" width="200" height="50"/>
+                                        <rect key="frame" x="42" y="65" width="200" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ehz-BL-tYJ" secondAttribute="height" multiplier="4:1" id="9T7-iB-1X1"/>
                                             <constraint firstAttribute="width" constant="200" id="kYT-bI-ly6"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zm9-u5-di0" userLabel="ivEquipCompose0">
-                                        <rect key="frame" x="24" y="131" width="36" height="35"/>
+                                        <rect key="frame" x="24" y="121" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IeW-rR-CBp" userLabel="ivEquipCompose0Mask">
-                                        <rect key="frame" x="17" y="125" width="50" height="50"/>
+                                        <rect key="frame" x="17" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RAl-Ca-iQm"/>
                                             <constraint firstAttribute="width" constant="50" id="lJq-XV-VHY"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="czG-92-17q" userLabel="ivEquipCompose1">
-                                        <rect key="frame" x="124" y="131" width="36" height="35"/>
+                                        <rect key="frame" x="124" y="121" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-JL-vEp" userLabel="ivEquipCompose1Mask">
-                                        <rect key="frame" x="117" y="125" width="50" height="50"/>
+                                        <rect key="frame" x="117" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="RAg-bi-jq3"/>
                                             <constraint firstAttribute="height" constant="50" id="wrs-Mn-HP8"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-29-n96" userLabel="ivEquipCompose2">
-                                        <rect key="frame" x="224" y="131" width="36" height="35"/>
+                                        <rect key="frame" x="224" y="121" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQd-t4-iL9" userLabel="ivEquipCompose2Mask">
-                                        <rect key="frame" x="217" y="125" width="50" height="50"/>
+                                        <rect key="frame" x="217" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="EtP-3G-kgO"/>
                                             <constraint firstAttribute="width" constant="50" id="I8j-Hu-Daz"/>
@@ -175,60 +175,60 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="os3-de-OWf" userLabel="composeFrom4Holder">
-                                <rect key="frame" x="0.0" y="0.0" width="285" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="285" height="180"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-U6-7uT" userLabel="ivEquip">
-                                        <rect key="frame" x="124" y="36" width="36" height="35"/>
+                                        <rect key="frame" x="124" y="26" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-dd-sxQ" userLabel="ivEquipMask">
-                                        <rect key="frame" x="117" y="30" width="50" height="50"/>
+                                        <rect key="frame" x="117" y="20" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Wfw-9c-hqt"/>
                                             <constraint firstAttribute="height" constant="50" id="oDQ-QU-4B0"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equip_craft_4" translatesAutoresizingMaskIntoConstraints="NO" id="ebZ-Gw-WcN" userLabel="ivComposeInd">
-                                        <rect key="frame" x="22" y="80" width="240" height="40"/>
+                                        <rect key="frame" x="22" y="70" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="bJU-eC-fQl"/>
                                             <constraint firstAttribute="width" secondItem="ebZ-Gw-WcN" secondAttribute="height" multiplier="6:1" id="gCW-ia-Gie"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3uO-ZG-Qq0" userLabel="ivEquipCompose0">
-                                        <rect key="frame" x="4" y="126" width="36" height="35"/>
+                                        <rect key="frame" x="4" y="116" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-l9-dLD" userLabel="ivEquipCompose0Mask">
-                                        <rect key="frame" x="-3" y="120" width="50" height="50"/>
+                                        <rect key="frame" x="-3" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="AmD-1V-vIb"/>
                                             <constraint firstAttribute="height" constant="50" id="gmZ-87-2oQ"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-UL-zAb" userLabel="ivEquipCompose1">
-                                        <rect key="frame" x="84" y="126" width="36" height="35"/>
+                                        <rect key="frame" x="84" y="116" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-kT-N4y" userLabel="ivEquipCompose1Mask">
-                                        <rect key="frame" x="77" y="120" width="50" height="50"/>
+                                        <rect key="frame" x="77" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="XBF-xJ-p7P"/>
                                             <constraint firstAttribute="height" constant="50" id="gzv-cs-uoW"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5P0-Kf-nTe" userLabel="ivEquipCompose2">
-                                        <rect key="frame" x="164" y="126" width="36" height="35"/>
+                                        <rect key="frame" x="164" y="116" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tKy-Do-1tg" userLabel="ivEquipCompose2Mask">
-                                        <rect key="frame" x="157" y="120" width="50" height="50"/>
+                                        <rect key="frame" x="157" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Bsa-f7-gi8"/>
                                             <constraint firstAttribute="height" constant="50" id="uyS-LQ-EMm"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-na-U2Q" userLabel="ivEquipCompose3">
-                                        <rect key="frame" x="244" y="126" width="36" height="35"/>
+                                        <rect key="frame" x="244" y="116" width="36" height="35"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="soI-qV-cxe" userLabel="ivEquipCompose3Mask">
-                                        <rect key="frame" x="237" y="120" width="50" height="50"/>
+                                        <rect key="frame" x="237" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9jm-oe-1R6"/>
                                             <constraint firstAttribute="width" constant="50" id="vmV-U9-kM5"/>
@@ -286,40 +286,40 @@
                             <constraint firstAttribute="bottom" secondItem="oRq-dN-wl7" secondAttribute="bottom" id="dFU-Ig-hVc"/>
                             <constraint firstItem="os3-de-OWf" firstAttribute="leading" secondItem="VOh-bk-RSY" secondAttribute="leading" id="ea3-Kw-jqs"/>
                             <constraint firstAttribute="bottom" secondItem="e9c-DW-y2K" secondAttribute="bottom" id="eoi-IF-ZIq"/>
-                            <constraint firstAttribute="height" constant="200" id="xP1-s2-tMl"/>
+                            <constraint firstAttribute="height" constant="180" id="xP1-s2-tMl"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-rm-JnH" userLabel="composeFromFragmentHolder">
-                        <rect key="frame" x="8" y="29" width="285" height="150"/>
+                        <rect key="frame" x="8" y="29" width="285" height="100"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-8X-bBt" userLabel="ivFragment">
-                                <rect key="frame" x="17" y="34" width="80" height="80"/>
+                                <rect key="frame" x="17" y="9" width="80" height="80"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujr-RQ-7aL" userLabel="ivFragmentMask">
-                                <rect key="frame" x="10" y="28" width="94" height="95"/>
+                                <rect key="frame" x="10" y="3" width="94" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="0Y6-j2-AGa"/>
                                     <constraint firstAttribute="width" constant="94" id="qMk-3R-27b"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-Ag-w8V" userLabel="lblCount">
-                                <rect key="frame" x="38.5" y="123" width="37.5" height="18"/>
+                                <rect key="frame" x="38.5" y="98" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fragment_compose_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="SvG-ib-z7W" userLabel="ivArrow">
-                                <rect key="frame" x="124" y="61" width="37" height="28"/>
+                                <rect key="frame" x="124" y="36" width="37" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="WiE-RQ-ahe"/>
                                     <constraint firstAttribute="height" constant="28" id="rEt-rw-nFU"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cw0-u5-tlw" userLabel="ivEquip">
-                                <rect key="frame" x="188" y="34" width="80" height="80"/>
+                                <rect key="frame" x="188" y="9" width="80" height="80"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-lA-Uk3" userLabel="ivEquipMask">
-                                <rect key="frame" x="181" y="28" width="94" height="95"/>
+                                <rect key="frame" x="181" y="3" width="94" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="2fe-fr-bxY"/>
                                     <constraint firstAttribute="width" constant="94" id="Qii-Y0-Evv"/>
@@ -333,7 +333,7 @@
                             <constraint firstItem="Hxo-lA-Uk3" firstAttribute="bottom" secondItem="cw0-u5-tlw" secondAttribute="bottom" constant="9" id="9Wx-VB-iiy"/>
                             <constraint firstItem="Hxo-lA-Uk3" firstAttribute="centerY" secondItem="SxV-rm-JnH" secondAttribute="centerY" id="BmZ-3P-FEP"/>
                             <constraint firstItem="0Xf-Ag-w8V" firstAttribute="centerX" secondItem="Ujr-RQ-7aL" secondAttribute="centerX" id="Ma8-ch-Asm"/>
-                            <constraint firstAttribute="height" constant="150" id="OLW-LN-dNd"/>
+                            <constraint firstAttribute="height" constant="100" id="OLW-LN-dNd"/>
                             <constraint firstItem="q6T-8X-bBt" firstAttribute="top" secondItem="Ujr-RQ-7aL" secondAttribute="top" constant="6" id="Trt-Ph-rf3"/>
                             <constraint firstItem="cw0-u5-tlw" firstAttribute="leading" secondItem="Hxo-lA-Uk3" secondAttribute="leading" constant="7" id="UO6-jH-WD0"/>
                             <constraint firstItem="cw0-u5-tlw" firstAttribute="top" secondItem="Hxo-lA-Uk3" secondAttribute="top" constant="6" id="Ukb-hO-6N2"/>
@@ -348,7 +348,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hh-rj-lhn" userLabel="lblComposeNone">
-                        <rect key="frame" x="8" y="79" width="285" height="21"/>
+                        <rect key="frame" x="8" y="49" width="285" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -363,7 +363,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="VOh-bk-RSY" secondAttribute="trailing" id="Vdn-vF-VdH"/>
                     <constraint firstItem="VOh-bk-RSY" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" id="Z8y-Yl-SW4"/>
                     <constraint firstItem="SxV-rm-JnH" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" id="Zji-jt-gyf"/>
-                    <constraint firstItem="3Hh-rj-lhn" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" constant="50" id="qaY-BP-zxV"/>
+                    <constraint firstItem="3Hh-rj-lhn" firstAttribute="top" secondItem="7bu-vh-61H" secondAttribute="bottom" constant="20" id="qaY-BP-zxV"/>
                     <constraint firstItem="3Hh-rj-lhn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="r1f-J9-y0g"/>
                     <constraint firstItem="7bu-vh-61H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vMP-59-LKK"/>
                     <constraint firstItem="VOh-bk-RSY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="wpc-Wo-I0h"/>

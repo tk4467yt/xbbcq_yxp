@@ -40,13 +40,52 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (CGFloat)heightForEquipComposeCell
+{
+    if (self.equipInfo.isCompose) {
+        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipInfo.equipId];
+        
+        if (composeInfo.fragmentCount > 0) {
+            return 150;
+        } else {
+            NSMutableArray *composeIdArr=[NSMutableArray new];
+            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom1]) {
+                [composeIdArr addObject:composeInfo.composeFrom1];
+            }
+            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom2]) {
+                [composeIdArr addObject:composeInfo.composeFrom2];
+            }
+            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom3]) {
+                [composeIdArr addObject:composeInfo.composeFrom3];
+            }
+            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom4]) {
+                [composeIdArr addObject:composeInfo.composeFrom4];
+            }
+            
+            if (2 == composeIdArr.count) {
+                return 220;
+            } else if (3 == composeIdArr.count) {
+                return 220;
+            } else if (4 == composeIdArr.count) {
+                return 220;
+            } else {
+                return 80;
+            }
+        }
+    } else {
+        return 80;
+    }
+    
+    return 80;
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (0 == indexPath.section) {
         return 84;
     } else if (1 == indexPath.section) {
-        return [MyUtility screenHeight]-84-60-20;
+        return [self heightForEquipComposeCell];
     }
     return 0;
 }
