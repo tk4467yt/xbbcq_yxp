@@ -57,7 +57,7 @@
     self.lblTitle.text=NSLocalizedString(@"equip_compose_title", @"");
     self.lblComposeNone.text=NSLocalizedString(@"desc_for_none", @"");
     
-    EquipInfo *equipInfo=[DbHandler getEquipInfoForEquipId:self.equipId2show];
+    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipId:self.equipId2show];
     if (equipInfo.isCompose) {
         self.lblComposeNone.hidden=true;
         
