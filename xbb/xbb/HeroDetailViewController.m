@@ -194,22 +194,22 @@
         
         equipCell.lblRankDesc.text=title2set;
         
-        EquipInfo *equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip1];
+        EquipInfo *equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
         equipCell.ivEquip0.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
-        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip2];
+        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip2];
         equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
-        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip3];
+        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip3];
         equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
-        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip4];
+        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip4];
         equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
-        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip5];
+        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip5];
         equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
-        equipInfo2use=[DbHandler getEquipInfoForEquipId:aHeroEquip.equip6];
+        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
         equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
         cell2ret=equipCell;

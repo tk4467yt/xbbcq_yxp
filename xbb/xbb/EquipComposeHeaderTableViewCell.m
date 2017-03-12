@@ -49,7 +49,7 @@
     EquipComposeHeaderItemCollectionViewCell *headerComposeItemCell=[collectionView dequeueReusableCellWithReuseIdentifier:kEquipComposeHeaderItemCVCellId forIndexPath:indexPath];
     
     NSString *equipId=self.equipShowingArr[indexPath.row];
-    EquipInfo *curEquip=[DbHandler getEquipInfoForEquipId:equipId];
+    EquipInfo *curEquip=[MyUtility getEquipInfoForEquipId:equipId];
     
     headerComposeItemCell.ivEquip.image=[UIImage imageNamed:curEquip.thumbFile];
     if (indexPath.row == self.equipShowingArr.count-1) {
