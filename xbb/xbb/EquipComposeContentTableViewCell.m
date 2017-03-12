@@ -146,9 +146,13 @@
                 self.ivEquipCompose2From4.image=[UIImage imageNamed:composeFrom3Equip.thumbFile];
                 self.ivEquipCompose2MaskFrom4.image=[self getEquipMaskForRank:composeFrom3Equip.equipRank];
                 
-                EquipInfo *composeFrom4Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom3];
+                EquipInfo *composeFrom4Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom4];
                 self.ivEquipCompose3From4.image=[UIImage imageNamed:composeFrom4Equip.thumbFile];
                 self.ivEquipCompose3MaskFrom4.image=[self getEquipMaskForRank:composeFrom4Equip.equipRank];
+            } else {
+                self.composeFrom2Holder.hidden=true;
+                self.composeFrom3Holder.hidden=true;
+                self.composeFrom4Holder.hidden=true;
             }
         }
     } else {
