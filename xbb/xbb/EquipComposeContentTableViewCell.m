@@ -96,14 +96,59 @@
                 self.composeFrom2Holder.hidden=false;
                 self.composeFrom3Holder.hidden=true;
                 self.composeFrom4Holder.hidden=true;
+                
+                self.ivEquipFrom2.image=[UIImage imageNamed:equipInfo.thumbFile];
+                self.ivEquipMaskFrom2.image=[self getEquipMaskForRank:equipInfo.equipRank];
+                
+                EquipInfo *composeFrom1Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom1];
+                self.ivEquipCompose0From2.image=[UIImage imageNamed:composeFrom1Equip.thumbFile];
+                self.ivEquipCompose0MaskFrom2.image=[self getEquipMaskForRank:composeFrom1Equip.equipRank];
+                
+                EquipInfo *composeFrom2Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom2];
+                self.ivEquipCompose1From2.image=[UIImage imageNamed:composeFrom2Equip.thumbFile];
+                self.ivEquipCompose1MaskFrom2.image=[self getEquipMaskForRank:composeFrom2Equip.equipRank];
             } else if (3 == composeIdArr.count) {
                 self.composeFrom2Holder.hidden=true;
                 self.composeFrom3Holder.hidden=false;
                 self.composeFrom4Holder.hidden=true;
+                
+                self.ivEquipFrom3.image=[UIImage imageNamed:equipInfo.thumbFile];
+                self.ivEquipMaskFrom3.image=[self getEquipMaskForRank:equipInfo.equipRank];
+                
+                EquipInfo *composeFrom1Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom1];
+                self.ivEquipCompose0From3.image=[UIImage imageNamed:composeFrom1Equip.thumbFile];
+                self.ivEquipCompose0MaskFrom3.image=[self getEquipMaskForRank:composeFrom1Equip.equipRank];
+                
+                EquipInfo *composeFrom2Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom2];
+                self.ivEquipCompose1From3.image=[UIImage imageNamed:composeFrom2Equip.thumbFile];
+                self.ivEquipCompose1MaskFrom3.image=[self getEquipMaskForRank:composeFrom2Equip.equipRank];
+                
+                EquipInfo *composeFrom3Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom3];
+                self.ivEquipCompose2From3.image=[UIImage imageNamed:composeFrom3Equip.thumbFile];
+                self.ivEquipCompose2MaskFrom3.image=[self getEquipMaskForRank:composeFrom3Equip.equipRank];
             } else if (4 == composeIdArr.count) {
                 self.composeFrom2Holder.hidden=true;
                 self.composeFrom3Holder.hidden=true;
                 self.composeFrom4Holder.hidden=false;
+                
+                self.ivEquipFrom4.image=[UIImage imageNamed:equipInfo.thumbFile];
+                self.ivEquipMaskFrom4.image=[self getEquipMaskForRank:equipInfo.equipRank];
+                
+                EquipInfo *composeFrom1Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom1];
+                self.ivEquipCompose0From4.image=[UIImage imageNamed:composeFrom1Equip.thumbFile];
+                self.ivEquipCompose0MaskFrom4.image=[self getEquipMaskForRank:composeFrom1Equip.equipRank];
+                
+                EquipInfo *composeFrom2Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom2];
+                self.ivEquipCompose1From4.image=[UIImage imageNamed:composeFrom2Equip.thumbFile];
+                self.ivEquipCompose1MaskFrom4.image=[self getEquipMaskForRank:composeFrom2Equip.equipRank];
+                
+                EquipInfo *composeFrom3Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom3];
+                self.ivEquipCompose2From4.image=[UIImage imageNamed:composeFrom3Equip.thumbFile];
+                self.ivEquipCompose2MaskFrom4.image=[self getEquipMaskForRank:composeFrom3Equip.equipRank];
+                
+                EquipInfo *composeFrom4Equip=[MyUtility getEquipInfoForEquipId:composeInfo.composeFrom3];
+                self.ivEquipCompose3From4.image=[UIImage imageNamed:composeFrom4Equip.thumbFile];
+                self.ivEquipCompose3MaskFrom4.image=[self getEquipMaskForRank:composeFrom4Equip.equipRank];
             }
         }
     } else {
