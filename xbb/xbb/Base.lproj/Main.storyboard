@@ -174,7 +174,6 @@
                     <connections>
                         <segue destination="kqa-Vs-1AW" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="3QK-Rz-VLx" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="CbS-Hs-COt" kind="relationship" relationship="viewControllers" id="uhk-Yf-8Yi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "EquipInfo.h"
+#import "MyRootViewController.h"
 
-@interface EquipComposeViewController : UIViewController
+@interface EquipComposeViewController : MyRootViewController
 @property (nonatomic,strong) EquipInfo *equipInfo;
 
 @property (weak, nonatomic) IBOutlet UITableView *tbContent;
