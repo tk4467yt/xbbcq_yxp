@@ -170,7 +170,15 @@
         attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@",attrId];
     } else {
         EquipAttrDesc *attrDesc=[MyUtility getEquipAttrDescForAttrId:attrId];
-        attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@ + %d",attrDesc.attrDesc,[self.value2showArr[indexPath.row] intValue]];
+        BOOL withPercentSufix=false;
+        if ([attrId isEqualToString:[MyUtility attrIdForZhiliaoXiaoguo]] ||
+            [attrId isEqualToString:[MyUtility attrIdForMinusControlTime]] ||
+            [attrId isEqualToString:[MyUtility attrIdForYingzhiDikang]] ||
+            [attrId isEqualToString:[MyUtility attrIdForChengmoDikang]] ||
+            [attrId isEqualToString:[MyUtility attrIdForMinusNengliangXiaohao]]) {
+            withPercentSufix=true;
+        }
+        attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@ + %d%@",attrDesc.attrDesc,[self.value2showArr[indexPath.row] intValue],withPercentSufix?@"\%":@""];
     }
     
     return attrItemCell;

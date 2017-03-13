@@ -84,7 +84,7 @@
 
 -(NSInteger)numberOfEquipAttr2show
 {
-    NSInteger count2ret=0;
+    NSInteger count2ret=1;
     
     if (self.equipInfo.liliang > 0) {
         ++count2ret;
