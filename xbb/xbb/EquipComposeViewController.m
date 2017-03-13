@@ -82,6 +82,83 @@
     return 80;
 }
 
+-(NSInteger)numberOfEquipAttr2show
+{
+    NSInteger count2ret=0;
+    
+    if (self.equipInfo.liliang > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.minjie > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.zhili > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.healthMax > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.healthRecover > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.energyRecover > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.physicsGongji > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.physicsHujia > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.physicsBaoji > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.chuantouPhysicsHujia > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.magicQiangdu > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.magicBaoji > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.magicKangxing > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.hulueMagicKangxing > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.xixue > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.zhiliaoXiaoguo > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.shangbi > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.mingzhong > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.minusControlTime > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.yingzhiDikang > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.chengmoDikang > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.minusNengliangXiaohao > 0) {
+        ++count2ret;
+    }
+    if (self.equipInfo.skillLevelAddon > 0) {
+        ++count2ret;
+    }
+    
+    return count2ret;
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -90,7 +167,7 @@
     } else if (1 == indexPath.section) {
         return [self heightForEquipComposeCell];
     } else if (2 == indexPath.section) {
-        return 150;
+        return [self numberOfEquipAttr2show]*30+16;
     }
     return 0;
 }

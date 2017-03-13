@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "EquipInfo.h"
 
-@interface EquipComposeAttrTableViewCell : UITableViewCell <UICollectionViewDataSource,UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UICollectionView *cvAttrs;
+@interface EquipComposeAttrTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITableView *tbAttrs;
 
 @property (strong,nonatomic) EquipInfo *equipInfo2show;
 @end

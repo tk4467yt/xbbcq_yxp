@@ -7,13 +7,13 @@
 //
 
 #import "EquipComposeAttrTableViewCell.h"
-#import "EquipComposeAttrItemCollectionViewCell.h"
+#import "EquipComposeAttrItemTableViewCell.h"
 #import "DbHandler.h"
 #import "MyUtility.h"
 
-#define kEquipComposeAttrItemCVCellId @"equip_compose_attr_item_cv_cell_id"
+#define kEquipComposeAttrItemTBCellId @"equip_compose_attr_item_tb_cell_id"
 
-@interface EquipComposeAttrTableViewCell ()
+@interface EquipComposeAttrTableViewCell () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray *attrDescArr;
 @property (nonatomic,strong) NSMutableArray *attr2showIdArr;
 @property (nonatomic,strong) NSMutableArray *value2showArr;
@@ -25,10 +25,10 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.cvAttrs.dataSource=self;
-    self.cvAttrs.delegate=self;
+    self.tbAttrs.dataSource=self;
+    self.tbAttrs.delegate=self;
     
-    [self.cvAttrs registerNib:[UINib nibWithNibName:@"EquipComposeAttrItemCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kEquipComposeAttrItemCVCellId];
+    [self.tbAttrs registerNib:[UINib nibWithNibName:@"EquipComposeAttrItemTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kEquipComposeAttrItemTBCellId];
     
     self.attrDescArr=[MyUtility getAllEquipAttrDescArr];
 }
@@ -138,8 +138,14 @@
     // Configure the view for the selected state
 }
 
-#pragma mark UICollectionViewDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+#pragma mark UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 30;
+}
+
+#pragma mark UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (nil == self.attr2showIdArr) {
         [self updateAttrId2show];
@@ -147,24 +153,15 @@
     return self.attr2showIdArr.count;
 }
 
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EquipComposeAttrItemCollectionViewCell *attrItemCell=[collectionView dequeueReusableCellWithReuseIdentifier:kEquipComposeAttrItemCVCellId forIndexPath:indexPath];
+    EquipComposeAttrItemTableViewCell *attrItemCell=[tableView dequeueReusableCellWithIdentifier:kEquipComposeAttrItemTBCellId];
     
-    attrItemCell.lblAttrDesc.text=@"a";
+    NSString *attrId=self.attr2showIdArr[indexPath.row];
+    EquipAttrDesc *attrDesc=[MyUtility getEquipAttrDescForAttrId:attrId];
+    attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@: %d",attrDesc.attrDesc,[self.value2showArr[indexPath.row] intValue]];
     
     return attrItemCell;
-}
-
-#pragma mark UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
-#pragma mark UICollectionViewDelegateFlowLayout
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(57+16+5+37,68+16);
 }
 
 @end

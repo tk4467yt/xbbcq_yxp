@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		250057021E7559E1006FB475 /* EquipComposeAttrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250057001E7559E1006FB475 /* EquipComposeAttrTableViewCell.m */; };
 		250057031E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250057011E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib */; };
-		250057071E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250057051E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m */; };
-		250057081E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250057061E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib */; };
 		250B1B511E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B1B4F1E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m */; };
 		250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250B1B501E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib */; };
 		250B1B561E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B1B541E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m */; };
@@ -51,6 +49,8 @@
 		25895E311E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25895E2F1E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.xib */; };
 		25895E351E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25895E331E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.m */; };
 		25895E361E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25895E341E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib */; };
+		259418E91E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259418E71E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m */; };
+		259418EA1E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259418E81E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib */; };
 		25989BED1E6C24E600E8481C /* HeroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25989BEB1E6C24E600E8481C /* HeroDetailViewController.m */; };
 		25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25989BEC1E6C24E600E8481C /* HeroDetailViewController.xib */; };
 		25AEB6B81E72F23800AE73BB /* EquipComposeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AEB6B61E72F23800AE73BB /* EquipComposeHeaderTableViewCell.m */; };
@@ -101,9 +101,6 @@
 		250056FF1E7559E1006FB475 /* EquipComposeAttrTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeAttrTableViewCell.h; sourceTree = "<group>"; };
 		250057001E7559E1006FB475 /* EquipComposeAttrTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeAttrTableViewCell.m; sourceTree = "<group>"; };
 		250057011E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeAttrTableViewCell.xib; sourceTree = "<group>"; };
-		250057041E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeAttrItemCollectionViewCell.h; sourceTree = "<group>"; };
-		250057051E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeAttrItemCollectionViewCell.m; sourceTree = "<group>"; };
-		250057061E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeAttrItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		250B1B4E1E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailStarInfoTableViewCell.h; sourceTree = "<group>"; };
 		250B1B4F1E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailStarInfoTableViewCell.m; sourceTree = "<group>"; };
 		250B1B501E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailStarInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -172,6 +169,9 @@
 		25895E321E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSepciesIconCollectionViewCell.h; sourceTree = "<group>"; };
 		25895E331E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSepciesIconCollectionViewCell.m; sourceTree = "<group>"; };
 		25895E341E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroSepciesIconCollectionViewCell.xib; sourceTree = "<group>"; };
+		259418E61E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeAttrItemTableViewCell.h; sourceTree = "<group>"; };
+		259418E71E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeAttrItemTableViewCell.m; sourceTree = "<group>"; };
+		259418E81E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeAttrItemTableViewCell.xib; sourceTree = "<group>"; };
 		25989BEA1E6C24E600E8481C /* HeroDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailViewController.h; sourceTree = "<group>"; };
 		25989BEB1E6C24E600E8481C /* HeroDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailViewController.m; sourceTree = "<group>"; };
 		25989BEC1E6C24E600E8481C /* HeroDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailViewController.xib; sourceTree = "<group>"; };
@@ -291,9 +291,9 @@
 				25EDF2C81E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.h */,
 				25EDF2C91E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m */,
 				25EDF2CA1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.xib */,
-				250057041E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.h */,
-				250057051E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m */,
-				250057061E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib */,
+				259418E61E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.h */,
+				259418E71E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m */,
+				259418E81E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib */,
 				250056FF1E7559E1006FB475 /* EquipComposeAttrTableViewCell.h */,
 				250057001E7559E1006FB475 /* EquipComposeAttrTableViewCell.m */,
 				250057011E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib */,
@@ -606,12 +606,12 @@
 				250057031E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib in Resources */,
 				25895E361E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.xib in Resources */,
 				250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */,
-				250057081E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.xib in Resources */,
 				250B1B571E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib in Resources */,
 				25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */,
 				253EBB211E6859D400524553 /* xbb.db in Resources */,
 				25AEB6BE1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib in Resources */,
 				25834CEE1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib in Resources */,
+				259418EA1E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib in Resources */,
 				25AEB6C31E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib in Resources */,
 				2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */,
 			);
@@ -647,6 +647,7 @@
 				253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */,
 				25DD74B81E6AC5F40000EB46 /* HeroEquips.m in Sources */,
 				25AEB6BD1E72F46700AE73BB /* EquipComposeContentTableViewCell.m in Sources */,
+				259418E91E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m in Sources */,
 				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
 				25895E2B1E6D9B900085B662 /* HeroDetailTopTableViewCell.m in Sources */,
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
@@ -672,7 +673,6 @@
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
 				253EBB381E685B6200524553 /* FMDatabaseQueue.m in Sources */,
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
-				250057071E758828006FB475 /* EquipComposeAttrItemCollectionViewCell.m in Sources */,
 				25EDF2D21E6C0B130046AF1C /* MyRootViewController.m in Sources */,
 				250B1B511E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m in Sources */,
 				25EDF2CF1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m in Sources */,
