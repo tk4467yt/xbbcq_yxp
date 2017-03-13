@@ -38,6 +38,9 @@
     self.attr2showIdArr=[NSMutableArray new];
     self.value2showArr=[NSMutableArray new];
     
+    [self.attr2showIdArr addObject:NSLocalizedString(@"equip_attr_title", @"")];
+    [self.value2showArr addObject:[NSNumber numberWithInteger:0]];
+    
     if (self.equipInfo2show.liliang > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForLiliang]];
         [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.liliang]];
@@ -158,8 +161,13 @@
     EquipComposeAttrItemTableViewCell *attrItemCell=[tableView dequeueReusableCellWithIdentifier:kEquipComposeAttrItemTBCellId];
     
     NSString *attrId=self.attr2showIdArr[indexPath.row];
-    EquipAttrDesc *attrDesc=[MyUtility getEquipAttrDescForAttrId:attrId];
-    attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@: %d",attrDesc.attrDesc,[self.value2showArr[indexPath.row] intValue]];
+    
+    if (0 == indexPath.row) {
+        attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@",attrId];
+    } else {
+        EquipAttrDesc *attrDesc=[MyUtility getEquipAttrDescForAttrId:attrId];
+        attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@ + %d",attrDesc.attrDesc,[self.value2showArr[indexPath.row] intValue]];
+    }
     
     return attrItemCell;
 }

@@ -19,11 +19,13 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-2h-GSY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="r6F-2h-GSY" secondAttribute="trailing" id="Kew-eu-Nmt"/>
                     <constraint firstAttribute="bottom" secondItem="r6F-2h-GSY" secondAttribute="bottom" id="Mcy-Wa-baM"/>
@@ -31,6 +33,7 @@
                     <constraint firstItem="r6F-2h-GSY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fOz-bA-N9K"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="lblAttrDesc" destination="r6F-2h-GSY" id="K66-j8-Atb"/>
             </connections>
