@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EquipComposeItemActionDelegate <NSObject>
+
+- (void)equipComposeItemTappedWithEquipId:(NSString *)itemId;
+
+@end
+
 @interface EquipComposeContentTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 
@@ -59,4 +65,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblComposeNone;
 
 @property (strong,nonatomic) NSString *equipId2show;
+@property (weak, nonatomic) id<EquipComposeItemActionDelegate> itemActionDelegate;
 @end

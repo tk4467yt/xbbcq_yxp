@@ -24,6 +24,73 @@
     // Initialization code
     
     self.rankDescDict=[MyUtility getAllRankDescDict];
+    
+    UITapGestureRecognizer *tapGesture02=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip0Tapped:)];
+    [self.ivEquipCompose0MaskFrom2 addGestureRecognizer:tapGesture02];
+    
+    UITapGestureRecognizer *tapGesture03=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip0Tapped:)];
+    [self.ivEquipCompose0MaskFrom3 addGestureRecognizer:tapGesture03];
+    
+    UITapGestureRecognizer *tapGesture04=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip0Tapped:)];
+    [self.ivEquipCompose0MaskFrom4 addGestureRecognizer:tapGesture04];
+    
+    UITapGestureRecognizer *tapGesture12=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip1Tapped:)];
+    [self.ivEquipCompose1MaskFrom2 addGestureRecognizer:tapGesture12];
+    
+    UITapGestureRecognizer *tapGesture13=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip1Tapped:)];
+    [self.ivEquipCompose1MaskFrom3 addGestureRecognizer:tapGesture13];
+    
+    UITapGestureRecognizer *tapGesture14=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip1Tapped:)];
+    [self.ivEquipCompose1MaskFrom4 addGestureRecognizer:tapGesture14];
+    
+    UITapGestureRecognizer *tapGesture23=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip2Tapped:)];
+    [self.ivEquipCompose2MaskFrom3 addGestureRecognizer:tapGesture23];
+    
+    UITapGestureRecognizer *tapGesture24=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip2Tapped:)];
+    [self.ivEquipCompose2MaskFrom4 addGestureRecognizer:tapGesture24];
+    
+    UITapGestureRecognizer *tapGesture34=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(composeEquip3Tapped:)];
+    [self.ivEquipCompose3MaskFrom4 addGestureRecognizer:tapGesture34];
+}
+
+- (void)composeEquip0Tapped:(UITapGestureRecognizer *)tapGesture
+{
+    NSLog(@"equip 0 tapped");
+    
+    if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
+        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom1];
+    }
+}
+
+- (void)composeEquip1Tapped:(UITapGestureRecognizer *)tapGesture
+{
+    NSLog(@"equip 1 tapped");
+    
+    if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
+        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom2];
+    }
+}
+
+- (void)composeEquip2Tapped:(UITapGestureRecognizer *)tapGesture
+{
+    NSLog(@"equip 2 tapped");
+    
+    if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
+        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom3];
+    }
+}
+
+- (void)composeEquip3Tapped:(UITapGestureRecognizer *)tapGesture
+{
+    NSLog(@"equip 3 tapped");
+    
+    if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
+        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom4];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

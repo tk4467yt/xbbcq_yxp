@@ -18,7 +18,7 @@
 #define equipComposeContentCellId @"equip_compose_content_tb_cell_id"
 #define equipComposeAttrCellId @"equip_compose_attr_tb_cell_id"
 
-@interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource,EquipComposeItemActionDelegate>
 @property (nonatomic,strong) NSMutableArray *equip2showArr;
 @end
 
@@ -159,6 +159,28 @@
     return count2ret;
 }
 
+- (void)equipComposeItemTappedWithEquipId:(NSString *)itemId
+{
+    BOOL isItemExist=false;
+    for (NSString *aEquipId in self.equip2showArr) {
+        if ([aEquipId isEqualToString:itemId]) {
+            isItemExist=true;
+        }
+    }
+    
+    if (!isItemExist) {
+        [self.equip2showArr addObject:itemId];
+    } else {
+        NSInteger itemIdx=[self.equip2showArr indexOfObject:itemId];
+        NSInteger count2remove=self.equip2showArr.count-itemIdx-1;
+        for (int i=0; i<count2remove; ++i) {
+            [self.equip2showArr removeLastObject];
+        }
+    }
+    
+    [self.tbContent reloadData];
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -201,6 +223,7 @@
     } else if (1 == indexPath.section) {
         EquipComposeContentTableViewCell *contentCell=[tableView dequeueReusableCellWithIdentifier:equipComposeContentCellId];
         contentCell.equipId2show=self.equip2showArr.lastObject;
+        contentCell.itemActionDelegate=self;
         
         cell2ret=contentCell;
     } else if (2 == indexPath.section) {

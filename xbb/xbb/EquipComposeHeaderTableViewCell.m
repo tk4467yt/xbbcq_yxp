@@ -38,6 +38,13 @@
     // Configure the view for the selected state
 }
 
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self.cvHeader reloadData];
+}
+
 #pragma mark UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

@@ -51,7 +51,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kUs-i6-PPc" userLabel="ivEquipCompose0">
                                         <rect key="frame" x="74" y="121" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-ER-Dso" userLabel="ivEquipCompose0Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-ER-Dso" userLabel="ivEquipCompose0Mask">
                                         <rect key="frame" x="67" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a3D-kn-Bl8"/>
@@ -61,7 +61,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1p-XI-yxG" userLabel="ivEquipCompose1">
                                         <rect key="frame" x="174" y="121" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGC-Rm-WPb" userLabel="ivEquipCompose1Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGC-Rm-WPb" userLabel="ivEquipCompose1Mask">
                                         <rect key="frame" x="167" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="FY5-GK-x5y"/>
@@ -116,7 +116,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zm9-u5-di0" userLabel="ivEquipCompose0">
                                         <rect key="frame" x="24" y="121" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IeW-rR-CBp" userLabel="ivEquipCompose0Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IeW-rR-CBp" userLabel="ivEquipCompose0Mask">
                                         <rect key="frame" x="17" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RAl-Ca-iQm"/>
@@ -126,7 +126,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="czG-92-17q" userLabel="ivEquipCompose1">
                                         <rect key="frame" x="124" y="121" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-JL-vEp" userLabel="ivEquipCompose1Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-JL-vEp" userLabel="ivEquipCompose1Mask">
                                         <rect key="frame" x="117" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="RAg-bi-jq3"/>
@@ -136,7 +136,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-29-n96" userLabel="ivEquipCompose2">
                                         <rect key="frame" x="224" y="121" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQd-t4-iL9" userLabel="ivEquipCompose2Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQd-t4-iL9" userLabel="ivEquipCompose2Mask">
                                         <rect key="frame" x="217" y="115" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="EtP-3G-kgO"/>
@@ -197,7 +197,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3uO-ZG-Qq0" userLabel="ivEquipCompose0">
                                         <rect key="frame" x="4" y="116" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-l9-dLD" userLabel="ivEquipCompose0Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-l9-dLD" userLabel="ivEquipCompose0Mask">
                                         <rect key="frame" x="-3" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="AmD-1V-vIb"/>
@@ -207,7 +207,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-UL-zAb" userLabel="ivEquipCompose1">
                                         <rect key="frame" x="84" y="116" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-kT-N4y" userLabel="ivEquipCompose1Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-kT-N4y" userLabel="ivEquipCompose1Mask">
                                         <rect key="frame" x="77" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="XBF-xJ-p7P"/>
@@ -217,7 +217,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5P0-Kf-nTe" userLabel="ivEquipCompose2">
                                         <rect key="frame" x="164" y="116" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tKy-Do-1tg" userLabel="ivEquipCompose2Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tKy-Do-1tg" userLabel="ivEquipCompose2Mask">
                                         <rect key="frame" x="157" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Bsa-f7-gi8"/>
@@ -227,7 +227,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-na-U2Q" userLabel="ivEquipCompose3">
                                         <rect key="frame" x="244" y="116" width="36" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="soI-qV-cxe" userLabel="ivEquipCompose3Mask">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="soI-qV-cxe" userLabel="ivEquipCompose3Mask">
                                         <rect key="frame" x="237" y="110" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9jm-oe-1R6"/>
