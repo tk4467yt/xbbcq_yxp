@@ -81,7 +81,9 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
+        [self.itemActionDelegate equipComposeItemTappedWithEquipId:self.equipShowingArr[indexPath.row]];
+    }
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout

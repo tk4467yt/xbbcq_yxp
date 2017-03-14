@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EquipComposeContentTableViewCell.h"
 
 @interface EquipComposeHeaderTableViewCell : UITableViewCell <UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *cvHeader;
 @property (nonatomic,strong) NSArray *equipShowingArr;
+
+@property (weak, nonatomic) id<EquipComposeItemActionDelegate> itemActionDelegate;
 @end

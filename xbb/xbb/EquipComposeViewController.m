@@ -46,7 +46,7 @@
 - (CGFloat)heightForEquipComposeCell
 {
     if (self.equipInfo.isCompose) {
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipInfo.equipId];
+        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equip2showArr.lastObject];
         
         if (composeInfo.fragmentCount > 0) {
             return 150;
@@ -218,6 +218,7 @@
     if (0 == indexPath.section) {
         EquipComposeHeaderTableViewCell *headerCell=[tableView dequeueReusableCellWithIdentifier:equipComposeHeaderCellId];
         headerCell.equipShowingArr=self.equip2showArr;
+        headerCell.itemActionDelegate=self;
         
         cell2ret=headerCell;
     } else if (1 == indexPath.section) {

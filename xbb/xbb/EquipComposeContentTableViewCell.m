@@ -121,10 +121,11 @@
 {
     [super layoutSubviews];
     
-    self.lblTitle.text=NSLocalizedString(@"equip_compose_title", @"");
+    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipId:self.equipId2show];
+    
+    self.lblTitle.text=[NSString stringWithFormat:NSLocalizedString(@"equip_compose_title", @""),equipInfo.equipName];
     self.lblComposeNone.text=NSLocalizedString(@"desc_for_none", @"");
     
-    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipId:self.equipId2show];
     if (equipInfo.isCompose) {
         self.lblComposeNone.hidden=true;
         
