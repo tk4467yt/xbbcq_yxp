@@ -49,3 +49,8 @@
 "equip_compose_title"="合成信息(%@):";
 "equip_attr_title"="属性(%@):";
 "desc_for_none"="无";
+
+"species_title"="英雄标志:";
+"star_title"="英雄成长:";
+"skill_title"="英雄技能:";
+"equip_title"="英雄装备:";

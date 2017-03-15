@@ -137,10 +137,12 @@
         cell2ret=skillCell;
     } else if (4 == indexPath.section) {
         HeroDetailEquipsTableViewCell *equipCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailEquipCellId];
+        equipCell.lblEquipDesc.hidden=true;
         
         NSString *rankId2use=@"";
         NSString *title2set=@"";
         if (0 == indexPath.row) {
+            equipCell.lblEquipDesc.hidden=false;
             rankId2use=[MyUtility rankIdForBai];
             title2set=NSLocalizedString(@"title_equip_bai", @"");
         } else if (1 == indexPath.row) {

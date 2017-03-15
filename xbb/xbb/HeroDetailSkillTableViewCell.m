@@ -35,6 +35,15 @@
     // Configure the view for the selected state
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.lblSkillDesc.text=NSLocalizedString(@"skill_title", @"");
+    
+    [self.tbSkills reloadData];
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

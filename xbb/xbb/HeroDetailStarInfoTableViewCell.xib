@@ -15,9 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-s0-CFX" userLabel="lblStarDesc">
+                        <rect key="frame" x="55.5" y="13" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KeP-el-Qua" userLabel="ivStar0">
                         <rect key="frame" x="98" y="8" width="30" height="30"/>
                         <gestureRecognizers/>
@@ -78,6 +84,7 @@
                     <constraint firstItem="w69-oA-ca4" firstAttribute="height" secondItem="KeP-el-Qua" secondAttribute="height" id="64i-Gz-4qe"/>
                     <constraint firstItem="EZd-Dy-5ay" firstAttribute="height" secondItem="KeP-el-Qua" secondAttribute="height" id="8jd-MB-NXA"/>
                     <constraint firstItem="Pcz-Rm-4eB" firstAttribute="width" secondItem="KeP-el-Qua" secondAttribute="width" id="9f3-om-CyE"/>
+                    <constraint firstItem="FRc-s0-CFX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="GE1-IF-T9g"/>
                     <constraint firstItem="w69-oA-ca4" firstAttribute="top" secondItem="KeP-el-Qua" secondAttribute="top" id="GZj-ho-LJ3"/>
                     <constraint firstItem="Pcz-Rm-4eB" firstAttribute="height" secondItem="KeP-el-Qua" secondAttribute="height" id="HTz-Bc-dL5"/>
                     <constraint firstItem="KeP-el-Qua" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="JEH-eO-a0R"/>
@@ -92,6 +99,7 @@
                     <constraint firstItem="Pcz-Rm-4eB" firstAttribute="top" secondItem="KeP-el-Qua" secondAttribute="top" id="caE-ht-8ux"/>
                     <constraint firstItem="ode-Bf-yD1" firstAttribute="leading" secondItem="K4q-Og-1sV" secondAttribute="leading" id="dLN-zb-fqD"/>
                     <constraint firstItem="K4q-Og-1sV" firstAttribute="top" secondItem="KeP-el-Qua" secondAttribute="bottom" constant="5" id="eAS-KR-exn"/>
+                    <constraint firstItem="KeP-el-Qua" firstAttribute="leading" secondItem="FRc-s0-CFX" secondAttribute="trailing" constant="5" id="iDn-eg-II1"/>
                     <constraint firstItem="zBo-ma-v1i" firstAttribute="leading" secondItem="EZd-Dy-5ay" secondAttribute="trailing" constant="5" id="j40-Ww-AAk"/>
                     <constraint firstItem="Lgq-4J-0BG" firstAttribute="trailing" secondItem="K4q-Og-1sV" secondAttribute="trailing" id="jqc-Yn-vnV"/>
                     <constraint firstItem="Lgq-4J-0BG" firstAttribute="top" secondItem="ode-Bf-yD1" secondAttribute="bottom" id="s5s-Nf-YNF"/>
@@ -108,6 +116,7 @@
                 <outlet property="ivStar4" destination="zBo-ma-v1i" id="Hqo-Ca-8GS"/>
                 <outlet property="lblLiliangGrow" destination="K4q-Og-1sV" id="V1I-i9-zxy"/>
                 <outlet property="lblMinjieGrow" destination="Lgq-4J-0BG" id="XcZ-8o-8Ef"/>
+                <outlet property="lblStarDesc" destination="FRc-s0-CFX" id="cVm-i1-lUz"/>
                 <outlet property="lblZhiliGrow" destination="ode-Bf-yD1" id="pd8-kE-Das"/>
             </connections>
             <point key="canvasLocation" x="25" y="104.5"/>

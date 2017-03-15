@@ -16,12 +16,18 @@
             <rect key="frame" x="0.0" y="0.0" width="463" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="463" height="87"/>
+                <rect key="frame" x="0.0" y="0.0" width="463" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-pd-fXp">
                         <rect key="frame" x="98" y="8" width="357" height="71"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-yh-nVY" userLabel="lblEquipDesc">
+                                <rect key="frame" x="-42.5" y="0.0" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-eq-9cM" userLabel="lblRankDesc">
                                 <rect key="frame" x="0.0" y="0.0" width="38" height="18"/>
                                 <constraints>
@@ -79,11 +85,13 @@
                             <constraint firstItem="Fm5-eq-9cM" firstAttribute="leading" secondItem="3aW-pd-fXp" secondAttribute="leading" id="Qwg-hd-Ua3"/>
                             <constraint firstItem="KlI-RC-xZy" firstAttribute="top" secondItem="Fm5-eq-9cM" secondAttribute="bottom" constant="3" id="Y2e-1R-vIm"/>
                             <constraint firstItem="Tjc-5c-N0i" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="aM6-Qu-nfb"/>
+                            <constraint firstItem="Fm5-eq-9cM" firstAttribute="leading" secondItem="Dgf-yh-nVY" secondAttribute="trailing" constant="5" id="eL0-RK-qPp"/>
                             <constraint firstItem="FPr-6q-rRI" firstAttribute="leading" secondItem="KlI-RC-xZy" secondAttribute="trailing" constant="5" id="eSS-6u-8X8"/>
                             <constraint firstItem="416-uX-TgG" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="euY-Iq-mzB"/>
                             <constraint firstItem="UTa-uL-1mk" firstAttribute="leading" secondItem="416-uX-TgG" secondAttribute="trailing" constant="5" id="fcl-qE-suI"/>
                             <constraint firstItem="UTa-uL-1mk" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="hkG-ri-nZy"/>
                             <constraint firstItem="Tjc-5c-N0i" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="pCe-4I-pWd"/>
+                            <constraint firstItem="Dgf-yh-nVY" firstAttribute="top" secondItem="3aW-pd-fXp" secondAttribute="top" id="qG3-DM-Z0j"/>
                             <constraint firstItem="Fm5-eq-9cM" firstAttribute="top" secondItem="3aW-pd-fXp" secondAttribute="top" id="qiP-YK-Ilg"/>
                             <constraint firstItem="Cl5-K5-4ZW" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="r5I-NS-FDd"/>
                             <constraint firstItem="Tjc-5c-N0i" firstAttribute="leading" secondItem="UTa-uL-1mk" secondAttribute="trailing" constant="5" id="rIK-lT-Xa2"/>
@@ -108,6 +116,7 @@
                 <outlet property="ivEquip3" destination="416-uX-TgG" id="ket-pg-kud"/>
                 <outlet property="ivEquip4" destination="UTa-uL-1mk" id="chP-7w-LR1"/>
                 <outlet property="ivEquip5" destination="Tjc-5c-N0i" id="uFk-Vf-2YD"/>
+                <outlet property="lblEquipDesc" destination="Dgf-yh-nVY" id="lol-qP-KZl"/>
                 <outlet property="lblRankDesc" destination="Fm5-eq-9cM" id="MlQ-tl-pct"/>
             </connections>
             <point key="canvasLocation" x="97.5" y="73.5"/>

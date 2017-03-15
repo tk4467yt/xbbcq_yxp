@@ -10,5 +10,6 @@
 
 @interface HeroDetailSpeciesTableViewCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSArray *heroSpeciesArr;
+@property (weak, nonatomic) IBOutlet UILabel *lblSpeciesDesc;
 @property (weak, nonatomic) IBOutlet UICollectionView *cvSpecies;
 @end

@@ -10,6 +10,7 @@
 
 @interface HeroDetailEquipsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *contentHolder;
+@property (weak, nonatomic) IBOutlet UILabel *lblEquipDesc;
 @property (weak, nonatomic) IBOutlet UILabel *lblRankDesc;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip0;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip1;

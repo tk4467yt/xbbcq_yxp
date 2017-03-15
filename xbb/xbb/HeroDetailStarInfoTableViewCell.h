@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HeroDetailStarInfoTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lblStarDesc;
 @property (weak, nonatomic) IBOutlet UIImageView *ivStar0;
 @property (weak, nonatomic) IBOutlet UIImageView *ivStar1;
 @property (weak, nonatomic) IBOutlet UIImageView *ivStar2;

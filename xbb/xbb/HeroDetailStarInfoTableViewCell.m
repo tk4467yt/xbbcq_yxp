@@ -42,6 +42,8 @@
 {
     [super layoutSubviews];
     
+    self.lblStarDesc.text=NSLocalizedString(@"star_title", @"");
+    
     CGFloat curLiliang=0;
     CGFloat curZhili=0;
     CGFloat curMinjie=0;

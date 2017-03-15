@@ -37,6 +37,15 @@
     // Configure the view for the selected state
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.lblSpeciesDesc.text=NSLocalizedString(@"species_title", @"");
+    
+    [self.cvSpecies reloadData];
+}
+
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

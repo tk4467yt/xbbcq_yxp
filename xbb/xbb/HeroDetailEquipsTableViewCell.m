@@ -21,4 +21,11 @@
     // Configure the view for the selected state
 }
 
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.lblEquipDesc.text=NSLocalizedString(@"equip_title", @"");
+}
+
 @end
