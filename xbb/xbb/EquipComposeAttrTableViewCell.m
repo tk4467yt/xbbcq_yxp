@@ -14,7 +14,7 @@
 #define kEquipComposeAttrItemTBCellId @"equip_compose_attr_item_tb_cell_id"
 
 @interface EquipComposeAttrTableViewCell () <UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong) NSArray *attrDescArr;
+//@property (nonatomic,strong) NSArray *attrDescArr;
 @property (nonatomic,strong) NSMutableArray *attr2showIdArr;
 @property (nonatomic,strong) NSMutableArray *value2showArr;
 @end
@@ -30,7 +30,14 @@
     
     [self.tbAttrs registerNib:[UINib nibWithNibName:@"EquipComposeAttrItemTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kEquipComposeAttrItemTBCellId];
     
-    self.attrDescArr=[MyUtility getAllEquipAttrDescArr];
+//    self.attrDescArr=[MyUtility getAllEquipAttrDescArr];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self.tbAttrs reloadData];
 }
 
 -(void)updateAttrId2show
@@ -38,7 +45,7 @@
     self.attr2showIdArr=[NSMutableArray new];
     self.value2showArr=[NSMutableArray new];
     
-    [self.attr2showIdArr addObject:NSLocalizedString(@"equip_attr_title", @"")];
+    [self.attr2showIdArr addObject:[NSString stringWithFormat:NSLocalizedString(@"equip_attr_title", @""),self.equipInfo2show.equipName]];
     [self.value2showArr addObject:[NSNumber numberWithInteger:0]];
     
     if (self.equipInfo2show.liliang > 0) {
@@ -154,9 +161,8 @@
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (nil == self.attr2showIdArr) {
-        [self updateAttrId2show];
-    }
+    [self updateAttrId2show];
+    
     return self.attr2showIdArr.count;
 }
 
