@@ -57,11 +57,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (CGFloat)heightForEquipTopCell
+{
+    CGFloat height2ret=16+20*3;
+    height2ret += [MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-60-16-10 title:[self heroDescText] font:[UIFont systemFontOfSize:15]];
+    height2ret += 20;
+    return height2ret;
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (0 == indexPath.section) {
-        return 120;
+        return [self heightForEquipTopCell];
     } else if (1 == indexPath.section) {
         if (self.heroSpeciesArr.count <= 0) {
             return 0;
@@ -98,6 +106,11 @@
     return 0;
 }
 
+- (NSString *)heroDescText
+{
+    return [NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_desc", @""),self.hero2show.heroDesc];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell2ret=nil;
@@ -115,7 +128,7 @@
         PosDesc *posDesc2use=self.heroPosDescDict[self.hero2show.heroPos];
         topCell.lblPos.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_pos", @""),posDesc2use.posDesc];
         
-        topCell.lblDesc.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_desc", @""),self.hero2show.heroDesc];
+        topCell.lblDesc.text=[self heroDescText];
         
         cell2ret=topCell;
     } else if (1 == indexPath.section) {
