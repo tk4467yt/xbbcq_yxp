@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="463" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="463" height="86"/>
+                <rect key="frame" x="0.0" y="0.0" width="463" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-pd-fXp">
@@ -74,7 +74,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cl5-K5-4ZW" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="BdN-F7-zhS"/>
                             <constraint firstItem="FPr-6q-rRI" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="FaM-b8-vJQ"/>
@@ -101,6 +101,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="3aW-pd-fXp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="FPH-q2-Jlb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3aW-pd-fXp" secondAttribute="trailing" id="HeC-b6-mhG"/>

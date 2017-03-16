@@ -71,9 +71,9 @@
     if (0 == indexPath.section) {
         return [self heightForEquipTopCell];
     } else if (1 == indexPath.section) {
-        if (self.heroSpeciesArr.count <= 0) {
-            return 0;
-        }
+//        if (self.heroSpeciesArr.count <= 0) {
+//            return 0;
+//        }
         return 60;
     } else if (2 == indexPath.section) {
         return 106;
@@ -231,6 +231,14 @@
     } else {
         cell2ret=[UITableViewCell new];
     }
+    
+    if (0 == indexPath.section%2) {
+        cell2ret.backgroundColor=[UIColor lightGrayColor];
+    } else {
+        cell2ret.backgroundColor=[UIColor grayColor];
+    }
+    
+    [cell2ret setNeedsLayout];
     return cell2ret;
 }
 
