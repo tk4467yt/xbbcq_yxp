@@ -262,7 +262,15 @@
         equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
         equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
-        equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        if (nil == equipInfo2use) {
+            equipCell.ivEquip5.image=[UIImage imageNamed:@"hero_icon_unknow"];
+            equipCell.ivEquip5.layer.borderColor=[[UIColor darkGrayColor] CGColor];
+            equipCell.ivEquip5.layer.borderWidth=1;
+        } else {
+            equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            equipCell.ivEquip5.layer.borderColor=[[UIColor grayColor] CGColor];
+            equipCell.ivEquip5.layer.borderWidth=0;
+        }
         
         cell2ret=equipCell;
     } else {
