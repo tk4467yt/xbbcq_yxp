@@ -18,6 +18,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78B-V0-HqW" userLabel="lblDescNone">
+                        <rect key="frame" x="98" y="24" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zrY-4a-pRy">
                         <rect key="frame" x="98" y="0.0" width="214" height="65"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -42,7 +48,9 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="zrY-4a-pRy" firstAttribute="leading" secondItem="OZr-bk-c6J" secondAttribute="trailing" constant="5" id="21H-E0-fN8"/>
+                    <constraint firstItem="78B-V0-HqW" firstAttribute="centerY" secondItem="zrY-4a-pRy" secondAttribute="centerY" id="3FS-iX-Opy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zrY-4a-pRy" secondAttribute="trailing" id="54k-yI-R3L"/>
+                    <constraint firstItem="78B-V0-HqW" firstAttribute="leading" secondItem="zrY-4a-pRy" secondAttribute="leading" id="AyU-qT-UbO"/>
                     <constraint firstAttribute="bottom" secondItem="zrY-4a-pRy" secondAttribute="bottom" id="DuR-QZ-e7U"/>
                     <constraint firstAttribute="bottomMargin" secondItem="OZr-bk-c6J" secondAttribute="bottom" id="LY2-HC-Bdm"/>
                     <constraint firstItem="zrY-4a-pRy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dmE-W0-Zix"/>
@@ -52,6 +60,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cvSpecies" destination="zrY-4a-pRy" id="PXU-iK-hct"/>
+                <outlet property="lblDescNone" destination="78B-V0-HqW" id="4uW-bS-TPj"/>
                 <outlet property="lblSpeciesDesc" destination="OZr-bk-c6J" id="Whi-KP-M4k"/>
             </connections>
             <point key="canvasLocation" x="25" y="62.5"/>

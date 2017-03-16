@@ -43,6 +43,13 @@
     
     self.lblSpeciesDesc.text=NSLocalizedString(@"species_title", @"");
     
+    self.lblDescNone.text=NSLocalizedString(@"desc_for_none", @"");
+    if (self.heroSpeciesArr.count > 0) {
+        self.lblDescNone.hidden=true;
+    } else {
+        self.lblDescNone.hidden=false;
+    }
+    
     [self.cvSpecies reloadData];
 }
 
