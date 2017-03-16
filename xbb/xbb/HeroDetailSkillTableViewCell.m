@@ -47,7 +47,9 @@
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 76;
+    HeroSkill *heroSkill=self.heroSkillsArr[indexPath.row];
+    CGFloat skillRowHeight = MAX(76, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-60-16-10-60-10 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);
+    return skillRowHeight;
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -18,6 +18,7 @@
 #import "PosDesc.h"
 #import "MyUtility.h"
 #import "HeroEquips.h"
+#import "HeroSkill.h"
 
 #define kHeroDetailTopCellId @"hero_detail_top_table_view_cell"
 #define kHeroDetailSpeciesCellId @"hero_detail_species_cell_id"
@@ -112,7 +113,11 @@
     } else if (2 == indexPath.section) {
         return 110;
     } else if (3 == indexPath.section) {
-        return self.heroSkillsArr.count*76;
+        CGFloat skillRowHeight=0;
+        for (HeroSkill *aSkill in self.heroSkillsArr) {
+            skillRowHeight += MAX(76, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-60-16-10-60-10 title:aSkill.skillDesc font:[UIFont systemFontOfSize:14]]);
+        }
+        return skillRowHeight;
     } else if (4 == indexPath.section) {
         return 80;
     }
