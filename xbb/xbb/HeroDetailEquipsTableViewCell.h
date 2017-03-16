@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HeroDetailEquipsTapDelegate <NSObject>
+
+- (void)equipTappedWithRank:(NSString *)rankId andItemIdx:(NSInteger)itemIdx;
+
+@end
+
 @interface HeroDetailEquipsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *contentHolder;
 @property (weak, nonatomic) IBOutlet UILabel *lblEquipDesc;
@@ -19,4 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip4;
 @property (weak, nonatomic) IBOutlet UIImageView *ivEquip5;
 
+@property (copy, nonatomic) NSString *rankId;
+@property (weak, nonatomic) id<HeroDetailEquipsTapDelegate> equipTapDelegate;
 @end

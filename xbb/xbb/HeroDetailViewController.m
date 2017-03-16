@@ -12,6 +12,7 @@
 #import "HeroDetailStarInfoTableViewCell.h"
 #import "HeroDetailSkillTableViewCell.h"
 #import "HeroDetailEquipsTableViewCell.h"
+#import "EquipComposeViewController.h"
 #import "DbHandler.h"
 #import "HeroTypeDesc.h"
 #import "PosDesc.h"
@@ -24,7 +25,7 @@
 #define kHeroDetailSkillCellId @"hero_detail_skill_tb_cell_id"
 #define kHeroDetailEquipCellId @"hero_detail_equip_tb_cell_id"
 
-@interface HeroDetailViewController ()
+@interface HeroDetailViewController () <HeroDetailEquipsTapDelegate>
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
 @property (nonatomic,strong) NSDictionary *heroPosDescDict;
 @property (nonatomic,strong) NSArray *heroSpeciesArr;
@@ -63,6 +64,39 @@
     height2ret += [MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-60-16-10 title:[self heroDescText] font:[UIFont systemFontOfSize:15]];
     height2ret += 20;
     return height2ret;
+}
+
+#pragma mark HeroDetailEquipsTapDelegate
+- (void)equipTappedWithRank:(NSString *)rankId andItemIdx:(NSInteger)itemIdx
+{
+    HeroEquips *heroEquip=self.heroEquipsDict[rankId];
+    
+    NSString *equipId=@"";
+    
+    if (0 == itemIdx) {
+        equipId=heroEquip.equip1;
+    } else if (1 == itemIdx) {
+        equipId=heroEquip.equip2;
+    } else if (2 == itemIdx) {
+        equipId=heroEquip.equip3;
+    } else if (3 == itemIdx) {
+        equipId=heroEquip.equip4;
+    } else if (4 == itemIdx) {
+        equipId=heroEquip.equip5;
+    } else if (5 == itemIdx) {
+        equipId=heroEquip.equip6;
+    }
+    
+    if (![MyUtility isStringNilOrZeroLength:equipId]) {
+        EquipInfo *equipInfo2use=[MyUtility getEquipInfoForEquipId:equipId];
+        if (nil != equipInfo2use) {
+            EquipComposeViewController *composeVC=[EquipComposeViewController new];
+            
+            composeVC.equipInfo=equipInfo2use;
+            
+            [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:composeVC animated:YES];
+        }
+    }
 }
 
 #pragma mark UITableViewDelegate
@@ -206,6 +240,9 @@
         }
         
         HeroEquips *aHeroEquip=self.heroEquipsDict[rankId2use];
+        
+        equipCell.rankId=rankId2use;
+        equipCell.equipTapDelegate=self;
         
         equipCell.lblRankDesc.text=title2set;
         

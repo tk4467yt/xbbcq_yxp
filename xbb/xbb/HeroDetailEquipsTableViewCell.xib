@@ -37,37 +37,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-RC-xZy" userLabel="ivEquip0">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-RC-xZy" userLabel="ivEquip0">
                                 <rect key="frame" x="0.0" y="21" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KlI-RC-xZy" secondAttribute="height" multiplier="1:1" id="Ers-ko-DVo"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPr-6q-rRI" userLabel="ivEquip1">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPr-6q-rRI" userLabel="ivEquip1">
                                 <rect key="frame" x="55" y="21" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FPr-6q-rRI" secondAttribute="height" multiplier="1:1" id="HZf-xH-ORH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-K5-4ZW" userLabel="ivEquip2">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-K5-4ZW" userLabel="ivEquip2">
                                 <rect key="frame" x="110" y="21" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Cl5-K5-4ZW" secondAttribute="height" multiplier="1:1" id="UOn-uZ-F2k"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="416-uX-TgG" userLabel="ivEquip3">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="416-uX-TgG" userLabel="ivEquip3">
                                 <rect key="frame" x="165" y="21" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="416-uX-TgG" secondAttribute="height" multiplier="1:1" id="5fe-We-1J9"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTa-uL-1mk" userLabel="ivEquip4">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTa-uL-1mk" userLabel="ivEquip4">
                                 <rect key="frame" x="220" y="21" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UTa-uL-1mk" secondAttribute="height" multiplier="1:1" id="8wD-IX-p4k"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-5c-N0i" userLabel="ivEquip5">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-5c-N0i" userLabel="ivEquip5">
                                 <rect key="frame" x="275" y="21" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Tjc-5c-N0i" secondAttribute="height" multiplier="1:1" id="qrK-hD-qgl"/>
