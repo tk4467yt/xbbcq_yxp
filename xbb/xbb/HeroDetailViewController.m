@@ -110,7 +110,7 @@
 //        }
         return 60;
     } else if (2 == indexPath.section) {
-        return 106;
+        return 110;
     } else if (3 == indexPath.section) {
         return self.heroSkillsArr.count*76;
     } else if (4 == indexPath.section) {
