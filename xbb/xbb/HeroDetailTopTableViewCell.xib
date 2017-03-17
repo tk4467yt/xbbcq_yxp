@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lft-Wj-i1V" userLabel="ivThumb">
@@ -35,20 +35,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="19N-I7-c7W" userLabel="lblType">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-vQ-rIg" userLabel="lblShortName">
                         <rect key="frame" x="98" y="26" width="214" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9VA-Bf-3Vc" userLabel="lblPos">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="19N-I7-c7W" userLabel="lblType">
                         <rect key="frame" x="98" y="44" width="214" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ol6-GQ-8N6" userLabel="lblDesc">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9VA-Bf-3Vc" userLabel="lblPos">
                         <rect key="frame" x="98" y="62" width="214" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ol6-GQ-8N6" userLabel="lblDesc">
+                        <rect key="frame" x="98" y="80" width="214" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -56,6 +62,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="hXd-av-Lge" firstAttribute="height" secondItem="lft-Wj-i1V" secondAttribute="height" multiplier="0.3" id="053-zg-yxX"/>
+                    <constraint firstItem="rfV-vQ-rIg" firstAttribute="leading" secondItem="FWG-J7-VvT" secondAttribute="leading" id="19J-c0-rcf"/>
+                    <constraint firstItem="19N-I7-c7W" firstAttribute="top" secondItem="rfV-vQ-rIg" secondAttribute="bottom" id="31c-sg-5hx"/>
                     <constraint firstItem="19N-I7-c7W" firstAttribute="trailing" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="8QV-jf-yK4"/>
                     <constraint firstItem="Ol6-GQ-8N6" firstAttribute="leading" secondItem="FWG-J7-VvT" secondAttribute="leading" id="8pn-Wz-k3c"/>
                     <constraint firstItem="lft-Wj-i1V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Czk-fH-SfN"/>
@@ -65,14 +73,15 @@
                     <constraint firstItem="hXd-av-Lge" firstAttribute="trailing" secondItem="lft-Wj-i1V" secondAttribute="trailing" id="TxX-3N-nZz"/>
                     <constraint firstItem="FWG-J7-VvT" firstAttribute="leading" secondItem="lft-Wj-i1V" secondAttribute="trailing" constant="10" id="X8j-9V-ZJf"/>
                     <constraint firstItem="19N-I7-c7W" firstAttribute="leading" secondItem="FWG-J7-VvT" secondAttribute="leading" id="ZeW-Qb-i6s"/>
+                    <constraint firstItem="rfV-vQ-rIg" firstAttribute="top" secondItem="FWG-J7-VvT" secondAttribute="bottom" id="b7r-xo-GmF"/>
                     <constraint firstAttribute="trailingMargin" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="hwr-uu-WXB"/>
                     <constraint firstItem="hXd-av-Lge" firstAttribute="bottom" secondItem="lft-Wj-i1V" secondAttribute="bottom" id="kPe-JZ-A1z"/>
                     <constraint firstItem="9VA-Bf-3Vc" firstAttribute="top" secondItem="19N-I7-c7W" secondAttribute="bottom" id="kVO-5h-cap"/>
                     <constraint firstItem="Ol6-GQ-8N6" firstAttribute="trailing" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="mhY-W4-xzb"/>
                     <constraint firstItem="hXd-av-Lge" firstAttribute="width" secondItem="lft-Wj-i1V" secondAttribute="width" multiplier="0.3" id="nGE-Gc-pPL"/>
-                    <constraint firstItem="19N-I7-c7W" firstAttribute="top" secondItem="FWG-J7-VvT" secondAttribute="bottom" id="suc-z4-1B5"/>
                     <constraint firstItem="lft-Wj-i1V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="y5Q-IT-nvg"/>
                     <constraint firstItem="Ol6-GQ-8N6" firstAttribute="top" secondItem="9VA-Bf-3Vc" secondAttribute="bottom" id="yij-ro-ztM"/>
+                    <constraint firstItem="rfV-vQ-rIg" firstAttribute="trailing" secondItem="FWG-J7-VvT" secondAttribute="trailing" id="z7d-LG-A6n"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -81,6 +90,7 @@
                 <outlet property="lblDesc" destination="Ol6-GQ-8N6" id="tLZ-AS-hZa"/>
                 <outlet property="lblName" destination="FWG-J7-VvT" id="fVq-4q-GkD"/>
                 <outlet property="lblPos" destination="9VA-Bf-3Vc" id="cOk-vT-J88"/>
+                <outlet property="lblShortName" destination="rfV-vQ-rIg" id="zwF-kX-Z3m"/>
                 <outlet property="lblType" destination="19N-I7-c7W" id="Qam-Qx-ZMn"/>
             </connections>
             <point key="canvasLocation" x="7" y="-3"/>

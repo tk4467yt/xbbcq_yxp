@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivThumb;
 @property (weak, nonatomic) IBOutlet UIImageView *ivType;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblShortName;
 @property (weak, nonatomic) IBOutlet UILabel *lblType;
 @property (weak, nonatomic) IBOutlet UILabel *lblPos;
 @property (weak, nonatomic) IBOutlet UILabel *lblDesc;

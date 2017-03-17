@@ -38,6 +38,7 @@
 "hero_title_thumb_juexing"="觉醒头像";
 
 "hero_cell_title_prefix_name"="名称：%@";
+"hero_cell_title_prefix_short_name"="简称：%@";
 "hero_cell_title_prefix_type"="类型：%@";
 "hero_cell_title_prefix_pos"="站位：%@";
 "hero_cell_title_prefix_desc"="描述：%@";
