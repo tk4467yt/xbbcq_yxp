@@ -43,12 +43,13 @@
     self.allEquipsArr=[MyUtility getAllEquipInfoFromDb];
     self.rankDescDict=[MyUtility getAllRankDescDict];
     
-    self.equipRank2showArr=[NSMutableArray arrayWithObjects:[MyUtility rankIdForBai],
-                            [MyUtility rankIdForLv],
-                            [MyUtility rankIdForLan],
-                            [MyUtility rankIdForZi],
+    self.equipRank2showArr=[NSMutableArray arrayWithObjects:[MyUtility rankIdForHong],
                             [MyUtility rankIdForCheng],
-                            [MyUtility rankIdForHong],nil];
+                            [MyUtility rankIdForZi],
+                            [MyUtility rankIdForLan],
+                            [MyUtility rankIdForLv],
+                            [MyUtility rankIdForBai],
+                            nil];
     
     self.equipRankDict=[NSMutableDictionary new];
     
