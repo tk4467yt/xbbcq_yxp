@@ -12,6 +12,7 @@
 static __strong NSArray *allEquipsInfoArr;
 static __strong NSDictionary *rankDescDict;
 static __strong NSArray *allEquipAttrDescArr;
+static __strong NSArray *allHeroSpeciesArr;
 
 @implementation MyUtility
 +(NSString *)heroTypeLiliangId
@@ -284,6 +285,15 @@ static __strong NSArray *allEquipAttrDescArr;
     }
     
     return nil;
+}
+
++(NSArray *)getAllHeroSpeciesArr
+{
+    if (nil == allHeroSpeciesArr) {
+        allHeroSpeciesArr = [DbHandler getAllHeroSpecies];
+    }
+    
+    return allHeroSpeciesArr;
 }
 
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask

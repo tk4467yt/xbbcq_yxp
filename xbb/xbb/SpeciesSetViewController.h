@@ -10,5 +10,6 @@
 #import "SpeciesDesc.h"
 
 @interface SpeciesSetViewController : MyRootViewController
+@property (weak, nonatomic) IBOutlet UITableView *tbSpeciesSet;
 @property (nonatomic,strong) SpeciesDesc *speciesDesc2show;
 @end

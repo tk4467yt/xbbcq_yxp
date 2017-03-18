@@ -79,6 +79,8 @@
 +(NSArray *)getAllEquipAttrDescArr;
 +(EquipAttrDesc *)getEquipAttrDescForAttrId:(NSString *)attrId;
 
++(NSArray *)getAllHeroSpeciesArr;
+
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask;
 
 + (CGFloat)getLabelHeightByWidth:(CGFloat)width title:(NSString *)title font:(UIFont*)font;
