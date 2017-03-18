@@ -170,6 +170,9 @@
         
         topCell.lblDesc.text=[self heroDescText];
         
+        topCell.parentVC=self;
+        topCell.heroId=self.hero2show.heroId;
+        
         cell2ret=topCell;
     } else if (1 == indexPath.section) {
         HeroDetailSpeciesTableViewCell *speciesCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailSpeciesCellId];

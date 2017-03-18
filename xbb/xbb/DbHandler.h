@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EquipInfo.h"
+#import "HeroInfo.h"
 #import "EquipComposeInfo.h"
 
 @interface DbHandler : NSObject
@@ -16,6 +17,8 @@
 +(void)closeLocalDatabase;
 
 +(NSArray *)getAllHeros;
++(HeroInfo *)getHeroInfoWithHeroId:(NSString *)heroId;
+
 +(NSDictionary *)getAllHeroTypeDescDict;
 +(NSArray *)getAllStarDesc;
 +(NSDictionary *)getAllSpeciesDescDict;

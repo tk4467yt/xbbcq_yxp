@@ -17,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblPos;
 @property (weak, nonatomic) IBOutlet UILabel *lblDesc;
 
+@property (weak, nonatomic) UIViewController *parentVC;
+@property (copy) NSString *heroId;
+
 @end
