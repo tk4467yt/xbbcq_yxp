@@ -29,7 +29,7 @@
     
     self.allHeroSpeciesArr=[MyUtility getAllHeroSpeciesArr];
     
-    self.navigationItem.title=self.speciesDesc2show.speciesDesc;
+    self.navigationItem.title=[NSString stringWithFormat:@"%@(%d)",self.speciesDesc2show.speciesDesc,(int)[self getAllHerosForCurSpecies].count];
     
     [self.tbSpeciesSet registerNib:[UINib nibWithNibName:@"SpeciesSetTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kSepciesSetTopCellId];
     [self.tbSpeciesSet registerNib:[UINib nibWithNibName:@"SpeciesSetHerosTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kSpeciesSetHerosCellId];
@@ -42,12 +42,16 @@
 
 - (NSArray *)getAllHerosForCurSpecies
 {
-    NSMutableArray *arr2ret=[NSMutableArray new];
+    NSMutableArray *arr2ret=nil;
     
-    for (HeroSpecies *aHeroSpecies in self.allHeroSpeciesArr) {
-        if ([aHeroSpecies.speciesId isEqualToString:self.speciesDesc2show.speciesId]) {
-            HeroInfo *heroInfo=[DbHandler getHeroInfoWithHeroId:aHeroSpecies.heroId];
-            [arr2ret addObject:heroInfo];
+    if (nil == arr2ret) {
+        arr2ret=[NSMutableArray new];
+        
+        for (HeroSpecies *aHeroSpecies in self.allHeroSpeciesArr) {
+            if ([aHeroSpecies.speciesId isEqualToString:self.speciesDesc2show.speciesId]) {
+                HeroInfo *heroInfo=[DbHandler getHeroInfoWithHeroId:aHeroSpecies.heroId];
+                [arr2ret addObject:heroInfo];
+            }
         }
     }
     
