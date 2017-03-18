@@ -41,8 +41,6 @@
 
 - (void)equip0Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 0 tapped");
-    
     if ([self.equipTapDelegate respondsToSelector:@selector(equipTappedWithRank:andItemIdx:)]) {
         [self.equipTapDelegate equipTappedWithRank:self.rankId andItemIdx:0];
     }
@@ -50,8 +48,6 @@
 
 - (void)equip1Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 1 tapped");
-    
     if ([self.equipTapDelegate respondsToSelector:@selector(equipTappedWithRank:andItemIdx:)]) {
         [self.equipTapDelegate equipTappedWithRank:self.rankId andItemIdx:1];
     }
@@ -59,8 +55,6 @@
 
 - (void)equip2Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 2 tapped");
-    
     if ([self.equipTapDelegate respondsToSelector:@selector(equipTappedWithRank:andItemIdx:)]) {
         [self.equipTapDelegate equipTappedWithRank:self.rankId andItemIdx:2];
     }
@@ -68,8 +62,6 @@
 
 - (void)equip3Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 3 tapped");
-    
     if ([self.equipTapDelegate respondsToSelector:@selector(equipTappedWithRank:andItemIdx:)]) {
         [self.equipTapDelegate equipTappedWithRank:self.rankId andItemIdx:3];
     }
@@ -77,8 +69,6 @@
 
 - (void)equip4Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 4 tapped");
-    
     if ([self.equipTapDelegate respondsToSelector:@selector(equipTappedWithRank:andItemIdx:)]) {
         [self.equipTapDelegate equipTappedWithRank:self.rankId andItemIdx:4];
     }
@@ -86,8 +76,6 @@
 
 - (void)equip5Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 5 tapped");
-    
     if ([self.equipTapDelegate respondsToSelector:@selector(equipTappedWithRank:andItemIdx:)]) {
         [self.equipTapDelegate equipTappedWithRank:self.rankId andItemIdx:5];
     }

@@ -67,6 +67,19 @@
     return height2ret;
 }
 
+- (BOOL)shouldSwitchEquipsFroRankId:(NSString *)rankId
+{
+    if ([rankId isEqualToString:[MyUtility rankIdForCheng]] ||
+        [rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
+        [rankId isEqualToString:[MyUtility rankIdForCheng2]] ||
+        [rankId isEqualToString:[MyUtility rankIdForHong]] ||
+        [rankId isEqualToString:[MyUtility rankIdForHong1]]) {
+        return true;
+    }
+    
+    return false;
+}
+
 #pragma mark HeroDetailEquipsTapDelegate
 - (void)equipTappedWithRank:(NSString *)rankId andItemIdx:(NSInteger)itemIdx
 {
@@ -74,18 +87,34 @@
     
     NSString *equipId=@"";
     
-    if (0 == itemIdx) {
-        equipId=heroEquip.equip1;
-    } else if (1 == itemIdx) {
-        equipId=heroEquip.equip2;
-    } else if (2 == itemIdx) {
-        equipId=heroEquip.equip3;
-    } else if (3 == itemIdx) {
-        equipId=heroEquip.equip4;
-    } else if (4 == itemIdx) {
-        equipId=heroEquip.equip5;
-    } else if (5 == itemIdx) {
-        equipId=heroEquip.equip6;
+    if ([self shouldSwitchEquipsFroRankId:rankId]) {
+        if (0 == itemIdx) {
+            equipId=heroEquip.equip6;
+        } else if (1 == itemIdx) {
+            equipId=heroEquip.equip1;
+        } else if (2 == itemIdx) {
+            equipId=heroEquip.equip2;
+        } else if (3 == itemIdx) {
+            equipId=heroEquip.equip3;
+        } else if (4 == itemIdx) {
+            equipId=heroEquip.equip4;
+        } else if (5 == itemIdx) {
+            equipId=heroEquip.equip5;
+        }
+    } else {
+        if (0 == itemIdx) {
+            equipId=heroEquip.equip1;
+        } else if (1 == itemIdx) {
+            equipId=heroEquip.equip2;
+        } else if (2 == itemIdx) {
+            equipId=heroEquip.equip3;
+        } else if (3 == itemIdx) {
+            equipId=heroEquip.equip4;
+        } else if (4 == itemIdx) {
+            equipId=heroEquip.equip5;
+        } else if (5 == itemIdx) {
+            equipId=heroEquip.equip6;
+        }
     }
     
     if (![MyUtility isStringNilOrZeroLength:equipId]) {
@@ -273,12 +302,72 @@
         equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
         if (nil == equipInfo2use) {
             equipCell.ivEquip5.image=[UIImage imageNamed:@"hero_icon_unknow"];
-            equipCell.ivEquip5.layer.borderColor=[[UIColor darkGrayColor] CGColor];
-            equipCell.ivEquip5.layer.borderWidth=1;
         } else {
             equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-            equipCell.ivEquip5.layer.borderColor=[[UIColor grayColor] CGColor];
-            equipCell.ivEquip5.layer.borderWidth=0;
+        }
+        
+        BOOL shouldSwitch1and6=[self shouldSwitchEquipsFroRankId:rankId2use];
+        
+        if (shouldSwitch1and6) {
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
+            equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip2];
+            equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip3];
+            equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip4];
+            equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip5];
+            equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
+            if (nil == equipInfo2use) {
+                equipCell.ivEquip0.image=[UIImage imageNamed:@"hero_icon_unknow"];
+            } else {
+                equipCell.ivEquip0.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            }
+            
+            if (nil == equipInfo2use) {
+                equipCell.ivEquip0.layer.borderColor=[[UIColor darkGrayColor] CGColor];
+                equipCell.ivEquip0.layer.borderWidth=1;
+            } else {
+                equipCell.ivEquip0.layer.borderColor=[[UIColor grayColor] CGColor];
+                equipCell.ivEquip0.layer.borderWidth=0;
+            }
+        } else {
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
+            equipCell.ivEquip0.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip2];
+            equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip3];
+            equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip4];
+            equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip5];
+            equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            
+            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
+            if (nil == equipInfo2use) {
+                equipCell.ivEquip5.image=[UIImage imageNamed:@"hero_icon_unknow"];
+            } else {
+                equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+            }
+            
+            if (nil == equipInfo2use) {
+                equipCell.ivEquip5.layer.borderColor=[[UIColor darkGrayColor] CGColor];
+                equipCell.ivEquip5.layer.borderWidth=1;
+            } else {
+                equipCell.ivEquip5.layer.borderColor=[[UIColor grayColor] CGColor];
+                equipCell.ivEquip5.layer.borderWidth=0;
+            }
         }
         
         cell2ret=equipCell;
