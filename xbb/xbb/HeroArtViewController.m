@@ -16,6 +16,8 @@
 
 @interface HeroArtViewController ()
 @property (strong,nonatomic) HeroInfo *heroInfo2use;
+
+@property (nonatomic,assign) BOOL shownJuexingArt;
 @end
 
 @implementation HeroArtViewController
@@ -25,10 +27,18 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.title=NSLocalizedString(@"nav_title_art", @"");
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shop_refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(switchArtShown)];
     
     [self.tbArt registerNib:[UINib nibWithNibName:@"HeroArtTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroArtCellId];
     
     self.heroInfo2use=[DbHandler getHeroInfoWithHeroId:self.heroId];
+}
+
+- (void)switchArtShown
+{
+    self.shownJuexingArt=!self.shownJuexingArt;
+    
+    [self.tbArt reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +68,11 @@
     
     HeroArtTableViewCell *artCell=[tableView dequeueReusableCellWithIdentifier:kHeroArtCellId];
     
-    artCell.ivArt.image=[UIImage imageNamed:self.heroInfo2use.artFile];
+    if (self.shownJuexingArt && ![MyUtility isStringNilOrZeroLength:self.heroInfo2use.artFileS]) {
+        artCell.ivArt.image=[UIImage imageNamed:self.heroInfo2use.artFileS];
+    } else {
+        artCell.ivArt.image=[UIImage imageNamed:self.heroInfo2use.artFile];
+    }
     
     cell2ret=artCell;
     
