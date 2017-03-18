@@ -28,14 +28,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.title=self.equipInfo.equipName;
-    
     self.equip2showArr=[NSMutableArray new];
     [self.equip2showArr addObject:self.equipInfo.equipId];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHeaderCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeAttrTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeAttrCellId];
+    
+    [self updateNavTitle];
+}
+
+-(void)updateNavTitle
+{
+    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipId:self.equip2showArr.lastObject];
+    self.navigationItem.title=equipInfo.equipName;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -180,6 +186,7 @@
         }
     }
     
+    [self updateNavTitle];
     [self.tbContent reloadData];
 }
 
