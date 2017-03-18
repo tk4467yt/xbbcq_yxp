@@ -10,5 +10,6 @@
 
 @interface HeroArtTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *ivArt;
+@property (weak, nonatomic) IBOutlet UIImageView *ivType;
 
 @end

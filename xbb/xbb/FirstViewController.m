@@ -57,9 +57,9 @@
 -(void)updateRightNavItem
 {
     if (self.showThumbS) {
-        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_normal", @"");
-    } else {
         self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_juexing", @"");
+    } else {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_normal", @"");
     }
 }
 
@@ -194,7 +194,7 @@
     
     heroCell.lblName.text=heroInfo2use.heroName;
     
-    HeroTypeDesc *typeDesc=self.self.heroTypeDescDict[heroInfo2use.heroType];
+    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
     heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
 }
 
