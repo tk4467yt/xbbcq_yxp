@@ -227,53 +227,53 @@
         
         NSString *rankId2use=@"";
         NSString *title2set=@"";
-        if (0 == indexPath.row) {
-            equipCell.lblEquipDesc.hidden=false;
+        if (15 == indexPath.row) {
             rankId2use=[MyUtility rankIdForBai];
             title2set=NSLocalizedString(@"title_equip_bai", @"");
-        } else if (1 == indexPath.row) {
+        } else if (14 == indexPath.row) {
             rankId2use=[MyUtility rankIdForLv];
             title2set=NSLocalizedString(@"title_equip_lv", @"");
-        } else if (2 == indexPath.row) {
+        } else if (13 == indexPath.row) {
             rankId2use=[MyUtility rankIdForLv1];
             title2set=NSLocalizedString(@"title_equip_lv1", @"");
-        } else if (3 == indexPath.row) {
+        } else if (12 == indexPath.row) {
             rankId2use=[MyUtility rankIdForLan];
             title2set=NSLocalizedString(@"title_equip_lan", @"");
-        } else if (4 == indexPath.row) {
+        } else if (11 == indexPath.row) {
             rankId2use=[MyUtility rankIdForLan1];
             title2set=NSLocalizedString(@"title_equip_lan1", @"");
-        } else if (5 == indexPath.row) {
+        } else if (10 == indexPath.row) {
             rankId2use=[MyUtility rankIdForLan2];
             title2set=NSLocalizedString(@"title_equip_lan2", @"");
-        } else if (6 == indexPath.row) {
+        } else if (9 == indexPath.row) {
             rankId2use=[MyUtility rankIdForZi];
             title2set=NSLocalizedString(@"title_equip_zi", @"");
-        } else if (7 == indexPath.row) {
+        } else if (8 == indexPath.row) {
             rankId2use=[MyUtility rankIdForZi1];
             title2set=NSLocalizedString(@"title_equip_zi1", @"");
-        } else if (8 == indexPath.row) {
+        } else if (7 == indexPath.row) {
             rankId2use=[MyUtility rankIdForZi2];
             title2set=NSLocalizedString(@"title_equip_zi2", @"");
-        } else if (9 == indexPath.row) {
+        } else if (6 == indexPath.row) {
             rankId2use=[MyUtility rankIdForZi3];
             title2set=NSLocalizedString(@"title_equip_zi3", @"");
-        } else if (10 == indexPath.row) {
+        } else if (5 == indexPath.row) {
             rankId2use=[MyUtility rankIdForZi4];
             title2set=NSLocalizedString(@"title_equip_zi4", @"");
-        } else if (11 == indexPath.row) {
+        } else if (4 == indexPath.row) {
             rankId2use=[MyUtility rankIdForCheng];
             title2set=NSLocalizedString(@"title_equip_cheng", @"");
-        } else if (12 == indexPath.row) {
+        } else if (3 == indexPath.row) {
             rankId2use=[MyUtility rankIdForCheng1];
             title2set=NSLocalizedString(@"title_equip_cheng1", @"");
-        } else if (13 == indexPath.row) {
+        } else if (2 == indexPath.row) {
             rankId2use=[MyUtility rankIdForCheng2];
             title2set=NSLocalizedString(@"title_equip_cheng2", @"");
-        } else if (14 == indexPath.row) {
+        } else if (1 == indexPath.row) {
             rankId2use=[MyUtility rankIdForHong];
             title2set=NSLocalizedString(@"title_equip_hong", @"");
-        } else if (15 == indexPath.row) {
+        } else if (0 == indexPath.row) {
+            equipCell.lblEquipDesc.hidden=false;
             rankId2use=[MyUtility rankIdForHong1];
             title2set=NSLocalizedString(@"title_equip_hong1", @"");
         }
