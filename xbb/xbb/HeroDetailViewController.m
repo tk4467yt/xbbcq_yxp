@@ -206,6 +206,7 @@
     } else if (1 == indexPath.section) {
         HeroDetailSpeciesTableViewCell *speciesCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailSpeciesCellId];
         speciesCell.heroSpeciesArr=self.heroSpeciesArr;
+        speciesCell.parentVC=self;
         
         cell2ret=speciesCell;
     } else if (2 == indexPath.section) {

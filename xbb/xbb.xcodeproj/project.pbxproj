@@ -31,6 +31,8 @@
 		2544EEAB1E7D33A000E6D18B /* HeroArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2544EEA91E7D33A000E6D18B /* HeroArtViewController.xib */; };
 		2544EEAF1E7D370A00E6D18B /* HeroArtTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2544EEAD1E7D370A00E6D18B /* HeroArtTableViewCell.m */; };
 		2544EEB01E7D370A00E6D18B /* HeroArtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2544EEAE1E7D370A00E6D18B /* HeroArtTableViewCell.xib */; };
+		2544EEB41E7D75F000E6D18B /* SpeciesSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2544EEB21E7D75F000E6D18B /* SpeciesSetViewController.m */; };
+		2544EEB51E7D75F000E6D18B /* SpeciesSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2544EEB31E7D75F000E6D18B /* SpeciesSetViewController.xib */; };
 		257024371E630D2D001CB5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024361E630D2D001CB5F3 /* main.m */; };
 		2570243A1E630D2D001CB5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024391E630D2D001CB5F3 /* AppDelegate.m */; };
 		2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570243C1E630D2D001CB5F3 /* FirstViewController.m */; };
@@ -142,6 +144,9 @@
 		2544EEAC1E7D370A00E6D18B /* HeroArtTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroArtTableViewCell.h; sourceTree = "<group>"; };
 		2544EEAD1E7D370A00E6D18B /* HeroArtTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroArtTableViewCell.m; sourceTree = "<group>"; };
 		2544EEAE1E7D370A00E6D18B /* HeroArtTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroArtTableViewCell.xib; sourceTree = "<group>"; };
+		2544EEB11E7D75F000E6D18B /* SpeciesSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeciesSetViewController.h; sourceTree = "<group>"; };
+		2544EEB21E7D75F000E6D18B /* SpeciesSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeciesSetViewController.m; sourceTree = "<group>"; };
+		2544EEB31E7D75F000E6D18B /* SpeciesSetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeciesSetViewController.xib; sourceTree = "<group>"; };
 		257024321E630D2D001CB5F3 /* xbb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xbb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257024361E630D2D001CB5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		257024381E630D2D001CB5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -294,6 +299,9 @@
 				253EBB1C1E67108300524553 /* MyTabbarViewController.m */,
 				2570243E1E630D2D001CB5F3 /* SecondViewController.h */,
 				2570243F1E630D2D001CB5F3 /* SecondViewController.m */,
+				2544EEB11E7D75F000E6D18B /* SpeciesSetViewController.h */,
+				2544EEB21E7D75F000E6D18B /* SpeciesSetViewController.m */,
+				2544EEB31E7D75F000E6D18B /* SpeciesSetViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -630,6 +638,7 @@
 				25AEB6BE1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib in Resources */,
 				25834CEE1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib in Resources */,
 				259418EA1E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib in Resources */,
+				2544EEB51E7D75F000E6D18B /* SpeciesSetViewController.xib in Resources */,
 				25AEB6C31E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib in Resources */,
 				2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */,
 			);
@@ -679,6 +688,7 @@
 				25DD74C41E6AD4CD0000EB46 /* EquipAttrDesc.m in Sources */,
 				257024711E6320DA001CB5F3 /* MineViewController.m in Sources */,
 				25DD74A91E6AC1070000EB46 /* RankDesc.m in Sources */,
+				2544EEB41E7D75F000E6D18B /* SpeciesSetViewController.m in Sources */,
 				253EBB361E685B6200524553 /* FMDatabaseAdditions.m in Sources */,
 				250B1B561E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m in Sources */,
 				2544EEAF1E7D370A00E6D18B /* HeroArtTableViewCell.m in Sources */,

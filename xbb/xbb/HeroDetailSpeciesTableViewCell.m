@@ -11,6 +11,8 @@
 #import "HeroSpecies.h"
 #import "SpeciesDesc.h"
 #import "DbHandler.h"
+#import "SpeciesSetViewController.h"
+#import "MyUtility.h"
 
 #define kHeroSpeciesIconCVCellId @"hero_species_icon_cv_cell_id"
 
@@ -56,7 +58,13 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    HeroSpecies *heroSpecies=self.heroSpeciesArr[indexPath.row];
+    SpeciesDesc *species2use=self.allSpeciesDict[heroSpecies.speciesId];
     
+    SpeciesSetViewController *detailVC=[SpeciesSetViewController new];
+    detailVC.speciesDesc2show=species2use;
+    
+    [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:detailVC animated:YES];
 }
 
 #pragma mark UICollectionViewDataSource

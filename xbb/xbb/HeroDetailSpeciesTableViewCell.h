@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblSpeciesDesc;
 @property (weak, nonatomic) IBOutlet UILabel *lblDescNone;
 @property (weak, nonatomic) IBOutlet UICollectionView *cvSpecies;
+
+@property (weak, nonatomic) UIViewController *parentVC;
 @end
