@@ -68,7 +68,7 @@
     
     HeroSkill *heroSkill=self.heroSkillsArr[indexPath.row];
     skillItemCell.ivSkillThumb.image=[UIImage imageNamed:heroSkill.skillThumb];
-    skillItemCell.lblSkillName.text=heroSkill.skillName;
+    skillItemCell.lblSkillName.text=[NSString stringWithFormat:@"%@:",heroSkill.skillName];
     skillItemCell.lblSkillDesc.text=heroSkill.skillDesc;
     
     return skillItemCell;
