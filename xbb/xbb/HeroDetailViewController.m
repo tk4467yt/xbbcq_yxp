@@ -19,6 +19,7 @@
 #import "MyUtility.h"
 #import "HeroEquips.h"
 #import "HeroSkill.h"
+#import "RankDesc.h"
 
 #define kHeroDetailTopCellId @"hero_detail_top_table_view_cell"
 #define kHeroDetailSpeciesCellId @"hero_detail_species_cell_id"
@@ -189,6 +190,10 @@
         topCell.ivThumb.image=[UIImage imageNamed:self.hero2show.thumbFile];
         topCell.lblName.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_name", @""),self.hero2show.heroName];
         topCell.lblShortName.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_short_name", @""),self.hero2show.shortName];
+        
+        RankDesc *rankDesc=[DbHandler getRankDescForRankId:[MyUtility rankIdForBai]];
+        UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
+        topCell.ivThumbMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
         
         HeroTypeDesc *typeDesc2use=self.heroTypeDescDict[self.hero2show.heroType];
         topCell.lblType.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_type", @""),typeDesc2use.typeDesc];

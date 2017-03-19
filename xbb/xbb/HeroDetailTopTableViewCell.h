@@ -10,6 +10,7 @@
 
 @interface HeroDetailTopTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *ivThumb;
+@property (weak, nonatomic) IBOutlet UIImageView *ivThumbMask;
 @property (weak, nonatomic) IBOutlet UIImageView *ivType;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblShortName;

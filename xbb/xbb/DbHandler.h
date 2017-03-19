@@ -10,6 +10,7 @@
 #import "EquipInfo.h"
 #import "HeroInfo.h"
 #import "EquipComposeInfo.h"
+#import "RankDesc.h"
 
 @interface DbHandler : NSObject
 
@@ -22,7 +23,10 @@
 +(NSDictionary *)getAllHeroTypeDescDict;
 +(NSArray *)getAllStarDesc;
 +(NSDictionary *)getAllSpeciesDescDict;
+
 +(NSDictionary *)getAllRankDescDict;
++(RankDesc *)getRankDescForRankId:(NSString *)rankId;
+
 +(NSDictionary *)getAllPosDescDict;
 
 +(NSArray *)getAllHeroSpecies;

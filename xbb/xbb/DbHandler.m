@@ -175,6 +175,16 @@ static __strong FMDatabase *dbConfig;
     return dict2ret;
 }
 
++(void)getRankDescFromSet:(FMResultSet *)s intoRank:(RankDesc *)aRankDesc
+{
+    aRankDesc.rankId=[s stringForColumn:@"rank_id"];
+    aRankDesc.rankName=[s stringForColumn:@"rank_name"];
+    aRankDesc.artBgThumb=[s stringForColumn:@"art_bg_thumb"];
+    aRankDesc.equipFrameThumb=[s stringForColumn:@"equip_frame_thumb"];
+    aRankDesc.fragmentFrameThumb=[s stringForColumn:@"fragment_frame_thumb"];
+    aRankDesc.heroIconFrameThumb=[s stringForColumn:@"hero_icon_frame_thumb"];
+}
+
 +(NSDictionary *)getAllRankDescDict
 {
     NSMutableDictionary *dict2ret=[NSMutableDictionary new];
@@ -183,17 +193,25 @@ static __strong FMDatabase *dbConfig;
     while ([s next]) {
         RankDesc *aRankDesc=[RankDesc new];
         
-        aRankDesc.rankId=[s stringForColumn:@"rank_id"];
-        aRankDesc.rankName=[s stringForColumn:@"rank_name"];
-        aRankDesc.artBgThumb=[s stringForColumn:@"art_bg_thumb"];
-        aRankDesc.equipFrameThumb=[s stringForColumn:@"equip_frame_thumb"];
-        aRankDesc.fragmentFrameThumb=[s stringForColumn:@"fragment_frame_thumb"];
-        aRankDesc.heroIconFrameThumb=[s stringForColumn:@"hero_icon_frame_thumb"];
+        [DbHandler getRankDescFromSet:s intoRank:aRankDesc];
         
         [dict2ret setObject:aRankDesc forKey:aRankDesc.rankId];
     }
     
     return dict2ret;
+}
+
++(RankDesc *)getRankDescForRankId:(NSString *)rankId
+{
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `rank_desc` WHERE `rank_id` = ?",rankId];
+    
+    RankDesc *aRankDesc=[RankDesc new];
+    
+    if ([s next]) {
+        [DbHandler getRankDescFromSet:s intoRank:aRankDesc];
+    }
+    
+    return aRankDesc;
 }
 
 +(NSDictionary *)getAllPosDescDict
