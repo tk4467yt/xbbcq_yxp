@@ -290,27 +290,7 @@
         
         equipCell.lblRankDesc.text=title2set;
         
-        EquipInfo *equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
-        equipCell.ivEquip0.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-        
-        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip2];
-        equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-        
-        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip3];
-        equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-        
-        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip4];
-        equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-        
-        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip5];
-        equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-        
-        equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
-        if (nil == equipInfo2use) {
-            equipCell.ivEquip5.image=[UIImage imageNamed:@"hero_icon_unknow"];
-        } else {
-            equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-        }
+        EquipInfo *equipInfo2use=nil;
         
         BOOL shouldSwitch1and6=[self shouldSwitchEquipsFroRankId:rankId2use];
         
