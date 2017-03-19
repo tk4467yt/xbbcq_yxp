@@ -390,6 +390,44 @@ static __strong FMDatabase *dbConfig;
     return dict2ret;
 }
 
++(void)getEquipInfoFromSet:(FMResultSet *)s intoEquip:(EquipInfo *)aEquipInfo
+{
+    aEquipInfo.equipId=[s stringForColumn:@"equip_id"];
+    aEquipInfo.equipName=[s stringForColumn:@"equip_name"];
+    
+    aEquipInfo.levelRequire=[s intForColumn:@"level_require"];
+    aEquipInfo.isCompose=[s boolForColumn:@"is_compose"];
+    
+    aEquipInfo.equipRank=[s stringForColumn:@"equip_rank"];
+    aEquipInfo.thumbFile=[s stringForColumn:@"thumb_file"];
+    
+    aEquipInfo.showInBook=[s boolForColumn:@"show_in_book"];
+    
+    aEquipInfo.liliang=[s doubleForColumn:@"li_liang"];
+    aEquipInfo.minjie=[s doubleForColumn:@"min_jie"];
+    aEquipInfo.zhili=[s doubleForColumn:@"zhi_li"];
+    aEquipInfo.healthMax=[s doubleForColumn:@"health_max"];
+    aEquipInfo.healthRecover=[s doubleForColumn:@"health_recover"];
+    aEquipInfo.energyRecover=[s doubleForColumn:@"energy_recover"];
+    aEquipInfo.physicsGongji=[s doubleForColumn:@"physics_gongji"];
+    aEquipInfo.physicsHujia=[s doubleForColumn:@"physics_hujia"];
+    aEquipInfo.physicsBaoji=[s doubleForColumn:@"physics_baoji"];
+    aEquipInfo.chuantouPhysicsHujia=[s doubleForColumn:@"chuantou_physics_hujia"];
+    aEquipInfo.magicQiangdu=[s doubleForColumn:@"magic_qiangdu"];
+    aEquipInfo.magicBaoji=[s doubleForColumn:@"magic_baoji"];
+    aEquipInfo.magicKangxing=[s doubleForColumn:@"magic_kangxing"];
+    aEquipInfo.hulueMagicKangxing=[s doubleForColumn:@"hulue_magic_kangxing"];
+    aEquipInfo.xixue=[s doubleForColumn:@"xixue"];
+    aEquipInfo.zhiliaoXiaoguo=[s doubleForColumn:@"zhiliao_xiaoguo"];
+    aEquipInfo.shangbi=[s doubleForColumn:@"shangbi"];
+    aEquipInfo.mingzhong=[s doubleForColumn:@"mingzhong"];
+    aEquipInfo.minusControlTime=[s doubleForColumn:@"minus_control_time"];
+    aEquipInfo.yingzhiDikang=[s doubleForColumn:@"yingzhi_dikang"];
+    aEquipInfo.chengmoDikang=[s doubleForColumn:@"chengmo_dikang"];
+    aEquipInfo.minusNengliangXiaohao=[s doubleForColumn:@"minus_nengliang_xiaohao"];
+    aEquipInfo.skillLevelAddon=[s doubleForColumn:@"skill_level_addon"];
+}
+
 +(NSArray *)getAllEquipInfo
 {
     NSMutableArray *arr2ret=[NSMutableArray new];
@@ -398,40 +436,7 @@ static __strong FMDatabase *dbConfig;
     while ([s next]) {
         EquipInfo *aEquipInfo=[EquipInfo new];
         
-        aEquipInfo.equipId=[s stringForColumn:@"equip_id"];
-        aEquipInfo.equipName=[s stringForColumn:@"equip_name"];
-        
-        aEquipInfo.levelRequire=[s intForColumn:@"level_require"];
-        aEquipInfo.isCompose=[s boolForColumn:@"is_compose"];
-        
-        aEquipInfo.equipRank=[s stringForColumn:@"equip_rank"];
-        aEquipInfo.thumbFile=[s stringForColumn:@"thumb_file"];
-        
-        aEquipInfo.showInBook=[s boolForColumn:@"show_in_book"];
-        
-        aEquipInfo.liliang=[s intForColumn:@"li_liang"];
-        aEquipInfo.minjie=[s intForColumn:@"min_jie"];
-        aEquipInfo.zhili=[s intForColumn:@"zhi_li"];
-        aEquipInfo.healthMax=[s intForColumn:@"health_max"];
-        aEquipInfo.healthRecover=[s intForColumn:@"health_recover"];
-        aEquipInfo.energyRecover=[s intForColumn:@"energy_recover"];
-        aEquipInfo.physicsGongji=[s intForColumn:@"physics_gongji"];
-        aEquipInfo.physicsHujia=[s intForColumn:@"physics_hujia"];
-        aEquipInfo.physicsBaoji=[s intForColumn:@"physics_baoji"];
-        aEquipInfo.chuantouPhysicsHujia=[s intForColumn:@"chuantou_physics_hujia"];
-        aEquipInfo.magicQiangdu=[s intForColumn:@"magic_qiangdu"];
-        aEquipInfo.magicBaoji=[s intForColumn:@"magic_baoji"];
-        aEquipInfo.magicKangxing=[s intForColumn:@"magic_kangxing"];
-        aEquipInfo.hulueMagicKangxing=[s intForColumn:@"hulue_magic_kangxing"];
-        aEquipInfo.xixue=[s intForColumn:@"xixue"];
-        aEquipInfo.zhiliaoXiaoguo=[s intForColumn:@"zhiliao_xiaoguo"];
-        aEquipInfo.shangbi=[s intForColumn:@"shangbi"];
-        aEquipInfo.mingzhong=[s intForColumn:@"mingzhong"];
-        aEquipInfo.minusControlTime=[s intForColumn:@"minus_control_time"];
-        aEquipInfo.yingzhiDikang=[s intForColumn:@"yingzhi_dikang"];
-        aEquipInfo.chengmoDikang=[s intForColumn:@"chengmo_dikang"];
-        aEquipInfo.minusNengliangXiaohao=[s intForColumn:@"minus_nengliang_xiaohao"];
-        aEquipInfo.skillLevelAddon=[s intForColumn:@"skill_level_addon"];
+        [DbHandler getEquipInfoFromSet:s intoEquip:aEquipInfo];
         
         [arr2ret addObject:aEquipInfo];
     }
@@ -445,40 +450,7 @@ static __strong FMDatabase *dbConfig;
     
     EquipInfo *aEquipInfo=[EquipInfo new];
     if ([s next]) {
-        aEquipInfo.equipId=[s stringForColumn:@"equip_id"];
-        aEquipInfo.equipName=[s stringForColumn:@"equip_name"];
-        
-        aEquipInfo.levelRequire=[s intForColumn:@"level_require"];
-        aEquipInfo.isCompose=[s boolForColumn:@"is_compose"];
-        
-        aEquipInfo.equipRank=[s stringForColumn:@"equip_rank"];
-        aEquipInfo.thumbFile=[s stringForColumn:@"thumb_file"];
-        
-        aEquipInfo.showInBook=[s boolForColumn:@"show_in_book"];
-        
-        aEquipInfo.liliang=[s intForColumn:@"li_liang"];
-        aEquipInfo.minjie=[s intForColumn:@"min_jie"];
-        aEquipInfo.zhili=[s intForColumn:@"zhi_li"];
-        aEquipInfo.healthMax=[s intForColumn:@"health_max"];
-        aEquipInfo.healthRecover=[s intForColumn:@"health_recover"];
-        aEquipInfo.energyRecover=[s intForColumn:@"energy_recover"];
-        aEquipInfo.physicsGongji=[s intForColumn:@"physics_gongji"];
-        aEquipInfo.physicsHujia=[s intForColumn:@"physics_hujia"];
-        aEquipInfo.physicsBaoji=[s intForColumn:@"physics_baoji"];
-        aEquipInfo.chuantouPhysicsHujia=[s intForColumn:@"chuantou_physics_hujia"];
-        aEquipInfo.magicQiangdu=[s intForColumn:@"magic_qiangdu"];
-        aEquipInfo.magicBaoji=[s intForColumn:@"magic_baoji"];
-        aEquipInfo.magicKangxing=[s intForColumn:@"magic_kangxing"];
-        aEquipInfo.hulueMagicKangxing=[s intForColumn:@"hulue_magic_kangxing"];
-        aEquipInfo.xixue=[s intForColumn:@"xixue"];
-        aEquipInfo.zhiliaoXiaoguo=[s intForColumn:@"zhiliao_xiaoguo"];
-        aEquipInfo.shangbi=[s intForColumn:@"shangbi"];
-        aEquipInfo.mingzhong=[s intForColumn:@"mingzhong"];
-        aEquipInfo.minusControlTime=[s intForColumn:@"minus_control_time"];
-        aEquipInfo.yingzhiDikang=[s intForColumn:@"yingzhi_dikang"];
-        aEquipInfo.chengmoDikang=[s intForColumn:@"chengmo_dikang"];
-        aEquipInfo.minusNengliangXiaohao=[s intForColumn:@"minus_nengliang_xiaohao"];
-        aEquipInfo.skillLevelAddon=[s intForColumn:@"skill_level_addon"];
+        [DbHandler getEquipInfoFromSet:s intoEquip:aEquipInfo];
     }
     
     return aEquipInfo;

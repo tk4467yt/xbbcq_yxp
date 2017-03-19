@@ -50,95 +50,95 @@
     
     if (self.equipInfo2show.liliang > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForLiliang]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.liliang]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.liliang]];
     }
     if (self.equipInfo2show.zhili > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForZhili]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.zhili]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.zhili]];
     }
     if (self.equipInfo2show.minjie > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMinjie]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.minjie]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.minjie]];
     }
     if (self.equipInfo2show.healthMax > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForHealthMax]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.healthMax]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.healthMax]];
     }
     if (self.equipInfo2show.healthRecover > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForHealthRecover]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.healthRecover]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.healthRecover]];
     }
     if (self.equipInfo2show.energyRecover > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForEnergyRecover]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.energyRecover]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.energyRecover]];
     }
     if (self.equipInfo2show.physicsGongji > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsGongji]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.physicsGongji]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsGongji]];
     }
     if (self.equipInfo2show.physicsHujia > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsHujia]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.physicsHujia]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsHujia]];
     }
     if (self.equipInfo2show.physicsBaoji > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsBaoji]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.physicsBaoji]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsBaoji]];
     }
     if (self.equipInfo2show.chuantouPhysicsHujia > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForChuantouPhysicsHujia]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.chuantouPhysicsHujia]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.chuantouPhysicsHujia]];
     }
     if (self.equipInfo2show.magicQiangdu > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMagicQiangdu]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.magicQiangdu]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicQiangdu]];
     }
     if (self.equipInfo2show.magicBaoji > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMagicBaoji]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.magicBaoji]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicBaoji]];
     }
     if (self.equipInfo2show.magicKangxing > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMagicKangxing]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.magicKangxing]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicKangxing]];
     }
     if (self.equipInfo2show.hulueMagicKangxing > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForHulueMagicKangxing]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.hulueMagicKangxing]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.hulueMagicKangxing]];
     }
     if (self.equipInfo2show.xixue > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForXixue]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.xixue]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.xixue]];
     }
     if (self.equipInfo2show.zhiliaoXiaoguo > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForZhiliaoXiaoguo]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.zhiliaoXiaoguo]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.zhiliaoXiaoguo]];
     }
     if (self.equipInfo2show.shangbi > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForShangbi]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.shangbi]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.shangbi]];
     }
     if (self.equipInfo2show.mingzhong > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMingzhong]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.mingzhong]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.mingzhong]];
     }
     if (self.equipInfo2show.minusControlTime > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMinusControlTime]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.minusControlTime]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.minusControlTime]];
     }
     if (self.equipInfo2show.yingzhiDikang > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForYingzhiDikang]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.yingzhiDikang]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.yingzhiDikang]];
     }
     if (self.equipInfo2show.chengmoDikang > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForChengmoDikang]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.chengmoDikang]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.chengmoDikang]];
     }
     if (self.equipInfo2show.minusNengliangXiaohao > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMinusNengliangXiaohao]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.minusNengliangXiaohao]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.minusNengliangXiaohao]];
     }
     if (self.equipInfo2show.skillLevelAddon > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForSkillLevelAddon]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.skillLevelAddon]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.skillLevelAddon]];
     }
 }
 
@@ -184,7 +184,14 @@
             [attrId isEqualToString:[MyUtility attrIdForMinusNengliangXiaohao]]) {
             withPercentSufix=true;
         }
-        attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@ + %d%@",attrDesc.attrDesc,[self.value2showArr[indexPath.row] intValue],withPercentSufix?@"\%":@""];
+        
+        int attrIntValue=[self.value2showArr[indexPath.row] intValue];
+        double attrDoubleValue=[self.value2showArr[indexPath.row] doubleValue];
+        if (attrIntValue == attrDoubleValue) {
+            attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@ + %d%@",attrDesc.attrDesc,attrIntValue,withPercentSufix?@"\%":@""];
+        } else {
+            attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@ + %.1f%@",attrDesc.attrDesc,attrDoubleValue,withPercentSufix?@"\%":@""];
+        }
     }
     
     return attrItemCell;
