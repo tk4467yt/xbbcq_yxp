@@ -94,73 +94,73 @@
     
     EquipInfo *curEquipInfo=[MyUtility getEquipInfoForEquipId:self.equip2showArr.lastObject];
     
-    if (curEquipInfo.liliang > 0) {
+    if (curEquipInfo.liliang != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.minjie > 0) {
+    if (curEquipInfo.minjie != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.zhili > 0) {
+    if (curEquipInfo.zhili != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.healthMax > 0) {
+    if (curEquipInfo.healthMax != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.healthRecover > 0) {
+    if (curEquipInfo.healthRecover != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.energyRecover > 0) {
+    if (curEquipInfo.energyRecover != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.physicsGongji > 0) {
+    if (curEquipInfo.physicsGongji != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.physicsHujia > 0) {
+    if (curEquipInfo.physicsHujia != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.physicsBaoji > 0) {
+    if (curEquipInfo.physicsBaoji != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.chuantouPhysicsHujia > 0) {
+    if (curEquipInfo.chuantouPhysicsHujia != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.magicQiangdu > 0) {
+    if (curEquipInfo.magicQiangdu != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.magicBaoji > 0) {
+    if (curEquipInfo.magicBaoji != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.magicKangxing > 0) {
+    if (curEquipInfo.magicKangxing != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.hulueMagicKangxing > 0) {
+    if (curEquipInfo.hulueMagicKangxing != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.xixue > 0) {
+    if (curEquipInfo.xixue != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.zhiliaoXiaoguo > 0) {
+    if (curEquipInfo.zhiliaoXiaoguo != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.shangbi > 0) {
+    if (curEquipInfo.shangbi != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.mingzhong > 0) {
+    if (curEquipInfo.mingzhong != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.minusControlTime > 0) {
+    if (curEquipInfo.minusControlTime != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.yingzhiDikang > 0) {
+    if (curEquipInfo.yingzhiDikang != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.chengmoDikang > 0) {
+    if (curEquipInfo.chengmoDikang != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.minusNengliangXiaohao > 0) {
+    if (curEquipInfo.minusNengliangXiaohao != 0) {
         ++count2ret;
     }
-    if (curEquipInfo.skillLevelAddon > 0) {
+    if (curEquipInfo.skillLevelAddon != 0) {
         ++count2ret;
     }
     
