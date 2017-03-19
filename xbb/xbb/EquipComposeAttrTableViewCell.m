@@ -64,14 +64,6 @@
         [self.attr2showIdArr addObject:[MyUtility attrIdForHealthMax]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.healthMax]];
     }
-    if (self.equipInfo2show.healthRecover != 0) {
-        [self.attr2showIdArr addObject:[MyUtility attrIdForHealthRecover]];
-        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.healthRecover]];
-    }
-    if (self.equipInfo2show.energyRecover != 0) {
-        [self.attr2showIdArr addObject:[MyUtility attrIdForEnergyRecover]];
-        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.energyRecover]];
-    }
     if (self.equipInfo2show.physicsGongji != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsGongji]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsGongji]];
@@ -103,6 +95,14 @@
     if (self.equipInfo2show.hulueMagicKangxing != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForHulueMagicKangxing]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.hulueMagicKangxing]];
+    }
+    if (self.equipInfo2show.healthRecover != 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForHealthRecover]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.healthRecover]];
+    }
+    if (self.equipInfo2show.energyRecover != 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForEnergyRecover]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.energyRecover]];
     }
     if (self.equipInfo2show.xixue != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForXixue]];
