@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.ivSkillThumb.layer.masksToBounds=true;
+    self.ivSkillThumb.layer.cornerRadius=5;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

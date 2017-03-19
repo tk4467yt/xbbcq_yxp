@@ -10,6 +10,8 @@
 #import "HeroSkillItemTableViewCell.h"
 #import "HeroSkill.h"
 #import "MyUtility.h"
+#import "RankDesc.h"
+#import "DbHandler.h"
 
 #define kHeroSkillItemTBCellId @"hero_skill_item_tb_cell_id"
 
@@ -48,7 +50,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HeroSkill *heroSkill=self.heroSkillsArr[indexPath.row];
-    CGFloat skillRowHeight = MAX(76, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-60-16-10-60-10 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);
+    CGFloat skillRowHeight = MAX(96, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-80-16-10-60-10 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);
     return skillRowHeight;
 }
 
@@ -70,6 +72,10 @@
     skillItemCell.ivSkillThumb.image=[UIImage imageNamed:heroSkill.skillThumb];
     skillItemCell.lblSkillName.text=[NSString stringWithFormat:@"%@:",heroSkill.skillName];
     skillItemCell.lblSkillDesc.text=heroSkill.skillDesc;
+    
+    RankDesc *rankDesc=[DbHandler getRankDescForRankId:[MyUtility rankIdForBai]];
+    UIImage *maskImg=[UIImage imageNamed:rankDesc.equipFrameThumb];
+    skillItemCell.ivSkillThumbMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     return skillItemCell;
 }

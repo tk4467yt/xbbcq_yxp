@@ -10,6 +10,7 @@
 
 @interface HeroSkillItemTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *ivSkillThumb;
+@property (weak, nonatomic) IBOutlet UIImageView *ivSkillThumbMask;
 @property (weak, nonatomic) IBOutlet UILabel *lblSkillName;
 @property (weak, nonatomic) IBOutlet UILabel *lblSkillDesc;
 
