@@ -52,13 +52,13 @@
         [self.attr2showIdArr addObject:[MyUtility attrIdForLiliang]];
         [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.liliang]];
     }
-    if (self.equipInfo2show.minjie > 0) {
-        [self.attr2showIdArr addObject:[MyUtility attrIdForMinjie]];
-        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.minjie]];
-    }
     if (self.equipInfo2show.zhili > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForZhili]];
         [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.zhili]];
+    }
+    if (self.equipInfo2show.minjie > 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForMinjie]];
+        [self.value2showArr addObject:[NSNumber numberWithInteger:self.equipInfo2show.minjie]];
     }
     if (self.equipInfo2show.healthMax > 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForHealthMax]];
