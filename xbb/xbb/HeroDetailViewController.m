@@ -68,7 +68,7 @@
     return height2ret;
 }
 
-- (BOOL)shouldSwitchEquipsFroRankId:(NSString *)rankId
+- (BOOL)shouldSwitchEquipsForRankId:(NSString *)rankId
 {
     if ([rankId isEqualToString:[MyUtility rankIdForCheng]] ||
         [rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
@@ -88,7 +88,7 @@
     
     NSString *equipId=@"";
     
-    if ([self shouldSwitchEquipsFroRankId:rankId]) {
+    if ([self shouldSwitchEquipsForRankId:rankId]) {
         if (0 == itemIdx) {
             equipId=heroEquip.equip6;
         } else if (1 == itemIdx) {
@@ -292,7 +292,7 @@
         
         EquipInfo *equipInfo2use=nil;
         
-        BOOL shouldSwitch1and6=[self shouldSwitchEquipsFroRankId:rankId2use];
+        BOOL shouldSwitch1and6=[self shouldSwitchEquipsForRankId:rankId2use];
         
         if (shouldSwitch1and6) {
             equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
