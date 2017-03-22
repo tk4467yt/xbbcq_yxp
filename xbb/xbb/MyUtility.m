@@ -185,6 +185,10 @@ static __strong NSArray *allHeroSpeciesArr;
 {
     return @"skill_level_addon";
 }
++(NSString *)attrIdForSiWangDuiFangHuiNengJianBan
+{
+    return @"si_wang_dui_fang_hui_neng_jian_ban";
+}
 
 +(UIImage *)makeMaskImageFroFrame:(UIImage *)img2use
 {

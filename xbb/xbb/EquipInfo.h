@@ -43,4 +43,5 @@
 @property (nonatomic,assign) double chengmoDikang;
 @property (nonatomic,assign) double minusNengliangXiaohao;
 @property (nonatomic,assign) double skillLevelAddon;
+@property (nonatomic,assign) double siWangDuiFangHuiNengJianBan;
 @end

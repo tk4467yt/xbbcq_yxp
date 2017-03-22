@@ -60,6 +60,7 @@
 +(NSString *)attrIdForChengmoDikang;
 +(NSString *)attrIdForMinusNengliangXiaohao;
 +(NSString *)attrIdForSkillLevelAddon;
++(NSString *)attrIdForSiWangDuiFangHuiNengJianBan;
 
 +(UIImage *)makeMaskImageFroFrame:(UIImage *)img2use;
 

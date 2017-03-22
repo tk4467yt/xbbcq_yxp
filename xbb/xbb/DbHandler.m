@@ -444,6 +444,7 @@ static __strong FMDatabase *dbConfig;
     aEquipInfo.chengmoDikang=[s doubleForColumn:@"chengmo_dikang"];
     aEquipInfo.minusNengliangXiaohao=[s doubleForColumn:@"minus_nengliang_xiaohao"];
     aEquipInfo.skillLevelAddon=[s doubleForColumn:@"skill_level_addon"];
+    aEquipInfo.siWangDuiFangHuiNengJianBan=[s doubleForColumn:@"si_wang_dui_fang_hui_neng_jian_ban"];
 }
 
 +(NSArray *)getAllEquipInfo

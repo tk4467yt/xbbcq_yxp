@@ -140,6 +140,10 @@
         [self.attr2showIdArr addObject:[MyUtility attrIdForSkillLevelAddon]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.skillLevelAddon]];
     }
+    if (self.equipInfo2show.siWangDuiFangHuiNengJianBan != 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForSiWangDuiFangHuiNengJianBan]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.siWangDuiFangHuiNengJianBan]];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -181,7 +185,8 @@
             [attrId isEqualToString:[MyUtility attrIdForMinusControlTime]] ||
             [attrId isEqualToString:[MyUtility attrIdForYingzhiDikang]] ||
             [attrId isEqualToString:[MyUtility attrIdForChengmoDikang]] ||
-            [attrId isEqualToString:[MyUtility attrIdForMinusNengliangXiaohao]]) {
+            [attrId isEqualToString:[MyUtility attrIdForMinusNengliangXiaohao]] ||
+            [attrId isEqualToString:[MyUtility attrIdForSiWangDuiFangHuiNengJianBan]]) {
             withPercentSufix=true;
         }
         

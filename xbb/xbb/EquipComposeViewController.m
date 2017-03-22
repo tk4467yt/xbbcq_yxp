@@ -163,6 +163,9 @@
     if (curEquipInfo.skillLevelAddon != 0) {
         ++count2ret;
     }
+    if (curEquipInfo.siWangDuiFangHuiNengJianBan != 0) {
+        ++count2ret;
+    }
     
     return count2ret;
 }
