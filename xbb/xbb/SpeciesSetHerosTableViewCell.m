@@ -53,7 +53,12 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ([self.selectHeroDelegate respondsToSelector:@selector(speciesSetDidSelectHeroWithId:)]) {
+        HeroInfo *heroInfo2use=self.herosArr[indexPath.row];
+        [self.selectHeroDelegate speciesSetDidSelectHeroWithId:heroInfo2use.heroId];
+        
+        [self.parentVC.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark UICollectionViewDataSource

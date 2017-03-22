@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpeciesSetViewController.h"
 
 @interface SpeciesSetHerosTableViewCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *lblHeroDesc;
 @property (weak, nonatomic) IBOutlet UICollectionView *cvHeros;
 
 @property (strong, nonatomic) NSArray *herosArr;
+
+@property (nonatomic,weak) id<SpeciesSetDidSelectHeroDelegate> selectHeroDelegate;
+@property (nonatomic,weak) UIViewController *parentVC;
 @end

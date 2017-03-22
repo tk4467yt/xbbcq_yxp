@@ -8,9 +8,10 @@
 
 #import "MyRootViewController.h"
 #import "HeroInfo.h"
+#import "SpeciesSetViewController.h"
 
-@interface HeroDetailViewController : MyRootViewController <UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,weak) HeroInfo *hero2show;
+@interface HeroDetailViewController : MyRootViewController <UITableViewDelegate,UITableViewDataSource,SpeciesSetDidSelectHeroDelegate>
+@property (nonatomic,strong) HeroInfo *hero2show;
 @property (weak, nonatomic) IBOutlet UITableView *tbContent;
 
 @end

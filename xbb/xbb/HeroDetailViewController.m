@@ -40,19 +40,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title=self.hero2show.heroName;
-    
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
     self.heroPosDescDict=[DbHandler getAllPosDescDict];
-    self.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
-    self.heroSkillsArr=[DbHandler getHeroSkillsForHero:self.hero2show.heroId];
-    self.heroEquipsDict=[DbHandler getHeroEquipsDictForHero:self.hero2show.heroId];
+    [self updateHeroRelateStructure];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailTopTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailTopCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSpeciesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSpeciesCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailStarInfoTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailStarInfoCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSkillTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSkillCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailEquipsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailEquipCellId];
+}
+
+-(void)updateHeroRelateStructure
+{
+    self.navigationItem.title=self.hero2show.heroName;
+    
+    self.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
+    self.heroSkillsArr=[DbHandler getHeroSkillsForHero:self.hero2show.heroId];
+    self.heroEquipsDict=[DbHandler getHeroEquipsDictForHero:self.hero2show.heroId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +84,18 @@
     }
     
     return false;
+}
+
+#pragma mark SpeciesSetDidSelectHeroDelegate
+- (void)speciesSetDidSelectHeroWithId:(NSString *)heroId
+{
+    if (![MyUtility isStringNilOrZeroLength:heroId] && ![heroId isEqualToString:self.hero2show.heroId]) {
+        self.hero2show=[DbHandler getHeroInfoWithHeroId:heroId];
+        
+        [self updateHeroRelateStructure];
+        
+        [self.tbContent reloadData];
+    }
 }
 
 #pragma mark HeroDetailEquipsTapDelegate

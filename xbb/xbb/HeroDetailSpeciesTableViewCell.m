@@ -63,6 +63,7 @@
     
     SpeciesSetViewController *detailVC=[SpeciesSetViewController new];
     detailVC.speciesDesc2show=species2use;
+    detailVC.selectHeroDelegate=(id<SpeciesSetDidSelectHeroDelegate>)self.parentVC;
     
     [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:detailVC animated:YES];
 }

@@ -101,6 +101,8 @@
         
         herosCell.lblHeroDesc.text=[NSString stringWithFormat:@"%@:",NSLocalizedString(@"nav_title_hero", @"")];
         herosCell.herosArr=[self getAllHerosForCurSpecies];
+        herosCell.selectHeroDelegate=self.selectHeroDelegate;
+        herosCell.parentVC=self;
         
         herosCell.backgroundColor=[UIColor grayColor];
         cell2ret=herosCell;

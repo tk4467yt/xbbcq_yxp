@@ -9,7 +9,15 @@
 #import "MyRootViewController.h"
 #import "SpeciesDesc.h"
 
+@protocol SpeciesSetDidSelectHeroDelegate <NSObject>
+
+- (void)speciesSetDidSelectHeroWithId:(NSString *)heroId;
+
+@end
+
 @interface SpeciesSetViewController : MyRootViewController
 @property (weak, nonatomic) IBOutlet UITableView *tbSpeciesSet;
 @property (nonatomic,strong) SpeciesDesc *speciesDesc2show;
+
+@property (nonatomic,weak) id<SpeciesSetDidSelectHeroDelegate> selectHeroDelegate;
 @end
