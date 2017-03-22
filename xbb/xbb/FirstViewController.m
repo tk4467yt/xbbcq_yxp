@@ -40,27 +40,35 @@
     [self initHerosInfo];
     
     self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
-    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(switchThumbShown)];
-    [self updateRightNavItem];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(handleForNavAction)];;
     
     [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:heroBriefReusableCellId];
+}
+
+-(void)handleForNavAction
+{
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *switchThumbAction = nil;
+    if (self.showThumbS) {
+        switchThumbAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"hero_title_thumb_normal", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self switchThumbShown];
+        }];
+    } else {
+        switchThumbAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"hero_title_thumb_juexing", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self switchThumbShown];
+        }];
+    }
+    [alertController addAction:switchThumbAction];
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", @"") style:UIAlertActionStyleCancel handler:nil]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 -(void)switchThumbShown
 {
     self.showThumbS= !self.showThumbS;
     [self.cvHeros reloadData];
-    
-    [self updateRightNavItem];
-}
-
--(void)updateRightNavItem
-{
-    if (self.showThumbS) {
-        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_juexing", @"");
-    } else {
-        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"hero_title_thumb_normal", @"");
-    }
 }
 
 -(void)initHerosInfo
