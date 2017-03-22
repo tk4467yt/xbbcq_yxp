@@ -68,29 +68,29 @@
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsGongji]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsGongji]];
     }
+    if (self.equipInfo2show.magicQiangdu != 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForMagicQiangdu]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicQiangdu]];
+    }
     if (self.equipInfo2show.physicsHujia != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsHujia]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsHujia]];
+    }
+    if (self.equipInfo2show.magicKangxing != 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForMagicKangxing]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicKangxing]];
     }
     if (self.equipInfo2show.physicsBaoji != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForPhysicsBaoji]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.physicsBaoji]];
     }
-    if (self.equipInfo2show.chuantouPhysicsHujia != 0) {
-        [self.attr2showIdArr addObject:[MyUtility attrIdForChuantouPhysicsHujia]];
-        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.chuantouPhysicsHujia]];
-    }
-    if (self.equipInfo2show.magicQiangdu != 0) {
-        [self.attr2showIdArr addObject:[MyUtility attrIdForMagicQiangdu]];
-        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicQiangdu]];
-    }
     if (self.equipInfo2show.magicBaoji != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForMagicBaoji]];
         [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicBaoji]];
     }
-    if (self.equipInfo2show.magicKangxing != 0) {
-        [self.attr2showIdArr addObject:[MyUtility attrIdForMagicKangxing]];
-        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.magicKangxing]];
+    if (self.equipInfo2show.chuantouPhysicsHujia != 0) {
+        [self.attr2showIdArr addObject:[MyUtility attrIdForChuantouPhysicsHujia]];
+        [self.value2showArr addObject:[NSNumber numberWithDouble:self.equipInfo2show.chuantouPhysicsHujia]];
     }
     if (self.equipInfo2show.hulueMagicKangxing != 0) {
         [self.attr2showIdArr addObject:[MyUtility attrIdForHulueMagicKangxing]];
