@@ -8,7 +8,6 @@
 
 #import "HeroDetailSkillTableViewCell.h"
 #import "HeroSkillItemTableViewCell.h"
-#import "HeroSkill.h"
 #import "MyUtility.h"
 #import "RankDesc.h"
 #import "DbHandler.h"
@@ -46,12 +45,18 @@
     [self.tbSkills reloadData];
 }
 
++ (CGFloat)getHeightForASkill:(HeroSkill *)heroSkill
+{
+    CGFloat skillRowHeight = MAX(96, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-90-16-80-10-8 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);;
+    return skillRowHeight;
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HeroSkill *heroSkill=self.heroSkillsArr[indexPath.row];
-    CGFloat skillRowHeight = MAX(96, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-80-16-10-60-10 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);
-    return skillRowHeight;
+    
+    return [HeroDetailSkillTableViewCell getHeightForASkill:heroSkill];
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{

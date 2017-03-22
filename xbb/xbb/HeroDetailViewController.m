@@ -162,9 +162,9 @@
     } else if (3 == indexPath.section) {
         CGFloat skillRowHeight=0;
         for (HeroSkill *aSkill in self.heroSkillsArr) {
-            skillRowHeight += MAX(96, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-80-16-10-60-10 title:aSkill.skillDesc font:[UIFont systemFontOfSize:14]]);
+            skillRowHeight += [HeroDetailSkillTableViewCell getHeightForASkill:aSkill];
         }
-        return skillRowHeight;
+        return skillRowHeight+16;
     } else if (4 == indexPath.section) {
         return 80;
     }
