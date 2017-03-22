@@ -43,6 +43,8 @@
     [super layoutSubviews];
     
     [self.cvHeader reloadData];
+    [self.cvHeader scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.equipShowingArr.count-1 inSection:0]
+                          atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
 }
 
 #pragma mark UICollectionViewDataSource
