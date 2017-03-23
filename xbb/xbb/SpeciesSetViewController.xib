@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWy-oP-LKP">
-                    <rect key="frame" x="8" y="8" width="359" height="651"/>
+                    <rect key="frame" x="0.0" y="8" width="375" height="659"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="DTY-XB-TIB"/>
@@ -31,9 +31,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vWy-oP-LKP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="03I-ln-mhF"/>
-                <constraint firstAttribute="trailingMargin" secondItem="vWy-oP-LKP" secondAttribute="trailing" id="PXU-Zx-8Ol"/>
-                <constraint firstAttribute="bottomMargin" secondItem="vWy-oP-LKP" secondAttribute="bottom" id="WP8-Ax-XrG"/>
+                <constraint firstItem="vWy-oP-LKP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="03I-ln-mhF"/>
+                <constraint firstAttribute="trailing" secondItem="vWy-oP-LKP" secondAttribute="trailing" id="PXU-Zx-8Ol"/>
+                <constraint firstAttribute="bottom" secondItem="vWy-oP-LKP" secondAttribute="bottom" id="WP8-Ax-XrG"/>
                 <constraint firstItem="vWy-oP-LKP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="tcb-Pq-WEv"/>
             </constraints>
         </view>

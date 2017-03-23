@@ -219,6 +219,12 @@ static __strong NSArray *allHeroSpeciesArr;
 {
     return [UIScreen mainScreen].bounds.size.height;
 }
++(CGFloat)heightOfStatusBar
+{
+    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+    
+    return rectStatus.size.height;
+}
 
 +(NSArray *)getAllEquipInfoFromDbCache
 {

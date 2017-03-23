@@ -71,6 +71,7 @@
 +(UIView *)getTopViewForNib:(UINib *)nib2use;
 +(CGFloat)screenWidth;
 +(CGFloat)screenHeight;
++(CGFloat)heightOfStatusBar;
 
 +(NSArray *)getAllEquipInfoFromDbCache;
 +(EquipInfo *)getEquipInfoForEquipIdCache:(NSString *)equipId;
