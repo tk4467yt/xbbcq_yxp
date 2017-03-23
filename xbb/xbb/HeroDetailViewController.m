@@ -156,6 +156,7 @@
 //        if (self.heroSpeciesArr.count <= 0) {
 //            return 0;
 //        }
+        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
         return 60;
     } else if (2 == indexPath.section) {
         return 110;
