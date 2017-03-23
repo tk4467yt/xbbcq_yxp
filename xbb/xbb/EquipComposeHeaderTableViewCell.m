@@ -27,7 +27,7 @@
     self.cvHeader.dataSource=self;
     self.cvHeader.delegate=self;
     
-    self.rankDescDict=[MyUtility getAllRankDescDict];
+    self.rankDescDict=[MyUtility getAllRankDescDictCache];
     
     [self.cvHeader registerNib:[UINib nibWithNibName:@"EquipComposeHeaderItemCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kEquipComposeHeaderItemCVCellId];
 }
@@ -58,7 +58,7 @@
     EquipComposeHeaderItemCollectionViewCell *headerComposeItemCell=[collectionView dequeueReusableCellWithReuseIdentifier:kEquipComposeHeaderItemCVCellId forIndexPath:indexPath];
     
     NSString *equipId=self.equipShowingArr[indexPath.row];
-    EquipInfo *curEquip=[MyUtility getEquipInfoForEquipId:equipId];
+    EquipInfo *curEquip=[MyUtility getEquipInfoForEquipIdCache:equipId];
     
     headerComposeItemCell.ivEquip.image=[UIImage imageNamed:curEquip.thumbFile];
     if (indexPath.row == self.equipShowingArr.count-1) {

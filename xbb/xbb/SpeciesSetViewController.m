@@ -27,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.allHeroSpeciesArr=[MyUtility getAllHeroSpeciesArr];
+    self.allHeroSpeciesArr=[MyUtility getAllHeroSpeciesArrCache];
     
     self.navigationItem.title=[NSString stringWithFormat:@"%@(%d)",self.speciesDesc2show.speciesDesc,(int)[self getAllHerosForCurSpecies].count];
     

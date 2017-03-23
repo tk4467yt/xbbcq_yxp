@@ -40,7 +40,7 @@
 
 -(void)updateNavTitle
 {
-    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipId:self.equip2showArr.lastObject];
+    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
     self.navigationItem.title=equipInfo.equipName;
 }
 
@@ -92,7 +92,7 @@
 {
     NSInteger count2ret=1;
     
-    EquipInfo *curEquipInfo=[MyUtility getEquipInfoForEquipId:self.equip2showArr.lastObject];
+    EquipInfo *curEquipInfo=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
     
     if (curEquipInfo.liliang != 0) {
         ++count2ret;
@@ -241,7 +241,7 @@
         cell2ret=contentCell;
     } else if (2 == indexPath.section) {
         EquipComposeAttrTableViewCell *attrCell=[tableView dequeueReusableCellWithIdentifier:equipComposeAttrCellId];
-        attrCell.equipInfo2show=[MyUtility getEquipInfoForEquipId:self.equip2showArr.lastObject];
+        attrCell.equipInfo2show=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
         
         cell2ret=attrCell;
     } else {

@@ -30,7 +30,7 @@
     
     [self.tbAttrs registerNib:[UINib nibWithNibName:@"EquipComposeAttrItemTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kEquipComposeAttrItemTBCellId];
     
-//    self.attrDescArr=[MyUtility getAllEquipAttrDescArr];
+//    self.attrDescArr=[MyUtility getAllEquipAttrDescArrCache];
 }
 
 - (void)layoutSubviews
@@ -179,7 +179,7 @@
     if (0 == indexPath.row) {
         attrItemCell.lblAttrDesc.text=[NSString stringWithFormat:@"%@",attrId];
     } else {
-        EquipAttrDesc *attrDesc=[MyUtility getEquipAttrDescForAttrId:attrId];
+        EquipAttrDesc *attrDesc=[MyUtility getEquipAttrDescForAttrIdCache:attrId];
         BOOL withPercentSufix=false;
         if ([attrId isEqualToString:[MyUtility attrIdForZhiliaoXiaoguo]] ||
             [attrId isEqualToString:[MyUtility attrIdForMinusControlTime]] ||

@@ -136,7 +136,7 @@
     }
     
     if (![MyUtility isStringNilOrZeroLength:equipId]) {
-        EquipInfo *equipInfo2use=[MyUtility getEquipInfoForEquipId:equipId];
+        EquipInfo *equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:equipId];
         if (nil != equipInfo2use) {
             EquipComposeViewController *composeVC=[EquipComposeViewController new];
             
@@ -208,7 +208,7 @@
         topCell.lblName.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_name", @""),self.hero2show.heroName];
         topCell.lblShortName.text=[NSString stringWithFormat:NSLocalizedString(@"hero_cell_title_prefix_short_name", @""),self.hero2show.shortName];
         
-        RankDesc *rankDesc=[DbHandler getRankDescForRankId:[MyUtility rankIdForBai]];
+        RankDesc *rankDesc=[MyUtility getRankDescForRankIdCache:[MyUtility rankIdForBai]];
         UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
         topCell.ivThumbMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
         
@@ -312,22 +312,22 @@
         BOOL shouldSwitch1and6=[self shouldSwitchEquipsForRankId:rankId2use];
         
         if (shouldSwitch1and6) {
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip1];
             equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip2];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip2];
             equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip3];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip3];
             equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip4];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip4];
             equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip5];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip5];
             equipCell.ivEquip5.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip6];
             if (nil == equipInfo2use) {
                 equipCell.ivEquip0.image=[UIImage imageNamed:@"hero_icon_unknow"];
             } else {
@@ -342,22 +342,22 @@
                 equipCell.ivEquip0.layer.borderWidth=0;
             }
         } else {
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip1];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip1];
             equipCell.ivEquip0.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip2];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip2];
             equipCell.ivEquip1.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip3];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip3];
             equipCell.ivEquip2.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip4];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip4];
             equipCell.ivEquip3.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip5];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip5];
             equipCell.ivEquip4.image=[UIImage imageNamed:equipInfo2use.thumbFile];
             
-            equipInfo2use=[MyUtility getEquipInfoForEquipId:aHeroEquip.equip6];
+            equipInfo2use=[MyUtility getEquipInfoForEquipIdCache:aHeroEquip.equip6];
             if (nil == equipInfo2use) {
                 equipCell.ivEquip5.image=[UIImage imageNamed:@"hero_icon_unknow"];
             } else {

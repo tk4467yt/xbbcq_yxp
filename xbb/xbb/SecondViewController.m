@@ -40,8 +40,8 @@
 
 -(void)initEquipInfo
 {
-    self.allEquipsArr=[MyUtility getAllEquipInfoFromDb];
-    self.rankDescDict=[MyUtility getAllRankDescDict];
+    self.allEquipsArr=[MyUtility getAllEquipInfoFromDbCache];
+    self.rankDescDict=[MyUtility getAllRankDescDictCache];
     
     self.equipRank2showArr=[NSMutableArray arrayWithObjects:[MyUtility rankIdForHong],
                             [MyUtility rankIdForCheng],

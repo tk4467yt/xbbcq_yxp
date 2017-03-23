@@ -29,7 +29,7 @@
     // Initialization code
     
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
-    self.rankDescDict=[MyUtility getAllRankDescDict];
+    self.rankDescDict=[MyUtility getAllRankDescDictCache];
     
     self.cvHeros.dataSource=self;
     self.cvHeros.delegate=self;

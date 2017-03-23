@@ -220,7 +220,7 @@ static __strong NSArray *allHeroSpeciesArr;
     return [UIScreen mainScreen].bounds.size.height;
 }
 
-+(NSArray *)getAllEquipInfoFromDb
++(NSArray *)getAllEquipInfoFromDbCache
 {
     if (nil == allEquipsInfoArr) {
         allEquipsInfoArr=[DbHandler getAllEquipInfo];
@@ -229,7 +229,7 @@ static __strong NSArray *allHeroSpeciesArr;
     return allEquipsInfoArr;
 }
 
-+(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId
++(EquipInfo *)getEquipInfoForEquipIdCache:(NSString *)equipId
 {
     if (nil == allEquipsInfoArr) {
         allEquipsInfoArr=[DbHandler getAllEquipInfo];
@@ -244,7 +244,7 @@ static __strong NSArray *allHeroSpeciesArr;
     return nil;
 }
 
-+(NSDictionary *)getAllRankDescDict
++(NSDictionary *)getAllRankDescDictCache
 {
     if (nil == rankDescDict) {
         rankDescDict=[DbHandler getAllRankDescDict];
@@ -253,7 +253,7 @@ static __strong NSArray *allHeroSpeciesArr;
     return rankDescDict;
 }
 
-+(RankDesc *)getRankDescForRankId:(NSString *)rankId
++(RankDesc *)getRankDescForRankIdCache:(NSString *)rankId
 {
     if (nil == rankDescDict) {
         rankDescDict=[DbHandler getAllRankDescDict];
@@ -268,7 +268,7 @@ static __strong NSArray *allHeroSpeciesArr;
     return nil;
 }
 
-+(NSArray *)getAllEquipAttrDescArr
++(NSArray *)getAllEquipAttrDescArrCache
 {
     if (nil == allEquipAttrDescArr) {
         allEquipAttrDescArr=[DbHandler getAllEquipAttrDescArr];
@@ -276,7 +276,7 @@ static __strong NSArray *allHeroSpeciesArr;
     
     return allEquipAttrDescArr;
 }
-+(EquipAttrDesc *)getEquipAttrDescForAttrId:(NSString *)attrId
++(EquipAttrDesc *)getEquipAttrDescForAttrIdCache:(NSString *)attrId
 {
     if (nil == allEquipAttrDescArr) {
         allEquipAttrDescArr=[DbHandler getAllEquipAttrDescArr];
@@ -291,7 +291,7 @@ static __strong NSArray *allHeroSpeciesArr;
     return nil;
 }
 
-+(NSArray *)getAllHeroSpeciesArr
++(NSArray *)getAllHeroSpeciesArrCache
 {
     if (nil == allHeroSpeciesArr) {
         allHeroSpeciesArr = [DbHandler getAllHeroSpecies];

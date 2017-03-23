@@ -78,7 +78,7 @@
     skillItemCell.lblSkillName.text=[NSString stringWithFormat:@"%@:",heroSkill.skillName];
     skillItemCell.lblSkillDesc.text=heroSkill.skillDesc;
     
-    RankDesc *rankDesc=[DbHandler getRankDescForRankId:[MyUtility rankIdForBai]];
+    RankDesc *rankDesc=[MyUtility getRankDescForRankIdCache:[MyUtility rankIdForBai]];
     UIImage *maskImg=[UIImage imageNamed:rankDesc.equipFrameThumb];
     skillItemCell.ivSkillThumbMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     

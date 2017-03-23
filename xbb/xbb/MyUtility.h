@@ -71,16 +71,16 @@
 +(CGFloat)screenWidth;
 +(CGFloat)screenHeight;
 
-+(NSArray *)getAllEquipInfoFromDb;
-+(EquipInfo *)getEquipInfoForEquipId:(NSString *)equipId;
++(NSArray *)getAllEquipInfoFromDbCache;
++(EquipInfo *)getEquipInfoForEquipIdCache:(NSString *)equipId;
 
-+(NSDictionary *)getAllRankDescDict;
-+(RankDesc *)getRankDescForRankId:(NSString *)rankId;
++(NSDictionary *)getAllRankDescDictCache;
++(RankDesc *)getRankDescForRankIdCache:(NSString *)rankId;
 
-+(NSArray *)getAllEquipAttrDescArr;
-+(EquipAttrDesc *)getEquipAttrDescForAttrId:(NSString *)attrId;
++(NSArray *)getAllEquipAttrDescArrCache;
++(EquipAttrDesc *)getEquipAttrDescForAttrIdCache:(NSString *)attrId;
 
-+(NSArray *)getAllHeroSpeciesArr;
++(NSArray *)getAllHeroSpeciesArrCache;
 
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask;
 
