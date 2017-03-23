@@ -157,7 +157,7 @@
 //            return 0;
 //        }
         CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
-        CGSize itemSize=[MyUtility heroSpeciesItemSize];
+        CGSize itemSize=[MyAppSizeInfo heroSpeciesItemSize];
         NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
         CGFloat height=itemSize.height;
         while (maxItemOneLine < self.heroSpeciesArr.count) {

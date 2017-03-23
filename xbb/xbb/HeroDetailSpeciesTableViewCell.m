@@ -88,6 +88,6 @@
 
 #pragma mark UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return [MyUtility heroSpeciesItemSize];
+    return [MyAppSizeInfo heroSpeciesItemSize];
 }
 @end
