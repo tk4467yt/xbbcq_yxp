@@ -47,7 +47,7 @@
 
 + (CGFloat)getHeightForASkill:(HeroSkill *)heroSkill
 {
-    CGFloat skillRowHeight = MAX(96, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-90-16-80-10-8 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);;
+    CGFloat skillRowHeight = MAX(96, 20+16+[MyUtility getLabelHeightByWidth:[MyUtility screenWidth]-70-8-80-10-8 title:heroSkill.skillDesc font:[UIFont systemFontOfSize:14]]);;
     return skillRowHeight;
 }
 

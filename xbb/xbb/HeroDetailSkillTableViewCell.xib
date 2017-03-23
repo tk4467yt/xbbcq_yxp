@@ -18,14 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSY-Sk-XkR" userLabel="lblSkillDesc">
-                        <rect key="frame" x="55.5" y="8" width="37.5" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nSY-Sk-XkR" userLabel="lblSkillDesc">
+                        <rect key="frame" x="35.5" y="8" width="37.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HPq-fE-HZ6" userLabel="tbSkills">
-                        <rect key="frame" x="98" y="0.0" width="214" height="43.5"/>
+                        <rect key="frame" x="78" y="0.0" width="234" height="43.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tableView>
                 </subviews>
@@ -34,7 +34,7 @@
                     <constraint firstAttribute="bottom" secondItem="HPq-fE-HZ6" secondAttribute="bottom" id="OSq-2t-Z0d"/>
                     <constraint firstItem="HPq-fE-HZ6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dVs-wZ-AJu"/>
                     <constraint firstAttribute="trailingMargin" secondItem="HPq-fE-HZ6" secondAttribute="trailing" id="fPS-bP-IZT"/>
-                    <constraint firstItem="HPq-fE-HZ6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="90" id="goa-Hk-xaJ"/>
+                    <constraint firstItem="HPq-fE-HZ6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="goa-Hk-xaJ"/>
                     <constraint firstItem="HPq-fE-HZ6" firstAttribute="leading" secondItem="nSY-Sk-XkR" secondAttribute="trailing" constant="5" id="x92-1j-8Mo"/>
                 </constraints>
             </tableViewCellContentView>

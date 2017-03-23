@@ -20,9 +20,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-pd-fXp">
-                        <rect key="frame" x="98" y="8" width="357" height="71"/>
+                        <rect key="frame" x="78" y="8" width="377" height="71"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-yh-nVY" userLabel="lblEquipDesc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-yh-nVY" userLabel="lblEquipDesc">
                                 <rect key="frame" x="-42.5" y="0.0" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -105,7 +105,7 @@
                 <constraints>
                     <constraint firstItem="3aW-pd-fXp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="FPH-q2-Jlb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3aW-pd-fXp" secondAttribute="trailing" id="HeC-b6-mhG"/>
-                    <constraint firstItem="3aW-pd-fXp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="90" id="REP-Vy-hx6"/>
+                    <constraint firstItem="3aW-pd-fXp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="REP-Vy-hx6"/>
                     <constraint firstAttribute="bottomMargin" secondItem="3aW-pd-fXp" secondAttribute="bottom" id="ofz-j5-fOR"/>
                 </constraints>
             </tableViewCellContentView>

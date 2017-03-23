@@ -18,14 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-s0-CFX" userLabel="lblStarDesc">
-                        <rect key="frame" x="55" y="13" width="38" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-s0-CFX" userLabel="lblStarDesc">
+                        <rect key="frame" x="35" y="13" width="38" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KeP-el-Qua" userLabel="ivStar0">
-                        <rect key="frame" x="98" y="8" width="30" height="30"/>
+                        <rect key="frame" x="78" y="8" width="30" height="30"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="YWB-AU-Wop"/>
@@ -33,23 +33,23 @@
                         </constraints>
                     </imageView>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w69-oA-ca4" userLabel="ivStar1">
-                        <rect key="frame" x="133" y="8" width="30" height="30"/>
+                        <rect key="frame" x="113" y="8" width="30" height="30"/>
                         <gestureRecognizers/>
                     </imageView>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-Rm-4eB" userLabel="ivStar2">
-                        <rect key="frame" x="168" y="8" width="30" height="30"/>
+                        <rect key="frame" x="148" y="8" width="30" height="30"/>
                         <gestureRecognizers/>
                     </imageView>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EZd-Dy-5ay" userLabel="ivStar3">
-                        <rect key="frame" x="203" y="8" width="30" height="30"/>
+                        <rect key="frame" x="183" y="8" width="30" height="30"/>
                         <gestureRecognizers/>
                     </imageView>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBo-ma-v1i" userLabel="ivStar4">
-                        <rect key="frame" x="238" y="8" width="30" height="30"/>
+                        <rect key="frame" x="218" y="8" width="30" height="30"/>
                         <gestureRecognizers/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4q-Og-1sV" userLabel="lblLiliangGrow">
-                        <rect key="frame" x="98" y="43" width="214" height="20"/>
+                        <rect key="frame" x="78" y="43" width="234" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="VAZ-aX-c5f"/>
                         </constraints>
@@ -58,7 +58,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Bf-yD1" userLabel="lblZhiliGrow">
-                        <rect key="frame" x="98" y="63" width="214" height="20"/>
+                        <rect key="frame" x="78" y="63" width="234" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="SRG-TB-og6"/>
                         </constraints>
@@ -67,7 +67,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgq-4J-0BG" userLabel="lblMinjieGrow">
-                        <rect key="frame" x="98" y="83" width="214" height="20"/>
+                        <rect key="frame" x="78" y="83" width="234" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="cWc-CT-9aE"/>
                         </constraints>
@@ -78,7 +78,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="KeP-el-Qua" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="90" id="0PU-71-X3h"/>
+                    <constraint firstItem="KeP-el-Qua" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="0PU-71-X3h"/>
                     <constraint firstItem="w69-oA-ca4" firstAttribute="leading" secondItem="KeP-el-Qua" secondAttribute="trailing" constant="5" id="0g4-b1-fFl"/>
                     <constraint firstItem="zBo-ma-v1i" firstAttribute="top" secondItem="KeP-el-Qua" secondAttribute="top" id="1UG-GB-T2B"/>
                     <constraint firstItem="ode-Bf-yD1" firstAttribute="top" secondItem="K4q-Og-1sV" secondAttribute="bottom" id="2Jm-0e-hsd"/>
