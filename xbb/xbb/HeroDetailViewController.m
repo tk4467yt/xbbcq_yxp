@@ -157,7 +157,13 @@
 //            return 0;
 //        }
         CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
-        return 60;
+        NSInteger maxItemOneLine=maxCVWidth/50;
+        CGFloat height=60;
+        while (maxItemOneLine < self.heroSpeciesArr.count) {
+            maxItemOneLine *= 2;
+            height += 70;
+        }
+        return height;
     } else if (2 == indexPath.section) {
         return 110;
     } else if (3 == indexPath.section) {
