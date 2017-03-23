@@ -12,6 +12,7 @@
 #import "RankDesc.h"
 #import "EquipAttrDesc.h"
 #import "MyAppSizeInfo.h"
+#import "MyAppCellIdInfo.h"
 
 #define kHeroStarImage @"detail_star"
 #define kHeroStarImageGrey @"detail_star_grey"
@@ -87,4 +88,5 @@
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask;
 
 + (CGFloat)getLabelHeightByWidth:(CGFloat)width title:(NSString *)title font:(UIFont*)font;
++ (BOOL)shouldSwitchEquipsForRankId:(NSString *)rankId;
 @end

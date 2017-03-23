@@ -50,6 +50,7 @@
 		2570246E1E630F32001CB5F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2570246D1E630F32001CB5F3 /* InfoPlist.strings */; };
 		257024711E6320DA001CB5F3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257024701E6320DA001CB5F3 /* MineViewController.m */; };
 		2572430B1E8416D00080B503 /* MyAppSizeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2572430A1E8416D00080B503 /* MyAppSizeInfo.m */; };
+		2572430E1E841CD60080B503 /* MyAppCellIdInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2572430D1E841CD60080B503 /* MyAppCellIdInfo.m */; };
 		25834CED1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25834CEB1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m */; };
 		25834CEE1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25834CEC1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib */; };
 		25834CF21E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25834CF01E704FE700B45F05 /* HeroDetailEquipsTableViewCell.m */; };
@@ -182,6 +183,8 @@
 		257024701E6320DA001CB5F3 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		257243091E8416D00080B503 /* MyAppSizeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppSizeInfo.h; sourceTree = "<group>"; };
 		2572430A1E8416D00080B503 /* MyAppSizeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppSizeInfo.m; sourceTree = "<group>"; };
+		2572430C1E841CD60080B503 /* MyAppCellIdInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppCellIdInfo.h; sourceTree = "<group>"; };
+		2572430D1E841CD60080B503 /* MyAppCellIdInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppCellIdInfo.m; sourceTree = "<group>"; };
 		25834CEA1E704AFA00B45F05 /* HeroSkillItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSkillItemTableViewCell.h; sourceTree = "<group>"; };
 		25834CEB1E704AFA00B45F05 /* HeroSkillItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSkillItemTableViewCell.m; sourceTree = "<group>"; };
 		25834CEC1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroSkillItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -416,6 +419,8 @@
 				25C8C97C1E69ACE30083C581 /* MyUtility.m */,
 				257243091E8416D00080B503 /* MyAppSizeInfo.h */,
 				2572430A1E8416D00080B503 /* MyAppSizeInfo.m */,
+				2572430C1E841CD60080B503 /* MyAppCellIdInfo.h */,
+				2572430D1E841CD60080B503 /* MyAppCellIdInfo.m */,
 			);
 			name = utility;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				2544EEBE1E7D7B7700E6D18B /* SpeciesSetHerosTableViewCell.m in Sources */,
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
 				25989BED1E6C24E600E8481C /* HeroDetailViewController.m in Sources */,
+				2572430E1E841CD60080B503 /* MyAppCellIdInfo.m in Sources */,
 				25AEB6B81E72F23800AE73BB /* EquipComposeHeaderTableViewCell.m in Sources */,
 				2572430B1E8416D00080B503 /* MyAppSizeInfo.m in Sources */,
 				25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */,

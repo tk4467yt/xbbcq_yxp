@@ -330,4 +330,17 @@ static __strong NSArray *allHeroSpeciesArr;
     CGFloat height = label.frame.size.height;
     return height;
 }
+
++ (BOOL)shouldSwitchEquipsForRankId:(NSString *)rankId
+{
+    if ([rankId isEqualToString:[MyUtility rankIdForCheng]] ||
+        [rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
+        [rankId isEqualToString:[MyUtility rankIdForCheng2]] ||
+        [rankId isEqualToString:[MyUtility rankIdForHong]] ||
+        [rankId isEqualToString:[MyUtility rankIdForHong1]]) {
+        return true;
+    }
+    
+    return false;
+}
 @end

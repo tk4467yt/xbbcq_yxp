@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,67 +36,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-RC-xZy" userLabel="ivEquip0">
-                                <rect key="frame" x="0.0" y="21" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KlI-RC-xZy" secondAttribute="height" multiplier="1:1" id="Ers-ko-DVo"/>
-                                </constraints>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPr-6q-rRI" userLabel="ivEquip1">
-                                <rect key="frame" x="55" y="21" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FPr-6q-rRI" secondAttribute="height" multiplier="1:1" id="HZf-xH-ORH"/>
-                                </constraints>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-K5-4ZW" userLabel="ivEquip2">
-                                <rect key="frame" x="110" y="21" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Cl5-K5-4ZW" secondAttribute="height" multiplier="1:1" id="UOn-uZ-F2k"/>
-                                </constraints>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="416-uX-TgG" userLabel="ivEquip3">
-                                <rect key="frame" x="165" y="21" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="416-uX-TgG" secondAttribute="height" multiplier="1:1" id="5fe-We-1J9"/>
-                                </constraints>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTa-uL-1mk" userLabel="ivEquip4">
-                                <rect key="frame" x="220" y="21" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="UTa-uL-1mk" secondAttribute="height" multiplier="1:1" id="8wD-IX-p4k"/>
-                                </constraints>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-5c-N0i" userLabel="ivEquip5">
-                                <rect key="frame" x="275" y="21" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Tjc-5c-N0i" secondAttribute="height" multiplier="1:1" id="qrK-hD-qgl"/>
-                                </constraints>
-                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-L4-3es">
+                                <rect key="frame" x="0.0" y="18" width="377" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="wa6-7K-gYh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Cl5-K5-4ZW" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="BdN-F7-zhS"/>
-                            <constraint firstItem="FPr-6q-rRI" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="FaM-b8-vJQ"/>
-                            <constraint firstItem="Cl5-K5-4ZW" firstAttribute="leading" secondItem="FPr-6q-rRI" secondAttribute="trailing" constant="5" id="Fs9-E5-VuN"/>
-                            <constraint firstItem="416-uX-TgG" firstAttribute="leading" secondItem="Cl5-K5-4ZW" secondAttribute="trailing" constant="5" id="Gpk-bT-Ops"/>
-                            <constraint firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="Gzg-h0-HSV"/>
-                            <constraint firstItem="KlI-RC-xZy" firstAttribute="leading" secondItem="3aW-pd-fXp" secondAttribute="leading" id="Kht-Xb-AjU"/>
+                            <constraint firstItem="aI7-L4-3es" firstAttribute="leading" secondItem="Fm5-eq-9cM" secondAttribute="leading" id="4SJ-aa-zHH"/>
+                            <constraint firstAttribute="trailing" secondItem="aI7-L4-3es" secondAttribute="trailing" id="5wz-be-mNY"/>
+                            <constraint firstItem="aI7-L4-3es" firstAttribute="top" secondItem="Fm5-eq-9cM" secondAttribute="bottom" id="AZV-Dw-7I9"/>
+                            <constraint firstAttribute="bottom" secondItem="aI7-L4-3es" secondAttribute="bottom" id="MYt-10-BgU"/>
                             <constraint firstItem="Fm5-eq-9cM" firstAttribute="leading" secondItem="3aW-pd-fXp" secondAttribute="leading" id="Qwg-hd-Ua3"/>
-                            <constraint firstItem="KlI-RC-xZy" firstAttribute="top" secondItem="Fm5-eq-9cM" secondAttribute="bottom" constant="3" id="Y2e-1R-vIm"/>
-                            <constraint firstItem="Tjc-5c-N0i" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="aM6-Qu-nfb"/>
                             <constraint firstItem="Fm5-eq-9cM" firstAttribute="leading" secondItem="Dgf-yh-nVY" secondAttribute="trailing" constant="5" id="eL0-RK-qPp"/>
-                            <constraint firstItem="FPr-6q-rRI" firstAttribute="leading" secondItem="KlI-RC-xZy" secondAttribute="trailing" constant="5" id="eSS-6u-8X8"/>
-                            <constraint firstItem="416-uX-TgG" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="euY-Iq-mzB"/>
-                            <constraint firstItem="UTa-uL-1mk" firstAttribute="leading" secondItem="416-uX-TgG" secondAttribute="trailing" constant="5" id="fcl-qE-suI"/>
-                            <constraint firstItem="UTa-uL-1mk" firstAttribute="bottom" secondItem="KlI-RC-xZy" secondAttribute="bottom" id="hkG-ri-nZy"/>
-                            <constraint firstItem="Tjc-5c-N0i" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="pCe-4I-pWd"/>
                             <constraint firstItem="Dgf-yh-nVY" firstAttribute="top" secondItem="3aW-pd-fXp" secondAttribute="top" id="qG3-DM-Z0j"/>
                             <constraint firstItem="Fm5-eq-9cM" firstAttribute="top" secondItem="3aW-pd-fXp" secondAttribute="top" id="qiP-YK-Ilg"/>
-                            <constraint firstItem="Cl5-K5-4ZW" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="r5I-NS-FDd"/>
-                            <constraint firstItem="Tjc-5c-N0i" firstAttribute="leading" secondItem="UTa-uL-1mk" secondAttribute="trailing" constant="5" id="rIK-lT-Xa2"/>
-                            <constraint firstItem="UTa-uL-1mk" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="tWh-cE-EHe"/>
-                            <constraint firstItem="416-uX-TgG" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="uJe-Ts-iE6"/>
-                            <constraint firstItem="FPr-6q-rRI" firstAttribute="top" secondItem="KlI-RC-xZy" secondAttribute="top" id="zdu-lJ-ds6"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -111,12 +70,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentHolder" destination="3aW-pd-fXp" id="zwx-VU-tdi"/>
-                <outlet property="ivEquip0" destination="KlI-RC-xZy" id="dem-QH-3Vq"/>
-                <outlet property="ivEquip1" destination="FPr-6q-rRI" id="L9s-nT-Duf"/>
-                <outlet property="ivEquip2" destination="Cl5-K5-4ZW" id="1v0-4V-VKA"/>
-                <outlet property="ivEquip3" destination="416-uX-TgG" id="ket-pg-kud"/>
-                <outlet property="ivEquip4" destination="UTa-uL-1mk" id="chP-7w-LR1"/>
-                <outlet property="ivEquip5" destination="Tjc-5c-N0i" id="uFk-Vf-2YD"/>
+                <outlet property="cvEquipsForRank" destination="aI7-L4-3es" id="E3Y-6X-N1Y"/>
                 <outlet property="lblEquipDesc" destination="Dgf-yh-nVY" id="lol-qP-KZl"/>
                 <outlet property="lblRankDesc" destination="Fm5-eq-9cM" id="MlQ-tl-pct"/>
             </connections>

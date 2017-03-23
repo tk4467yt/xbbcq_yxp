@@ -15,8 +15,6 @@
 #import "EquipBriefInfoCollectionViewCell.h"
 #import "EquipHeaderCollectionReusableView.h"
 
-#define equipBriefReusableCellId @"equip_brief_info_cell_id"
-
 @interface SecondViewController ()
 @property (nonatomic,strong) NSArray *allEquipsArr;
 @property (nonatomic,strong) NSMutableDictionary *equipRankDict;
@@ -33,7 +31,7 @@
     
     self.navigationItem.title=NSLocalizedString(@"nav_title_equip", @"");
     
-    [self.cvEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:equipBriefReusableCellId];
+    [self.cvEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForCVEquiBriefInfo]];
     
     [self initEquipInfo];
 }
@@ -112,7 +110,7 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    EquipBriefInfoCollectionViewCell *equipBriefCell=[collectionView dequeueReusableCellWithReuseIdentifier:equipBriefReusableCellId forIndexPath:indexPath];
+    EquipBriefInfoCollectionViewCell *equipBriefCell=[collectionView dequeueReusableCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForCVEquiBriefInfo] forIndexPath:indexPath];
     
     return equipBriefCell;
 }
@@ -165,7 +163,7 @@
 
 #pragma mark UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(80,100);
+    return [MyAppSizeInfo equipBriefCVItemSize];
 }
 
 @end

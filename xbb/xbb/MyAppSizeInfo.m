@@ -15,4 +15,13 @@
     return CGSizeMake(50,60);
 }
 
++(CGSize)equipBriefCVItemSize
+{
+    return CGSizeMake(80,100);
+}
++(CGSize)equipBriefCVItemSmallSize
+{
+    return CGSizeMake(50, 70);
+}
+
 @end

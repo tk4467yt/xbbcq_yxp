@@ -11,4 +11,6 @@
 
 @interface MyAppSizeInfo : NSObject
 +(CGSize)heroSpeciesItemSize;
++(CGSize)equipBriefCVItemSize;
++(CGSize)equipBriefCVItemSmallSize;
 @end
