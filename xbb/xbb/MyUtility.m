@@ -324,4 +324,9 @@ static __strong NSArray *allHeroSpeciesArr;
     CGFloat height = label.frame.size.height;
     return height;
 }
+
++(CGSize)heroSpeciesItemSize
+{
+    return CGSizeMake(50,60);
+}
 @end

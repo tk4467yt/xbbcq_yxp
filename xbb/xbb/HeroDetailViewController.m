@@ -157,11 +157,12 @@
 //            return 0;
 //        }
         CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
-        NSInteger maxItemOneLine=maxCVWidth/50;
-        CGFloat height=60;
+        CGSize itemSize=[MyUtility heroSpeciesItemSize];
+        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
+        CGFloat height=itemSize.height;
         while (maxItemOneLine < self.heroSpeciesArr.count) {
             maxItemOneLine *= 2;
-            height += 70;
+            height += itemSize.height+10;
         }
         return height;
     } else if (2 == indexPath.section) {
