@@ -30,7 +30,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TqU-6g-vHO" userLabel="lblName">
                         <rect key="frame" x="0.0" y="123" width="248" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Coy-b8-TdQ"/>
+                            <constraint firstAttribute="height" constant="20" identifier="lbl_name_height" id="Coy-b8-TdQ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>

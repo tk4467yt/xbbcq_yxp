@@ -153,7 +153,7 @@
         equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     }
     
-    equipBriefCell.lblName.text=equipInfo2use.equipName;
+//    equipBriefCell.lblName.text=equipInfo2use.equipName;
 }
 
 #pragma mark UICollectionViewDelegate
@@ -167,8 +167,8 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     EquipBriefInfoCollectionViewCell *equipBriefCell=(EquipBriefInfoCollectionViewCell *)cell;
-    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
-    
+//    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
+    equipBriefCell.noNameShown=true;
     [self setEquipImageForIndexPath:indexPath withEquipCell:equipBriefCell];
 }
 

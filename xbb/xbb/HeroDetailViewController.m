@@ -169,7 +169,7 @@
         CGFloat height=itemSize.height;
         while (itemShown < 6) {
             itemShown += maxItemOneLine;
-            height += itemSize.height+10;
+            height += itemSize.height;
         }
         return height+18+16;
     }
