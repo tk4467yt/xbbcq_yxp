@@ -39,4 +39,6 @@
 @property (nonatomic,assign) NSInteger initPhysicsHujia;
 @property (nonatomic,assign) NSInteger initMagicKangxing;
 @property (nonatomic,assign) NSInteger initPhysicaBaoji;
+
+@property (nonatomic,assign) BOOL isHunXiaHero;
 @end

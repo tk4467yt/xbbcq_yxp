@@ -107,6 +107,8 @@ static __strong FMDatabase *dbConfig;
     aHero.initPhysicsHujia=[s intForColumn:@"init_physics_hujia"];
     aHero.initMagicKangxing=[s intForColumn:@"init_magic_kangxing"];
     aHero.initPhysicaBaoji=[s intForColumn:@"init_physics_baoji"];
+    
+    aHero.isHunXiaHero=[s boolForColumn:@"is_hun_xia"];
 }
 
 +(HeroInfo *)getHeroInfoWithHeroId:(NSString *)heroId

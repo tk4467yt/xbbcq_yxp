@@ -30,6 +30,7 @@
 @property (nonatomic,strong) NSMutableArray *heroType2showArr;
 
 @property (nonatomic,assign) BOOL showThumbS;
+@property (nonatomic,assign) BOOL showHunXiaHero;
 @end
 
 @implementation FirstViewController
@@ -39,10 +40,22 @@
     
     [self initHerosInfo];
     
-    self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_more"] style:UIBarButtonItemStylePlain target:self action:@selector(handleForNavAction)];
     
     [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:heroBriefReusableCellId];
+}
+
+-(void)updateNavTitle
+{
+    if (self.showHunXiaHero) {
+        int heroCount=0;
+        heroCount += self.liLiangHerosArr.count;
+        heroCount += self.zhiLiHerosArr.count;
+        heroCount += self.minJieHerosArr.count;
+        self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hua_xia", @""),heroCount];
+    } else {
+        self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
+    }
 }
 
 -(void)handleForNavAction
@@ -60,9 +73,30 @@
         }];
     }
     [alertController addAction:switchThumbAction];
+    
+    UIAlertAction *switchHunXiaHeroAction = nil;
+    if (self.showHunXiaHero) {
+        switchHunXiaHeroAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"nav_title_hero", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self switchHunXiaHeroShown];
+        }];
+    } else {
+        switchHunXiaHeroAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"nav_title_hua_xia", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self switchHunXiaHeroShown];
+        }];
+    }
+    [alertController addAction:switchHunXiaHeroAction];
+    
     [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", @"") style:UIAlertActionStyleCancel handler:nil]];
     
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+-(void)switchHunXiaHeroShown
+{
+    self.showHunXiaHero = !self.showHunXiaHero;
+    
+    [self updateHeros2shown];
+    [self.cvHeros reloadData];
 }
 
 -(void)switchThumbShown
@@ -83,7 +117,19 @@
     
     self.heroType2showArr=[NSMutableArray arrayWithObjects:[MyUtility heroTypeLiliangId],[MyUtility heroTypeZhiliId],[MyUtility heroTypeMinjieId], nil];
     
+    [self updateHeros2shown];
+}
+
+-(void)updateHeros2shown
+{
+    [self.liLiangHerosArr removeAllObjects];
+    [self.zhiLiHerosArr removeAllObjects];
+    [self.minJieHerosArr removeAllObjects];
+    
     for (HeroInfo *aHeroInfo in self.allHerosArr) {
+        if (self.showHunXiaHero && !aHeroInfo.isHunXiaHero) {
+            continue;
+        }
         if ([aHeroInfo.heroType isEqualToString:[MyUtility heroTypeLiliangId]]) {
             [self.liLiangHerosArr addObject:aHeroInfo];
         } else if ([aHeroInfo.heroType isEqualToString:[MyUtility heroTypeZhiliId]]) {
@@ -92,6 +138,8 @@
             [self.minJieHerosArr addObject:aHeroInfo];
         }
     }
+    
+    [self updateNavTitle];
 }
 
 - (void)didReceiveMemoryWarning {
