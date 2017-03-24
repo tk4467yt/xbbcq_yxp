@@ -134,17 +134,17 @@
         NSString *title2set=@"";
         UIColor *color2set=[UIColor clearColor];
         if ([rankId isEqualToString:[MyUtility rankIdForBai]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_bai", @""),(int)equipsArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_equip_bai", @""),(int)equipsArr.count];
         } else if ([rankId isEqualToString:[MyUtility rankIdForLv]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_lv", @""),(int)equipsArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_equip_lv", @""),(int)equipsArr.count];
         } else if ([rankId isEqualToString:[MyUtility rankIdForLan]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_lan", @""),(int)equipsArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_equip_lan", @""),(int)equipsArr.count];
         } else if ([rankId isEqualToString:[MyUtility rankIdForZi]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_zi", @""),(int)equipsArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_equip_zi", @""),(int)equipsArr.count];
         } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_cheng", @""),(int)equipsArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_equip_cheng", @""),(int)equipsArr.count];
         } else if ([rankId isEqualToString:[MyUtility rankIdForHong]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_hong", @""),(int)equipsArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_equip_hong", @""),(int)equipsArr.count];
         }
         color2set=[MyUtility rankColorForRankId:rankId];
         equipView.lblTitle.text=title2set;

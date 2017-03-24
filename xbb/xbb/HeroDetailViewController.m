@@ -310,7 +310,7 @@
         equipCell.rankId=rankId2use;
         equipCell.equipTapDelegate=self;
         
-        equipCell.lblRankDesc.text=title2set;
+        equipCell.lblRankDesc.text=[NSString stringWithFormat:@"%@:",title2set];
         equipCell.lblRankDesc.textColor=[MyUtility rankColorForRankId:rankId2use];
         
         equipCell.heroEquips=aHeroEquip;

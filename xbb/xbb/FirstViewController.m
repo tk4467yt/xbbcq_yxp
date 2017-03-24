@@ -140,13 +140,13 @@
         NSString *title2set=@"";
         UIColor *color2set=[UIColor clearColor];
         if ([typeId isEqualToString:[MyUtility heroTypeLiliangId]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_liliang_hero", @""),(int)self.liLiangHerosArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_liliang_hero", @""),(int)self.liLiangHerosArr.count];
             color2set=[MyUtility rankColorForRankId:[MyUtility rankIdForHong]];
         } else if ([typeId isEqualToString:[MyUtility heroTypeZhiliId]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_zhili_hero", @""),(int)self.zhiLiHerosArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_zhili_hero", @""),(int)self.zhiLiHerosArr.count];
             color2set=[MyUtility rankColorForRankId:[MyUtility rankIdForLan]];
         } else if ([typeId isEqualToString:[MyUtility heroTypeMinjieId]]) {
-            title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_minjie_hero", @""),(int)self.minJieHerosArr.count];
+            title2set=[NSString stringWithFormat:@"%@( %d ):",NSLocalizedString(@"title_minjie_hero", @""),(int)self.minJieHerosArr.count];
             color2set=[MyUtility rankColorForRankId:[MyUtility rankIdForLv]];
         }
         headerView.lblTitle.text=title2set;
