@@ -135,23 +135,18 @@
         UIColor *color2set=[UIColor clearColor];
         if ([rankId isEqualToString:[MyUtility rankIdForBai]]) {
             title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_bai", @""),(int)equipsArr.count];
-            color2set=[UIColor lightGrayColor];
         } else if ([rankId isEqualToString:[MyUtility rankIdForLv]]) {
             title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_lv", @""),(int)equipsArr.count];
-            color2set=[UIColor greenColor];
         } else if ([rankId isEqualToString:[MyUtility rankIdForLan]]) {
             title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_lan", @""),(int)equipsArr.count];
-            color2set=[UIColor blueColor];
         } else if ([rankId isEqualToString:[MyUtility rankIdForZi]]) {
             title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_zi", @""),(int)equipsArr.count];
-            color2set=[UIColor purpleColor];
         } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]]) {
             title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_cheng", @""),(int)equipsArr.count];
-            color2set=[UIColor orangeColor];
         } else if ([rankId isEqualToString:[MyUtility rankIdForHong]]) {
             title2set=[NSString stringWithFormat:@"%@( %d )",NSLocalizedString(@"title_equip_hong", @""),(int)equipsArr.count];
-            color2set=[UIColor redColor];
         }
+        color2set=[MyUtility rankColorForRankId:rankId];
         equipView.lblTitle.text=title2set;
         equipView.lblTitle.textColor=color2set;
         

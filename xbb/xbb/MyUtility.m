@@ -93,6 +93,46 @@ static __strong NSArray *allHeroSpeciesArr;
     return @"rank_hong_1";
 }
 
++(UIColor *)rankColorForRankId:(NSString *)rankId
+{
+    UIColor *color2ret=[UIColor whiteColor];
+    if ([rankId isEqualToString:[MyUtility rankIdForBai]]) {
+        color2ret=[UIColor whiteColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLv]]) {
+        color2ret=[UIColor greenColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLv1]]) {
+        color2ret=[UIColor greenColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLan]]) {
+        color2ret=[UIColor blueColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLan1]]) {
+        color2ret=[UIColor blueColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLan2]]) {
+        color2ret=[UIColor blueColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForZi]]) {
+        color2ret=[UIColor purpleColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForZi1]]) {
+        color2ret=[UIColor purpleColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForZi2]]) {
+        color2ret=[UIColor purpleColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForZi3]]) {
+        color2ret=[UIColor purpleColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForZi4]]) {
+        color2ret=[UIColor purpleColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]]) {
+        color2ret=[UIColor orangeColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng1]]) {
+        color2ret=[UIColor orangeColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng2]]) {
+        color2ret=[UIColor orangeColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForHong]]) {
+        color2ret=[UIColor redColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForHong1]]) {
+        color2ret=[UIColor redColor];
+    }
+    
+    return color2ret;
+}
+
 +(NSString *)attrIdForLiliang
 {
     return @"li_liang";

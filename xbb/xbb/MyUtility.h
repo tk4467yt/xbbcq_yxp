@@ -39,6 +39,8 @@
 +(NSString *)rankIdForHong;
 +(NSString *)rankIdForHong1;
 
++(UIColor *)rankColorForRankId:(NSString *)rankId;
+
 +(NSString *)attrIdForLiliang;
 +(NSString *)attrIdForMinjie;
 +(NSString *)attrIdForZhili;

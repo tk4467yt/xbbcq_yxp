@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="re0-DM-f3H">
-                                <rect key="frame" x="16" y="10" width="343" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Thq-IG-6ld">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -32,11 +32,11 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="hero_reusable_header_cell" id="0NV-s2-TOX" customClass="HeroHeaderReusableView">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBy-EK-2er" userLabel="lblTitle">
-                                            <rect key="frame" x="8" y="8" width="327" height="34"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -60,9 +60,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="re0-DM-f3H" secondAttribute="trailing" id="Apd-FY-3JA"/>
+                            <constraint firstAttribute="trailing" secondItem="re0-DM-f3H" secondAttribute="trailing" id="Apd-FY-3JA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="re0-DM-f3H" secondAttribute="bottom" constant="10" id="n37-vK-Fe6"/>
-                            <constraint firstItem="re0-DM-f3H" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="p0Y-Wy-Att"/>
+                            <constraint firstItem="re0-DM-f3H" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="p0Y-Wy-Att"/>
                             <constraint firstItem="re0-DM-f3H" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="10" id="xDb-dH-u5W"/>
                         </constraints>
                     </view>
@@ -108,8 +108,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LSt-p1-v1H" userLabel="cvEquips">
-                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yv5-HD-RIU">
                                     <size key="itemSize" width="158" height="108"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -118,11 +118,11 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equip_reusable_header_cell_id" id="Ape-9Q-lVg" customClass="EquipHeaderCollectionReusableView">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAD-zz-2cr">
-                                            <rect key="frame" x="8" y="8" width="327" height="34"/>
+                                            <rect key="frame" x="8" y="8" width="343" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -147,9 +147,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LSt-p1-v1H" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="LC7-hr-mgh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LSt-p1-v1H" secondAttribute="trailing" id="NfY-W2-V8E"/>
+                            <constraint firstAttribute="trailing" secondItem="LSt-p1-v1H" secondAttribute="trailing" id="NfY-W2-V8E"/>
                             <constraint firstAttribute="bottomMargin" secondItem="LSt-p1-v1H" secondAttribute="bottom" id="qb7-p3-7OH"/>
-                            <constraint firstItem="LSt-p1-v1H" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="uw9-Sg-Zwm"/>
+                            <constraint firstItem="LSt-p1-v1H" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="uw9-Sg-Zwm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wyM-4C-EP8"/>
