@@ -97,37 +97,27 @@ static __strong NSArray *allHeroSpeciesArr;
 {
     UIColor *color2ret=[UIColor whiteColor];
     if ([rankId isEqualToString:[MyUtility rankIdForBai]]) {
-        color2ret=[UIColor whiteColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForLv]]) {
-        color2ret=[UIColor greenColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForLv1]]) {
-        color2ret=[UIColor greenColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForLan]]) {
+        color2ret=[UIColor colorWithRed:247/255.0 green:247/255.0 blue:243/255.0 alpha:1];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLv]] ||
+               [rankId isEqualToString:[MyUtility rankIdForLv1]]) {
+        color2ret=[UIColor colorWithRed:216/255.0 green:245/255.0 blue:96/255.0 alpha:1];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForLan]] ||
+               [rankId isEqualToString:[MyUtility rankIdForLan1]] ||
+               [rankId isEqualToString:[MyUtility rankIdForLan2]]) {
         color2ret=[UIColor blueColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForLan1]]) {
-        color2ret=[UIColor blueColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForLan2]]) {
-        color2ret=[UIColor blueColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForZi]]) {
-        color2ret=[UIColor purpleColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForZi1]]) {
-        color2ret=[UIColor purpleColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForZi2]]) {
-        color2ret=[UIColor purpleColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForZi3]]) {
-        color2ret=[UIColor purpleColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForZi4]]) {
-        color2ret=[UIColor purpleColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]]) {
-        color2ret=[UIColor orangeColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng1]]) {
-        color2ret=[UIColor orangeColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng2]]) {
-        color2ret=[UIColor orangeColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForHong]]) {
-        color2ret=[UIColor redColor];
-    } else if ([rankId isEqualToString:[MyUtility rankIdForHong1]]) {
-        color2ret=[UIColor redColor];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForZi]] ||
+               [rankId isEqualToString:[MyUtility rankIdForZi1]] ||
+               [rankId isEqualToString:[MyUtility rankIdForZi2]] ||
+               [rankId isEqualToString:[MyUtility rankIdForZi3]] ||
+               [rankId isEqualToString:[MyUtility rankIdForZi4]]) {
+        color2ret=[UIColor colorWithRed:225/255.0 green:92/255.0 blue:248/255.0 alpha:1];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]] ||
+               [rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
+               [rankId isEqualToString:[MyUtility rankIdForCheng2]]) {
+        color2ret=[UIColor colorWithRed:242/255.0 green:205/255.0 blue:71/255.0 alpha:1];
+    } else if ([rankId isEqualToString:[MyUtility rankIdForHong]] ||
+               [rankId isEqualToString:[MyUtility rankIdForHong1]]) {
+        color2ret=[UIColor colorWithRed:246/255.0 green:88/255.0 blue:90/255.0 alpha:1];
     }
     
     return color2ret;
