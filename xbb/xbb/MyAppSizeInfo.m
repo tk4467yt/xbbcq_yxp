@@ -21,7 +21,7 @@
 }
 +(CGSize)equipBriefCVItemSmallSize
 {
-    return CGSizeMake(50, 50);
+    return CGSizeMake(60, 60);
 }
 
 @end

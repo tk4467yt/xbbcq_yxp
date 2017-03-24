@@ -171,7 +171,7 @@
             itemShown += maxItemOneLine;
             height += itemSize.height;
         }
-        return height+18+16;
+        return height+18+8;
     }
     return 0;
 }

@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-pd-fXp">
-                        <rect key="frame" x="78" y="8" width="377" height="71"/>
+                        <rect key="frame" x="78" y="8" width="377" height="78.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-yh-nVY" userLabel="lblEquipDesc">
                                 <rect key="frame" x="-42.5" y="0.0" width="37.5" height="18"/>
@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-L4-3es">
-                                <rect key="frame" x="0.0" y="18" width="377" height="53"/>
+                                <rect key="frame" x="0.0" y="18" width="377" height="60.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wa6-7K-gYh">
                                     <size key="itemSize" width="50" height="50"/>
@@ -65,7 +65,7 @@
                     <constraint firstItem="3aW-pd-fXp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="FPH-q2-Jlb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3aW-pd-fXp" secondAttribute="trailing" id="HeC-b6-mhG"/>
                     <constraint firstItem="3aW-pd-fXp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="REP-Vy-hx6"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3aW-pd-fXp" secondAttribute="bottom" id="ofz-j5-fOR"/>
+                    <constraint firstAttribute="bottom" secondItem="3aW-pd-fXp" secondAttribute="bottom" id="ofz-j5-fOR"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
