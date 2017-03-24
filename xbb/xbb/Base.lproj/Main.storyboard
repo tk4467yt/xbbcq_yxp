@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="re0-DM-f3H">
-                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="657"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Thq-IG-6ld">
                                     <size key="itemSize" width="50" height="50"/>
@@ -63,7 +63,7 @@
                             <constraint firstAttribute="trailing" secondItem="re0-DM-f3H" secondAttribute="trailing" id="Apd-FY-3JA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="re0-DM-f3H" secondAttribute="bottom" constant="10" id="n37-vK-Fe6"/>
                             <constraint firstItem="re0-DM-f3H" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="p0Y-Wy-Att"/>
-                            <constraint firstItem="re0-DM-f3H" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="10" id="xDb-dH-u5W"/>
+                            <constraint firstItem="re0-DM-f3H" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="xDb-dH-u5W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dRs-kQ-34r"/>
@@ -118,7 +118,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equip_reusable_header_cell_id" id="Ape-9Q-lVg" customClass="EquipHeaderCollectionReusableView">
-                                    <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAD-zz-2cr">
