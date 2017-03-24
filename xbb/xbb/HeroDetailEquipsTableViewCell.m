@@ -99,7 +99,7 @@
     [self.cvEquipsForRank reloadData];
 }
 
--(void)setEquipImageForIndexPath:(NSIndexPath *)indexPath andImageView:(UIImageView *)iv2set andNameLabel:(UILabel *)lblName;
+-(void)setEquipImageForIndexPath:(NSIndexPath *)indexPath withEquipCell:(EquipBriefInfoCollectionViewCell *)equipBriefCell
 {
     EquipInfo *equipInfo2use=nil;
     
@@ -136,18 +136,24 @@
     }
     
     if (nil == equipInfo2use) {
-        iv2set.image=[UIImage imageNamed:@"hero_icon_unknow"];
+        equipBriefCell.ivThumb.image=[UIImage imageNamed:@"hero_icon_unknow"];
         
-        iv2set.layer.borderColor=[[UIColor darkGrayColor] CGColor];
-        iv2set.layer.borderWidth=1;
+        equipBriefCell.ivThumb.layer.borderColor=[[UIColor darkGrayColor] CGColor];
+        equipBriefCell.ivThumb.layer.borderWidth=1;
+        
+        equipBriefCell.ivMask.image=nil;
     } else {
-        iv2set.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+        equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
         
-        iv2set.layer.borderColor=[[UIColor grayColor] CGColor];
-        iv2set.layer.borderWidth=0;
+        equipBriefCell.ivThumb.layer.borderColor=[[UIColor grayColor] CGColor];
+        equipBriefCell.ivThumb.layer.borderWidth=0;
+        
+        RankDesc *rankDesc2use=self.rankDescDict[equipInfo2use.equipRank];
+        UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
+        equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     }
     
-    lblName.text=equipInfo2use.equipName;
+    equipBriefCell.lblName.text=equipInfo2use.equipName;
 }
 
 #pragma mark UICollectionViewDelegate
@@ -163,17 +169,7 @@
     EquipBriefInfoCollectionViewCell *equipBriefCell=(EquipBriefInfoCollectionViewCell *)cell;
     equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
     
-//    EquipInfo *equipInfo2use=self.equipsArr[indexPath.row];
-//    
-//    equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-    
-    [self setEquipImageForIndexPath:indexPath andImageView:equipBriefCell.ivThumb andNameLabel:equipBriefCell.lblName];
-    
-    RankDesc *rankDesc2use=self.rankDescDict[self.rankId];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
-    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
-    
-//    equipBriefCell.lblName.text=equipInfo2use.equipName;
+    [self setEquipImageForIndexPath:indexPath withEquipCell:equipBriefCell];
 }
 
 #pragma mark UICollectionViewDataSource
