@@ -56,7 +56,7 @@
 - (CGFloat)heightForEquipComposeCell
 {
     if (self.equipInfo.isCompose) {
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equip2showArr.lastObject];
+        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equip2showArr.lastObject];
         
         if (composeInfo.fragmentCount > 0) {
             return 150;

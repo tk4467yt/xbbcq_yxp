@@ -58,7 +58,7 @@
     NSLog(@"equip 0 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
         [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom1];
     }
 }
@@ -68,7 +68,7 @@
     NSLog(@"equip 1 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
         [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom2];
     }
 }
@@ -78,7 +78,7 @@
     NSLog(@"equip 2 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
         [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom3];
     }
 }
@@ -88,7 +88,7 @@
     NSLog(@"equip 3 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
         [self.itemActionDelegate equipComposeItemTappedWithEquipId:composeInfo.composeFrom4];
     }
 }
@@ -129,7 +129,7 @@
     if (equipInfo.isCompose) {
         self.lblComposeNone.hidden=true;
         
-        EquipComposeInfo *composeInfo=[DbHandler getEquipComposeInfoForEquipId:self.equipId2show];
+        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
         if (composeInfo.fragmentCount > 0) {
             self.composeFromEquipHolder.hidden=true;
             self.composeFromFragmentHolder.hidden=false;
