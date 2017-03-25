@@ -21,8 +21,10 @@
 #define equipComposeAttrCellId @"equip_compose_attr_tb_cell_id"
 #define equipComposeableCellId @"equip_composeable_tb_cell_id"
 
-@interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource,EquipComposeItemActionDelegate>
+@interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource,EquipComposeItemActionDelegate,EquipComposeableActionDelegate>
 @property (nonatomic,strong) NSMutableArray *equip2showArr;
+
+@property (nonatomic,strong) NSMutableArray *composeEquipsArr;
 @end
 
 @implementation EquipComposeViewController
@@ -31,13 +33,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.equip2showArr=[NSMutableArray new];
-    [self.equip2showArr addObject:self.equipInfo.equipId];
+    [self initEquip2show];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHeaderCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeAttrTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeAttrCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeableTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeableCellId];
+}
+
+-(void)initEquip2show
+{
+    self.equip2showArr=[NSMutableArray new];
+    [self.equip2showArr addObject:self.equipInfo.equipId];
     
     [self updateNavTitle];
 }
@@ -46,6 +53,8 @@
 {
     EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
     self.navigationItem.title=equipInfo.equipName;
+    
+    [self updateComposeEquipsArrForEquip:self.equip2showArr.lastObject];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -197,46 +206,66 @@
     [self.tbContent reloadData];
 }
 
--(NSArray *)getComposeEquipsArrForEquip:(NSString *)equipId
+-(void)updateComposeEquipsArrForEquip:(NSString *)equipId
 {
-    NSMutableArray *arr2ret=[NSMutableArray new];
+    self.composeEquipsArr=[NSMutableArray new];
     
-    if (![MyUtility isStringNilOrZeroLength:equipId]) {
-        NSDictionary *allEquipComposeInfoDict=[MyUtility getAllEquipComposeInfoDictCache];
-        for (NSString *aEquipId in allEquipComposeInfoDict.allKeys) {
-            EquipComposeInfo *aComposeInfo=allEquipComposeInfoDict[aEquipId];
-            if ([equipId isEqualToString:aComposeInfo.composeFrom1]) {
-                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
-                if (nil != equip2add) {
-                    [arr2ret addObject:equip2add];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *arr2ret=[NSMutableArray new];
+        
+        if (![MyUtility isStringNilOrZeroLength:equipId]) {
+            NSDictionary *allEquipComposeInfoDict=[MyUtility getAllEquipComposeInfoDictCache];
+            for (NSString *aEquipId in allEquipComposeInfoDict.allKeys) {
+                EquipComposeInfo *aComposeInfo=allEquipComposeInfoDict[aEquipId];
+                if ([equipId isEqualToString:aComposeInfo.composeFrom1]) {
+                    EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                    if (nil != equip2add) {
+                        [arr2ret addObject:equip2add];
+                    }
+                    continue;
                 }
-                continue;
-            }
-            if ([equipId isEqualToString:aComposeInfo.composeFrom2]) {
-                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
-                if (nil != equip2add) {
-                    [arr2ret addObject:equip2add];
+                if ([equipId isEqualToString:aComposeInfo.composeFrom2]) {
+                    EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                    if (nil != equip2add) {
+                        [arr2ret addObject:equip2add];
+                    }
+                    continue;
                 }
-                continue;
-            }
-            if ([equipId isEqualToString:aComposeInfo.composeFrom3]) {
-                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
-                if (nil != equip2add) {
-                    [arr2ret addObject:equip2add];
+                if ([equipId isEqualToString:aComposeInfo.composeFrom3]) {
+                    EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                    if (nil != equip2add) {
+                        [arr2ret addObject:equip2add];
+                    }
+                    continue;
                 }
-                continue;
-            }
-            if ([equipId isEqualToString:aComposeInfo.composeFrom4]) {
-                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
-                if (nil != equip2add) {
-                    [arr2ret addObject:equip2add];
+                if ([equipId isEqualToString:aComposeInfo.composeFrom4]) {
+                    EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                    if (nil != equip2add) {
+                        [arr2ret addObject:equip2add];
+                    }
+                    continue;
                 }
-                continue;
             }
         }
-    }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([equipId isEqualToString:self.equip2showArr.lastObject]) {
+                [self.composeEquipsArr removeAllObjects];
+                [self.composeEquipsArr addObjectsFromArray:arr2ret];
+                
+                [self.tbContent reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:3]] withRowAnimation:UITableViewRowAnimationAutomatic];
+            }
+        });
+    });
     
-    return arr2ret;
+}
+
+#pragma mark EquipComposeableActionDelegate
+-(void)didSelectComposeableEquip:(EquipInfo *)equipSelected
+{
+    self.equipInfo=equipSelected;
+    [self initEquip2show];
+    
+    [self.tbContent reloadData];
 }
 
 #pragma mark UITableViewDelegate
@@ -251,7 +280,7 @@
     } else if (3 == indexPath.section) {
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSmallSize]
-                                                     andItemCount:[self getComposeEquipsArrForEquip:self.equip2showArr.lastObject].count
+                                                     andItemCount:self.composeEquipsArr.count
                                                     andLineOffset:0]+18+16;
     }
     return 0;
@@ -299,8 +328,9 @@
         cell2ret=attrCell;
     } else if (3 == indexPath.section) {
         EquipComposeableTableViewCell *composeableCell=[tableView dequeueReusableCellWithIdentifier:equipComposeableCellId];
-        composeableCell.composeableEquipsArr=[self getComposeEquipsArrForEquip:self.equip2showArr.lastObject];
+        composeableCell.composeableEquipsArr=self.composeEquipsArr;
         composeableCell.equipInfoShowing=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
+        composeableCell.composeableActionDelegate=self;
         
         cell2ret=composeableCell;
     } else {

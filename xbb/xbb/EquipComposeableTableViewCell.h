@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "EquipInfo.h"
 
+@protocol EquipComposeableActionDelegate <NSObject>
+
+-(void)didSelectComposeableEquip:(EquipInfo *)equipSelected;
+
+@end
+
 @interface EquipComposeableTableViewCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *lblDesc;
 @property (weak, nonatomic) IBOutlet UILabel *lblNone;
@@ -17,4 +23,6 @@
 @property (nonatomic, strong) NSArray *composeableEquipsArr;
 @property (nonatomic,strong) NSDictionary *rankDescDict;
 @property (strong,nonatomic) EquipInfo *equipInfoShowing;
+
+@property (nonatomic, weak) id<EquipComposeableActionDelegate> composeableActionDelegate;
 @end

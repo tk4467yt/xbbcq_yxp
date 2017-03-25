@@ -49,7 +49,10 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (nil != self.composeableActionDelegate && [self.composeableActionDelegate respondsToSelector:@selector(didSelectComposeableEquip:)]) {
+        EquipInfo *equipInfo2use=self.composeableEquipsArr[indexPath.row];
+        [self.composeableActionDelegate didSelectComposeableEquip:equipInfo2use];
+    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
