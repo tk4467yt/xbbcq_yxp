@@ -11,12 +11,15 @@
 #import "EquipComposeHeaderTableViewCell.h"
 #import "EquipComposeContentTableViewCell.h"
 #import "EquipComposeAttrTableViewCell.h"
+#import "EquipComposeableTableViewCell.h"
 #import "MyUtility.h"
 #import "DbHandler.h"
+#import "EquipComposeInfo.h"
 
 #define equipComposeHeaderCellId @"equip_compose_header_tb_cell_id"
 #define equipComposeContentCellId @"equip_compose_content_tb_cell_id"
 #define equipComposeAttrCellId @"equip_compose_attr_tb_cell_id"
+#define equipComposeableCellId @"equip_composeable_tb_cell_id"
 
 @interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource,EquipComposeItemActionDelegate>
 @property (nonatomic,strong) NSMutableArray *equip2showArr;
@@ -34,6 +37,7 @@
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHeaderCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeAttrTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeAttrCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeableTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeableCellId];
     
     [self updateNavTitle];
 }
@@ -193,6 +197,48 @@
     [self.tbContent reloadData];
 }
 
+-(NSArray *)getComposeEquipsArrForEquip:(NSString *)equipId
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    if (![MyUtility isStringNilOrZeroLength:equipId]) {
+        NSDictionary *allEquipComposeInfoDict=[MyUtility getAllEquipComposeInfoDictCache];
+        for (NSString *aEquipId in allEquipComposeInfoDict.allKeys) {
+            EquipComposeInfo *aComposeInfo=allEquipComposeInfoDict[aEquipId];
+            if ([equipId isEqualToString:aComposeInfo.composeFrom1]) {
+                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                if (nil != equip2add) {
+                    [arr2ret addObject:equip2add];
+                }
+                continue;
+            }
+            if ([equipId isEqualToString:aComposeInfo.composeFrom2]) {
+                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                if (nil != equip2add) {
+                    [arr2ret addObject:equip2add];
+                }
+                continue;
+            }
+            if ([equipId isEqualToString:aComposeInfo.composeFrom3]) {
+                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                if (nil != equip2add) {
+                    [arr2ret addObject:equip2add];
+                }
+                continue;
+            }
+            if ([equipId isEqualToString:aComposeInfo.composeFrom4]) {
+                EquipInfo *equip2add=[MyUtility getEquipInfoForEquipIdCache:aEquipId];
+                if (nil != equip2add) {
+                    [arr2ret addObject:equip2add];
+                }
+                continue;
+            }
+        }
+    }
+    
+    return arr2ret;
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -202,6 +248,11 @@
         return [self heightForEquipComposeCell];
     } else if (2 == indexPath.section) {
         return [self numberOfEquipAttr2show]*30+16;
+    } else if (3 == indexPath.section) {
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+                                                      andItemSize:[MyAppSizeInfo equipBriefCVItemSmallSize]
+                                                     andItemCount:[self getComposeEquipsArrForEquip:self.equip2showArr.lastObject].count
+                                                    andLineOffset:0]+18+16;
     }
     return 0;
 }
@@ -218,6 +269,8 @@
     } else if (1 == section) {
         return 1;
     } else if (2 == section) {
+        return 1;
+    } else if (3 == section) {
         return 1;
     }
     return 0;
@@ -244,8 +297,20 @@
         attrCell.equipInfo2show=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
         
         cell2ret=attrCell;
+    } else if (3 == indexPath.section) {
+        EquipComposeableTableViewCell *composeableCell=[tableView dequeueReusableCellWithIdentifier:equipComposeableCellId];
+        composeableCell.composeableEquipsArr=[self getComposeEquipsArrForEquip:self.equip2showArr.lastObject];
+        composeableCell.equipInfoShowing=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
+        
+        cell2ret=composeableCell;
     } else {
         cell2ret=[UITableViewCell new];
+    }
+    
+    if (0 == indexPath.section%2) {
+        cell2ret.backgroundColor=[UIColor lightGrayColor];
+    } else {
+        cell2ret.backgroundColor=[UIColor grayColor];
     }
     
     [cell2ret setNeedsLayout];
@@ -254,6 +319,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 @end

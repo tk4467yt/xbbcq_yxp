@@ -1,18 +1,16 @@
 //
-//  HeroDetailAllNonComposeEquipsTableViewCell.m
+//  EquipComposeableTableViewCell.m
 //  xbb
 //
 //  Created by  qin on 2017/3/25.
 //  Copyright © 2017年  qin. All rights reserved.
 //
 
-#import "HeroDetailAllNonComposeEquipsTableViewCell.h"
+#import "EquipComposeableTableViewCell.h"
 #import "MyUtility.h"
 #import "EquipBriefInfoCollectionViewCell.h"
-#import "RankDesc.h"
-#import "EquipComposeViewController.h"
 
-@implementation HeroDetailAllNonComposeEquipsTableViewCell
+@implementation EquipComposeableTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,9 +18,10 @@
     
     self.rankDescDict=[MyUtility getAllRankDescDictCache];
     
-    self.cvNonComposeEquips.delegate=self;
-    self.cvNonComposeEquips.dataSource=self;
-    [self.cvNonComposeEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForCVEquiBriefInfo]];
+    self.cvComposeableEquips.delegate=self;
+    self.cvComposeableEquips.dataSource=self;
+    [self.cvComposeableEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]]
+               forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForCVEquiBriefInfo]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,23 +30,26 @@
     // Configure the view for the selected state
 }
 
-- (void)layoutSubviews
+-(void)layoutSubviews
 {
     [super layoutSubviews];
     
-    self.lblDesc.text=[NSString stringWithFormat:@"%@:",NSLocalizedString(@"title_for_non_compose_equips", @"")];
+    self.lblDesc.text=[NSString stringWithFormat:@"(%@)%@:",self.equipInfoShowing.equipName,NSLocalizedString(@"equip_composeable_title", @"")];
+    self.lblNone.text=NSLocalizedString(@"desc_for_none", @"");
     
-    [self.cvNonComposeEquips reloadData];
+    if (self.composeableEquipsArr.count <= 0) {
+        self.lblNone.hidden=false;
+    } else {
+        self.lblNone.hidden=true;
+    }
+    
+    [self.cvComposeableEquips reloadData];
 }
 
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    EquipComposeViewController *composeVC=[EquipComposeViewController new];
     
-    composeVC.equipInfo=self.nonComposeEquipsArr[indexPath.row];
-    
-    [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:composeVC animated:YES];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
@@ -56,22 +58,18 @@
     //    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
     equipBriefCell.noNameShown=true;
     
-    EquipInfo *equipInfo2use=self.nonComposeEquipsArr[indexPath.row];
+    EquipInfo *equipInfo2use=self.composeableEquipsArr[indexPath.row];
     equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
     
     RankDesc *rankDesc2use=self.rankDescDict[equipInfo2use.equipRank];
     UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
     equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
-    
-    equipBriefCell.lblCount.hidden=false;
-    NSNumber *countNumber=[self.equipCountDict objectForKey:equipInfo2use.equipId];
-    equipBriefCell.lblCount.text=[NSString stringWithFormat:@"%d",countNumber.intValue];
 }
 
 #pragma mark UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.nonComposeEquipsArr.count;
+    return self.composeableEquipsArr.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -86,5 +84,4 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return [MyAppSizeInfo equipBriefCVItemSmallSize];
 }
-
 @end
