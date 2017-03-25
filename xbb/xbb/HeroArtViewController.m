@@ -64,7 +64,7 @@
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [MyUtility screenHeight]-80;
+    return [MyUtility screenHeight]-[MyUtility heightOfStatusBar]-self.navigationController.navigationBar.frame.size.height;
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
