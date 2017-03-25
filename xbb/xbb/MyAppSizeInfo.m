@@ -23,5 +23,16 @@
 {
     return CGSizeMake(60, 60);
 }
-
++(CGFloat)cacTableCellHeightForCVWithMaxWidth:(CGFloat)maxCVWidth andItemSize:(CGSize)itemSize andItemCount:(NSInteger)itemCount andLineOffset:(CGFloat)lineOffset
+{
+    NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
+    NSInteger itemShown=maxItemOneLine;
+    CGFloat height=itemSize.height;
+    while (itemShown < itemCount) {
+        itemShown += maxItemOneLine;
+        height += itemSize.height;
+        height += lineOffset;
+    }
+    return height;
+}
 @end

@@ -272,16 +272,20 @@
 //        if (self.heroSpeciesArr.count <= 0) {
 //            return 0;
 //        }
-        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
-        CGSize itemSize=[MyAppSizeInfo heroSpeciesItemSize];
-        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
-        NSInteger itemShown=maxItemOneLine;
-        CGFloat height=itemSize.height;
-        while (itemShown < self.heroSpeciesArr.count) {
-            itemShown += maxItemOneLine;
-            height += itemSize.height+10;
-        }
-        return height;
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+                                                      andItemSize:[MyAppSizeInfo heroSpeciesItemSize]
+                                                     andItemCount:self.heroSpeciesArr.count
+                                                    andLineOffset:10];
+//        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
+//        CGSize itemSize=[MyAppSizeInfo heroSpeciesItemSize];
+//        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
+//        NSInteger itemShown=maxItemOneLine;
+//        CGFloat height=itemSize.height;
+//        while (itemShown < self.heroSpeciesArr.count) {
+//            itemShown += maxItemOneLine;
+//            height += itemSize.height+10;
+//        }
+//        return height;
     } else if (2 == indexPath.section) {
         return 110;
     } else if (3 == indexPath.section) {
@@ -291,27 +295,36 @@
         }
         return skillRowHeight+16;
     } else if (4 == indexPath.section) {
-        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
-        CGSize itemSize = [MyAppSizeInfo equipBriefCVItemSmallSize];
-        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
-        NSInteger itemShown=maxItemOneLine;
-        CGFloat height=itemSize.height;
-        while (itemShown < 6) {
-            itemShown += maxItemOneLine;
-            height += itemSize.height;
-        }
-        return height+18+8;
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+                                                      andItemSize:[MyAppSizeInfo equipBriefCVItemSmallSize]
+                                                     andItemCount:6
+                                                    andLineOffset:0]+18+8;
+        
+//        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
+//        CGSize itemSize = [MyAppSizeInfo equipBriefCVItemSmallSize];
+//        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
+//        NSInteger itemShown=maxItemOneLine;
+//        CGFloat height=itemSize.height;
+//        while (itemShown < 6) {
+//            itemShown += maxItemOneLine;
+//            height += itemSize.height;
+//        }
+//        return height+18+8;
     } else if (5 == indexPath.section) {
-        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
-        CGSize itemSize = [MyAppSizeInfo equipBriefCVItemSmallSize];
-        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
-        NSInteger itemShown=maxItemOneLine;
-        CGFloat height=itemSize.height;
-        while (itemShown < self.allNonComposeEquipsArr.count) {
-            itemShown += maxItemOneLine;
-            height += itemSize.height;
-        }
-        return height+16;
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+                                                      andItemSize:[MyAppSizeInfo equipBriefCVItemSmallSize]
+                                                     andItemCount:self.allNonComposeEquipsArr.count
+                                                    andLineOffset:0]+16;
+//        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
+//        CGSize itemSize = [MyAppSizeInfo equipBriefCVItemSmallSize];
+//        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
+//        NSInteger itemShown=maxItemOneLine;
+//        CGFloat height=itemSize.height;
+//        while (itemShown < self.allNonComposeEquipsArr.count) {
+//            itemShown += maxItemOneLine;
+//            height += itemSize.height;
+//        }
+//        return height+16;
     }
     return 0;
 }
