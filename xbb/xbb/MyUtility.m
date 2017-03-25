@@ -110,11 +110,11 @@ static __strong NSArray *allHeroSpeciesArr;
                [rankId isEqualToString:[MyUtility rankIdForZi2]] ||
                [rankId isEqualToString:[MyUtility rankIdForZi3]] ||
                [rankId isEqualToString:[MyUtility rankIdForZi4]]) {
-        color2ret=[UIColor colorWithRed:225/255.0 green:92/255.0 blue:248/255.0 alpha:1];
+        color2ret=[UIColor purpleColor];
     } else if ([rankId isEqualToString:[MyUtility rankIdForCheng]] ||
                [rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
                [rankId isEqualToString:[MyUtility rankIdForCheng2]]) {
-        color2ret=[UIColor colorWithRed:242/255.0 green:205/255.0 blue:71/255.0 alpha:1];
+        color2ret=[UIColor orangeColor];
     } else if ([rankId isEqualToString:[MyUtility rankIdForHong]] ||
                [rankId isEqualToString:[MyUtility rankIdForHong1]]) {
         color2ret=[UIColor colorWithRed:246/255.0 green:88/255.0 blue:90/255.0 alpha:1];
