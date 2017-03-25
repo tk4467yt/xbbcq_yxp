@@ -127,7 +127,15 @@
     [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip3]];
     [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip4]];
     [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip5]];
-    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip6]];
+    
+    if (!([rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
+        [rankId isEqualToString:[MyUtility rankIdForCheng2]] ||
+        [rankId isEqualToString:[MyUtility rankIdForHong]] ||
+        [rankId isEqualToString:[MyUtility rankIdForHong1]])) {
+        //the last one is assumed as jue_xing equip for rank larger than cheng
+        //so onley rank_cheng is needed to handle,other is duplicate
+        [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip6]];
+    }
     
     return equips2ret;
 }
