@@ -35,6 +35,11 @@
     [self.tbSpeciesSet registerNib:[UINib nibWithNibName:@"SpeciesSetHerosTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kSpeciesSetHerosCellId];
 }
 
+-(void)screenOrientationChangedHandle
+{
+    [self.tbSpeciesSet reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

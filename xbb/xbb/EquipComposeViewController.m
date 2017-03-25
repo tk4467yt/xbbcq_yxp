@@ -295,6 +295,11 @@
     });
 }
 
+-(void)screenOrientationChangedHandle
+{
+    [self.tbContent reloadData];
+}
+
 #pragma mark EquipComposeableActionDelegate
 -(void)didSelectComposeableEquip:(EquipInfo *)equipSelected
 {

@@ -39,6 +39,11 @@
     [self.tbArt registerNib:[UINib nibWithNibName:@"HeroArtTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroArtCellId];
 }
 
+-(void)screenOrientationChangedHandle
+{
+    [self.tbArt reloadData];
+}
+
 - (void)switchArtShown
 {
     self.shownJuexingArt=!self.shownJuexingArt;

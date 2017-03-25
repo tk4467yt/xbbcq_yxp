@@ -118,6 +118,11 @@
     [self updateHeros2shown];
 }
 
+-(void)screenOrientationChangedHandle
+{
+    [self.cvHeros reloadData];
+}
+
 -(void)updateHeros2shown
 {
     [self.liLiangHerosArr removeAllObjects];
