@@ -45,7 +45,7 @@
     self.attr2showIdArr=[NSMutableArray new];
     self.value2showArr=[NSMutableArray new];
     
-    [self.attr2showIdArr addObject:[NSString stringWithFormat:NSLocalizedString(@"equip_attr_title", @""),self.equipInfo2show.equipName]];
+    [self.attr2showIdArr addObject:[NSString stringWithFormat:NSLocalizedString(@"equip_attr_title", @""),self.equipInfo2show.equipName,self.equipInfo2show.levelRequire]];
     [self.value2showArr addObject:[NSNumber numberWithInteger:0]];
     
     if (self.equipInfo2show.liliang != 0) {
