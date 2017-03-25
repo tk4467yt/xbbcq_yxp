@@ -21,6 +21,13 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-YE-9yd" userLabel="ivThumb">
                         <rect key="frame" x="69.5" y="6" width="109" height="108"/>
                     </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fan-W2-aew" userLabel="lblCount">
+                        <rect key="frame" x="69.5" y="93.5" width="109" height="20.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.29891029870123709" blue="0.87792109016006881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rKb-5a-8Hb" userLabel="ivMask">
                         <rect key="frame" x="62.5" y="0.0" width="123" height="123"/>
                         <constraints>
@@ -45,6 +52,9 @@
                 <constraint firstItem="rKb-5a-8Hb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MDe-kF-hCr"/>
                 <constraint firstItem="cYZ-YE-9yd" firstAttribute="bottom" secondItem="rKb-5a-8Hb" secondAttribute="bottom" constant="-9" id="OxI-zP-CDG"/>
                 <constraint firstItem="cYZ-YE-9yd" firstAttribute="top" secondItem="rKb-5a-8Hb" secondAttribute="top" constant="6" id="SZe-JJ-iLc"/>
+                <constraint firstItem="fan-W2-aew" firstAttribute="leading" secondItem="cYZ-YE-9yd" secondAttribute="leading" id="XCH-mv-c9J"/>
+                <constraint firstItem="fan-W2-aew" firstAttribute="bottom" secondItem="cYZ-YE-9yd" secondAttribute="bottom" id="Xz0-eh-NAU"/>
+                <constraint firstItem="fan-W2-aew" firstAttribute="trailing" secondItem="cYZ-YE-9yd" secondAttribute="trailing" id="Yhh-qH-udE"/>
                 <constraint firstItem="cYZ-YE-9yd" firstAttribute="trailing" secondItem="rKb-5a-8Hb" secondAttribute="trailing" constant="-7" id="jgW-XF-nAQ"/>
                 <constraint firstItem="TqU-6g-vHO" firstAttribute="top" secondItem="rKb-5a-8Hb" secondAttribute="bottom" id="lqi-ji-wbc"/>
                 <constraint firstAttribute="trailing" secondItem="TqU-6g-vHO" secondAttribute="trailing" id="r5g-4u-S6e"/>
@@ -54,6 +64,7 @@
             <connections>
                 <outlet property="ivMask" destination="rKb-5a-8Hb" id="Aii-jC-jCa"/>
                 <outlet property="ivThumb" destination="cYZ-YE-9yd" id="CYR-CS-bvp"/>
+                <outlet property="lblCount" destination="fan-W2-aew" id="hez-IN-YdF"/>
                 <outlet property="lblName" destination="TqU-6g-vHO" id="QvP-kA-g7r"/>
             </connections>
             <point key="canvasLocation" x="-149" y="116.5"/>

@@ -58,6 +58,10 @@
     UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
     equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
+    equipBriefCell.lblCount.hidden=false;
+    NSNumber *countNumber=[self.equipCountDict objectForKey:equipInfo2use.equipId];
+    equipBriefCell.lblCount.text=[NSString stringWithFormat:@"%d",countNumber.intValue];
+    
     [equipBriefCell setNeedsLayout];
 }
 
