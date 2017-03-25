@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSArray *nonComposeEquipsArr;
 @property (nonatomic,strong) NSDictionary *rankDescDict;
 @property (nonatomic, strong) NSDictionary *equipCountDict;
+
+@property (nonatomic,weak) UIViewController *parentVC;
 @end

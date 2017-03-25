@@ -10,6 +10,7 @@
 #import "MyUtility.h"
 #import "EquipBriefInfoCollectionViewCell.h"
 #import "RankDesc.h"
+#import "EquipComposeViewController.h"
 
 @implementation HeroDetailAllNonComposeEquipsTableViewCell
 
@@ -34,15 +35,19 @@
 {
     [super layoutSubviews];
     
-    [self.cvNonComposeEquips reloadData];
-    
     self.lblDesc.text=[NSString stringWithFormat:@"%@:",NSLocalizedString(@"title_for_non_compose_equips", @"")];
+    
+    [self.cvNonComposeEquips reloadData];
 }
 
 #pragma mark UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    EquipComposeViewController *composeVC=[EquipComposeViewController new];
     
+    composeVC.equipInfo=self.nonComposeEquipsArr[indexPath.row];
+    
+    [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:composeVC animated:YES];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath

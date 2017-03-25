@@ -462,6 +462,7 @@
         HeroDetailAllNonComposeEquipsTableViewCell *nonComposeEquipsCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailAllNonComposeEquipsCellId];
         nonComposeEquipsCell.nonComposeEquipsArr=self.allNonComposeEquipsArr;
         nonComposeEquipsCell.equipCountDict=self.nonComposeEquipCountDict;
+        nonComposeEquipsCell.parentVC=self;
         
         cell2ret=nonComposeEquipsCell;
     } else {
