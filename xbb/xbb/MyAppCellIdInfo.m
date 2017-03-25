@@ -13,4 +13,8 @@
 {
     return @"equip_brief_info_cell_id";
 }
++(NSString *)cellIdForHeroInfo
+{
+    return @"hero_cv_cell_id";
+}
 @end

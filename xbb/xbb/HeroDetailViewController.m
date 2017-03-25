@@ -206,7 +206,7 @@
 - (void)speciesSetDidSelectHeroWithId:(NSString *)heroId
 {
     if (![MyUtility isStringNilOrZeroLength:heroId] && ![heroId isEqualToString:self.hero2show.heroId]) {
-        self.hero2show=[DbHandler getHeroInfoWithHeroId:heroId];
+        self.hero2show=[MyUtility getCachedHeroInfoWithHeroId:heroId];
         
         [self updateHeroRelateStructure];
         

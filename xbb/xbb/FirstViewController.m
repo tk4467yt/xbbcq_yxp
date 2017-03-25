@@ -16,8 +16,6 @@
 #import "RankDesc.h"
 #import "HeroDetailViewController.h"
 
-#define heroBriefReusableCellId @"hero_cv_cell_id"
-
 @interface FirstViewController ()
 @property (nonatomic,strong) NSArray *allHerosArr;
 @property (nonatomic,strong) NSMutableArray *liLiangHerosArr;
@@ -42,7 +40,7 @@
     
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_more"] style:UIBarButtonItemStylePlain target:self action:@selector(handleForNavAction)];
     
-    [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:heroBriefReusableCellId];
+    [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForHeroInfo]];
 }
 
 -(void)updateNavTitle
@@ -107,7 +105,7 @@
 
 -(void)initHerosInfo
 {
-    self.allHerosArr=[DbHandler getAllHeros];
+    self.allHerosArr=[MyUtility getCachedAllHeros];
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
     self.rankDescDict=[MyUtility getAllRankDescDictCache];
     
@@ -165,7 +163,7 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    HeroCollectionViewCell *heroCell=[collectionView dequeueReusableCellWithReuseIdentifier:heroBriefReusableCellId forIndexPath:indexPath];
+    HeroCollectionViewCell *heroCell=[collectionView dequeueReusableCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForHeroInfo] forIndexPath:indexPath];
     
     return heroCell;
 }
@@ -256,7 +254,7 @@
 
 #pragma mark UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(80,100);
+    return [MyAppSizeInfo heroBriefCVItemSize];
 }
 
 @end

@@ -15,6 +15,9 @@
 #import "MyAppCellIdInfo.h"
 #import "EquipComposeInfo.h"
 #import "HeroSpecies.h"
+#import "DbHandler.h"
+#import "HeroInfo.h"
+#import "HeroEquips.h"
 
 #define kHeroStarImage @"detail_star"
 #define kHeroStarImageGrey @"detail_star_grey"
@@ -78,11 +81,17 @@
 +(CGFloat)screenHeight;
 +(CGFloat)heightOfStatusBar;
 
++(NSArray *)getCachedAllHeros;
++(HeroInfo *)getCachedHeroInfoWithHeroId:(NSString *)heroId;
+
 +(NSArray *)getAllEquipInfoFromDbCache;
 +(EquipInfo *)getEquipInfoForEquipIdCache:(NSString *)equipId;
 
 +(NSDictionary *)getAllRankDescDictCache;
 +(RankDesc *)getRankDescForRankIdCache:(NSString *)rankId;
+
++(NSArray *)getCachedAllHeroEquips;
++(NSDictionary *)getCachedHeroEquipsDictForHero:(NSString *)heroId;
 
 +(NSArray *)getAllEquipAttrDescArrCache;
 +(EquipAttrDesc *)getEquipAttrDescForAttrIdCache:(NSString *)attrId;

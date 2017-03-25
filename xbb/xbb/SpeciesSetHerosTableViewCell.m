@@ -13,8 +13,6 @@
 #import "MyUtility.h"
 #import "DbHandler.h"
 
-#define heroBriefReusableCellId @"hero_cv_cell_id"
-
 @interface SpeciesSetHerosTableViewCell ()
 
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
@@ -34,7 +32,7 @@
     self.cvHeros.dataSource=self;
     self.cvHeros.delegate=self;
     
-    [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:heroBriefReusableCellId];
+    [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForHeroInfo]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -69,7 +67,7 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    HeroCollectionViewCell *heroCell=[collectionView dequeueReusableCellWithReuseIdentifier:heroBriefReusableCellId forIndexPath:indexPath];
+    HeroCollectionViewCell *heroCell=[collectionView dequeueReusableCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForHeroInfo] forIndexPath:indexPath];
     
     HeroInfo *heroInfo2use=self.herosArr[indexPath.row];
     
@@ -94,6 +92,6 @@
 
 #pragma mark UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(80,100);
+    return [MyAppSizeInfo heroBriefCVItemSize];
 }
 @end

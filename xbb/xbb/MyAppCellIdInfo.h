@@ -10,4 +10,5 @@
 
 @interface MyAppCellIdInfo : NSObject
 +(NSString *)cellIdForCVEquiBriefInfo;
++(NSString *)cellIdForHeroInfo;
 @end

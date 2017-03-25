@@ -49,7 +49,7 @@
         
         for (HeroSpecies *aHeroSpecies in self.allHeroSpeciesArr) {
             if ([aHeroSpecies.speciesId isEqualToString:self.speciesDesc2show.speciesId]) {
-                HeroInfo *heroInfo=[DbHandler getHeroInfoWithHeroId:aHeroSpecies.heroId];
+                HeroInfo *heroInfo=[MyUtility getCachedHeroInfoWithHeroId:aHeroSpecies.heroId];
                 [arr2ret addObject:heroInfo];
             }
         }

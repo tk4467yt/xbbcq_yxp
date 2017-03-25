@@ -7,10 +7,11 @@
 //
 
 #import "MyUtility.h"
-#import "DbHandler.h"
 
+static __strong NSArray *allHerosInfoArr;
 static __strong NSArray *allEquipsInfoArr;
 static __strong NSDictionary *rankDescDict;
+static __strong NSArray *allHeroEquipsArr;
 static __strong NSArray *allEquipAttrDescArr;
 static __strong NSArray *allHeroSpeciesArr;
 static __strong NSDictionary *allEquipComposeInfoDict;
@@ -255,6 +256,57 @@ static __strong NSDictionary *allEquipComposeInfoDict;
     CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
     
     return rectStatus.size.height;
+}
+
++(NSArray *)getCachedAllHeros
+{
+    if (nil == allHerosInfoArr) {
+        allHerosInfoArr = [DbHandler getAllHeros];
+    }
+    
+    return allHerosInfoArr;
+}
++(HeroInfo *)getCachedHeroInfoWithHeroId:(NSString *)heroId
+{
+    if (nil == allHerosInfoArr) {
+        allHerosInfoArr = [DbHandler getAllHeros];
+    }
+    
+    HeroInfo *info2ret=nil;
+    
+    for (HeroInfo *aHeroInfo in allHerosInfoArr) {
+        if ([aHeroInfo.heroId isEqualToString:heroId]) {
+            info2ret=aHeroInfo;
+            break;
+        }
+    }
+    
+    return info2ret;
+}
+
++(NSArray *)getCachedAllHeroEquips
+{
+    if (nil == allHeroEquipsArr) {
+        allHeroEquipsArr = [DbHandler getAllHeroEquips];
+    }
+    
+    return allHeroEquipsArr;
+}
++(NSDictionary *)getCachedHeroEquipsDictForHero:(NSString *)heroId
+{
+    if (nil == allHeroEquipsArr) {
+        allHeroEquipsArr = [DbHandler getAllHeroEquips];
+    }
+    
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    for (HeroEquips *aHeroEquip in allHeroEquipsArr) {
+        if ([aHeroEquip.heroId isEqualToString:heroId]) {
+            [dict2ret setObject:aHeroEquip forKey:aHeroEquip.heroRank];
+        }
+    }
+    
+    return dict2ret;
 }
 
 +(NSArray *)getAllEquipInfoFromDbCache

@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.heroInfo2use=[DbHandler getHeroInfoWithHeroId:self.heroId];
+    self.heroInfo2use=[MyUtility getCachedHeroInfoWithHeroId:self.heroId];
     self.heroTypeDescDict=[DbHandler getAllHeroTypeDescDict];
     
     self.navigationItem.title=[NSString stringWithFormat:@"%@-%@",NSLocalizedString(@"nav_title_art", @""),self.heroInfo2use.heroName];

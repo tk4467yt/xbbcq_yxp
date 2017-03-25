@@ -12,6 +12,7 @@
 #import "EquipComposeContentTableViewCell.h"
 #import "EquipComposeAttrTableViewCell.h"
 #import "EquipComposeableTableViewCell.h"
+#import "EquipComposeHerosTableViewCell.h"
 #import "MyUtility.h"
 #import "DbHandler.h"
 #import "EquipComposeInfo.h"
@@ -20,11 +21,13 @@
 #define equipComposeContentCellId @"equip_compose_content_tb_cell_id"
 #define equipComposeAttrCellId @"equip_compose_attr_tb_cell_id"
 #define equipComposeableCellId @"equip_composeable_tb_cell_id"
+#define equipComposeHerosCellId @"equip_compose_heros_tb_cell_id"
 
 @interface EquipComposeViewController () <UITableViewDelegate,UITableViewDataSource,EquipComposeItemActionDelegate,EquipComposeableActionDelegate>
 @property (nonatomic,strong) NSMutableArray *equip2showArr;
 
 @property (nonatomic,strong) NSMutableArray *composeEquipsArr;
+@property (nonatomic,strong) NSMutableArray *composeHeroEquipsArr;
 @end
 
 @implementation EquipComposeViewController
@@ -39,6 +42,7 @@
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeAttrTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeAttrCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeableTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeableCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHerosTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHerosCellId];
 }
 
 -(void)initEquip2show
@@ -55,6 +59,7 @@
     self.navigationItem.title=equipInfo.equipName;
     
     [self updateComposeEquipsArrForEquip:self.equip2showArr.lastObject];
+    [self updateComposeHerosForEquip:self.equip2showArr.lastObject];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -259,6 +264,37 @@
     
 }
 
+-(void)updateComposeHerosForEquip:(NSString *)equipId
+{
+    self.composeHeroEquipsArr=[NSMutableArray new];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *arr2ret=[NSMutableArray new];
+        
+        if (![MyUtility isStringNilOrZeroLength:equipId]) {
+            NSArray *allHeroEquips=[MyUtility getCachedAllHeroEquips];
+            for (HeroEquips *aHeroEquip in allHeroEquips) {
+                if ([aHeroEquip.equip1 isEqualToString:equipId] ||
+                    [aHeroEquip.equip2 isEqualToString:equipId] ||
+                    [aHeroEquip.equip3 isEqualToString:equipId] ||
+                    [aHeroEquip.equip4 isEqualToString:equipId] ||
+                    [aHeroEquip.equip5 isEqualToString:equipId] ||
+                    [aHeroEquip.equip6 isEqualToString:equipId]) {
+                    [arr2ret addObject:aHeroEquip];
+                }
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([equipId isEqualToString:self.equip2showArr.lastObject]) {
+                [self.composeHeroEquipsArr removeAllObjects];
+                [self.composeHeroEquipsArr addObjectsFromArray:arr2ret];
+                
+                [self.tbContent reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:4]] withRowAnimation:UITableViewRowAnimationAutomatic];
+            }
+        });
+    });
+}
+
 #pragma mark EquipComposeableActionDelegate
 -(void)didSelectComposeableEquip:(EquipInfo *)equipSelected
 {
@@ -282,6 +318,11 @@
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSmallSize]
                                                      andItemCount:self.composeEquipsArr.count
                                                     andLineOffset:0]+18+16;
+    } else if (4 == indexPath.section) {
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+                                                      andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
+                                                     andItemCount:self.composeHeroEquipsArr.count
+                                                    andLineOffset:0]+18+16;
     }
     return 0;
 }
@@ -300,6 +341,8 @@
     } else if (2 == section) {
         return 1;
     } else if (3 == section) {
+        return 1;
+    } else if (4 == section) {
         return 1;
     }
     return 0;
@@ -333,6 +376,12 @@
         composeableCell.composeableActionDelegate=self;
         
         cell2ret=composeableCell;
+    } else if (4 == indexPath.section) {
+        EquipComposeHerosTableViewCell *heroCell=[tableView dequeueReusableCellWithIdentifier:equipComposeHerosCellId];
+        heroCell.equipInfoShowing=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
+        heroCell.heroEquipsArr=self.composeHeroEquipsArr;
+        
+        cell2ret=heroCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -349,6 +398,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 @end

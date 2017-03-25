@@ -14,4 +14,5 @@
 +(CGSize)equipBriefCVItemSize;
 +(CGSize)equipBriefCVItemSmallSize;
 +(CGFloat)cacTableCellHeightForCVWithMaxWidth:(CGFloat)maxCVWidth andItemSize:(CGSize)itemSize andItemCount:(NSInteger)itemCount andLineOffset:(CGFloat)lineOffset;
++(CGSize)heroBriefCVItemSize;
 @end

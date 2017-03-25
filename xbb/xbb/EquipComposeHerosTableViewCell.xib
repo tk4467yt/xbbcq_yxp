@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="equip_compose_heros_tb_cell_id" rowHeight="108" id="KGk-i7-Jjw" customClass="EquipComposeHerosTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="108"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-93-mY4" userLabel="lblDesc">
+                        <rect key="frame" x="8" y="8" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oar-qH-PPm" userLabel="lblNone">
+                        <rect key="frame" x="56" y="8" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="o5P-ls-PD9" userLabel="cvEquipableHeros">
+                        <rect key="frame" x="8" y="26" width="342" height="74"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4I2-y4-xtb">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZIh-93-mY4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="1il-u3-2Aa"/>
+                    <constraint firstItem="o5P-ls-PD9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="RJW-1L-igJ"/>
+                    <constraint firstItem="o5P-ls-PD9" firstAttribute="top" secondItem="ZIh-93-mY4" secondAttribute="bottom" id="a5R-4z-0Nv"/>
+                    <constraint firstItem="Oar-qH-PPm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bT1-32-awG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="o5P-ls-PD9" secondAttribute="bottom" id="cW7-r5-gxB"/>
+                    <constraint firstItem="ZIh-93-mY4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="k0c-uS-0L5"/>
+                    <constraint firstItem="Oar-qH-PPm" firstAttribute="leading" secondItem="ZIh-93-mY4" secondAttribute="trailing" constant="10" id="lse-oS-sfv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="o5P-ls-PD9" secondAttribute="trailing" id="wEb-Cg-Ggh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cvEquipableHeros" destination="o5P-ls-PD9" id="6Ml-8f-OGm"/>
+                <outlet property="lblDesc" destination="ZIh-93-mY4" id="XHG-fd-YwK"/>
+                <outlet property="lblNone" destination="Oar-qH-PPm" id="Nb7-C5-brf"/>
+            </connections>
+            <point key="canvasLocation" x="-228" y="61"/>
+        </tableViewCell>
+    </objects>
+</document>
