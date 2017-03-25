@@ -13,6 +13,7 @@ static __strong NSArray *allEquipsInfoArr;
 static __strong NSDictionary *rankDescDict;
 static __strong NSArray *allEquipAttrDescArr;
 static __strong NSArray *allHeroSpeciesArr;
+static __strong NSDictionary *allEquipComposeInfoDict;
 
 @implementation MyUtility
 +(NSString *)heroTypeLiliangId
@@ -271,9 +272,11 @@ static __strong NSArray *allHeroSpeciesArr;
         allEquipsInfoArr=[DbHandler getAllEquipInfo];
     }
     
-    for (EquipInfo *aEquipInfo in allEquipsInfoArr) {
-        if ([aEquipInfo.equipId isEqualToString:equipId]) {
-            return aEquipInfo;
+    if (![MyUtility isStringNilOrZeroLength:equipId]) {
+        for (EquipInfo *aEquipInfo in allEquipsInfoArr) {
+            if ([aEquipInfo.equipId isEqualToString:equipId]) {
+                return aEquipInfo;
+            }
         }
     }
     
@@ -295,9 +298,11 @@ static __strong NSArray *allHeroSpeciesArr;
         rankDescDict=[DbHandler getAllRankDescDict];
     }
     
-    for (RankDesc *aRankDesc in rankDescDict.allValues) {
-        if ([aRankDesc.rankId isEqualToString:rankId]) {
-            return aRankDesc;
+    if (![MyUtility isStringNilOrZeroLength:rankId]) {
+        for (RankDesc *aRankDesc in rankDescDict.allValues) {
+            if ([aRankDesc.rankId isEqualToString:rankId]) {
+                return aRankDesc;
+            }
         }
     }
     
@@ -318,9 +323,11 @@ static __strong NSArray *allHeroSpeciesArr;
         allEquipAttrDescArr=[DbHandler getAllEquipAttrDescArr];
     }
     
-    for (EquipAttrDesc *aAttrDesc in allEquipAttrDescArr) {
-        if ([aAttrDesc.attrId isEqualToString:attrId]) {
-            return aAttrDesc;
+    if (![MyUtility isStringNilOrZeroLength:attrId]) {
+        for (EquipAttrDesc *aAttrDesc in allEquipAttrDescArr) {
+            if ([aAttrDesc.attrId isEqualToString:attrId]) {
+                return aAttrDesc;
+            }
         }
     }
     
@@ -334,6 +341,46 @@ static __strong NSArray *allHeroSpeciesArr;
     }
     
     return allHeroSpeciesArr;
+}
+
++(NSArray * )getHeroSpeciesCacheForHero:(NSString *)heroId
+{
+    if (nil == allHeroSpeciesArr) {
+        allHeroSpeciesArr = [DbHandler getAllHeroSpecies];
+    }
+    
+    NSMutableArray *apecies2ret=[NSMutableArray new];
+    
+    if (![MyUtility isStringNilOrZeroLength:heroId]) {
+        for (HeroSpecies *aSpecies in allHeroSpeciesArr) {
+            if ([aSpecies.heroId isEqualToString:heroId]) {
+                [apecies2ret addObject:aSpecies];
+            }
+        }
+    }
+    
+    return apecies2ret;
+}
+
++(NSDictionary *)getAllEquipComposeInfoDictCache
+{
+    if (nil == allEquipComposeInfoDict) {
+        allEquipComposeInfoDict = [DbHandler getAllEquipComposeInfo];
+    }
+    
+    return allEquipComposeInfoDict;
+}
++(EquipComposeInfo *)getEquipComposeInfoCacheForEquipId:(NSString *)equipId
+{
+    if (nil == allEquipComposeInfoDict) {
+        allEquipComposeInfoDict = [DbHandler getAllEquipComposeInfo];
+    }
+    
+    EquipComposeInfo *composeInfo=nil;
+    if (![MyUtility isStringNilOrZeroLength:equipId]) {
+        composeInfo=allEquipComposeInfoDict[equipId];
+    }
+    return composeInfo;
 }
 
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask

@@ -12,6 +12,7 @@
 #import "HeroDetailStarInfoTableViewCell.h"
 #import "HeroDetailSkillTableViewCell.h"
 #import "HeroDetailEquipsTableViewCell.h"
+#import "HeroDetailAllNonComposeEquipsTableViewCell.h"
 #import "EquipComposeViewController.h"
 #import "DbHandler.h"
 #import "HeroTypeDesc.h"
@@ -26,6 +27,7 @@
 #define kHeroDetailStarInfoCellId @"hero_detail_star_info_cell_id"
 #define kHeroDetailSkillCellId @"hero_detail_skill_tb_cell_id"
 #define kHeroDetailEquipCellId @"hero_detail_equip_tb_cell_id"
+#define kHeroDetailAllNonComposeEquipsCellId @"hero_detail_all_non_compose_equips_tb_cell_id"
 
 @interface HeroDetailViewController () <HeroDetailEquipsTapDelegate>
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
@@ -33,6 +35,8 @@
 @property (nonatomic,strong) NSArray *heroSpeciesArr;
 @property (nonatomic,strong) NSArray *heroSkillsArr;
 @property (nonatomic,strong) NSDictionary *heroEquipsDict;
+@property (nonatomic,strong) NSMutableArray *allNonComposeEquipsArr;
+@property (nonatomic,strong) NSMutableDictionary *nonComposeEquipCountDict;
 @end
 
 @implementation HeroDetailViewController
@@ -49,15 +53,132 @@
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailStarInfoTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailStarInfoCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailSkillTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailSkillCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailEquipsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailEquipCellId];
+    [self.tbContent registerNib:[UINib nibWithNibName:@"HeroDetailAllNonComposeEquipsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kHeroDetailAllNonComposeEquipsCellId];
 }
 
 -(void)updateHeroRelateStructure
 {
     self.navigationItem.title=self.hero2show.heroName;
     
-    self.heroSpeciesArr=[DbHandler getHeroSpeciesForHero:self.hero2show.heroId];
+    self.heroSpeciesArr=[MyUtility getHeroSpeciesCacheForHero:self.hero2show.heroId];
     self.heroSkillsArr=[DbHandler getHeroSkillsForHero:self.hero2show.heroId];
     self.heroEquipsDict=[DbHandler getHeroEquipsDictForHero:self.hero2show.heroId];
+    
+    if (nil == self.allNonComposeEquipsArr) {
+        self.allNonComposeEquipsArr=[NSMutableArray new];
+    } else {
+        [self.allNonComposeEquipsArr removeAllObjects];
+    }
+    if (nil == self.nonComposeEquipCountDict) {
+        self.nonComposeEquipCountDict=[NSMutableDictionary new];
+    } else {
+        [self.nonComposeEquipCountDict removeAllObjects];
+    }
+    
+    NSMutableArray *tmpArr=[NSMutableArray new];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForHong1]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForHong]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForCheng2]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForCheng1]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForCheng]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForZi4]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForZi3]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForZi2]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForZi1]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForZi]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForLan2]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForLan1]]];
+    [tmpArr addObjectsFromArray:[self getNonComposeEquipsForRank:[MyUtility rankIdForLan]]];
+    
+    for (EquipInfo *aEquipInfo in tmpArr) {
+        if (![MyUtility isStringNilOrZeroLength:aEquipInfo.equipId]) {
+            NSNumber *countNumber=self.nonComposeEquipCountDict[aEquipInfo.equipId];
+            if (nil == countNumber) {
+                [self.nonComposeEquipCountDict setObject:[NSNumber numberWithInt:1] forKey:aEquipInfo.equipId];
+                [self.allNonComposeEquipsArr addObject:aEquipInfo];
+            } else {
+                [self.nonComposeEquipCountDict setObject:[NSNumber numberWithInt:countNumber.intValue+1] forKey:aEquipInfo.equipId];
+            }
+        }
+    }
+    
+    [self.allNonComposeEquipsArr sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        EquipInfo *equip1=(EquipInfo *)obj1;
+        EquipInfo *equip2=(EquipInfo *)obj2;
+        
+        if (equip1.levelRequire > equip2.levelRequire) {
+            return NSOrderedAscending;
+        } else if (equip1.levelRequire < equip2.levelRequire) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
+        }
+    }];
+}
+
+-(NSArray *)getNonComposeEquipsForRank:(NSString *)rankId
+{
+    NSMutableArray *equips2ret=[NSMutableArray new];
+    
+    HeroEquips *aHeroEquip=self.heroEquipsDict[rankId];
+    
+    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip1]];
+    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip2]];
+    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip3]];
+    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip4]];
+    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip5]];
+    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip6]];
+    
+    return equips2ret;
+}
+
+-(NSArray *)getNonComposeEquipInfoForEquipId:(NSString *)equipId
+{
+    NSMutableArray *retArr=[NSMutableArray new];
+    
+    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipIdCache:equipId];
+    if (nil != equipInfo) {
+        if (equipInfo.isCompose) {
+            EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:equipInfo.equipId];
+            if (composeInfo.fragmentCount > 0) {
+                if ([self nonComposeEquipShouldShowForEquipRank:equipInfo.equipRank]) {
+                    [retArr addObject:equipInfo];
+                }
+            } else {
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom1]) {
+                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom1]];
+                }
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom2]) {
+                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom2]];
+                }
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom3]) {
+                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom3]];
+                }
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom4]) {
+                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom4]];
+                }
+            }
+        } else {
+            if ([self nonComposeEquipShouldShowForEquipRank:equipInfo.equipRank]) {
+                [retArr addObject:equipInfo];
+            }
+        }
+    }
+    
+    return retArr;
+}
+
+-(BOOL)nonComposeEquipShouldShowForEquipRank:(NSString *)equipRank
+{
+    if ([equipRank isEqualToString:[MyUtility rankIdForBai]] ||
+        [equipRank isEqualToString:[MyUtility rankIdForLv]] ||
+        [equipRank isEqualToString:[MyUtility rankIdForLv1]] ||
+        [equipRank isEqualToString:[MyUtility rankIdForLan]] ||
+        [equipRank isEqualToString:[MyUtility rankIdForLan1]] ||
+        [equipRank isEqualToString:[MyUtility rankIdForLan2]]) {
+        return false;
+    }
+    return true;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -172,6 +293,17 @@
             height += itemSize.height;
         }
         return height+18+8;
+    } else if (5 == indexPath.section) {
+        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
+        CGSize itemSize = [MyAppSizeInfo equipBriefCVItemSmallSize];
+        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
+        NSInteger itemShown=maxItemOneLine;
+        CGFloat height=itemSize.height;
+        while (itemShown < self.allNonComposeEquipsArr.count) {
+            itemShown += maxItemOneLine;
+            height += itemSize.height;
+        }
+        return height+16;
     }
     return 0;
 }
@@ -193,6 +325,8 @@
         return 1;
     } else if (4 == section) {
         return 16;
+    } else if (5 == section) {
+        return 1;
     }
     return 0;
 }
@@ -316,6 +450,12 @@
         equipCell.heroEquips=aHeroEquip;
         
         cell2ret=equipCell;
+    } else if (5 == indexPath.section) {
+        HeroDetailAllNonComposeEquipsTableViewCell *nonComposeEquipsCell=[tableView dequeueReusableCellWithIdentifier:kHeroDetailAllNonComposeEquipsCellId];
+        nonComposeEquipsCell.nonComposeEquipsArr=self.allNonComposeEquipsArr;
+        nonComposeEquipsCell.equipCountDict=self.nonComposeEquipCountDict;
+        
+        cell2ret=nonComposeEquipsCell;
     } else {
         cell2ret=[UITableViewCell new];
     }
@@ -332,6 +472,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 6;
 }
 @end

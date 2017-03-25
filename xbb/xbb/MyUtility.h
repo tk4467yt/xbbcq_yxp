@@ -13,6 +13,8 @@
 #import "EquipAttrDesc.h"
 #import "MyAppSizeInfo.h"
 #import "MyAppCellIdInfo.h"
+#import "EquipComposeInfo.h"
+#import "HeroSpecies.h"
 
 #define kHeroStarImage @"detail_star"
 #define kHeroStarImageGrey @"detail_star_grey"
@@ -86,6 +88,10 @@
 +(EquipAttrDesc *)getEquipAttrDescForAttrIdCache:(NSString *)attrId;
 
 +(NSArray *)getAllHeroSpeciesArrCache;
++(NSArray * )getHeroSpeciesCacheForHero:(NSString *)heroId;
+
++(NSDictionary *)getAllEquipComposeInfoDictCache;
++(EquipComposeInfo *)getEquipComposeInfoCacheForEquipId:(NSString *)equipId;
 
 +(void)applyMaskImageToImageView:(UIImageView *)iv2mask withImage:(UIImage *)img2mask;
 

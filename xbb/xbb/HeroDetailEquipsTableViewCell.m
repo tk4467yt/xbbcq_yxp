@@ -170,6 +170,8 @@
 //    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
     equipBriefCell.noNameShown=true;
     [self setEquipImageForIndexPath:indexPath withEquipCell:equipBriefCell];
+    
+    [equipBriefCell setNeedsLayout];
 }
 
 #pragma mark UICollectionViewDataSource
