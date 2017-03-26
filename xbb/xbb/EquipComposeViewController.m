@@ -215,11 +215,11 @@
 {
     self.composeEquipsArr=[NSMutableArray new];
     
+    NSDictionary *allEquipComposeInfoDict=[MyUtility getAllEquipComposeInfoDictCache];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *arr2ret=[NSMutableArray new];
         
         if (![MyUtility isStringNilOrZeroLength:equipId]) {
-            NSDictionary *allEquipComposeInfoDict=[MyUtility getAllEquipComposeInfoDictCache];
             for (NSString *aEquipId in allEquipComposeInfoDict.allKeys) {
                 EquipComposeInfo *aComposeInfo=allEquipComposeInfoDict[aEquipId];
                 if ([equipId isEqualToString:aComposeInfo.composeFrom1]) {
@@ -268,11 +268,11 @@
 {
     self.composeHeroEquipsArr=[NSMutableArray new];
     
+    NSArray *allHeroEquips=[MyUtility getCachedAllHeroEquips];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *arr2ret=[NSMutableArray new];
         
         if (![MyUtility isStringNilOrZeroLength:equipId]) {
-            NSArray *allHeroEquips=[MyUtility getCachedAllHeroEquips];
             for (HeroEquips *aHeroEquip in allHeroEquips) {
                 if ([aHeroEquip.equip1 isEqualToString:equipId] ||
                     [aHeroEquip.equip2 isEqualToString:equipId] ||
