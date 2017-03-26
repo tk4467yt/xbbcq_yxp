@@ -69,8 +69,11 @@
     if (0 == indexPath.section) {
         return 50;
     } else if (1 == indexPath.section) {
-        return [MyUtility screenHeight]-50-[MyUtility heightOfStatusBar]-self.navigationController.navigationBar.frame.size.height;
-        //cac actual height
+//        return [MyUtility screenHeight]-50-[MyUtility heightOfStatusBar]-self.navigationController.navigationBar.frame.size.height;
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+                                                      andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
+                                                     andItemCount:[self getAllHerosForCurSpecies].count
+                                                    andLineOffset:0]+18+10+16;
     }
     return 0;
 }

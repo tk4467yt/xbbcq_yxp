@@ -277,10 +277,14 @@
 //        if (self.heroSpeciesArr.count <= 0) {
 //            return 0;
 //        }
-        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
-                                                      andItemSize:[MyAppSizeInfo heroSpeciesItemSize]
-                                                     andItemCount:self.heroSpeciesArr.count
-                                                    andLineOffset:10]+18+16;
+        if (self.heroSpeciesArr.count <= 0) {
+            return 18+16;
+        } else {
+            return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+                                                          andItemSize:[MyAppSizeInfo heroSpeciesItemSize]
+                                                         andItemCount:self.heroSpeciesArr.count
+                                                        andLineOffset:0];
+        }
 //        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
 //        CGSize itemSize=[MyAppSizeInfo heroSpeciesItemSize];
 //        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
