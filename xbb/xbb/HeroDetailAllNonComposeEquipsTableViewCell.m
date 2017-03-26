@@ -46,6 +46,7 @@
     EquipComposeViewController *composeVC=[EquipComposeViewController new];
     
     composeVC.equipInfo=self.nonComposeEquipsArr[indexPath.row];
+    composeVC.composeActionDelegate=self.parentVC;
     
     [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:composeVC animated:YES];
 }

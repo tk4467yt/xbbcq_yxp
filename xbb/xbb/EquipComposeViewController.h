@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "EquipInfo.h"
 #import "MyRootViewController.h"
+#import "MyDelegateSet.h"
 
 @interface EquipComposeViewController : MyRootViewController
 @property (nonatomic,strong) EquipInfo *equipInfo;
 
 @property (weak, nonatomic) IBOutlet UITableView *tbContent;
 
+@property (nonatomic,weak) UIViewController<equipComposeVCActionDelegate> *composeActionDelegate;
 @end

@@ -9,8 +9,9 @@
 #import "MyRootViewController.h"
 #import "HeroInfo.h"
 #import "SpeciesSetViewController.h"
+#import "MyDelegateSet.h"
 
-@interface HeroDetailViewController : MyRootViewController <UITableViewDelegate,UITableViewDataSource,SpeciesSetDidSelectHeroDelegate>
+@interface HeroDetailViewController : MyRootViewController <UITableViewDelegate,UITableViewDataSource,SpeciesSetDidSelectHeroDelegate,equipComposeVCActionDelegate>
 @property (nonatomic,strong) HeroInfo *hero2show;
 @property (weak, nonatomic) IBOutlet UITableView *tbContent;
 

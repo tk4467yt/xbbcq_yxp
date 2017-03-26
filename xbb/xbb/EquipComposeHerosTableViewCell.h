@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EquipInfo.h"
+#import "MyDelegateSet.h"
 
 @interface EquipComposeHerosTableViewCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *lblDesc;
@@ -18,4 +19,6 @@
 @property (nonatomic,strong) NSDictionary *rankDescDict;
 @property (nonatomic,strong) NSDictionary *heroTypeDescDict;
 @property (strong,nonatomic) EquipInfo *equipInfoShowing;
+
+@property (nonatomic,weak) UIViewController<equipComposeVCActionDelegate> *composeActionDelegate;
 @end

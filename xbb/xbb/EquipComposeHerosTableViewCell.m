@@ -51,7 +51,12 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ([self.composeActionDelegate respondsToSelector:@selector(didSelectEquipableHero:)]) {
+        [self.composeActionDelegate.navigationController popViewControllerAnimated:YES];
+        
+        HeroEquips *heroEquip=self.heroEquipsArr[indexPath.row];
+        [self.composeActionDelegate didSelectEquipableHero:heroEquip.heroId];
+    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath

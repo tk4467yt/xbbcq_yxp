@@ -385,6 +385,7 @@
         EquipComposeHerosTableViewCell *heroCell=[tableView dequeueReusableCellWithIdentifier:equipComposeHerosCellId];
         heroCell.equipInfoShowing=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
         heroCell.heroEquipsArr=self.composeHeroEquipsArr;
+        heroCell.composeActionDelegate=self.composeActionDelegate;
         
         cell2ret=heroCell;
     } else {

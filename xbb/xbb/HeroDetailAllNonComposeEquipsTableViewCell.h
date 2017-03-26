@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyDelegateSet.h"
 
 @interface HeroDetailAllNonComposeEquipsTableViewCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *lblDesc;
@@ -16,5 +17,5 @@
 @property (nonatomic,strong) NSDictionary *rankDescDict;
 @property (nonatomic, strong) NSDictionary *equipCountDict;
 
-@property (nonatomic,weak) UIViewController *parentVC;
+@property (nonatomic,weak) UIViewController<equipComposeVCActionDelegate> *parentVC;
 @end

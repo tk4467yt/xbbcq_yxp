@@ -207,8 +207,7 @@
     return height2ret;
 }
 
-#pragma mark SpeciesSetDidSelectHeroDelegate
-- (void)speciesSetDidSelectHeroWithId:(NSString *)heroId
+- (void)updateContentWithNewHero:(NSString *)heroId
 {
     if (![MyUtility isStringNilOrZeroLength:heroId] && ![heroId isEqualToString:self.hero2show.heroId]) {
         self.hero2show=[MyUtility getCachedHeroInfoWithHeroId:heroId];
@@ -217,6 +216,18 @@
         
         [self.tbContent reloadData];
     }
+}
+
+#pragma mark equipComposeVCActionDelegate
+- (void)didSelectEquipableHero:(NSString *)heroId
+{
+    [self updateContentWithNewHero:heroId];
+}
+
+#pragma mark SpeciesSetDidSelectHeroDelegate
+- (void)speciesSetDidSelectHeroWithId:(NSString *)heroId
+{
+    [self updateContentWithNewHero:heroId];
 }
 
 #pragma mark HeroDetailEquipsTapDelegate
@@ -262,6 +273,7 @@
             EquipComposeViewController *composeVC=[EquipComposeViewController new];
             
             composeVC.equipInfo=equipInfo2use;
+            composeVC.composeActionDelegate=self;
             
             [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:composeVC animated:YES];
         }
