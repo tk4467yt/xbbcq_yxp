@@ -107,4 +107,6 @@
 
 + (CGFloat)getLabelHeightByWidth:(CGFloat)width title:(NSString *)title font:(UIFont*)font;
 + (BOOL)shouldSwitchEquipsForRankId:(NSString *)rankId;
+
++(NSArray *)getNonComposeEquipInfoForEquipId:(NSString *)equipId withNonShownRank:(NSArray *)nonShownRankArr;
 @end

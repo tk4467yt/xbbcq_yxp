@@ -11,4 +11,5 @@
 @interface MyAppCellIdInfo : NSObject
 +(NSString *)cellIdForCVEquiBriefInfo;
 +(NSString *)cellIdForHeroInfo;
++(NSString *)cellIdForTextContentCVReusableViewId;
 @end

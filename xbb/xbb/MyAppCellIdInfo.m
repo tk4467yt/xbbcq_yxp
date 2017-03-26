@@ -17,4 +17,8 @@
 {
     return @"hero_cv_cell_id";
 }
++(NSString *)cellIdForTextContentCVReusableViewId
+{
+    return @"text_content_cv_reusable_cell_id";
+}
 @end

@@ -122,11 +122,11 @@
     
     HeroEquips *aHeroEquip=self.heroEquipsDict[rankId];
     
-    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip1]];
-    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip2]];
-    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip3]];
-    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip4]];
-    [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip5]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip1 withNonShownRank:[self nonShownComposeEquipRank]]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip2 withNonShownRank:[self nonShownComposeEquipRank]]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip3 withNonShownRank:[self nonShownComposeEquipRank]]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip4 withNonShownRank:[self nonShownComposeEquipRank]]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip5 withNonShownRank:[self nonShownComposeEquipRank]]];
     
     if (!([rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
         [rankId isEqualToString:[MyUtility rankIdForCheng2]] ||
@@ -134,59 +134,20 @@
         [rankId isEqualToString:[MyUtility rankIdForHong1]])) {
         //the last one is assumed as jue_xing equip for rank larger than cheng
         //so onley rank_cheng is needed to handle,other is duplicate
-        [equips2ret addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:aHeroEquip.equip6]];
+        [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip6 withNonShownRank:[self nonShownComposeEquipRank]]];
     }
     
     return equips2ret;
 }
 
--(NSArray *)getNonComposeEquipInfoForEquipId:(NSString *)equipId
+-(NSArray *)nonShownComposeEquipRank
 {
-    NSMutableArray *retArr=[NSMutableArray new];
-    
-    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipIdCache:equipId];
-    if (nil != equipInfo) {
-        if (equipInfo.isCompose) {
-            EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:equipInfo.equipId];
-            if (composeInfo.fragmentCount > 0) {
-                if ([self nonComposeEquipShouldShowForEquipRank:equipInfo.equipRank]) {
-                    [retArr addObject:equipInfo];
-                }
-            } else {
-                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom1]) {
-                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom1]];
-                }
-                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom2]) {
-                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom2]];
-                }
-                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom3]) {
-                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom3]];
-                }
-                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom4]) {
-                    [retArr addObjectsFromArray:[self getNonComposeEquipInfoForEquipId:composeInfo.composeFrom4]];
-                }
-            }
-        } else {
-            if ([self nonComposeEquipShouldShowForEquipRank:equipInfo.equipRank]) {
-                [retArr addObject:equipInfo];
-            }
-        }
-    }
-    
-    return retArr;
-}
-
--(BOOL)nonComposeEquipShouldShowForEquipRank:(NSString *)equipRank
-{
-    if ([equipRank isEqualToString:[MyUtility rankIdForBai]] ||
-        [equipRank isEqualToString:[MyUtility rankIdForLv]] ||
-        [equipRank isEqualToString:[MyUtility rankIdForLv1]] ||
-        [equipRank isEqualToString:[MyUtility rankIdForLan]] ||
-        [equipRank isEqualToString:[MyUtility rankIdForLan1]] ||
-        [equipRank isEqualToString:[MyUtility rankIdForLan2]]) {
-        return false;
-    }
-    return true;
+    return [NSArray arrayWithObjects:[MyUtility rankIdForBai],
+            [MyUtility rankIdForLv],
+            [MyUtility rankIdForLv1],
+            [MyUtility rankIdForLan],
+            [MyUtility rankIdForLan1],
+            [MyUtility rankIdForLan2], nil];
 }
 
 -(void)screenOrientationChangedHandle

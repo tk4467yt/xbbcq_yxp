@@ -472,4 +472,40 @@ static __strong NSDictionary *allEquipComposeInfoDict;
     
     return false;
 }
+
++(NSArray *)getNonComposeEquipInfoForEquipId:(NSString *)equipId withNonShownRank:(NSArray *)nonShownRankArr
+{
+    NSMutableArray *retArr=[NSMutableArray new];
+    
+    EquipInfo *equipInfo=[MyUtility getEquipInfoForEquipIdCache:equipId];
+    if (nil != equipInfo) {
+        if (equipInfo.isCompose) {
+            EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:equipInfo.equipId];
+            if (composeInfo.fragmentCount > 0) {
+                if (![nonShownRankArr containsObject:equipInfo.equipRank]) {
+                    [retArr addObject:equipInfo];
+                }
+            } else {
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom1]) {
+                    [retArr addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:composeInfo.composeFrom1 withNonShownRank:nonShownRankArr]];
+                }
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom2]) {
+                    [retArr addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:composeInfo.composeFrom2 withNonShownRank:nonShownRankArr]];
+                }
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom3]) {
+                    [retArr addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:composeInfo.composeFrom3 withNonShownRank:nonShownRankArr]];
+                }
+                if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom4]) {
+                    [retArr addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:composeInfo.composeFrom4 withNonShownRank:nonShownRankArr]];
+                }
+            }
+        } else {
+            if (![nonShownRankArr containsObject:equipInfo.equipRank]) {
+                [retArr addObject:equipInfo];
+            }
+        }
+    }
+    
+    return retArr;
+}
 @end
