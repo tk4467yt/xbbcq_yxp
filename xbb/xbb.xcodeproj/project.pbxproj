@@ -77,6 +77,8 @@
 		25AEB6BE1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6BC1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib */; };
 		25AEB6C21E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AEB6C01E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m */; };
 		25AEB6C31E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */; };
+		25BDE6DA1E880ED2007B6312 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */; };
+		25BDE6DC1E880EFE007B6312 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BDE6DB1E880EFE007B6312 /* GoogleMobileAds.framework */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -236,6 +238,8 @@
 		25AEB6BF1E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeHeaderItemCollectionViewCell.h; sourceTree = "<group>"; };
 		25AEB6C01E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeHeaderItemCollectionViewCell.m; sourceTree = "<group>"; };
 		25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeHeaderItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		25BDE6DB1E880EFE007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
 		25C7E1BD1E875F5A0024546A /* MyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConstants.h; sourceTree = "<group>"; };
@@ -290,7 +294,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25BDE6DC1E880EFE007B6312 /* GoogleMobileAds.framework in Frameworks */,
 				253EBB401E685F6D00524553 /* libsqlite3.tbd in Frameworks */,
+				25BDE6DA1E880ED2007B6312 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +439,7 @@
 		253EBB281E685B3300524553 /* 3rd_tools */ = {
 			isa = PBXGroup;
 			children = (
+				25BDE6DB1E880EFE007B6312 /* GoogleMobileAds.framework */,
 				253EBB291E685B4900524553 /* fmdb */,
 			);
 			name = 3rd_tools;
@@ -478,6 +485,7 @@
 		253EBB3E1E685F6C00524553 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */,
 				253EBB3F1E685F6D00524553 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -957,6 +965,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 36Y8RN8MDS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xbb",
+				);
 				INFOPLIST_FILE = xbb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -970,6 +982,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 36Y8RN8MDS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xbb",
+				);
 				INFOPLIST_FILE = xbb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
