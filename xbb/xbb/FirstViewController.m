@@ -86,6 +86,9 @@
     
     [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", @"") style:UIAlertActionStyleCancel handler:nil]];
     
+//    alertController.popoverPresentationController.sourceView = self.view;
+//    alertController.popoverPresentationController.sourceRect = CGRectMake(0,0,1.0,1.0);
+    alertController.popoverPresentationController.barButtonItem=self.navigationItem.rightBarButtonItem;
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
