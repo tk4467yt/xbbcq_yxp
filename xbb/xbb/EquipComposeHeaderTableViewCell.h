@@ -14,4 +14,6 @@
 @property (nonatomic,strong) NSArray *equipShowingArr;
 
 @property (weak, nonatomic) id<EquipComposeItemActionDelegate> itemActionDelegate;
+
+- (void)scroll2ViewLastHeaderItem;
 @end

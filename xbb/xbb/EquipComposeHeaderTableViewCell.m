@@ -43,6 +43,10 @@
     [super layoutSubviews];
     
     [self.cvHeader reloadData];
+}
+
+- (void)scroll2ViewLastHeaderItem
+{
     [self.cvHeader scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.equipShowingArr.count-1 inSection:0]
                           atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
 }

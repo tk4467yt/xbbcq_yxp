@@ -55,7 +55,7 @@
 
 - (void)composeEquip0Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 0 tapped");
+//    NSLog(@"equip 0 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
         EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
@@ -65,7 +65,7 @@
 
 - (void)composeEquip1Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 1 tapped");
+//    NSLog(@"equip 1 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
         EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
@@ -75,7 +75,7 @@
 
 - (void)composeEquip2Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 2 tapped");
+//    NSLog(@"equip 2 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
         EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];
@@ -85,7 +85,7 @@
 
 - (void)composeEquip3Tapped:(UITapGestureRecognizer *)tapGesture
 {
-    NSLog(@"equip 3 tapped");
+//    NSLog(@"equip 3 tapped");
     
     if ([self.itemActionDelegate respondsToSelector:@selector(equipComposeItemTappedWithEquipId:)]) {
         EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equipId2show];

@@ -361,6 +361,7 @@
         EquipComposeHeaderTableViewCell *headerCell=[tableView dequeueReusableCellWithIdentifier:equipComposeHeaderCellId];
         headerCell.equipShowingArr=self.equip2showArr;
         headerCell.itemActionDelegate=self;
+        [headerCell performSelector:@selector(scroll2ViewLastHeaderItem) withObject:nil afterDelay:0.2];
         
         cell2ret=headerCell;
     } else if (1 == indexPath.section) {
