@@ -70,6 +70,7 @@
         return 50;
     } else if (1 == indexPath.section) {
         return [MyUtility screenHeight]-50-[MyUtility heightOfStatusBar]-self.navigationController.navigationBar.frame.size.height;
+        //cac actual height
     }
     return 0;
 }

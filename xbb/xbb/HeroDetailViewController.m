@@ -280,7 +280,7 @@
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
                                                       andItemSize:[MyAppSizeInfo heroSpeciesItemSize]
                                                      andItemCount:self.heroSpeciesArr.count
-                                                    andLineOffset:10];
+                                                    andLineOffset:10]+18+16;
 //        CGFloat maxCVWidth=[MyUtility screenWidth]-70-16;
 //        CGSize itemSize=[MyAppSizeInfo heroSpeciesItemSize];
 //        NSInteger maxItemOneLine=maxCVWidth/itemSize.width;
