@@ -11,4 +11,8 @@
 @interface AllEquipsRequrieViewController : MyRootViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *cvCountedEquips;
 
+@property (weak, nonatomic) IBOutlet UIView *loadingView;
+@property (weak, nonatomic) IBOutlet UILabel *lblLoading;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *aidLoading;
+
 @end

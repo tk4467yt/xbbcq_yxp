@@ -508,4 +508,52 @@ static __strong NSDictionary *allEquipComposeInfoDict;
     
     return retArr;
 }
+
++(NSArray *)getNonComposeEquipInfoForHero:(HeroInfo *)heroInfo  withHeroEquipsDict:(NSDictionary *)heroEquipsDict andNonShownRankArr:(NSArray *)nonShownArr
+{
+    NSMutableArray *tmpArr=[NSMutableArray new];
+    
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForHong1] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForHong] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForCheng2] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForCheng1] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForCheng] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForZi4] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForZi3] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForZi2] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForZi1] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForZi] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForLan2] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForLan1] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForLan] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForLv1] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForLv] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    [tmpArr addObjectsFromArray:[MyUtility getNonComposeEquipsForRank:[MyUtility rankIdForBai] withHeroEquipsDict:heroEquipsDict andNonShownRankArr:nonShownArr]];
+    
+    return tmpArr;
+}
+
++(NSArray *)getNonComposeEquipsForRank:(NSString *)rankId withHeroEquipsDict:(NSDictionary *)heroEquipsDict andNonShownRankArr:(NSArray *)nonShownArr
+{
+    NSMutableArray *equips2ret=[NSMutableArray new];
+    
+    HeroEquips *aHeroEquip=heroEquipsDict[rankId];
+    
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip1 withNonShownRank:nonShownArr]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip2 withNonShownRank:nonShownArr]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip3 withNonShownRank:nonShownArr]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip4 withNonShownRank:nonShownArr]];
+    [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip5 withNonShownRank:nonShownArr]];
+    
+    if (!([rankId isEqualToString:[MyUtility rankIdForCheng1]] ||
+          [rankId isEqualToString:[MyUtility rankIdForCheng2]] ||
+          [rankId isEqualToString:[MyUtility rankIdForHong]] ||
+          [rankId isEqualToString:[MyUtility rankIdForHong1]])) {
+        //the last one is assumed as jue_xing equip for rank larger than cheng
+        //so onley rank_cheng is needed to handle,other is duplicate
+        [equips2ret addObjectsFromArray:[MyUtility getNonComposeEquipInfoForEquipId:aHeroEquip.equip6 withNonShownRank:nonShownArr]];
+    }
+    
+    return equips2ret;
+}
 @end

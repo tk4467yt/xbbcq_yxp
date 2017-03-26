@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllEquipsRequrieViewController">
             <connections>
+                <outlet property="aidLoading" destination="haA-JJ-9Oh" id="wUY-ci-Jdk"/>
                 <outlet property="cvCountedEquips" destination="uPV-nF-2zy" id="3NJ-7C-ure"/>
+                <outlet property="lblLoading" destination="XL9-KG-9Gg" id="Pfe-BA-9vZ"/>
+                <outlet property="loadingView" destination="Nms-Ly-KdI" id="3r4-Xz-Mkw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,13 +37,38 @@
                         <outlet property="delegate" destination="-1" id="1xZ-XC-Yys"/>
                     </connections>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nms-Ly-KdI" userLabel="loadingView">
+                    <rect key="frame" x="0.0" y="283" width="375" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL9-KG-9Gg" userLabel="lblLoading">
+                            <rect key="frame" x="166.5" y="10" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="haA-JJ-9Oh">
+                            <rect key="frame" x="169" y="41" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="XL9-KG-9Gg" firstAttribute="top" secondItem="Nms-Ly-KdI" secondAttribute="top" constant="10" id="48o-wQ-ra2"/>
+                        <constraint firstItem="XL9-KG-9Gg" firstAttribute="centerX" secondItem="Nms-Ly-KdI" secondAttribute="centerX" id="7GY-az-x46"/>
+                        <constraint firstItem="haA-JJ-9Oh" firstAttribute="top" secondItem="XL9-KG-9Gg" secondAttribute="bottom" constant="10" id="DX2-Ju-tMh"/>
+                        <constraint firstItem="haA-JJ-9Oh" firstAttribute="centerX" secondItem="Nms-Ly-KdI" secondAttribute="centerX" id="iMx-sz-YXE"/>
+                        <constraint firstAttribute="height" constant="100" id="lSC-li-LbH"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="uPV-nF-2zy" secondAttribute="trailing" id="CAa-fR-Oxp"/>
                 <constraint firstItem="uPV-nF-2zy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QVg-lK-LA5"/>
+                <constraint firstAttribute="trailing" secondItem="Nms-Ly-KdI" secondAttribute="trailing" id="ShU-LJ-XpQ"/>
                 <constraint firstItem="uPV-nF-2zy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="VYT-uJ-aHE"/>
+                <constraint firstItem="Nms-Ly-KdI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="e7o-d8-PU2"/>
                 <constraint firstAttribute="bottomMargin" secondItem="uPV-nF-2zy" secondAttribute="bottom" id="hn0-Iv-vuY"/>
+                <constraint firstItem="Nms-Ly-KdI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jg3-qN-j6U"/>
             </constraints>
         </view>
     </objects>
