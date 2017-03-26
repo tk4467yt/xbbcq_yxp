@@ -14,6 +14,7 @@
 #import "RankDesc.h"
 #import "EquipBriefInfoCollectionViewCell.h"
 #import "EquipHeaderCollectionReusableView.h"
+#import "HeroDetailViewController.h"
 
 @interface SecondViewController ()
 @property (nonatomic,strong) NSArray *allEquipsArr;
@@ -78,15 +79,14 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.navigationController popToRootViewControllerAnimated:NO];
-        [self.tabBarController setSelectedIndex:0];
         
-        [self performSelector:@selector(actionForSwitch2heroDetail:) withObject:heroId afterDelay:0.3];
+        if (![MyUtility isStringNilOrZeroLength:heroId]) {
+            HeroDetailViewController *detailVC=[HeroDetailViewController new];
+            detailVC.hero2show=[MyUtility getCachedHeroInfoWithHeroId:heroId];
+            
+            [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
+        }
     });
-}
-
-- (void)actionForSwitch2heroDetail:(NSString *)heroId
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:[MyConstants notificationNameForShowHeroDetailInfo] object:heroId];
 }
 
 #pragma mark UICollectionViewDelegate
