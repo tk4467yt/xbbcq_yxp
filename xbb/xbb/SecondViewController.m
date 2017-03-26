@@ -15,6 +15,7 @@
 #import "EquipBriefInfoCollectionViewCell.h"
 #import "EquipHeaderCollectionReusableView.h"
 #import "HeroDetailViewController.h"
+#import "AllEquipsRequrieViewController.h"
 
 @interface SecondViewController ()
 @property (nonatomic,strong) NSArray *allEquipsArr;
@@ -31,10 +32,37 @@
     [super viewDidLoad];
     
     self.navigationItem.title=NSLocalizedString(@"nav_title_equip", @"");
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_more"]
+                                                                            style:UIBarButtonItemStylePlain
+                                                                           target:self
+                                                                           action:@selector(handleForNavMoreAction)];
     
     [self.cvEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForCVEquiBriefInfo]];
     
     [self initEquipInfo];
+}
+
+-(void)handleForNavMoreAction
+{
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *switchThumbAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"title_for_all_equips_requrie", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        [self showAllEquipRequire];
+    }];
+    [alertController addAction:switchThumbAction];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", @"") style:UIAlertActionStyleCancel handler:nil]];
+    
+    alertController.popoverPresentationController.barButtonItem=self.navigationItem.rightBarButtonItem;
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+-(void)showAllEquipRequire
+{
+    AllEquipsRequrieViewController *allEquipsRequrieVC=[AllEquipsRequrieViewController new];
+    
+    [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:allEquipsRequrieVC animated:YES];
 }
 
 -(void)initEquipInfo
