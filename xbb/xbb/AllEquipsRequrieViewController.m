@@ -8,8 +8,8 @@
 
 #import "AllEquipsRequrieViewController.h"
 #import "EquipBriefInfoCollectionViewCell.h"
-#import "MyUtility.h"
 #import "TextContentCollectionReusableView.h"
+#import "EquipComposeViewController.h"
 
 @interface AllEquipsRequrieViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *allEquipsShowingArr;
@@ -115,7 +115,12 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    EquipComposeViewController *composeVC=[EquipComposeViewController new];
     
+    composeVC.equipInfo=self.allEquipsShowingArr[indexPath.row];
+    composeVC.composeActionDelegate=self.composeActionDelegate;
+    
+    [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:composeVC animated:YES];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath

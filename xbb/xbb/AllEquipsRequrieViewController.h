@@ -7,6 +7,7 @@
 //
 
 #import "MyRootViewController.h"
+#import "MyUtility.h"
 
 @interface AllEquipsRequrieViewController : MyRootViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *cvCountedEquips;
@@ -15,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLoading;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *aidLoading;
 
+@property (nonatomic,weak) UIViewController<equipComposeVCActionDelegate> *composeActionDelegate;
 @end

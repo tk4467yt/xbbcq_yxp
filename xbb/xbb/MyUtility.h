@@ -19,6 +19,7 @@
 #import "HeroInfo.h"
 #import "HeroEquips.h"
 #import "MyConstants.h"
+#import "MyDelegateSet.h"
 
 #define kHeroStarImage @"detail_star"
 #define kHeroStarImageGrey @"detail_star_grey"

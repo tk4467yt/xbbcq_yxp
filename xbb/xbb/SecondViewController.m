@@ -45,6 +45,7 @@
 -(void)showAllEquipRequire
 {
     AllEquipsRequrieViewController *allEquipsRequrieVC=[AllEquipsRequrieViewController new];
+    allEquipsRequrieVC.composeActionDelegate=self;
     
     [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:allEquipsRequrieVC animated:YES];
 }
