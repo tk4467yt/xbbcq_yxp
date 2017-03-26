@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="301" height="369"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="301" height="368"/>
+                <rect key="frame" x="0.0" y="0.0" width="301" height="368.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bu-vh-61H" userLabel="lblTitle">
@@ -295,6 +295,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-8X-bBt" userLabel="ivFragment">
                                 <rect key="frame" x="17" y="9" width="80" height="80"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fragment_tag" translatesAutoresizingMaskIntoConstraints="NO" id="UH5-5r-Qj4" userLabel="ivFragmentTag">
+                                <rect key="frame" x="22" y="14" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="G2v-fO-SKB"/>
+                                    <constraint firstAttribute="width" constant="22" id="PRW-7M-WvE"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujr-RQ-7aL" userLabel="ivFragmentMask">
                                 <rect key="frame" x="10" y="3" width="94" height="95"/>
                                 <constraints>
@@ -328,6 +335,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UH5-5r-Qj4" firstAttribute="leading" secondItem="q6T-8X-bBt" secondAttribute="leading" constant="5" id="0WG-hB-fSQ"/>
                             <constraint firstItem="Ujr-RQ-7aL" firstAttribute="bottom" secondItem="q6T-8X-bBt" secondAttribute="bottom" constant="9" id="2tb-hL-iB9"/>
                             <constraint firstItem="SvG-ib-z7W" firstAttribute="leading" secondItem="Ujr-RQ-7aL" secondAttribute="trailing" constant="20" id="8cI-Z8-Xl0"/>
                             <constraint firstItem="Hxo-lA-Uk3" firstAttribute="bottom" secondItem="cw0-u5-tlw" secondAttribute="bottom" constant="9" id="9Wx-VB-iiy"/>
@@ -341,6 +349,7 @@
                             <constraint firstItem="SvG-ib-z7W" firstAttribute="centerX" secondItem="SxV-rm-JnH" secondAttribute="centerX" id="nT0-XX-Nfi"/>
                             <constraint firstItem="Ujr-RQ-7aL" firstAttribute="centerY" secondItem="SxV-rm-JnH" secondAttribute="centerY" id="orU-bW-uDC"/>
                             <constraint firstItem="q6T-8X-bBt" firstAttribute="leading" secondItem="Ujr-RQ-7aL" secondAttribute="leading" constant="7" id="pfG-vX-w54"/>
+                            <constraint firstItem="UH5-5r-Qj4" firstAttribute="top" secondItem="q6T-8X-bBt" secondAttribute="top" constant="5" id="qHb-qg-PtJ"/>
                             <constraint firstItem="Hxo-lA-Uk3" firstAttribute="trailing" secondItem="cw0-u5-tlw" secondAttribute="trailing" constant="7" id="qRe-rJ-hWD"/>
                             <constraint firstItem="Ujr-RQ-7aL" firstAttribute="trailing" secondItem="q6T-8X-bBt" secondAttribute="trailing" constant="7" id="t0u-Wj-K0m"/>
                             <constraint firstItem="0Xf-Ag-w8V" firstAttribute="top" secondItem="Ujr-RQ-7aL" secondAttribute="bottom" id="vyE-TD-Fsb"/>
@@ -419,5 +428,6 @@
         <image name="equip_craft_3" width="167" height="39"/>
         <image name="equip_craft_4" width="242" height="39"/>
         <image name="fragment_compose_arrow" width="37" height="28"/>
+        <image name="fragment_tag" width="22" height="22"/>
     </resources>
 </document>
