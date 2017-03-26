@@ -50,7 +50,7 @@
         heroCount += self.liLiangHerosArr.count;
         heroCount += self.zhiLiHerosArr.count;
         heroCount += self.minJieHerosArr.count;
-        self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hua_xia", @""),heroCount];
+        self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hun_xia", @""),heroCount];
     } else {
         self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
     }
@@ -78,7 +78,7 @@
             [self switchHunXiaHeroShown];
         }];
     } else {
-        switchHunXiaHeroAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"nav_title_hua_xia", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        switchHunXiaHeroAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"nav_title_hun_xia", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
             [self switchHunXiaHeroShown];
         }];
     }
