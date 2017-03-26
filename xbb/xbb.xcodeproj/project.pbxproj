@@ -78,6 +78,7 @@
 		25AEB6C21E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AEB6C01E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m */; };
 		25AEB6C31E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
+		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C9791E69A9670083C581 /* HeroTypeDesc.m */; };
 		25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C97C1E69ACE30083C581 /* MyUtility.m */; };
 		25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */; };
@@ -233,6 +234,8 @@
 		25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeHeaderItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
+		25C7E1BD1E875F5A0024546A /* MyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConstants.h; sourceTree = "<group>"; };
+		25C7E1BE1E875F5A0024546A /* MyConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyConstants.m; sourceTree = "<group>"; };
 		25C8C9781E69A9670083C581 /* HeroTypeDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroTypeDesc.h; sourceTree = "<group>"; };
 		25C8C9791E69A9670083C581 /* HeroTypeDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroTypeDesc.m; sourceTree = "<group>"; };
 		25C8C97B1E69ACE30083C581 /* MyUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtility.h; sourceTree = "<group>"; };
@@ -450,6 +453,8 @@
 				25C7E1BB1E87544F0024546A /* MyDelegateSet.m */,
 				25C8C97B1E69ACE30083C581 /* MyUtility.h */,
 				25C8C97C1E69ACE30083C581 /* MyUtility.m */,
+				25C7E1BD1E875F5A0024546A /* MyConstants.h */,
+				25C7E1BE1E875F5A0024546A /* MyConstants.m */,
 			);
 			name = utility;
 			sourceTree = "<group>";
@@ -728,6 +733,7 @@
 				25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */,
 				253EBB261E685B0A00524553 /* HeroCollectionViewCell.m in Sources */,
 				25DD74B51E6AC4CB0000EB46 /* HeroGrow.m in Sources */,
+				25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */,
 				25DD74B21E6AC3840000EB46 /* HeroSkill.m in Sources */,
 				25895E351E6DAD3D0085B662 /* HeroSepciesIconCollectionViewCell.m in Sources */,
 				25DD74AF1E6AC2510000EB46 /* HeroSpecies.m in Sources */,

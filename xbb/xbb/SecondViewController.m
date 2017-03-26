@@ -73,6 +73,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark equipComposeVCActionDelegate
+- (void)didSelectEquipableHero:(NSString *)heroId
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        [self.tabBarController setSelectedIndex:0];
+        
+        [self performSelector:@selector(actionForSwitch2heroDetail:) withObject:heroId afterDelay:0.3];
+    });
+}
+
+- (void)actionForSwitch2heroDetail:(NSString *)heroId
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:[MyConstants notificationNameForShowHeroDetailInfo] object:heroId];
+}
+
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -83,6 +99,7 @@
     EquipInfo *equipInfo2use=equipsArr[indexPath.row];
     
     composeVC.equipInfo=equipInfo2use;
+    composeVC.composeActionDelegate=self;
     
     [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:composeVC animated:YES];
 }

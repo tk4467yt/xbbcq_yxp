@@ -41,6 +41,8 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_more"] style:UIBarButtonItemStylePlain target:self action:@selector(handleForNavAction)];
     
     [self.cvHeros registerNib:[UINib nibWithNibName:@"HeroCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForHeroInfo]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveShowHeroDetailInfo:) name:[MyConstants notificationNameForShowHeroDetailInfo] object:nil];
 }
 
 -(void)updateNavTitle
@@ -53,6 +55,18 @@
         self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hua_xia", @""),heroCount];
     } else {
         self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
+    }
+}
+
+-(void)didReceiveShowHeroDetailInfo:(NSNotification *)notification
+{
+    NSString *heroId=notification.object;
+    
+    if (![MyUtility isStringNilOrZeroLength:heroId]) {
+        HeroDetailViewController *detailVC=[HeroDetailViewController new];
+        detailVC.hero2show=[MyUtility getCachedHeroInfoWithHeroId:heroId];
+        
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     }
 }
 

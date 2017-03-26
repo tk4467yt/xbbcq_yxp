@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MyRootViewController.h"
+#import "MyDelegateSet.h"
 
-@interface SecondViewController : MyRootViewController <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface SecondViewController : MyRootViewController <UICollectionViewDelegate,UICollectionViewDataSource,equipComposeVCActionDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *cvEquips;
 
