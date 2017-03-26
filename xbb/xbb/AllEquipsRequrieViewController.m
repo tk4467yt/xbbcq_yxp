@@ -15,6 +15,8 @@
 @property (nonatomic,strong) NSMutableArray *allEquipsShowingArr;
 @property (nonatomic,strong) NSMutableDictionary *nonComposeEquipCountDict;
 @property (nonatomic,strong) NSDictionary *rankDescDict;
+
+@property (nonatomic,assign) BOOL showEquipsOnZi;
 @end
 
 @implementation AllEquipsRequrieViewController
@@ -24,6 +26,10 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.title=NSLocalizedString(@"title_for_all_equips_requrie", @"");
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@""
+                                                                            style:UIBarButtonItemStylePlain
+                                                                           target:self
+                                                                           action:@selector(switchShownEquipsRank)];
     
     [self.cvCountedEquips registerNib:[UINib nibWithNibName:@"EquipBriefInfoCollectionViewCell" bundle:[NSBundle mainBundle]]
            forCellWithReuseIdentifier:[MyAppCellIdInfo cellIdForCVEquiBriefInfo]];
@@ -31,11 +37,25 @@
            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                   withReuseIdentifier:[MyAppCellIdInfo cellIdForTextContentCVReusableViewId]];
     
-    self.loadingView.hidden=false;
-    self.lblLoading.text=NSLocalizedString(@"desc_for_loading", @"");
-    [self.aidLoading startAnimating];
-    
     [self updateNonComposeEquipsArr];
+}
+
+-(void)updateNavTitle
+{
+    if (self.showEquipsOnZi) {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"nav_title_equip_on_zi", @"");
+    } else {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"nav_title_equip", @"");
+    }
+}
+
+-(void)switchShownEquipsRank
+{
+    if (self.loadingView.hidden) {
+        self.showEquipsOnZi = !self.showEquipsOnZi;
+        
+        [self updateNonComposeEquipsArr];
+    }
 }
 
 -(void)screenOrientationChangedHandle
@@ -50,6 +70,12 @@
 
 -(void)updateNonComposeEquipsArr
 {
+    [self updateNavTitle];
+    
+    self.loadingView.hidden=false;
+    self.lblLoading.text=NSLocalizedString(@"desc_for_loading", @"");
+    [self.aidLoading startAnimating];
+    
     self.allEquipsShowingArr=[NSMutableArray new];
     
     if (nil == self.nonComposeEquipCountDict) {
@@ -60,6 +86,8 @@
     
     self.rankDescDict=[MyUtility getAllRankDescDictCache];
     
+    [self.cvCountedEquips reloadData];
+    
     NSArray *allHeros=[MyUtility getCachedAllHeros];
     NSArray *allHeroEquips=[MyUtility getCachedAllHeroEquips];//call to cache,or db handle in global_queue may crash
     NSArray *allEquipInfo=[MyUtility getAllEquipInfoFromDbCache];//call to cache
@@ -69,9 +97,18 @@
         NSMutableArray *arr2ret=[NSMutableArray new];
         
         for (HeroInfo *aHeroInfo in allHeros) {
+            NSArray *nonShownRankArr=[NSArray array];
+            if (self.showEquipsOnZi) {
+                nonShownRankArr=[NSArray arrayWithObjects:[MyUtility rankIdForBai],
+                 [MyUtility rankIdForLv],
+                 [MyUtility rankIdForLv1],
+                 [MyUtility rankIdForLan],
+                 [MyUtility rankIdForLan1],
+                 [MyUtility rankIdForLan2], nil];
+            }
             NSArray *tmpArr=[MyUtility getNonComposeEquipInfoForHero:aHeroInfo
                                                   withHeroEquipsDict:[MyUtility getCachedHeroEquipsDictForHero:aHeroInfo.heroId]
-                                                  andNonShownRankArr:[NSArray array]];
+                                                  andNonShownRankArr:nonShownRankArr];
             
             [arr2ret addObjectsFromArray:tmpArr];
         }
