@@ -71,7 +71,6 @@
 		259418EA1E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259418E81E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib */; };
 		25989BED1E6C24E600E8481C /* HeroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25989BEB1E6C24E600E8481C /* HeroDetailViewController.m */; };
 		25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25989BEC1E6C24E600E8481C /* HeroDetailViewController.xib */; };
-		25A65AC41E89565D008D04D7 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BDE6DB1E880EFE007B6312 /* GoogleMobileAds.framework */; };
 		25AEB6B81E72F23800AE73BB /* EquipComposeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AEB6B61E72F23800AE73BB /* EquipComposeHeaderTableViewCell.m */; };
 		25AEB6B91E72F23800AE73BB /* EquipComposeHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6B71E72F23800AE73BB /* EquipComposeHeaderTableViewCell.xib */; };
 		25AEB6BD1E72F46700AE73BB /* EquipComposeContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AEB6BB1E72F46700AE73BB /* EquipComposeContentTableViewCell.m */; };
@@ -238,7 +237,6 @@
 		25AEB6C01E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeHeaderItemCollectionViewCell.m; sourceTree = "<group>"; };
 		25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeHeaderItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
-		25BDE6DB1E880EFE007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
 		25C7E1BD1E875F5A0024546A /* MyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConstants.h; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A65AC41E89565D008D04D7 /* GoogleMobileAds.framework in Frameworks */,
 				253EBB401E685F6D00524553 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +434,6 @@
 		253EBB281E685B3300524553 /* 3rd_tools */ = {
 			isa = PBXGroup;
 			children = (
-				25BDE6DB1E880EFE007B6312 /* GoogleMobileAds.framework */,
 				253EBB291E685B4900524553 /* fmdb */,
 			);
 			name = 3rd_tools;
