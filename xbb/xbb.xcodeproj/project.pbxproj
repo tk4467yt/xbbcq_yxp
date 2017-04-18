@@ -86,6 +86,7 @@
 		25C8C97A1E69A9670083C581 /* HeroTypeDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C9791E69A9670083C581 /* HeroTypeDesc.m */; };
 		25C8C97D1E69ACE30083C581 /* MyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C8C97C1E69ACE30083C581 /* MyUtility.m */; };
 		25D150D91EA502D500B159EB /* RootContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D150D81EA502D500B159EB /* RootContentViewController.m */; };
+		25D150DC1EA64F1300B159EB /* MainCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D150DB1EA64F1300B159EB /* MainCategoryCollectionViewCell.m */; };
 		25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */; };
 		25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A21E6ABF7A0000EB46 /* StarDesc.m */; };
 		25DD74A61E6AC0410000EB46 /* SpeciesDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A51E6AC0410000EB46 /* SpeciesDesc.m */; };
@@ -254,6 +255,8 @@
 		25C8C97C1E69ACE30083C581 /* MyUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtility.m; sourceTree = "<group>"; };
 		25D150D71EA502D500B159EB /* RootContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootContentViewController.h; sourceTree = "<group>"; };
 		25D150D81EA502D500B159EB /* RootContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootContentViewController.m; sourceTree = "<group>"; };
+		25D150DA1EA64F1300B159EB /* MainCategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		25D150DB1EA64F1300B159EB /* MainCategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCategoryCollectionViewCell.m; sourceTree = "<group>"; };
 		25DD749E1E6A637C0000EB46 /* HeroHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroHeaderReusableView.h; sourceTree = "<group>"; };
 		25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroHeaderReusableView.m; sourceTree = "<group>"; };
 		25DD74A11E6ABF7A0000EB46 /* StarDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDesc.h; sourceTree = "<group>"; };
@@ -432,6 +435,8 @@
 				25C7E1C51E87ED6A0024546A /* TextContentCollectionReusableView.h */,
 				25C7E1C61E87ED6A0024546A /* TextContentCollectionReusableView.m */,
 				25C7E1C71E87ED6A0024546A /* TextContentCollectionReusableView.xib */,
+				25D150DA1EA64F1300B159EB /* MainCategoryCollectionViewCell.h */,
+				25D150DB1EA64F1300B159EB /* MainCategoryCollectionViewCell.m */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -801,6 +806,7 @@
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
 				25EDF2D21E6C0B130046AF1C /* MyRootViewController.m in Sources */,
 				25C7E1C81E87ED6A0024546A /* TextContentCollectionReusableView.m in Sources */,
+				25D150DC1EA64F1300B159EB /* MainCategoryCollectionViewCell.m in Sources */,
 				251671021E86BEB10098A4D8 /* EquipComposeHerosTableViewCell.m in Sources */,
 				250B1B511E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m in Sources */,
 				25EDF2CF1E6BC1E80046AF1C /* EquipHeaderCollectionReusableView.m in Sources */,

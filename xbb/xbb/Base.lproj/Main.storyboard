@@ -183,13 +183,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ri4-HT-4Q4">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_cell_id" id="Ri4-HT-4Q4" customClass="MainCategoryCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9S-3D-tJ9">
+                                                    <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="q9S-3D-tJ9" secondAttribute="trailing" id="7dO-qY-NQz"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="q9S-3D-tJ9" secondAttribute="bottom" id="Et9-kF-NER"/>
+                                            <constraint firstItem="q9S-3D-tJ9" firstAttribute="top" secondItem="Ri4-HT-4Q4" secondAttribute="topMargin" id="gSa-ys-Qdc"/>
+                                            <constraint firstItem="q9S-3D-tJ9" firstAttribute="leading" secondItem="Ri4-HT-4Q4" secondAttribute="leadingMargin" id="iRO-2E-VoU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ivCategory" destination="q9S-3D-tJ9" id="8pg-W6-Hfw"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
