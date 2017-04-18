@@ -89,6 +89,8 @@
 		25D150DC1EA64F1300B159EB /* MainCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D150DB1EA64F1300B159EB /* MainCategoryCollectionViewCell.m */; };
 		25D150E01EA652A500B159EB /* HerosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D150DE1EA652A500B159EB /* HerosViewController.m */; };
 		25D150E11EA652A500B159EB /* HerosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D150DF1EA652A500B159EB /* HerosViewController.xib */; };
+		25D150E51EA65D0D00B159EB /* EquipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D150E31EA65D0D00B159EB /* EquipsViewController.m */; };
+		25D150E61EA65D0D00B159EB /* EquipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D150E41EA65D0D00B159EB /* EquipsViewController.xib */; };
 		25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */; };
 		25DD74A31E6ABF7A0000EB46 /* StarDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A21E6ABF7A0000EB46 /* StarDesc.m */; };
 		25DD74A61E6AC0410000EB46 /* SpeciesDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD74A51E6AC0410000EB46 /* SpeciesDesc.m */; };
@@ -262,6 +264,9 @@
 		25D150DD1EA652A500B159EB /* HerosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerosViewController.h; sourceTree = "<group>"; };
 		25D150DE1EA652A500B159EB /* HerosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerosViewController.m; sourceTree = "<group>"; };
 		25D150DF1EA652A500B159EB /* HerosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HerosViewController.xib; sourceTree = "<group>"; };
+		25D150E21EA65D0D00B159EB /* EquipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipsViewController.h; sourceTree = "<group>"; };
+		25D150E31EA65D0D00B159EB /* EquipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipsViewController.m; sourceTree = "<group>"; };
+		25D150E41EA65D0D00B159EB /* EquipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipsViewController.xib; sourceTree = "<group>"; };
 		25DD749E1E6A637C0000EB46 /* HeroHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroHeaderReusableView.h; sourceTree = "<group>"; };
 		25DD749F1E6A637C0000EB46 /* HeroHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroHeaderReusableView.m; sourceTree = "<group>"; };
 		25DD74A11E6ABF7A0000EB46 /* StarDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDesc.h; sourceTree = "<group>"; };
@@ -369,6 +374,9 @@
 				25D150DD1EA652A500B159EB /* HerosViewController.h */,
 				25D150DE1EA652A500B159EB /* HerosViewController.m */,
 				25D150DF1EA652A500B159EB /* HerosViewController.xib */,
+				25D150E21EA65D0D00B159EB /* EquipsViewController.h */,
+				25D150E31EA65D0D00B159EB /* EquipsViewController.m */,
+				25D150E41EA65D0D00B159EB /* EquipsViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -735,6 +743,7 @@
 				250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */,
 				250B1B571E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib in Resources */,
 				25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */,
+				25D150E61EA65D0D00B159EB /* EquipsViewController.xib in Resources */,
 				2544EEB01E7D370A00E6D18B /* HeroArtTableViewCell.xib in Resources */,
 				253EBB211E6859D400524553 /* xbb.db in Resources */,
 				25AEB6BE1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib in Resources */,
@@ -808,6 +817,7 @@
 				25EDF2CB1E6BB6320046AF1C /* EquipBriefInfoCollectionViewCell.m in Sources */,
 				2544EEAA1E7D33A000E6D18B /* HeroArtViewController.m in Sources */,
 				2570243D1E630D2D001CB5F3 /* FirstViewController.m in Sources */,
+				25D150E51EA65D0D00B159EB /* EquipsViewController.m in Sources */,
 				25DD74A01E6A637C0000EB46 /* HeroHeaderReusableView.m in Sources */,
 				25895E301E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.m in Sources */,
 				253EBB371E685B6200524553 /* FMDatabasePool.m in Sources */,
