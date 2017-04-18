@@ -28,10 +28,10 @@
 
 - (void)thumbTapped:(UITapGestureRecognizer *)tapGesture
 {
-    HeroArtViewController *detailVC=[HeroArtViewController new];
-    detailVC.heroId=self.heroId;
-    
-    [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:detailVC animated:YES];
+//    HeroArtViewController *detailVC=[HeroArtViewController new];
+//    detailVC.heroId=self.heroId;
+//    
+//    [MyUtility pushViewControllerFromNav:self.parentVC.navigationController withTargetVC:detailVC animated:YES];
 }
 
 @end
