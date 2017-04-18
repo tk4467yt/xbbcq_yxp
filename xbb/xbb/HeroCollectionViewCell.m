@@ -14,7 +14,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.contentView.backgroundColor=[UIColor grayColor];
+    self.contentView.backgroundColor=[UIColor blueColor];
 }
 
 @end

@@ -73,7 +73,7 @@
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                       andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                      andItemCount:[self getAllHerosForCurSpecies].count
-                                                    andLineOffset:0]+18+10+16;
+                                                    andLineOffset:10]+18+10+16;
     }
     return 0;
 }
