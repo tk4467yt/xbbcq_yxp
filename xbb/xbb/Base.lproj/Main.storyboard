@@ -221,6 +221,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ea9-uG-lUW"/>
+                    <connections>
+                        <outlet property="cvCategory" destination="lR8-0P-LMa" id="yXN-Yx-fMG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCv-fj-WdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

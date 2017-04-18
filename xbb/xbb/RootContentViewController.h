@@ -9,5 +9,6 @@
 #import "MyRootViewController.h"
 
 @interface RootContentViewController : MyRootViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *cvCategory;
 
 @end

@@ -244,20 +244,20 @@
     
     HeroInfo *heroInfo2use=[self getHeroInfoWithIndexPath:indexPath];
     
-    if (self.showThumbS && ![MyUtility isStringNilOrZeroLength:heroInfo2use.thumbFileS]) {
-        heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFileS];
-    } else {
-        heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
-    }
-    
-    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
-    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+//    if (self.showThumbS && ![MyUtility isStringNilOrZeroLength:heroInfo2use.thumbFileS]) {
+//        heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFileS];
+//    } else {
+//        heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+//    }
+//    
+//    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
+//    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
+//    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     heroCell.lblName.text=heroInfo2use.heroName;
     
-    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
-    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
+//    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
+//    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout

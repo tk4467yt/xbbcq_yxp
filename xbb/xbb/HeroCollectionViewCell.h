@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HeroCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *ivThumb;
-@property (weak, nonatomic) IBOutlet UIImageView *ivMask;
-@property (weak, nonatomic) IBOutlet UIImageView *ivType;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 
 @end

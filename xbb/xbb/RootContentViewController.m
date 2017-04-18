@@ -8,6 +8,8 @@
 
 #import "RootContentViewController.h"
 #import "MainCategoryCollectionViewCell.h"
+#import "HerosViewController.h"
+#import "MyUtility.h"
 
 #define CATEGORY_2_SHOW_HERO @"hero"
 #define CATEGORY_2_SHOW_EQUIP @"equip"
@@ -39,6 +41,11 @@
     
 }
 
+-(void)screenOrientationChangedHandle
+{
+    [self.cvCategory reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -47,7 +54,24 @@
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSString *curCategory=self.categoryArr[indexPath.row];
+    if ([CATEGORY_2_SHOW_HERO isEqualToString:curCategory]) {
+        HerosViewController *detailVC=[HerosViewController new];
+        
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
+    } else if ([CATEGORY_2_SHOW_EQUIP isEqualToString:curCategory]) {
+        
+    } else if ([CATEGORY_2_SHOW_JUE_XING isEqualToString:curCategory]) {
+        
+    } else if ([CATEGORY_2_SHOW_JUE_XING_2 isEqualToString:curCategory]) {
+        
+    } else if ([CATEGORY_2_SHOW_FU_SHI isEqualToString:curCategory]) {
+        
+    } else if ([CATEGORY_2_SHOW_MENG_JING isEqualToString:curCategory]) {
+        
+    } else if ([CATEGORY_2_SHOW_TUAN_BEN isEqualToString:curCategory]) {
+        
+    }
 }
 
 #pragma mark UICollectionViewDataSource
@@ -58,26 +82,26 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MainCategoryCollectionViewCell *heroCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"category_cell_id" forIndexPath:indexPath];
+    MainCategoryCollectionViewCell *categoryCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"category_cell_id" forIndexPath:indexPath];
     
     NSString *curCategory=self.categoryArr[indexPath.row];
     if ([CATEGORY_2_SHOW_HERO isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"hero"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"hero"];
     } else if ([CATEGORY_2_SHOW_EQUIP isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"equip"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"equip"];
     } else if ([CATEGORY_2_SHOW_JUE_XING isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"juexing"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"juexing"];
     } else if ([CATEGORY_2_SHOW_JUE_XING_2 isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"juexing2"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"juexing2"];
     } else if ([CATEGORY_2_SHOW_FU_SHI isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"fushi"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"fushi"];
     } else if ([CATEGORY_2_SHOW_MENG_JING isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"mengjing"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"mengjing"];
     } else if ([CATEGORY_2_SHOW_TUAN_BEN isEqualToString:curCategory]) {
-        heroCell.ivCategory.image=[UIImage imageNamed:@"tuanben"];
+        categoryCell.ivCategory.image=[UIImage imageNamed:@"tuanben"];
     }
     
-    return heroCell;
+    return categoryCell;
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout

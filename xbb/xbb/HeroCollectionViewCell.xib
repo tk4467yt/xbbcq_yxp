@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,51 +18,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="160" height="128"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-ft-487" userLabel="ivThumb">
-                        <rect key="frame" x="33" y="7" width="94" height="94"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-bZ-p9X" userLabel="ivMask">
-                        <rect key="frame" x="26" y="0.0" width="108" height="108"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="7hm-bZ-p9X" secondAttribute="height" multiplier="1:1" id="I9r-xL-71H"/>
-                        </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-YA-lHQ" userLabel="ivType">
-                        <rect key="frame" x="98.5" y="72.5" width="28.5" height="28.5"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l69-cV-gOH" userLabel="lblName">
-                        <rect key="frame" x="0.0" y="108" width="160" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Ip0-Zm-SrW"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="8" y="0.0" width="144" height="128"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="7hm-bZ-p9X" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="0WJ-ND-neU"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="leading" secondItem="7hm-bZ-p9X" secondAttribute="leading" constant="7" id="1m6-zF-9L4"/>
-                <constraint firstItem="l69-cV-gOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6la-EF-ztt"/>
-                <constraint firstItem="cDX-YA-lHQ" firstAttribute="width" secondItem="OdP-ft-487" secondAttribute="width" multiplier="0.3" id="E8f-d6-D7l"/>
-                <constraint firstItem="l69-cV-gOH" firstAttribute="top" secondItem="7hm-bZ-p9X" secondAttribute="bottom" id="GjB-pe-4eC"/>
-                <constraint firstAttribute="trailing" secondItem="l69-cV-gOH" secondAttribute="trailing" id="L0d-BZ-9hR"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="top" secondItem="7hm-bZ-p9X" secondAttribute="top" constant="7" id="Uvw-TN-hTi"/>
-                <constraint firstItem="cDX-YA-lHQ" firstAttribute="height" secondItem="OdP-ft-487" secondAttribute="height" multiplier="0.3" id="Xf9-TT-8Os"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="bottom" secondItem="7hm-bZ-p9X" secondAttribute="bottom" constant="-7" id="bzY-8Q-CXc"/>
-                <constraint firstItem="cDX-YA-lHQ" firstAttribute="trailing" secondItem="OdP-ft-487" secondAttribute="trailing" id="iQi-KQ-V8M"/>
-                <constraint firstItem="OdP-ft-487" firstAttribute="trailing" secondItem="7hm-bZ-p9X" secondAttribute="trailing" constant="-7" id="lo2-mw-ryY"/>
-                <constraint firstItem="7hm-bZ-p9X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pC1-6s-ptk"/>
+                <constraint firstItem="l69-cV-gOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="6la-EF-ztt"/>
+                <constraint firstAttribute="trailingMargin" secondItem="l69-cV-gOH" secondAttribute="trailing" id="L0d-BZ-9hR"/>
+                <constraint firstItem="l69-cV-gOH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RfH-78-GtO"/>
                 <constraint firstAttribute="bottom" secondItem="l69-cV-gOH" secondAttribute="bottom" id="rOB-G4-MqQ"/>
-                <constraint firstItem="cDX-YA-lHQ" firstAttribute="bottom" secondItem="OdP-ft-487" secondAttribute="bottom" id="wKJ-Fb-5jO"/>
             </constraints>
             <size key="customSize" width="160" height="128"/>
             <connections>
-                <outlet property="ivMask" destination="7hm-bZ-p9X" id="tSD-cZ-j9p"/>
-                <outlet property="ivThumb" destination="OdP-ft-487" id="4FJ-yd-8qx"/>
-                <outlet property="ivType" destination="cDX-YA-lHQ" id="2oK-hw-xqi"/>
                 <outlet property="lblName" destination="l69-cV-gOH" id="U5B-s3-B5J"/>
             </connections>
             <point key="canvasLocation" x="-19" y="-4"/>

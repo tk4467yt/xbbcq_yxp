@@ -37,6 +37,6 @@
 }
 +(CGSize)heroBriefCVItemSize
 {
-    return CGSizeMake(80,100);
+    return CGSizeMake(100,80);
 }
 @end

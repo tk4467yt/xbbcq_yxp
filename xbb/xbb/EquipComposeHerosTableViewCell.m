@@ -66,17 +66,17 @@
     
     HeroEquips *heroEquip=self.heroEquipsArr[indexPath.row];
     HeroInfo *heroInfo2use=[MyUtility getCachedHeroInfoWithHeroId:heroEquip.heroId];
-    
-    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
-    
-    RankDesc *rankDesc=[self.rankDescDict objectForKey:heroEquip.heroRank];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
-    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+//
+//    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+//    
+//    RankDesc *rankDesc=[self.rankDescDict objectForKey:heroEquip.heroRank];
+//    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
+//    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     heroCell.lblName.text=heroInfo2use.heroName;
     
-    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
-    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
+//    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
+//    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
 }
 
 #pragma mark UICollectionViewDataSource

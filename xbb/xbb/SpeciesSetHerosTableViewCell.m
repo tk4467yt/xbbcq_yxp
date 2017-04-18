@@ -71,16 +71,16 @@
     
     HeroInfo *heroInfo2use=self.herosArr[indexPath.row];
     
-    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
-    
-    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
-    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+//    heroCell.ivThumb.image=[UIImage imageNamed:heroInfo2use.thumbFile];
+//    
+//    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
+//    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
+//    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     heroCell.lblName.text=heroInfo2use.heroName;
     
-    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
-    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
+//    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
+//    heroCell.ivType.image=[UIImage imageNamed:typeDesc.typeThumb];
     
     return heroCell;
 }
