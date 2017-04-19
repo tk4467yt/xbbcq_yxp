@@ -134,7 +134,7 @@
     
     HeroInfo *heroInfo2use=[self getHeroInfoWithIndexPath:indexPath];
     heroCell.lblName.text=heroInfo2use.heroName;
-    
+    heroCell.contentView.backgroundColor=[MyUtility rankColorForRankId:[MyUtility rankIdForZi]];
     return heroCell;
 }
 

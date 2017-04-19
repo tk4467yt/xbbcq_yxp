@@ -179,6 +179,7 @@
     
 //    [equipBriefCell setNeedsUpdateConstraints];
     equipBriefCell.lblName.text=equipInfo2use.equipName;
+    equipBriefCell.contentView.backgroundColor=[MyUtility rankColorForRankId:equipInfo2use.equipRank];
 }
 
 #pragma mark UICollectionViewDataSource

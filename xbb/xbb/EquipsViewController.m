@@ -119,6 +119,7 @@
     EquipInfo *equipInfo2use=equipsArr[indexPath.row];
     
     equipBriefCell.lblName.text=equipInfo2use.equipName;
+    equipBriefCell.contentView.backgroundColor=[MyUtility rankColorForRankId:equipInfo2use.equipRank];
     return equipBriefCell;
 }
 

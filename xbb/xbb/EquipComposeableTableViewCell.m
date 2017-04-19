@@ -68,6 +68,7 @@
 //    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
 //    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     equipBriefCell.lblName.text=equipInfo2use.equipName;
+    equipBriefCell.contentView.backgroundColor=[MyUtility rankColorForRankId:equipInfo2use.equipRank];
 }
 
 #pragma mark UICollectionViewDataSource

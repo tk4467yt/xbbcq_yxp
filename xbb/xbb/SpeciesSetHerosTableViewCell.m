@@ -76,7 +76,7 @@
 //    RankDesc *rankDesc=[self.rankDescDict objectForKey:[MyUtility rankIdForBai]];
 //    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
 //    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
-    
+    heroCell.contentView.backgroundColor=[MyUtility rankColorForRankId:[MyUtility rankIdForZi]];
     heroCell.lblName.text=heroInfo2use.heroName;
     
 //    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];

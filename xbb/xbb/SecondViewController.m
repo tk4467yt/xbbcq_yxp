@@ -120,7 +120,7 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     EquipBriefInfoCollectionViewCell *equipBriefCell=(EquipBriefInfoCollectionViewCell *)cell;
-    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
+//    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
     
     NSString *rankId=self.equipRank2showArr[indexPath.section];
     NSArray *equipsArr=self.equipRankDict[rankId];
@@ -133,6 +133,7 @@
 //    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     equipBriefCell.lblName.text=equipInfo2use.equipName;
+    equipBriefCell.contentView.backgroundColor=[MyUtility rankColorForRankId:equipInfo2use.equipRank];
 }
 
 #pragma mark UICollectionViewDataSource

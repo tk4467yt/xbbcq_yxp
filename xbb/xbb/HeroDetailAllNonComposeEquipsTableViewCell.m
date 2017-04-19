@@ -68,6 +68,7 @@
 //    NSNumber *countNumber=[self.equipCountDict objectForKey:equipInfo2use.equipId];
 //    equipBriefCell.lblCount.text=[NSString stringWithFormat:@"%d",countNumber.intValue];
     equipBriefCell.lblName.text=equipInfo2use.equipName;
+    equipBriefCell.contentView.backgroundColor=[MyUtility rankColorForRankId:equipInfo2use.equipRank];
 }
 
 #pragma mark UICollectionViewDataSource

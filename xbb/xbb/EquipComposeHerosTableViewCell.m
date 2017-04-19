@@ -62,7 +62,6 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HeroCollectionViewCell *heroCell=(HeroCollectionViewCell *)cell;
-    heroCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
     
     HeroEquips *heroEquip=self.heroEquipsArr[indexPath.row];
     HeroInfo *heroInfo2use=[MyUtility getCachedHeroInfoWithHeroId:heroEquip.heroId];
@@ -73,6 +72,7 @@
 //    UIImage *maskImg=[UIImage imageNamed:rankDesc.heroIconFrameThumb];
 //    heroCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
+    heroCell.contentView.backgroundColor=[MyUtility rankColorForRankId:heroEquip.heroRank];
     heroCell.lblName.text=heroInfo2use.heroName;
     
 //    HeroTypeDesc *typeDesc=self.heroTypeDescDict[heroInfo2use.heroType];
