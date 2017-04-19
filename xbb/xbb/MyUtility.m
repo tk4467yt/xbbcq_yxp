@@ -99,7 +99,8 @@ static __strong NSDictionary *allEquipComposeInfoDict;
 {
     UIColor *color2ret=[UIColor whiteColor];
     if ([rankId isEqualToString:[MyUtility rankIdForBai]]) {
-        color2ret=[UIColor colorWithRed:247/255.0 green:247/255.0 blue:243/255.0 alpha:1];
+//        color2ret=[UIColor colorWithRed:247/255.0 green:247/255.0 blue:243/255.0 alpha:1];
+        color2ret=[UIColor lightGrayColor];
     } else if ([rankId isEqualToString:[MyUtility rankIdForLv]] ||
                [rankId isEqualToString:[MyUtility rankIdForLv1]]) {
         color2ret=[UIColor colorWithRed:216/255.0 green:245/255.0 blue:96/255.0 alpha:1];

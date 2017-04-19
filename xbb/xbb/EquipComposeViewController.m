@@ -9,7 +9,7 @@
 #import "EquipComposeViewController.h"
 #import "HeroCollectionViewCell.h"
 #import "EquipComposeHeaderTableViewCell.h"
-#import "EquipComposeContentTableViewCell.h"
+//#import "EquipComposeContentTableViewCell.h"
 #import "EquipComposeAttrTableViewCell.h"
 #import "EquipComposeableTableViewCell.h"
 #import "EquipComposeHerosTableViewCell.h"
@@ -39,7 +39,7 @@
     [self initEquip2show];
     
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHeaderCellId];
-    [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
+//    [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeContentCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeAttrTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeAttrCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeableTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeableCellId];
     [self.tbContent registerNib:[UINib nibWithNibName:@"EquipComposeHerosTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:equipComposeHerosCellId];
@@ -67,44 +67,44 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (CGFloat)heightForEquipComposeCell
-{
-    if (self.equipInfo.isCompose) {
-        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equip2showArr.lastObject];
-        
-        if (composeInfo.fragmentCount > 0) {
-            return 150;
-        } else {
-            NSMutableArray *composeIdArr=[NSMutableArray new];
-            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom1]) {
-                [composeIdArr addObject:composeInfo.composeFrom1];
-            }
-            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom2]) {
-                [composeIdArr addObject:composeInfo.composeFrom2];
-            }
-            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom3]) {
-                [composeIdArr addObject:composeInfo.composeFrom3];
-            }
-            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom4]) {
-                [composeIdArr addObject:composeInfo.composeFrom4];
-            }
-            
-            if (2 == composeIdArr.count) {
-                return 220;
-            } else if (3 == composeIdArr.count) {
-                return 220;
-            } else if (4 == composeIdArr.count) {
-                return 220;
-            } else {
-                return 80;
-            }
-        }
-    } else {
-        return 80;
-    }
-    
-    return 80;
-}
+//- (CGFloat)heightForEquipComposeCell
+//{
+//    if (self.equipInfo.isCompose) {
+//        EquipComposeInfo *composeInfo=[MyUtility getEquipComposeInfoCacheForEquipId:self.equip2showArr.lastObject];
+//        
+//        if (composeInfo.fragmentCount > 0) {
+//            return 150;
+//        } else {
+//            NSMutableArray *composeIdArr=[NSMutableArray new];
+//            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom1]) {
+//                [composeIdArr addObject:composeInfo.composeFrom1];
+//            }
+//            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom2]) {
+//                [composeIdArr addObject:composeInfo.composeFrom2];
+//            }
+//            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom3]) {
+//                [composeIdArr addObject:composeInfo.composeFrom3];
+//            }
+//            if (![MyUtility isStringNilOrZeroLength:composeInfo.composeFrom4]) {
+//                [composeIdArr addObject:composeInfo.composeFrom4];
+//            }
+//            
+//            if (2 == composeIdArr.count) {
+//                return 220;
+//            } else if (3 == composeIdArr.count) {
+//                return 220;
+//            } else if (4 == composeIdArr.count) {
+//                return 220;
+//            } else {
+//                return 80;
+//            }
+//        }
+//    } else {
+//        return 80;
+//    }
+//    
+//    return 80;
+//}
 
 -(NSInteger)numberOfEquipAttr2show
 {
@@ -257,7 +257,7 @@
                 [self.composeEquipsArr removeAllObjects];
                 [self.composeEquipsArr addObjectsFromArray:arr2ret];
                 
-                [self.tbContent reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:3]] withRowAnimation:UITableViewRowAnimationAutomatic];
+                [self.tbContent reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:2]] withRowAnimation:UITableViewRowAnimationAutomatic];
             }
         });
     });
@@ -289,7 +289,7 @@
                 [self.composeHeroEquipsArr removeAllObjects];
                 [self.composeHeroEquipsArr addObjectsFromArray:arr2ret];
                 
-                [self.tbContent reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:4]] withRowAnimation:UITableViewRowAnimationAutomatic];
+                [self.tbContent reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:3]] withRowAnimation:UITableViewRowAnimationAutomatic];
             }
         });
     });
@@ -314,16 +314,16 @@
 {
     if (0 == indexPath.section) {
         return 84;
-    } else if (1 == indexPath.section) {
+    }/* else if (1 == indexPath.section) {
         return [self heightForEquipComposeCell];
-    } else if (2 == indexPath.section) {
+    } */else if (1 == indexPath.section) {
         return [self numberOfEquipAttr2show]*30+16;
-    } else if (3 == indexPath.section) {
+    } else if (2 == indexPath.section) {
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSize]
                                                      andItemCount:self.composeEquipsArr.count
                                                     andLineOffset:0]+18+16;
-    } else if (4 == indexPath.section) {
+    } else if (3 == indexPath.section) {
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                       andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                      andItemCount:self.composeHeroEquipsArr.count
@@ -364,25 +364,25 @@
         [headerCell performSelector:@selector(scroll2ViewLastHeaderItem) withObject:nil afterDelay:0.2];
         
         cell2ret=headerCell;
-    } else if (1 == indexPath.section) {
+    }/* else if (1 == indexPath.section) {
         EquipComposeContentTableViewCell *contentCell=[tableView dequeueReusableCellWithIdentifier:equipComposeContentCellId];
         contentCell.equipId2show=self.equip2showArr.lastObject;
         contentCell.itemActionDelegate=self;
         
         cell2ret=contentCell;
-    } else if (2 == indexPath.section) {
+    } */else if (1 == indexPath.section) {
         EquipComposeAttrTableViewCell *attrCell=[tableView dequeueReusableCellWithIdentifier:equipComposeAttrCellId];
         attrCell.equipInfo2show=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
         
         cell2ret=attrCell;
-    } else if (3 == indexPath.section) {
+    } else if (2 == indexPath.section) {
         EquipComposeableTableViewCell *composeableCell=[tableView dequeueReusableCellWithIdentifier:equipComposeableCellId];
         composeableCell.composeableEquipsArr=self.composeEquipsArr;
         composeableCell.equipInfoShowing=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
         composeableCell.composeableActionDelegate=self;
         
         cell2ret=composeableCell;
-    } else if (4 == indexPath.section) {
+    } else if (3 == indexPath.section) {
         EquipComposeHerosTableViewCell *heroCell=[tableView dequeueReusableCellWithIdentifier:equipComposeHerosCellId];
         heroCell.equipInfoShowing=[MyUtility getEquipInfoForEquipIdCache:self.equip2showArr.lastObject];
         heroCell.heroEquipsArr=self.composeHeroEquipsArr;
@@ -405,6 +405,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 4;
 }
 @end
