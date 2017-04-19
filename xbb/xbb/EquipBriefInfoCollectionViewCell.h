@@ -9,10 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EquipBriefInfoCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *ivThumb;
-@property (weak, nonatomic) IBOutlet UIImageView *ivMask;
-@property (weak, nonatomic) IBOutlet UILabel *lblCount;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
-
-@property (nonatomic, assign) BOOL noNameShown;
 @end

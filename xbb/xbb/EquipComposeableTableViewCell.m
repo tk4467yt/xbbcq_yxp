@@ -59,14 +59,15 @@
 {
     EquipBriefInfoCollectionViewCell *equipBriefCell=(EquipBriefInfoCollectionViewCell *)cell;
     //    equipBriefCell.backgroundView=[[UIImageView alloc] initWithImage:[MyUtility makeMaskImageFroFrame:[UIImage imageNamed:@"handbook_equip_bg"]]];
-    equipBriefCell.noNameShown=true;
-    
+//    equipBriefCell.noNameShown=true;
+//    
     EquipInfo *equipInfo2use=self.composeableEquipsArr[indexPath.row];
-    equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-    
-    RankDesc *rankDesc2use=self.rankDescDict[equipInfo2use.equipRank];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
-    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+//    equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+//    
+//    RankDesc *rankDesc2use=self.rankDescDict[equipInfo2use.equipRank];
+//    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
+//    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+    equipBriefCell.lblName.text=equipInfo2use.equipName;
 }
 
 #pragma mark UICollectionViewDataSource
@@ -85,6 +86,6 @@
 
 #pragma mark UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return [MyAppSizeInfo equipBriefCVItemSmallSize];
+    return [MyAppSizeInfo equipBriefCVItemSize];
 }
 @end

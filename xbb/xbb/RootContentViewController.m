@@ -9,6 +9,7 @@
 #import "RootContentViewController.h"
 #import "MainCategoryCollectionViewCell.h"
 #import "HerosViewController.h"
+#import "EquipsViewController.h"
 #import "MyUtility.h"
 
 #define CATEGORY_2_SHOW_HERO @"hero"
@@ -60,7 +61,9 @@
         
         [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_EQUIP isEqualToString:curCategory]) {
+        EquipsViewController *detailVC=[EquipsViewController new];
         
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_JUE_XING isEqualToString:curCategory]) {
         
     } else if ([CATEGORY_2_SHOW_JUE_XING_2 isEqualToString:curCategory]) {

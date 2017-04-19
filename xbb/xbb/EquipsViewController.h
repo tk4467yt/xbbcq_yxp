@@ -9,5 +9,6 @@
 #import "MyRootViewController.h"
 
 @interface EquipsViewController : MyRootViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *cvEquips;
 
 @end

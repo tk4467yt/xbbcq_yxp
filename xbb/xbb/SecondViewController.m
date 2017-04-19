@@ -126,11 +126,11 @@
     NSArray *equipsArr=self.equipRankDict[rankId];
     EquipInfo *equipInfo2use=equipsArr[indexPath.row];
     
-    equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
-    
-    RankDesc *rankDesc2use=self.rankDescDict[rankId];
-    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
-    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
+//    equipBriefCell.ivThumb.image=[UIImage imageNamed:equipInfo2use.thumbFile];
+//    
+//    RankDesc *rankDesc2use=self.rankDescDict[rankId];
+//    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
+//    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
     
     equipBriefCell.lblName.text=equipInfo2use.equipName;
 }

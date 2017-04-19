@@ -69,6 +69,8 @@
             [self.minJieHerosArr addObject:aHeroInfo];
         }
     }
+    
+    self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
 }
 
 -(HeroInfo *)getHeroInfoWithIndexPath:(NSIndexPath *)indexPath

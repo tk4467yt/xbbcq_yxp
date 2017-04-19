@@ -17,11 +17,7 @@
 
 +(CGSize)equipBriefCVItemSize
 {
-    return CGSizeMake(80,100);
-}
-+(CGSize)equipBriefCVItemSmallSize
-{
-    return CGSizeMake(60, 60);
+    return CGSizeMake(120,60);
 }
 +(CGFloat)cacTableCellHeightForCVWithMaxWidth:(CGFloat)maxCVWidth andItemSize:(CGSize)itemSize andItemCount:(NSInteger)itemCount andLineOffset:(CGFloat)lineOffset
 {
