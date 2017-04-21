@@ -50,4 +50,6 @@
 +(EquipComposeInfo *)getEquipComposeInfoForEquipId:(NSString *)equipId;
 
 +(NSArray *)getAllEquipAttrDescArr;
+
++(NSDictionary *)getAllJuexingSuipianFromDict;
 @end

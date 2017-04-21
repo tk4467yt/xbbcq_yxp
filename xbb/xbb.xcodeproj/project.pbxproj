@@ -77,6 +77,8 @@
 		25AEB6BE1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6BC1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib */; };
 		25AEB6C21E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AEB6C01E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m */; };
 		25AEB6C31E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */; };
+		25BBC7731EAA47D800E96D77 /* JueXingSuipianFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7711EAA47D800E96D77 /* JueXingSuipianFromViewController.m */; };
+		25BBC7741EAA47D800E96D77 /* JueXingSuipianFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7721EAA47D800E96D77 /* JueXingSuipianFromViewController.xib */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -242,6 +244,9 @@
 		25AEB6BF1E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipComposeHeaderItemCollectionViewCell.h; sourceTree = "<group>"; };
 		25AEB6C01E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipComposeHeaderItemCollectionViewCell.m; sourceTree = "<group>"; };
 		25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipComposeHeaderItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		25BBC7701EAA47D800E96D77 /* JueXingSuipianFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JueXingSuipianFromViewController.h; sourceTree = "<group>"; };
+		25BBC7711EAA47D800E96D77 /* JueXingSuipianFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JueXingSuipianFromViewController.m; sourceTree = "<group>"; };
+		25BBC7721EAA47D800E96D77 /* JueXingSuipianFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JueXingSuipianFromViewController.xib; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
@@ -377,6 +382,9 @@
 				25D150E21EA65D0D00B159EB /* EquipsViewController.h */,
 				25D150E31EA65D0D00B159EB /* EquipsViewController.m */,
 				25D150E41EA65D0D00B159EB /* EquipsViewController.xib */,
+				25BBC7701EAA47D800E96D77 /* JueXingSuipianFromViewController.h */,
+				25BBC7711EAA47D800E96D77 /* JueXingSuipianFromViewController.m */,
+				25BBC7721EAA47D800E96D77 /* JueXingSuipianFromViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -722,6 +730,7 @@
 			files = (
 				257024481E630D2D001CB5F3 /* LaunchScreen.storyboard in Resources */,
 				25895E311E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.xib in Resources */,
+				25BBC7741EAA47D800E96D77 /* JueXingSuipianFromViewController.xib in Resources */,
 				2570246C1E630EE1001CB5F3 /* Localizable.strings in Resources */,
 				257024451E630D2D001CB5F3 /* Assets.xcassets in Resources */,
 				251D40001E860CB3002A4209 /* HeroDetailAllNonComposeEquipsTableViewCell.xib in Resources */,
@@ -792,6 +801,7 @@
 				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
 				25895E2B1E6D9B900085B662 /* HeroDetailTopTableViewCell.m in Sources */,
 				2544EEBE1E7D7B7700E6D18B /* SpeciesSetHerosTableViewCell.m in Sources */,
+				25BBC7731EAA47D800E96D77 /* JueXingSuipianFromViewController.m in Sources */,
 				257024401E630D2D001CB5F3 /* SecondViewController.m in Sources */,
 				25989BED1E6C24E600E8481C /* HeroDetailViewController.m in Sources */,
 				2572430E1E841CD60080B503 /* MyAppCellIdInfo.m in Sources */,

@@ -10,6 +10,7 @@
 #import "MainCategoryCollectionViewCell.h"
 #import "HerosViewController.h"
 #import "EquipsViewController.h"
+#import "JueXingSuipianFromViewController.h"
 #import "MyUtility.h"
 
 #define CATEGORY_2_SHOW_HERO @"hero"
@@ -65,7 +66,9 @@
         
         [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_JUE_XING isEqualToString:curCategory]) {
+        JueXingSuipianFromViewController *detailVC=[JueXingSuipianFromViewController new];
         
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_JUE_XING_2 isEqualToString:curCategory]) {
         
     } else if ([CATEGORY_2_SHOW_FU_SHI isEqualToString:curCategory]) {

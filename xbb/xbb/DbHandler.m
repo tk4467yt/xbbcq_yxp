@@ -532,4 +532,25 @@ static __strong FMDatabase *dbConfig;
     
     return arr2ret;
 }
+
++(NSDictionary *)getAllJuexingSuipianFromDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `juexing_suipian_from`"];
+    while ([s next]) {
+        NSString *fromDesc=[s stringForColumn:@"from_desc"];
+        NSString *heroId=[s stringForColumn:@"hero_id"];
+        
+        NSMutableArray *heroArr=[dict2ret objectForKey:fromDesc];
+        if (nil == heroArr) {
+            heroArr=[NSMutableArray new];
+        }
+        [heroArr addObject:heroId];
+        
+        [dict2ret setObject:heroArr forKey:fromDesc];
+    }
+    
+    return dict2ret;
+}
 @end
