@@ -33,6 +33,8 @@
     [self.cvSuipianFrom registerNib:[UINib nibWithNibName:@"TextContentCollectionReusableView" bundle:[NSBundle mainBundle]]
    forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
           withReuseIdentifier:[MyAppCellIdInfo cellIdForTextContentCVReusableViewId]];
+    
+    self.navigationItem.title=NSLocalizedString(@"title_for_juexing_suipian_from", @"");
 }
 
 - (void)didReceiveMemoryWarning {
