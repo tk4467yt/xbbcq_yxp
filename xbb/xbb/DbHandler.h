@@ -52,4 +52,6 @@
 +(NSArray *)getAllEquipAttrDescArr;
 
 +(NSDictionary *)getAllJuexingSuipianFromDict;
++(NSDictionary *)getAllShenDianInfoDict;
++(NSDictionary *)getAllJuexing2shenDianInfoDict;
 @end

@@ -553,4 +553,40 @@ static __strong FMDatabase *dbConfig;
     
     return dict2ret;
 }
+
++(NSDictionary *)getAllShenDianInfoDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `sheng_dian_desc`"];
+    while ([s next]) {
+        NSString *shenDianId=[s stringForColumn:@"sheng_dian_id"];
+        NSString *shenDianName=[s stringForColumn:@"sheng_dian_name"];
+        
+        [dict2ret setObject:shenDianName forKey:shenDianId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllJuexing2shenDianInfoDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `juexing2_shendian`"];
+    while ([s next]) {
+        NSString *heroId=[s stringForColumn:@"hero_id"];
+        NSString *shendianId=[s stringForColumn:@"shendian_id"];
+        
+        NSMutableArray *heroArr=[dict2ret objectForKey:shendianId];
+        if (nil == heroArr) {
+            heroArr=[NSMutableArray new];
+        }
+        [heroArr addObject:heroId];
+        
+        [dict2ret setObject:heroArr forKey:shendianId];
+    }
+    
+    return dict2ret;
+}
 @end

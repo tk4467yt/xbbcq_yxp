@@ -79,6 +79,8 @@
 		25AEB6C31E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AEB6C11E72F75300AE73BB /* EquipComposeHeaderItemCollectionViewCell.xib */; };
 		25BBC7731EAA47D800E96D77 /* JueXingSuipianFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7711EAA47D800E96D77 /* JueXingSuipianFromViewController.m */; };
 		25BBC7741EAA47D800E96D77 /* JueXingSuipianFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7721EAA47D800E96D77 /* JueXingSuipianFromViewController.xib */; };
+		25BBC7781EAA544B00E96D77 /* Juexing2shendianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7761EAA544B00E96D77 /* Juexing2shendianViewController.m */; };
+		25BBC7791EAA544B00E96D77 /* Juexing2shendianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7771EAA544B00E96D77 /* Juexing2shendianViewController.xib */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -247,6 +249,9 @@
 		25BBC7701EAA47D800E96D77 /* JueXingSuipianFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JueXingSuipianFromViewController.h; sourceTree = "<group>"; };
 		25BBC7711EAA47D800E96D77 /* JueXingSuipianFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JueXingSuipianFromViewController.m; sourceTree = "<group>"; };
 		25BBC7721EAA47D800E96D77 /* JueXingSuipianFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JueXingSuipianFromViewController.xib; sourceTree = "<group>"; };
+		25BBC7751EAA544B00E96D77 /* Juexing2shendianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Juexing2shendianViewController.h; sourceTree = "<group>"; };
+		25BBC7761EAA544B00E96D77 /* Juexing2shendianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juexing2shendianViewController.m; sourceTree = "<group>"; };
+		25BBC7771EAA544B00E96D77 /* Juexing2shendianViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Juexing2shendianViewController.xib; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
@@ -385,6 +390,9 @@
 				25BBC7701EAA47D800E96D77 /* JueXingSuipianFromViewController.h */,
 				25BBC7711EAA47D800E96D77 /* JueXingSuipianFromViewController.m */,
 				25BBC7721EAA47D800E96D77 /* JueXingSuipianFromViewController.xib */,
+				25BBC7751EAA544B00E96D77 /* Juexing2shendianViewController.h */,
+				25BBC7761EAA544B00E96D77 /* Juexing2shendianViewController.m */,
+				25BBC7771EAA544B00E96D77 /* Juexing2shendianViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -744,6 +752,7 @@
 				25C7E1C41E87AA890024546A /* AllEquipsRequrieViewController.xib in Resources */,
 				25895E2C1E6D9B900085B662 /* HeroDetailTopTableViewCell.xib in Resources */,
 				250057031E7559E1006FB475 /* EquipComposeAttrTableViewCell.xib in Resources */,
+				25BBC7791EAA544B00E96D77 /* Juexing2shendianViewController.xib in Resources */,
 				2544EEBF1E7D7B7700E6D18B /* SpeciesSetHerosTableViewCell.xib in Resources */,
 				25C7E1C91E87ED6A0024546A /* TextContentCollectionReusableView.xib in Resources */,
 				251670FE1E86A8AA0098A4D8 /* EquipComposeableTableViewCell.xib in Resources */,
@@ -799,6 +808,7 @@
 				25AEB6BD1E72F46700AE73BB /* EquipComposeContentTableViewCell.m in Sources */,
 				259418E91E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m in Sources */,
 				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
+				25BBC7781EAA544B00E96D77 /* Juexing2shendianViewController.m in Sources */,
 				25895E2B1E6D9B900085B662 /* HeroDetailTopTableViewCell.m in Sources */,
 				2544EEBE1E7D7B7700E6D18B /* SpeciesSetHerosTableViewCell.m in Sources */,
 				25BBC7731EAA47D800E96D77 /* JueXingSuipianFromViewController.m in Sources */,

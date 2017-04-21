@@ -11,6 +11,7 @@
 #import "HerosViewController.h"
 #import "EquipsViewController.h"
 #import "JueXingSuipianFromViewController.h"
+#import "Juexing2shendianViewController.h"
 #import "MyUtility.h"
 
 #define CATEGORY_2_SHOW_HERO @"hero"
@@ -70,7 +71,9 @@
         
         [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_JUE_XING_2 isEqualToString:curCategory]) {
+        Juexing2shendianViewController *detailVC=[Juexing2shendianViewController new];
         
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_FU_SHI isEqualToString:curCategory]) {
         
     } else if ([CATEGORY_2_SHOW_MENG_JING isEqualToString:curCategory]) {

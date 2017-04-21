@@ -141,3 +141,10 @@
 missing:
 2觉英雄，符石;
 舞姬
+
+select rowid,equip_id from equip_info where equip_name = '飓风飞刃';
+select rowid from equip_compose_info where equip_id = '443';
+select rowid,hero_name,hero_id from hero_info where hero_name = '云游武僧';
+select rowid from hero_species where hero_id not in (select hero_id from hero_info);
+select rowid from hero_equips where hero_id = 'bai_yin_ci_ke';
+select rowid from juexing_suipian_from where hero_id not in (select hero_id from hero_info);
