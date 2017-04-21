@@ -322,7 +322,7 @@
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSize]
                                                      andItemCount:self.composeEquipsArr.count
-                                                    andLineOffset:0]+18+16;
+                                                    andLineOffset:10]+18+16;
     } else if (3 == indexPath.section) {
         return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                       andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
