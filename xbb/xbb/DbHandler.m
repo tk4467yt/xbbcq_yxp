@@ -24,6 +24,7 @@
 #import "EquipAttrDesc.h"
 #import "Juexing2fushiInfo.h"
 #import "MengjingTeam.h"
+#import "TuanbenTeam.h"
 
 static __strong FMDatabase *dbConfig;
 
@@ -659,6 +660,46 @@ static __strong FMDatabase *dbConfig;
         team.heroId4=[s stringForColumn:@"hero_id_4"];
         team.heroId5=[s stringForColumn:@"hero_id_5"];
         team.heroId6=[s stringForColumn:@"hero_id_6"];
+        
+        NSMutableArray *teamArr=[dict2ret objectForKey:team.bossId];
+        if (nil == teamArr) {
+            teamArr=[NSMutableArray new];
+        }
+        [teamArr addObject:team];
+        
+        [dict2ret setObject:teamArr forKey:team.bossId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllTuanbenBossInfoDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `tuanben_boss`"];
+    while ([s next]) {
+        NSString *bossId=[s stringForColumn:@"boss_id"];
+        NSString *bossName=[s stringForColumn:@"boss_name"];
+        
+        [dict2ret setObject:bossName forKey:bossId];
+    }
+    
+    return dict2ret;
+}
++(NSDictionary *)getAllTuanbenBossTeamDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `tuanben_team`"];
+    while ([s next]) {
+        TuanbenTeam *team=[TuanbenTeam new];
+        team.bossId=[s stringForColumn:@"boss_id"];
+        team.heroId1=[s stringForColumn:@"hero_id_1"];
+        team.heroId2=[s stringForColumn:@"hero_id_2"];
+        team.heroId3=[s stringForColumn:@"hero_id_3"];
+        team.heroId4=[s stringForColumn:@"hero_id_4"];
+        team.heroId5=[s stringForColumn:@"hero_id_5"];
         
         NSMutableArray *teamArr=[dict2ret objectForKey:team.bossId];
         if (nil == teamArr) {
