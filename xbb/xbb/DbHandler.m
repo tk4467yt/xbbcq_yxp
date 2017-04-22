@@ -23,6 +23,7 @@
 #import "EquipComposeInfo.h"
 #import "EquipAttrDesc.h"
 #import "Juexing2fushiInfo.h"
+#import "MengjingTeam.h"
 
 static __strong FMDatabase *dbConfig;
 
@@ -624,6 +625,48 @@ static __strong FMDatabase *dbConfig;
         [heroArr addObject:fushiInfo];
         
         [dict2ret setObject:heroArr forKey:fushiInfo.heroId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllMengjingBossDescDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `mengjing_boss_desc`"];
+    while ([s next]) {
+        NSString *bossId=[s stringForColumn:@"boss_id"];
+        NSString *bossName=[s stringForColumn:@"boss_name"];
+        
+        [dict2ret setObject:bossName forKey:bossId];
+    }
+    
+    return dict2ret;
+}
++(NSDictionary *)getAllMengjingTeamDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `mengjing_team`"];
+    while ([s next]) {
+        MengjingTeam *team=[MengjingTeam new];
+        team.bossId=[s stringForColumn:@"boss_id"];
+        team.isLianji=[s intForColumn:@"is_lian_ji"];
+        team.heroId1=[s stringForColumn:@"hero_id_1"];
+        team.heroId2=[s stringForColumn:@"hero_id_2"];
+        team.heroId3=[s stringForColumn:@"hero_id_3"];
+        team.heroId4=[s stringForColumn:@"hero_id_4"];
+        team.heroId5=[s stringForColumn:@"hero_id_5"];
+        team.heroId6=[s stringForColumn:@"hero_id_6"];
+        
+        NSMutableArray *teamArr=[dict2ret objectForKey:team.bossId];
+        if (nil == teamArr) {
+            teamArr=[NSMutableArray new];
+        }
+        [teamArr addObject:team];
+        
+        [dict2ret setObject:teamArr forKey:team.bossId];
     }
     
     return dict2ret;

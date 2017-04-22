@@ -57,4 +57,7 @@
 
 +(NSDictionary *)getAllFushiDescDict;
 +(NSDictionary *)getAllJuexing2FushiInfoDict;
+
++(NSDictionary *)getAllMengjingBossDescDict;
++(NSDictionary *)getAllMengjingTeamDict;
 @end

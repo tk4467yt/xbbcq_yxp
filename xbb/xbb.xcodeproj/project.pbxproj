@@ -86,6 +86,9 @@
 		25BBC7811EAB191A00E96D77 /* Juexing2fushiInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7801EAB191A00E96D77 /* Juexing2fushiInfo.m */; };
 		25BBC7851EAB3CC200E96D77 /* FushiDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7831EAB3CC200E96D77 /* FushiDescTableViewCell.m */; };
 		25BBC7861EAB3CC200E96D77 /* FushiDescTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7841EAB3CC200E96D77 /* FushiDescTableViewCell.xib */; };
+		25BBC7891EAB6F7D00E96D77 /* MengjingTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7881EAB6F7D00E96D77 /* MengjingTeam.m */; };
+		25BBC78D1EAB70A800E96D77 /* MengjingTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC78B1EAB70A800E96D77 /* MengjingTeamViewController.m */; };
+		25BBC78E1EAB70A800E96D77 /* MengjingTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC78C1EAB70A800E96D77 /* MengjingTeamViewController.xib */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -265,6 +268,11 @@
 		25BBC7821EAB3CC200E96D77 /* FushiDescTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FushiDescTableViewCell.h; sourceTree = "<group>"; };
 		25BBC7831EAB3CC200E96D77 /* FushiDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FushiDescTableViewCell.m; sourceTree = "<group>"; };
 		25BBC7841EAB3CC200E96D77 /* FushiDescTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FushiDescTableViewCell.xib; sourceTree = "<group>"; };
+		25BBC7871EAB6F7D00E96D77 /* MengjingTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MengjingTeam.h; sourceTree = "<group>"; };
+		25BBC7881EAB6F7D00E96D77 /* MengjingTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MengjingTeam.m; sourceTree = "<group>"; };
+		25BBC78A1EAB70A800E96D77 /* MengjingTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MengjingTeamViewController.h; sourceTree = "<group>"; };
+		25BBC78B1EAB70A800E96D77 /* MengjingTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MengjingTeamViewController.m; sourceTree = "<group>"; };
+		25BBC78C1EAB70A800E96D77 /* MengjingTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MengjingTeamViewController.xib; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
@@ -409,6 +417,9 @@
 				25BBC77A1EAB139B00E96D77 /* Juexing2FushiViewController.h */,
 				25BBC77B1EAB139B00E96D77 /* Juexing2FushiViewController.m */,
 				25BBC77C1EAB139B00E96D77 /* Juexing2FushiViewController.xib */,
+				25BBC78A1EAB70A800E96D77 /* MengjingTeamViewController.h */,
+				25BBC78B1EAB70A800E96D77 /* MengjingTeamViewController.m */,
+				25BBC78C1EAB70A800E96D77 /* MengjingTeamViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -579,6 +590,8 @@
 				25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */,
 				25BBC77F1EAB191A00E96D77 /* Juexing2fushiInfo.h */,
 				25BBC7801EAB191A00E96D77 /* Juexing2fushiInfo.m */,
+				25BBC7871EAB6F7D00E96D77 /* MengjingTeam.h */,
+				25BBC7881EAB6F7D00E96D77 /* MengjingTeam.m */,
 			);
 			name = data_structure;
 			sourceTree = "<group>";
@@ -781,6 +794,7 @@
 				251671031E86BEB10098A4D8 /* EquipComposeHerosTableViewCell.xib in Resources */,
 				250B1B521E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.xib in Resources */,
 				250B1B571E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib in Resources */,
+				25BBC78E1EAB70A800E96D77 /* MengjingTeamViewController.xib in Resources */,
 				25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */,
 				25D150E61EA65D0D00B159EB /* EquipsViewController.xib in Resources */,
 				25BBC7861EAB3CC200E96D77 /* FushiDescTableViewCell.xib in Resources */,
@@ -834,6 +848,7 @@
 				259418E91E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m in Sources */,
 				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
 				25BBC7781EAA544B00E96D77 /* Juexing2shendianViewController.m in Sources */,
+				25BBC7891EAB6F7D00E96D77 /* MengjingTeam.m in Sources */,
 				25895E2B1E6D9B900085B662 /* HeroDetailTopTableViewCell.m in Sources */,
 				2544EEBE1E7D7B7700E6D18B /* SpeciesSetHerosTableViewCell.m in Sources */,
 				25BBC7731EAA47D800E96D77 /* JueXingSuipianFromViewController.m in Sources */,
@@ -880,6 +895,7 @@
 				2544EEB91E7D78CD00E6D18B /* SpeciesSetTopTableViewCell.m in Sources */,
 				253EBB441E685FE400524553 /* HeroInfo.m in Sources */,
 				25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */,
+				25BBC78D1EAB70A800E96D77 /* MengjingTeamViewController.m in Sources */,
 				253EBB3D1E685C0500524553 /* DbHandler.m in Sources */,
 				253EBB351E685B6200524553 /* FMDatabase.m in Sources */,
 				251D3FFF1E860CB3002A4209 /* HeroDetailAllNonComposeEquipsTableViewCell.m in Sources */,
