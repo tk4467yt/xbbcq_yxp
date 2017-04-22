@@ -22,6 +22,7 @@
 #import "EquipInfo.h"
 #import "EquipComposeInfo.h"
 #import "EquipAttrDesc.h"
+#import "Juexing2fushiInfo.h"
 
 static __strong FMDatabase *dbConfig;
 
@@ -585,6 +586,44 @@ static __strong FMDatabase *dbConfig;
         [heroArr addObject:heroId];
         
         [dict2ret setObject:heroArr forKey:shendianId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllFushiDescDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `fu_shi_desc`"];
+    while ([s next]) {
+        NSString *fushiId=[s stringForColumn:@"fu_shi_id"];
+        NSString *fushiName=[s stringForColumn:@"fu_shi_name"];
+        
+        [dict2ret setObject:fushiName forKey:fushiId];
+    }
+    
+    return dict2ret;
+}
+
++(NSDictionary *)getAllJuexing2FushiInfoDict
+{
+    NSMutableDictionary *dict2ret=[NSMutableDictionary new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `juexing2_fushi`"];
+    while ([s next]) {
+        Juexing2fushiInfo *fushiInfo=[Juexing2fushiInfo new];
+        fushiInfo.heroId=[s stringForColumn:@"hero_id"];
+        fushiInfo.fushiId=[s stringForColumn:@"fu_shi_id"];
+        fushiInfo.fushiDesc=[s stringForColumn:@"fu_shi_shu_xing"];
+        
+        NSMutableArray *heroArr=[dict2ret objectForKey:fushiInfo.heroId];
+        if (nil == heroArr) {
+            heroArr=[NSMutableArray new];
+        }
+        [heroArr addObject:fushiInfo];
+        
+        [dict2ret setObject:heroArr forKey:fushiInfo.heroId];
     }
     
     return dict2ret;

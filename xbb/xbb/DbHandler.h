@@ -54,4 +54,7 @@
 +(NSDictionary *)getAllJuexingSuipianFromDict;
 +(NSDictionary *)getAllShenDianInfoDict;
 +(NSDictionary *)getAllJuexing2shenDianInfoDict;
+
++(NSDictionary *)getAllFushiDescDict;
++(NSDictionary *)getAllJuexing2FushiInfoDict;
 @end

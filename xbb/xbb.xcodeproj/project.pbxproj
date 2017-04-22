@@ -83,6 +83,7 @@
 		25BBC7791EAA544B00E96D77 /* Juexing2shendianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7771EAA544B00E96D77 /* Juexing2shendianViewController.xib */; };
 		25BBC77D1EAB139B00E96D77 /* Juexing2FushiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC77B1EAB139B00E96D77 /* Juexing2FushiViewController.m */; };
 		25BBC77E1EAB139B00E96D77 /* Juexing2FushiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC77C1EAB139B00E96D77 /* Juexing2FushiViewController.xib */; };
+		25BBC7811EAB191A00E96D77 /* Juexing2fushiInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7801EAB191A00E96D77 /* Juexing2fushiInfo.m */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -257,6 +258,8 @@
 		25BBC77A1EAB139B00E96D77 /* Juexing2FushiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Juexing2FushiViewController.h; sourceTree = "<group>"; };
 		25BBC77B1EAB139B00E96D77 /* Juexing2FushiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juexing2FushiViewController.m; sourceTree = "<group>"; };
 		25BBC77C1EAB139B00E96D77 /* Juexing2FushiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Juexing2FushiViewController.xib; sourceTree = "<group>"; };
+		25BBC77F1EAB191A00E96D77 /* Juexing2fushiInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Juexing2fushiInfo.h; sourceTree = "<group>"; };
+		25BBC7801EAB191A00E96D77 /* Juexing2fushiInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juexing2fushiInfo.m; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
@@ -566,6 +569,8 @@
 				25DD74C01E6AD39D0000EB46 /* EquipComposeInfo.m */,
 				25DD74C21E6AD4CD0000EB46 /* EquipAttrDesc.h */,
 				25DD74C31E6AD4CD0000EB46 /* EquipAttrDesc.m */,
+				25BBC77F1EAB191A00E96D77 /* Juexing2fushiInfo.h */,
+				25BBC7801EAB191A00E96D77 /* Juexing2fushiInfo.m */,
 			);
 			name = data_structure;
 			sourceTree = "<group>";
@@ -814,6 +819,7 @@
 				25DD74AF1E6AC2510000EB46 /* HeroSpecies.m in Sources */,
 				253EBB1D1E67108300524553 /* MyTabbarViewController.m in Sources */,
 				25DD74B81E6AC5F40000EB46 /* HeroEquips.m in Sources */,
+				25BBC7811EAB191A00E96D77 /* Juexing2fushiInfo.m in Sources */,
 				25AEB6BD1E72F46700AE73BB /* EquipComposeContentTableViewCell.m in Sources */,
 				259418E91E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m in Sources */,
 				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
