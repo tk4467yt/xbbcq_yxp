@@ -89,6 +89,8 @@
 		25BBC7891EAB6F7D00E96D77 /* MengjingTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7881EAB6F7D00E96D77 /* MengjingTeam.m */; };
 		25BBC78D1EAB70A800E96D77 /* MengjingTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC78B1EAB70A800E96D77 /* MengjingTeamViewController.m */; };
 		25BBC78E1EAB70A800E96D77 /* MengjingTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC78C1EAB70A800E96D77 /* MengjingTeamViewController.xib */; };
+		25BBC7921EAB964800E96D77 /* MengjingTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7901EAB964800E96D77 /* MengjingTeamTableViewCell.m */; };
+		25BBC7931EAB964800E96D77 /* MengjingTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7911EAB964800E96D77 /* MengjingTeamTableViewCell.xib */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -273,6 +275,9 @@
 		25BBC78A1EAB70A800E96D77 /* MengjingTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MengjingTeamViewController.h; sourceTree = "<group>"; };
 		25BBC78B1EAB70A800E96D77 /* MengjingTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MengjingTeamViewController.m; sourceTree = "<group>"; };
 		25BBC78C1EAB70A800E96D77 /* MengjingTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MengjingTeamViewController.xib; sourceTree = "<group>"; };
+		25BBC78F1EAB964800E96D77 /* MengjingTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MengjingTeamTableViewCell.h; sourceTree = "<group>"; };
+		25BBC7901EAB964800E96D77 /* MengjingTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MengjingTeamTableViewCell.m; sourceTree = "<group>"; };
+		25BBC7911EAB964800E96D77 /* MengjingTeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MengjingTeamTableViewCell.xib; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
@@ -499,6 +504,9 @@
 				25BBC7821EAB3CC200E96D77 /* FushiDescTableViewCell.h */,
 				25BBC7831EAB3CC200E96D77 /* FushiDescTableViewCell.m */,
 				25BBC7841EAB3CC200E96D77 /* FushiDescTableViewCell.xib */,
+				25BBC78F1EAB964800E96D77 /* MengjingTeamTableViewCell.h */,
+				25BBC7901EAB964800E96D77 /* MengjingTeamTableViewCell.m */,
+				25BBC7911EAB964800E96D77 /* MengjingTeamTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -801,6 +809,7 @@
 				2544EEB01E7D370A00E6D18B /* HeroArtTableViewCell.xib in Resources */,
 				253EBB211E6859D400524553 /* xbb.db in Resources */,
 				25AEB6BE1E72F46700AE73BB /* EquipComposeContentTableViewCell.xib in Resources */,
+				25BBC7931EAB964800E96D77 /* MengjingTeamTableViewCell.xib in Resources */,
 				25834CEE1E704AFA00B45F05 /* HeroSkillItemTableViewCell.xib in Resources */,
 				2544EEBA1E7D78CD00E6D18B /* SpeciesSetTopTableViewCell.xib in Resources */,
 				259418EA1E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.xib in Resources */,
@@ -872,6 +881,7 @@
 				25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */,
 				250B1B561E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.m in Sources */,
 				2544EEAF1E7D370A00E6D18B /* HeroArtTableViewCell.m in Sources */,
+				25BBC7921EAB964800E96D77 /* MengjingTeamTableViewCell.m in Sources */,
 				25DD74BE1E6AC7B20000EB46 /* EquipInfo.m in Sources */,
 				253EBB391E685B6200524553 /* FMResultSet.m in Sources */,
 				25DD74BB1E6AC6FB0000EB46 /* FragmentFromDesc.m in Sources */,

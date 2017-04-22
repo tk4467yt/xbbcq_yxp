@@ -13,6 +13,7 @@
 #import "JueXingSuipianFromViewController.h"
 #import "Juexing2shendianViewController.h"
 #import "Juexing2FushiViewController.h"
+#import "MengjingTeamViewController.h"
 #import "MyUtility.h"
 
 #define CATEGORY_2_SHOW_HERO @"hero"
@@ -80,7 +81,9 @@
         
         [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_MENG_JING isEqualToString:curCategory]) {
+        MengjingTeamViewController *detailVC=[MengjingTeamViewController new];
         
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_TUAN_BEN isEqualToString:curCategory]) {
         
     }
