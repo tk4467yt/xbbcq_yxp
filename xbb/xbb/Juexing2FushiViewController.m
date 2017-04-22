@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.navigationItem.title=NSLocalizedString(@"title_for_juexing2_fushi", @"");
+    
     self.fushiDescDict=[DbHandler getAllFushiDescDict];
     self.juexing2fushiInfoDict=[DbHandler getAllJuexing2FushiInfoDict];
     
