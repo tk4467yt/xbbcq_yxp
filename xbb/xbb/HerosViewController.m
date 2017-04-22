@@ -23,6 +23,7 @@
 @property (nonatomic,strong) NSDictionary *rankDescDict;
 
 @property (nonatomic,strong) NSMutableArray *heroType2showArr;
+@property (nonatomic,assign) BOOL showHunXiaHero;
 @end
 
 @implementation HerosViewController
@@ -37,6 +38,22 @@
                   withReuseIdentifier:[MyAppCellIdInfo cellIdForTextContentCVReusableViewId]];
     
     [self initHerosInfo];
+    
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"nav_title_hero", @"") style:UIBarButtonItemStylePlain target:self action:@selector(switchHunXia)];
+}
+
+-(void)switchHunXia
+{
+    self.showHunXiaHero=!self.showHunXiaHero;
+    
+    [self updateHeros2shown];
+    [self.cvHeros reloadData];
+    
+    if (self.showHunXiaHero) {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"nav_title_hun_xia", @"");
+    } else {
+        self.navigationItem.rightBarButtonItem.title=NSLocalizedString(@"nav_title_hero", @"");
+    }
 }
 
 -(void)initHerosInfo
@@ -61,6 +78,9 @@
     [self.minJieHerosArr removeAllObjects];
     
     for (HeroInfo *aHeroInfo in self.allHerosArr) {
+        if (self.showHunXiaHero && !aHeroInfo.isHunXiaHero) {
+            continue;
+        }
         if ([aHeroInfo.heroType isEqualToString:[MyUtility heroTypeLiliangId]]) {
             [self.liLiangHerosArr addObject:aHeroInfo];
         } else if ([aHeroInfo.heroType isEqualToString:[MyUtility heroTypeZhiliId]]) {
@@ -70,7 +90,15 @@
         }
     }
     
-    self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
+    if (self.showHunXiaHero) {
+        int heroCount=0;
+        heroCount += self.liLiangHerosArr.count;
+        heroCount += self.zhiLiHerosArr.count;
+        heroCount += self.minJieHerosArr.count;
+        self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hun_xia", @""),heroCount];
+    } else {
+        self.navigationItem.title=[NSString stringWithFormat:@"%@ (%d)",NSLocalizedString(@"nav_title_hero", @""),(int)self.allHerosArr.count];
+    }
 }
 
 -(HeroInfo *)getHeroInfoWithIndexPath:(NSIndexPath *)indexPath
