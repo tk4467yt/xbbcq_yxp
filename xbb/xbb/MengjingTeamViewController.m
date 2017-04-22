@@ -26,6 +26,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.navigationItem.title=NSLocalizedString(@"nav_title_for_mengjing_team", @"");
+    
     self.mengjingBossDict=[DbHandler getAllMengjingBossDescDict];
     self.mengjingTeamDict=[DbHandler getAllMengjingTeamDict];
     
