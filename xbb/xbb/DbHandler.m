@@ -687,6 +687,20 @@ static __strong FMDatabase *dbConfig;
     
     return dict2ret;
 }
+
++(NSArray *)getAllTuanbenBossIdArr
+{
+    NSMutableArray *arr2ret=[NSMutableArray new];
+    
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `tuanben_boss` ORDER BY `rowid`"];
+    while ([s next]) {
+        NSString *bossId=[s stringForColumn:@"boss_id"];
+        [arr2ret addObject:bossId];
+    }
+    
+    return arr2ret;
+}
+
 +(NSDictionary *)getAllTuanbenBossTeamDict
 {
     NSMutableDictionary *dict2ret=[NSMutableDictionary new];

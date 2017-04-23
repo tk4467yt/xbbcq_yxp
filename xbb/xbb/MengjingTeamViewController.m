@@ -64,7 +64,7 @@
     return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
                                                   andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                  andItemCount:count
-                                                andLineOffset:10]+16+10;
+                                                andLineOffset:10]+16+10+20;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

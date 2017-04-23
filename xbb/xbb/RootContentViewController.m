@@ -14,6 +14,7 @@
 #import "Juexing2shendianViewController.h"
 #import "Juexing2FushiViewController.h"
 #import "MengjingTeamViewController.h"
+#import "TuanbenTeamViewController.h"
 #import "MyUtility.h"
 
 #define CATEGORY_2_SHOW_HERO @"hero"
@@ -85,7 +86,9 @@
         
         [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     } else if ([CATEGORY_2_SHOW_TUAN_BEN isEqualToString:curCategory]) {
+        TuanbenTeamViewController *detailVC=[TuanbenTeamViewController new];
         
+        [MyUtility pushViewControllerFromNav:self.navigationController withTargetVC:detailVC animated:YES];
     }
 }
 

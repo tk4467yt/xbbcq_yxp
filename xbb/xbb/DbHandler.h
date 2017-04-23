@@ -62,5 +62,6 @@
 +(NSDictionary *)getAllMengjingTeamDict;
 
 +(NSDictionary *)getAllTuanbenBossInfoDict;
++(NSArray *)getAllTuanbenBossIdArr;
 +(NSDictionary *)getAllTuanbenBossTeamDict;
 @end

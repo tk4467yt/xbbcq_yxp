@@ -92,6 +92,10 @@
 		25BBC7921EAB964800E96D77 /* MengjingTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7901EAB964800E96D77 /* MengjingTeamTableViewCell.m */; };
 		25BBC7931EAB964800E96D77 /* MengjingTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7911EAB964800E96D77 /* MengjingTeamTableViewCell.xib */; };
 		25BBC7961EABB11700E96D77 /* TuanbenTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7951EABB11700E96D77 /* TuanbenTeam.m */; };
+		25BBC79A1EABB25100E96D77 /* TuanbenTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC7981EABB25100E96D77 /* TuanbenTeamViewController.m */; };
+		25BBC79B1EABB25100E96D77 /* TuanbenTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC7991EABB25100E96D77 /* TuanbenTeamViewController.xib */; };
+		25BBC79F1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BBC79D1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.m */; };
+		25BBC7A01EABB4BB00E96D77 /* TuanbenTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BBC79E1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.xib */; };
 		25C7E1BC1E87544F0024546A /* MyDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BB1E87544F0024546A /* MyDelegateSet.m */; };
 		25C7E1BF1E875F5A0024546A /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1BE1E875F5A0024546A /* MyConstants.m */; };
 		25C7E1C31E87AA890024546A /* AllEquipsRequrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7E1C11E87AA890024546A /* AllEquipsRequrieViewController.m */; };
@@ -281,6 +285,12 @@
 		25BBC7911EAB964800E96D77 /* MengjingTeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MengjingTeamTableViewCell.xib; sourceTree = "<group>"; };
 		25BBC7941EABB11700E96D77 /* TuanbenTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanbenTeam.h; sourceTree = "<group>"; };
 		25BBC7951EABB11700E96D77 /* TuanbenTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanbenTeam.m; sourceTree = "<group>"; };
+		25BBC7971EABB25100E96D77 /* TuanbenTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanbenTeamViewController.h; sourceTree = "<group>"; };
+		25BBC7981EABB25100E96D77 /* TuanbenTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanbenTeamViewController.m; sourceTree = "<group>"; };
+		25BBC7991EABB25100E96D77 /* TuanbenTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TuanbenTeamViewController.xib; sourceTree = "<group>"; };
+		25BBC79C1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanbenTeamTableViewCell.h; sourceTree = "<group>"; };
+		25BBC79D1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanbenTeamTableViewCell.m; sourceTree = "<group>"; };
+		25BBC79E1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TuanbenTeamTableViewCell.xib; sourceTree = "<group>"; };
 		25BDE6D91E880ED2007B6312 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		25C7E1BA1E87544F0024546A /* MyDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDelegateSet.h; sourceTree = "<group>"; };
 		25C7E1BB1E87544F0024546A /* MyDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDelegateSet.m; sourceTree = "<group>"; };
@@ -428,6 +438,9 @@
 				25BBC78A1EAB70A800E96D77 /* MengjingTeamViewController.h */,
 				25BBC78B1EAB70A800E96D77 /* MengjingTeamViewController.m */,
 				25BBC78C1EAB70A800E96D77 /* MengjingTeamViewController.xib */,
+				25BBC7971EABB25100E96D77 /* TuanbenTeamViewController.h */,
+				25BBC7981EABB25100E96D77 /* TuanbenTeamViewController.m */,
+				25BBC7991EABB25100E96D77 /* TuanbenTeamViewController.xib */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -510,6 +523,9 @@
 				25BBC78F1EAB964800E96D77 /* MengjingTeamTableViewCell.h */,
 				25BBC7901EAB964800E96D77 /* MengjingTeamTableViewCell.m */,
 				25BBC7911EAB964800E96D77 /* MengjingTeamTableViewCell.xib */,
+				25BBC79C1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.h */,
+				25BBC79D1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.m */,
+				25BBC79E1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -783,6 +799,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25BBC7A01EABB4BB00E96D77 /* TuanbenTeamTableViewCell.xib in Resources */,
 				257024481E630D2D001CB5F3 /* LaunchScreen.storyboard in Resources */,
 				25895E311E6DA9880085B662 /* HeroDetailSpeciesTableViewCell.xib in Resources */,
 				25BBC7741EAA47D800E96D77 /* JueXingSuipianFromViewController.xib in Resources */,
@@ -809,6 +826,7 @@
 				250B1B571E6EF83C00F82E17 /* HeroDetailSkillTableViewCell.xib in Resources */,
 				25BBC78E1EAB70A800E96D77 /* MengjingTeamViewController.xib in Resources */,
 				25989BEE1E6C24E600E8481C /* HeroDetailViewController.xib in Resources */,
+				25BBC79B1EABB25100E96D77 /* TuanbenTeamViewController.xib in Resources */,
 				25D150E61EA65D0D00B159EB /* EquipsViewController.xib in Resources */,
 				25BBC7861EAB3CC200E96D77 /* FushiDescTableViewCell.xib in Resources */,
 				2544EEB01E7D370A00E6D18B /* HeroArtTableViewCell.xib in Resources */,
@@ -860,6 +878,7 @@
 				25DD74B81E6AC5F40000EB46 /* HeroEquips.m in Sources */,
 				25BBC7811EAB191A00E96D77 /* Juexing2fushiInfo.m in Sources */,
 				25AEB6BD1E72F46700AE73BB /* EquipComposeContentTableViewCell.m in Sources */,
+				25BBC79A1EABB25100E96D77 /* TuanbenTeamViewController.m in Sources */,
 				259418E91E76D6A2000AB59F /* EquipComposeAttrItemTableViewCell.m in Sources */,
 				25DD74AC1E6AC1960000EB46 /* PosDesc.m in Sources */,
 				25BBC7781EAA544B00E96D77 /* Juexing2shendianViewController.m in Sources */,
@@ -903,6 +922,7 @@
 				257024371E630D2D001CB5F3 /* main.m in Sources */,
 				25EDF2D21E6C0B130046AF1C /* MyRootViewController.m in Sources */,
 				25C7E1C81E87ED6A0024546A /* TextContentCollectionReusableView.m in Sources */,
+				25BBC79F1EABB4BB00E96D77 /* TuanbenTeamTableViewCell.m in Sources */,
 				25D150DC1EA64F1300B159EB /* MainCategoryCollectionViewCell.m in Sources */,
 				251671021E86BEB10098A4D8 /* EquipComposeHerosTableViewCell.m in Sources */,
 				250B1B511E6EE95C00F82E17 /* HeroDetailStarInfoTableViewCell.m in Sources */,
