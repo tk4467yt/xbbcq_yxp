@@ -692,7 +692,7 @@ static __strong FMDatabase *dbConfig;
 {
     NSMutableArray *arr2ret=[NSMutableArray new];
     
-    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `tuanben_boss` ORDER BY `rowid`"];
+    FMResultSet *s = [dbConfig executeQuery:@"SELECT * FROM `tuanben_boss` ORDER BY `rowid` DESC"];
     while ([s next]) {
         NSString *bossId=[s stringForColumn:@"boss_id"];
         [arr2ret addObject:bossId];
