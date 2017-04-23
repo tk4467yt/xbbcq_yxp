@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.showEquipsOnZi=true;
     
     self.navigationItem.title=NSLocalizedString(@"title_for_all_equips_requrie", @"");
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@""
@@ -173,9 +174,9 @@
 //    UIImage *maskImg=[UIImage imageNamed:rankDesc2use.equipFrameThumb];
 //    equipBriefCell.ivMask.image=[MyUtility makeMaskImageFroFrame:maskImg];
 //    
-//    equipBriefCell.lblCount.hidden=false;
-//    NSNumber *countNumber=[self.nonComposeEquipCountDict objectForKey:equipInfo2use.equipId];
-//    equipBriefCell.lblCount.text=[NSString stringWithFormat:@"%d",countNumber.intValue];
+    equipBriefCell.lblCount.hidden=false;
+    NSNumber *countNumber=[self.nonComposeEquipCountDict objectForKey:equipInfo2use.equipId];
+    equipBriefCell.lblCount.text=[NSString stringWithFormat:@"%d",countNumber.intValue];
     
 //    [equipBriefCell setNeedsUpdateConstraints];
     equipBriefCell.lblName.text=equipInfo2use.equipName;

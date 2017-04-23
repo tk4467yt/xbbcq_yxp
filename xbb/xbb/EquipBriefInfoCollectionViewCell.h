@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EquipBriefInfoCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lblCount;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @end
