@@ -148,3 +148,7 @@ select rowid,hero_name,hero_id from hero_info where hero_name = '云游武僧’
 select rowid from hero_species where hero_id not in (select hero_id from hero_info);
 select rowid from hero_equips where hero_id = 'bai_yin_ci_ke';
 select rowid from juexing_suipian_from where hero_id not in (select hero_id from hero_info);
+
+size:
+ipad: 2048 × 2732
+iphone: 1242 × 2208
