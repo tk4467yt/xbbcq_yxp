@@ -319,12 +319,12 @@
     } */else if (1 == indexPath.section) {
         return [self numberOfEquipAttr2show]*30+16;
     } else if (2 == indexPath.section) {
-        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSize]
                                                      andItemCount:self.composeEquipsArr.count
                                                     andLineOffset:10]+18+16;
     } else if (3 == indexPath.section) {
-        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                       andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                      andItemCount:self.composeHeroEquipsArr.count
                                                     andLineOffset:10]+18+16;

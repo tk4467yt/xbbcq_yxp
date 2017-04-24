@@ -216,7 +216,7 @@
         if (self.heroSpeciesArr.count <= 0) {
             return 18+16;
         } else {
-            return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+            return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                           andItemSize:[MyAppSizeInfo heroSpeciesItemSize]
                                                          andItemCount:self.heroSpeciesArr.count
                                                         andLineOffset:0];
@@ -240,7 +240,7 @@
         }
         return skillRowHeight+16;
     } else if (4 == indexPath.section) {
-        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSize]
                                                      andItemCount:6
                                                     andLineOffset:0]+18+8;
@@ -256,7 +256,7 @@
 //        }
 //        return height+18+8;
     } else if (5 == indexPath.section) {
-        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-16
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-70-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                       andItemSize:[MyAppSizeInfo equipBriefCVItemSize]
                                                      andItemCount:self.allNonComposeEquipsArr.count
                                                     andLineOffset:0]+16;

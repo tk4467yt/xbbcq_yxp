@@ -82,6 +82,7 @@
 +(CGFloat)screenWidth;
 +(CGFloat)screenHeight;
 +(CGFloat)heightOfStatusBar;
++(CGFloat)layoutMarginForLeftAndRightForView:(UIView *)view2check;
 
 +(NSArray *)getCachedAllHeros;
 +(HeroInfo *)getCachedHeroInfoWithHeroId:(NSString *)heroId;

@@ -45,7 +45,7 @@
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+    return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                   andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                  andItemCount:5
                                                 andLineOffset:10]+16+10+20;

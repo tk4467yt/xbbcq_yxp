@@ -70,7 +70,7 @@
         return 50;
     } else if (1 == indexPath.section) {
 //        return [MyUtility screenHeight]-50-[MyUtility heightOfStatusBar]-self.navigationController.navigationBar.frame.size.height;
-        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+        return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                       andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                      andItemCount:[self getAllHerosForCurSpecies].count
                                                     andLineOffset:10]+18+10+16;

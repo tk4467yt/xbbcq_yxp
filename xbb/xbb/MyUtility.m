@@ -259,6 +259,11 @@ static __strong NSDictionary *allEquipComposeInfoDict;
     return rectStatus.size.height;
 }
 
++(CGFloat)layoutMarginForLeftAndRightForView:(UIView *)view2check
+{
+    return view2check.layoutMargins.left+view2check.layoutMargins.right;
+}
+
 +(NSArray *)getCachedAllHeros
 {
     if (nil == allHerosInfoArr) {

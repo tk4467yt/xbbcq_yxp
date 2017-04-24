@@ -61,7 +61,7 @@
     if ([MyUtility isStringNilOrZeroLength:teamInfo.heroId6]) {
         count=5;
     }
-    return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-16
+    return [MyAppSizeInfo cacTableCellHeightForCVWithMaxWidth:[MyUtility screenWidth]-[MyUtility layoutMarginForLeftAndRightForView:self.view]
                                                   andItemSize:[MyAppSizeInfo heroBriefCVItemSize]
                                                  andItemCount:count
                                                 andLineOffset:10]+16+10+20;
